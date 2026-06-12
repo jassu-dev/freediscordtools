@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="bg-[#23272A] border-b border-[#2C2F33] sticky top-0 z-40">
+    <header className="bg-white border-b border-[#E3E6F0] sticky top-0 z-40 shadow-sm">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         <Link
           href="/"
@@ -14,17 +14,17 @@ export default function Header() {
         <nav aria-label="Main navigation">
           <ul className="flex gap-6 list-none m-0 p-0">
             <li>
-              <Link href="/tools" className="text-[#F2F3F5] hover:text-[#5865F2] transition-colors text-sm font-medium">
+              <Link href="/tools" className="text-[#5b6282] hover:text-[#5865F2] transition-colors text-sm font-medium">
                 Tools
               </Link>
             </li>
             <li>
-              <Link href="/about" className="text-[#F2F3F5] hover:text-[#5865F2] transition-colors text-sm font-medium">
+              <Link href="/about" className="text-[#5b6282] hover:text-[#5865F2] transition-colors text-sm font-medium">
                 About
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="text-[#F2F3F5] hover:text-[#5865F2] transition-colors text-sm font-medium">
+              <Link href="/contact" className="text-[#5b6282] hover:text-[#5865F2] transition-colors text-sm font-medium">
                 Contact
               </Link>
             </li>

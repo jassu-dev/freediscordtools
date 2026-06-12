@@ -150,7 +150,7 @@ export default function TimestampGenerator() {
       {/* Inputs */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
         <div>
-          <label htmlFor="ts-date" className="block text-sm font-medium text-[#B9BBBE] mb-1">
+          <label htmlFor="ts-date" className="block text-sm font-medium text-[#5b6282] mb-1">
             Date
           </label>
           <input
@@ -158,11 +158,11 @@ export default function TimestampGenerator() {
             type="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
-            className="w-full px-3 py-2 rounded bg-[#2C2F33] border border-[#40444B] text-[#F2F3F5] focus:outline-none focus:border-[#5865F2] min-h-[44px]"
+            className="w-full px-3 py-2 rounded-lg bg-white border border-[#E3E6F0] text-[#1a1d2e] focus:outline-none focus:border-[#5865F2] focus:ring-2 focus:ring-[#5865F2]/20 min-h-[44px] shadow-sm"
           />
         </div>
         <div>
-          <label htmlFor="ts-time" className="block text-sm font-medium text-[#B9BBBE] mb-1">
+          <label htmlFor="ts-time" className="block text-sm font-medium text-[#5b6282] mb-1">
             Time
           </label>
           <input
@@ -170,18 +170,18 @@ export default function TimestampGenerator() {
             type="time"
             value={time}
             onChange={(e) => setTime(e.target.value)}
-            className="w-full px-3 py-2 rounded bg-[#2C2F33] border border-[#40444B] text-[#F2F3F5] focus:outline-none focus:border-[#5865F2] min-h-[44px]"
+            className="w-full px-3 py-2 rounded-lg bg-white border border-[#E3E6F0] text-[#1a1d2e] focus:outline-none focus:border-[#5865F2] focus:ring-2 focus:ring-[#5865F2]/20 min-h-[44px] shadow-sm"
           />
         </div>
         <div>
-          <label htmlFor="ts-timezone" className="block text-sm font-medium text-[#B9BBBE] mb-1">
+          <label htmlFor="ts-timezone" className="block text-sm font-medium text-[#5b6282] mb-1">
             Timezone
           </label>
           <select
             id="ts-timezone"
             value={timezone}
             onChange={(e) => setTimezone(e.target.value)}
-            className="w-full px-3 py-2 rounded bg-[#2C2F33] border border-[#40444B] text-[#F2F3F5] focus:outline-none focus:border-[#5865F2] min-h-[44px]"
+            className="w-full px-3 py-2 rounded-lg bg-white border border-[#E3E6F0] text-[#1a1d2e] focus:outline-none focus:border-[#5865F2] focus:ring-2 focus:ring-[#5865F2]/20 min-h-[44px] shadow-sm"
             data-testid="timezone-select"
           >
             {timezones.map((tz) => (
@@ -195,14 +195,14 @@ export default function TimestampGenerator() {
 
       {/* Unix Timestamp Display */}
       {unixTimestamp !== null ? (
-        <div className="mb-6 p-4 rounded bg-[#2C2F33] border border-[#40444B]">
-          <p className="text-sm text-[#B9BBBE] mb-1">Unix Timestamp</p>
+        <div className="mb-6 p-4 rounded-xl bg-[#F0F2FF] border border-[#5865F2]/20">
+          <p className="text-sm text-[#5b6282] mb-1">Unix Timestamp</p>
           <p className="text-2xl font-mono font-bold text-[#5865F2]">{unixTimestamp}</p>
         </div>
       ) : (
         date && time && (
-          <div className="mb-6 p-4 rounded bg-[#2C2F33] border border-red-500">
-            <p className="text-sm text-red-400">Invalid date or time. Please check your inputs.</p>
+          <div className="mb-6 p-4 rounded-xl bg-red-50 border border-red-200">
+            <p className="text-sm text-red-600">Invalid date or time. Please check your inputs.</p>
           </div>
         )
       )}
@@ -213,12 +213,12 @@ export default function TimestampGenerator() {
           {outputs.map((output) => (
             <div
               key={output.code}
-              className="p-4 rounded bg-[#2C2F33] border border-[#40444B] flex flex-col sm:flex-row sm:items-center gap-3"
+              className="p-4 rounded-xl bg-white border border-[#E3E6F0] flex flex-col sm:flex-row sm:items-center gap-3 shadow-sm hover:border-[#5865F2]/40 transition-colors"
             >
               <div className="flex-1 min-w-0">
-                <p className="text-xs text-[#72767D] mb-1">{output.name}</p>
-                <p className="font-mono text-sm text-[#F2F3F5] break-all">{output.syntax}</p>
-                <p className="text-sm text-[#B9BBBE] mt-1">{output.preview}</p>
+                <p className="text-xs text-[#8b93b8] mb-1 font-medium uppercase tracking-wide">{output.name}</p>
+                <p className="font-mono text-sm text-[#1a1d2e] break-all">{output.syntax}</p>
+                <p className="text-sm text-[#5b6282] mt-1">{output.preview}</p>
               </div>
               <button
                 onClick={() => handleCopy(output.syntax, output.code)}
@@ -229,11 +229,11 @@ export default function TimestampGenerator() {
                     ? `Copy failed for ${formatLabel(output.code)} format`
                     : `Copy ${formatLabel(output.code)} format`
                 }
-                className={`shrink-0 px-4 py-2 rounded text-sm font-medium min-w-[80px] min-h-[44px] transition-colors focus:outline-none focus:ring-2 focus:ring-[#5865F2] ${
+                className={`shrink-0 px-4 py-2 rounded-lg text-sm font-medium min-w-[80px] min-h-[44px] transition-colors focus:outline-none focus:ring-2 focus:ring-[#5865F2] ${
                   copyStates[output.code]
-                    ? 'bg-green-600 text-white'
+                    ? 'bg-green-500 text-white'
                     : copyErrors[output.code]
-                    ? 'bg-red-600 text-white'
+                    ? 'bg-red-500 text-white'
                     : 'bg-[#5865F2] text-white hover:bg-[#4752C4]'
                 }`}
                 data-testid={`copy-btn-${output.code}`}

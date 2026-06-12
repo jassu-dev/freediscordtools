@@ -11,7 +11,7 @@ import { seoConfig } from '@/config/seo';
 export const metadata: Metadata = {
   title: 'Discord Timestamp Generator – #1 Free Timestamp Generator for Discord',
   description:
-    'The best Discord timestamp generator. Convert any date and time into all 7 Discord timestamp formats instantly. Free timestamp generator for Discord — no sign-up needed.',
+    'The best Discord timestamp generator. Convert any date and time into all 7 Discord timestamp formats instantly. Free timestamp generator for Discord no sign-up needed.',
   keywords: [
     'discord timestamp generator',
     'timestamp generator discord',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Discord Timestamp Generator – Free & Instant',
     description:
-      'Generate Discord timestamps instantly. The free timestamp generator for Discord — convert any date and time into all 7 Discord timestamp formats and copy with one click.',
+      'Generate Discord timestamps instantly. The free timestamp generator for Discord convert any date and time into all 7 Discord timestamp formats and copy with one click.',
     url: `${seoConfig.baseUrl}/tools/discord-timestamp-generator/`,
     type: 'website',
     images: [{ url: seoConfig.defaultOgImage, width: 1200, height: 630 }],
@@ -152,12 +152,12 @@ export default function DiscordTimestampGeneratorPage() {
       <div className="max-w-4xl mx-auto px-4 py-12">
         {/* Page Header */}
         <section className="mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#F2F3F5] mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#1a1d2e] mb-4">
             Discord Timestamp Generator
           </h1>
-          <p className="text-xl text-[#B9BBBE]">
+          <p className="text-xl text-[#5b6282]">
             The free timestamp generator for Discord. Convert any date and time into all 7 Discord
-            timestamp formats and copy the syntax with one click — works for every timezone.
+            timestamp formats and copy the syntax with one click works for every timezone.
           </p>
         </section>
 
@@ -178,23 +178,23 @@ export default function DiscordTimestampGeneratorPage() {
 
         {/* What Is A Discord Timestamp? */}
         <section aria-labelledby="what-is-heading" className="mb-12">
-          <h2 id="what-is-heading" className="text-3xl font-bold text-[#F2F3F5] mb-6">
+          <h2 id="what-is-heading" className="text-3xl font-bold text-[#1a1d2e] mb-6">
             What Is A Discord Timestamp? (And Why Use a Timestamp Generator for Discord?)
           </h2>
-          <div className="text-[#B9BBBE] space-y-4 leading-relaxed">
+          <div className="text-[#5b6282] space-y-4 leading-relaxed">
             <p>
-              A <strong className="text-[#F2F3F5]">Discord timestamp</strong> is a special piece of
+              A <strong className="text-[#1a1d2e]">Discord timestamp</strong> is a special piece of
               text that Discord automatically converts into a formatted date, time, or relative time
-              display when a message is rendered. This <strong className="text-[#F2F3F5]">Discord
+              display when a message is rendered. This <strong className="text-[#1a1d2e]">Discord
               timestamp generator</strong> creates the exact syntax you need:{' '}
-              <code className="bg-[#2C2F33] px-1 rounded text-[#5865F2] font-mono">
+              <code className="bg-white px-1 rounded text-[#5865F2] font-mono">
                 &lt;t:UNIX:FORMAT&gt;
               </code>{' '}
               — where UNIX is a Unix timestamp (seconds since January 1, 1970 UTC) and FORMAT is a
               single letter code that controls how Discord displays the date and time.
             </p>
             <p>
-              The reason every Discord user needs a <strong className="text-[#F2F3F5]">timestamp
+              The reason every Discord user needs a <strong className="text-[#1a1d2e]">timestamp
               generator for Discord</strong> is timezone awareness. Instead of typing
               &quot;3:00 PM EST&quot; and making every reader manually convert, a Discord timestamp
               automatically displays in each viewer&apos;s local timezone. Post a timestamp for
@@ -202,7 +202,7 @@ export default function DiscordTimestampGeneratorPage() {
               5:00 AM the next day — automatically, with zero effort.
             </p>
             <p>
-              This automatic timezone conversion makes the <strong className="text-[#F2F3F5]">Discord
+              This automatic timezone conversion makes the <strong className="text-[#1a1d2e]">Discord
               timestamps generator</strong> invaluable for any community with global members. Gaming
               guilds scheduling raid times, study groups planning sessions, development teams
               coordinating standups, content creators announcing live streams, event organizers
@@ -217,7 +217,7 @@ export default function DiscordTimestampGeneratorPage() {
             </p>
             <p>
               To use a Discord timestamp in your message, include the{' '}
-              <code className="bg-[#2C2F33] px-1 rounded text-[#5865F2] font-mono">
+              <code className="bg-white px-1 rounded text-[#5865F2] font-mono">
                 &lt;t:UNIX:FORMAT&gt;
               </code>{' '}
               syntax directly in your text. Discord&apos;s renderer replaces it with the formatted
@@ -228,7 +228,7 @@ export default function DiscordTimestampGeneratorPage() {
             <p>
               Computing the correct Unix timestamp manually requires knowing the UTC offset for your
               timezone at a specific date and time — and UTC offsets change with daylight saving
-              time. That&apos;s exactly what this <strong className="text-[#F2F3F5]">timestamp
+              time. That&apos;s exactly what this <strong className="text-[#1a1d2e]">timestamp
               discord generator</strong> handles for you. Select the date, time, and timezone, and
               it instantly computes the correct Unix timestamp and generates the syntax for all
               seven Discord format codes.
@@ -251,27 +251,27 @@ export default function DiscordTimestampGeneratorPage() {
 
         {/* Formats Reference Table */}
         <section aria-labelledby="formats-heading" className="mb-12">
-          <h2 id="formats-heading" className="text-3xl font-bold text-[#F2F3F5] mb-6">
+          <h2 id="formats-heading" className="text-3xl font-bold text-[#1a1d2e] mb-6">
             All Discord Timestamp Formats — Complete Reference
           </h2>
-          <p className="text-[#B9BBBE] mb-4">
+          <p className="text-[#5b6282] mb-4">
             This Discord timestamps generator supports all 7 official format codes. Here is every
             Discord timestamp format with its code, name, syntax, and example output:
           </p>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
-                <tr className="bg-[#2C2F33] border-b border-[#40444B]">
-                  <th className="text-left px-4 py-3 text-[#F2F3F5] font-semibold text-sm">
+                <tr className="bg-white border-b border-[#E3E6F0]">
+                  <th className="text-left px-4 py-3 text-[#1a1d2e] font-semibold text-sm">
                     Code
                   </th>
-                  <th className="text-left px-4 py-3 text-[#F2F3F5] font-semibold text-sm">
+                  <th className="text-left px-4 py-3 text-[#1a1d2e] font-semibold text-sm">
                     Name
                   </th>
-                  <th className="text-left px-4 py-3 text-[#F2F3F5] font-semibold text-sm">
+                  <th className="text-left px-4 py-3 text-[#1a1d2e] font-semibold text-sm">
                     Syntax
                   </th>
-                  <th className="text-left px-4 py-3 text-[#F2F3F5] font-semibold text-sm">
+                  <th className="text-left px-4 py-3 text-[#1a1d2e] font-semibold text-sm">
                     Example Output
                   </th>
                 </tr>
@@ -316,11 +316,11 @@ export default function DiscordTimestampGeneratorPage() {
                     example: '16 years ago',
                   },
                 ].map((row) => (
-                  <tr key={row.code} className="border-b border-[#40444B] hover:bg-[#2C2F33]">
+                  <tr key={row.code} className="border-b border-[#E3E6F0] hover:bg-white">
                     <td className="px-4 py-3 font-mono text-[#5865F2] font-bold">{row.code}</td>
-                    <td className="px-4 py-3 text-[#F2F3F5] text-sm">{row.name}</td>
-                    <td className="px-4 py-3 font-mono text-[#B9BBBE] text-xs">{row.syntax}</td>
-                    <td className="px-4 py-3 text-[#B9BBBE] text-sm">{row.example}</td>
+                    <td className="px-4 py-3 text-[#1a1d2e] text-sm">{row.name}</td>
+                    <td className="px-4 py-3 font-mono text-[#5b6282] text-xs">{row.syntax}</td>
+                    <td className="px-4 py-3 text-[#5b6282] text-sm">{row.example}</td>
                   </tr>
                 ))}
               </tbody>
@@ -330,16 +330,16 @@ export default function DiscordTimestampGeneratorPage() {
 
         {/* How To Use */}
         <section aria-labelledby="how-to-use-heading" className="mb-12">
-          <h2 id="how-to-use-heading" className="text-3xl font-bold text-[#F2F3F5] mb-6">
+          <h2 id="how-to-use-heading" className="text-3xl font-bold text-[#1a1d2e] mb-6">
             How To Use This Discord Timestamp Generator
           </h2>
-          <ol className="space-y-4 text-[#B9BBBE]">
+          <ol className="space-y-4 text-[#5b6282]">
             <li className="flex gap-4">
               <span className="flex-shrink-0 w-8 h-8 rounded-full bg-[#5865F2] text-white flex items-center justify-center font-bold text-sm">
                 1
               </span>
               <div>
-                <strong className="text-[#F2F3F5]">Select a date</strong>
+                <strong className="text-[#1a1d2e]">Select a date</strong>
                 <p className="mt-1">
                   Use the date picker to choose the date for your event or announcement. The
                   generator initializes to today&apos;s date automatically.
@@ -351,7 +351,7 @@ export default function DiscordTimestampGeneratorPage() {
                 2
               </span>
               <div>
-                <strong className="text-[#F2F3F5]">Set a time</strong>
+                <strong className="text-[#1a1d2e]">Set a time</strong>
                 <p className="mt-1">
                   Enter the time using the time input. Use the time in your own timezone — you will
                   select the timezone in the next step.
@@ -363,7 +363,7 @@ export default function DiscordTimestampGeneratorPage() {
                 3
               </span>
               <div>
-                <strong className="text-[#F2F3F5]">Choose a timezone</strong>
+                <strong className="text-[#1a1d2e]">Choose a timezone</strong>
                 <p className="mt-1">
                   Select your timezone from the dropdown. The generator auto-detects your local
                   timezone, but you can change it to schedule events in any timezone worldwide.
@@ -375,7 +375,7 @@ export default function DiscordTimestampGeneratorPage() {
                 4
               </span>
               <div>
-                <strong className="text-[#F2F3F5]">Review the outputs</strong>
+                <strong className="text-[#1a1d2e]">Review the outputs</strong>
                 <p className="mt-1">
                   The generator instantly displays all 7 Discord timestamp formats with the correct
                   syntax and a preview of how each will appear.
@@ -387,7 +387,7 @@ export default function DiscordTimestampGeneratorPage() {
                 5
               </span>
               <div>
-                <strong className="text-[#F2F3F5]">Copy and paste</strong>
+                <strong className="text-[#1a1d2e]">Copy and paste</strong>
                 <p className="mt-1">
                   Click the Copy button next to the format you want. Then paste the copied syntax
                   directly into your Discord message.
@@ -399,45 +399,45 @@ export default function DiscordTimestampGeneratorPage() {
 
         {/* Examples */}
         <section aria-labelledby="examples-heading" className="mb-12">
-          <h2 id="examples-heading" className="text-3xl font-bold text-[#F2F3F5] mb-6">
+          <h2 id="examples-heading" className="text-3xl font-bold text-[#1a1d2e] mb-6">
             Examples
           </h2>
           <div className="space-y-6">
-            <div className="p-6 rounded-lg bg-[#2C2F33] border border-[#40444B]">
-              <h3 className="text-lg font-semibold text-[#F2F3F5] mb-2">
+            <div className="p-6 rounded-xl bg-white border border-[#E3E6F0] shadow-sm">
+              <h3 className="text-lg font-semibold text-[#1a1d2e] mb-2">
                 Gaming Tournament Announcement
               </h3>
-              <p className="text-[#B9BBBE] text-sm mb-3">
+              <p className="text-[#5b6282] text-sm mb-3">
                 Announcing a tournament for an international gaming community where players are in
                 multiple time zones.
               </p>
-              <p className="text-[#B9BBBE] text-sm">
+              <p className="text-[#5b6282] text-sm">
                 Message: &quot;The finals begin &lt;t:1735689600:F&gt; — see you there!&quot;
                 <br />
                 Each player sees the date and time in their own timezone, so no one misses the event
                 due to timezone confusion.
               </p>
             </div>
-            <div className="p-6 rounded-lg bg-[#2C2F33] border border-[#40444B]">
-              <h3 className="text-lg font-semibold text-[#F2F3F5] mb-2">Event Countdown</h3>
-              <p className="text-[#B9BBBE] text-sm mb-3">
+            <div className="p-6 rounded-xl bg-white border border-[#E3E6F0] shadow-sm">
+              <h3 className="text-lg font-semibold text-[#1a1d2e] mb-2">Event Countdown</h3>
+              <p className="text-[#5b6282] text-sm mb-3">
                 Building excitement for an upcoming product launch or community event with a live
                 countdown.
               </p>
-              <p className="text-[#B9BBBE] text-sm">
+              <p className="text-[#5b6282] text-sm">
                 Message: &quot;Our new tool launches &lt;t:1735689600:R&gt;! Get ready.&quot;
                 <br />
                 The relative format shows &quot;in 3 days&quot;, &quot;in 2 hours&quot;, etc. and
                 updates in real time as the launch approaches.
               </p>
             </div>
-            <div className="p-6 rounded-lg bg-[#2C2F33] border border-[#40444B]">
-              <h3 className="text-lg font-semibold text-[#F2F3F5] mb-2">Study Group Schedule</h3>
-              <p className="text-[#B9BBBE] text-sm mb-3">
+            <div className="p-6 rounded-xl bg-white border border-[#E3E6F0] shadow-sm">
+              <h3 className="text-lg font-semibold text-[#1a1d2e] mb-2">Study Group Schedule</h3>
+              <p className="text-[#5b6282] text-sm mb-3">
                 Coordinating a recurring study session for a Discord server with students in
                 different countries.
               </p>
-              <p className="text-[#B9BBBE] text-sm">
+              <p className="text-[#5b6282] text-sm">
                 Message: &quot;Weekly session: &lt;t:1735689600:t&gt; every Sunday. Add it to your
                 calendar!&quot;
                 <br />
@@ -460,22 +460,22 @@ export default function DiscordTimestampGeneratorPage() {
 
         {/* FAQ Section */}
         <section aria-labelledby="faq-heading" className="mb-12">
-          <h2 id="faq-heading" className="text-3xl font-bold text-[#F2F3F5] mb-6">
+          <h2 id="faq-heading" className="text-3xl font-bold text-[#1a1d2e] mb-6">
             Discord Timestamp Generator – Frequently Asked Questions
           </h2>
           <div className="space-y-3">
             {faqItems.map((faq, i) => (
               <details
                 key={i}
-                className="p-4 rounded-lg bg-[#2C2F33] border border-[#40444B]"
+                className="p-4 rounded-xl bg-white border border-[#E3E6F0] shadow-sm"
               >
-                <summary className="font-medium text-[#F2F3F5] cursor-pointer list-none flex justify-between items-center">
+                <summary className="font-medium text-[#1a1d2e] cursor-pointer list-none flex justify-between items-center">
                   {faq.question}
                   <span className="text-[#5865F2] ml-2 shrink-0" aria-hidden="true">
                     +
                   </span>
                 </summary>
-                <p className="mt-3 text-[#B9BBBE] text-sm leading-relaxed">{faq.answer}</p>
+                <p className="mt-3 text-[#5b6282] text-sm leading-relaxed">{faq.answer}</p>
               </details>
             ))}
           </div>

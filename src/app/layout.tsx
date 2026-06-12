@@ -38,7 +38,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col bg-[#23272A] text-[#F2F3F5]">
+      <body className="min-h-screen flex flex-col bg-[#F8F9FF] text-[#1a1d2e]">
         <SkipLink />
         <Header />
         <main id="main-content" className="flex-1">

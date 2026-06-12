@@ -22,8 +22,8 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold text-[#F2F3F5] mb-6">About FreeDiscordTools</h1>
-      <div className="prose prose-invert max-w-none text-[#B9BBBE] space-y-4">
+      <h1 className="text-4xl font-bold text-[#1a1d2e] mb-6">About FreeDiscordTools</h1>
+      <div className="prose prose-invert max-w-none text-[#5b6282] space-y-4">
         <p>
           FreeDiscordTools is a collection of free, browser-based utilities designed to make Discord easier to use for everyone — from casual users to professional server administrators and bot developers.
         </p>

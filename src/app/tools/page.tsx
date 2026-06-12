@@ -24,8 +24,8 @@ export const metadata: Metadata = {
 export default function ToolsPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold text-[#F2F3F5] mb-4">Discord Tools</h1>
-      <p className="text-[#B9BBBE] mb-10 text-lg">
+      <h1 className="text-4xl font-bold text-[#1a1d2e] mb-4">Discord Tools</h1>
+      <p className="text-[#5b6282] mb-10 text-lg">
         Free utilities for Discord users, server owners, moderators, and developers.
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
