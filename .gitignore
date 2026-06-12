@@ -1,0 +1,18 @@
+# This is a comment
+
+# Ignore a specific file
+secrets.json
+
+# Ignore an entire folder (always use a trailing slash)
+node_modules/
+dist/
+
+# Ignore all files ending with .log
+*.log
+
+# Ignore all .pdf files inside a specific directory
+docs/*.pdf
+
+# Exception: Ignore all .txt files, EXCEPT notes.txt
+*.txt
+!notes.txt
