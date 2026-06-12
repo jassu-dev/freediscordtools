@@ -28,7 +28,7 @@ export default function ContactPage() {
           Have a question, feedback, or a suggestion for a new tool? We would love to hear from you.
         </p>
         <p>
-          You can reach us at: <a href="mailto:hello@freediscordtools.com" className="text-[#5865F2] hover:underline">hello@freediscordtools.com</a>
+          You can reach us at: <a href="mailto:freediscordtools.com@gmail.com" className="text-[#5865F2] hover:underline">hello@freediscordtools.com</a>
         </p>
         <p>
           We review every message and aim to respond within 48 hours on business days.
