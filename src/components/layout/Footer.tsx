@@ -29,7 +29,7 @@ export default function Footer() {
             </li>
           </ul>
         </nav>
-        <p className="text-center text-[#8b93b8] text-sm">
+        <p className="text-center text-[#5b6282] text-sm">
           &copy; {year} FreeDiscordTools. All rights reserved.
         </p>
       </div>

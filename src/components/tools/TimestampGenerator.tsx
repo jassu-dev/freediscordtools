@@ -77,6 +77,7 @@ export default function TimestampGenerator() {
   const [unixTimestamp, setUnixTimestamp] = useState<number | null>(null);
   const [copyStates, setCopyStates] = useState<Record<string, boolean>>({});
   const [copyErrors, setCopyErrors] = useState<Record<string, boolean>>({});
+  const [timezonesExpanded, setTimezonesExpanded] = useState(false);
 
   // Initialize on client with local values
   useEffect(() => {
@@ -181,14 +182,26 @@ export default function TimestampGenerator() {
             id="ts-timezone"
             value={timezone}
             onChange={(e) => setTimezone(e.target.value)}
+            onFocus={() => setTimezonesExpanded(true)}
             className="w-full px-3 py-2 rounded-lg bg-white border border-[#E3E6F0] text-[#1a1d2e] focus:outline-none focus:border-[#5865F2] focus:ring-2 focus:ring-[#5865F2]/20 min-h-[44px] shadow-sm"
             data-testid="timezone-select"
           >
-            {timezones.map((tz) => (
-              <option key={tz} value={tz}>
-                {tz}
-              </option>
-            ))}
+            {timezonesExpanded
+              ? timezones.map((tz) => (
+                  <option key={tz} value={tz}>
+                    {tz}
+                  </option>
+                ))
+              : [
+                  ...(timezone && !['UTC'].includes(timezone) ? [timezone] : []),
+                  'UTC',
+                ]
+                  .filter((v, i, a) => a.indexOf(v) === i)
+                  .map((tz) => (
+                    <option key={tz} value={tz}>
+                      {tz}
+                    </option>
+                  ))}
           </select>
         </div>
       </div>
@@ -216,7 +229,7 @@ export default function TimestampGenerator() {
               className="p-4 rounded-xl bg-white border border-[#E3E6F0] flex flex-col sm:flex-row sm:items-center gap-3 shadow-sm hover:border-[#5865F2]/40 transition-colors"
             >
               <div className="flex-1 min-w-0">
-                <p className="text-xs text-[#8b93b8] mb-1 font-medium uppercase tracking-wide">{output.name}</p>
+                <p className="text-xs text-[#5b6282] mb-1 font-medium uppercase tracking-wide">{output.name}</p>
                 <p className="font-mono text-sm text-[#1a1d2e] break-all">{output.syntax}</p>
                 <p className="text-sm text-[#5b6282] mt-1">{output.preview}</p>
               </div>

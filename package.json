@@ -29,5 +29,11 @@
     "vitest": "3.2.2",
     "@tailwindcss/postcss": "4.1.8",
     "tailwindcss": "4.1.8"
-  }
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions"
+  ]
 }

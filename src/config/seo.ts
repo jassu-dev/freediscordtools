@@ -1,6 +1,6 @@
 export const seoConfig = {
   siteName: 'FreeDiscordTools',
-  baseUrl: 'https://freediscordtools.pages.dev',
+  baseUrl: 'https://freediscordtools.in',
   defaultOgImage: '/icon.png',
   twitterHandle: '@freediscordtools',
 } as const;
