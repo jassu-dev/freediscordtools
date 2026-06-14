@@ -1,4 +1,4 @@
 {
-  "/tools/discord-timestamp-generator/page": "app/tools/discord-timestamp-generator/page.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/tools/discord-timestamp-generator/page": "app/tools/discord-timestamp-generator/page.js"
 }

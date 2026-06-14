@@ -8,10 +8,14 @@ import { adsConfig } from '@/config/ads';
 import { seoConfig } from '@/config/seo';
 
 export const metadata: Metadata = {
-  title: 'Free Discord Tools – Discord Utilities for Everyone',
-  description: 'Free Discord utilities for Discord users, server owners, moderators, and developers. Generate timestamps, format text, and more — all free.',
+  title: 'Free Discord Tools –  Utilities for Everyone',
+  description: 'Free utilities for Discord users, server owners, moderators, and developers. Generate timestamps, format text, and more — all free.',
   alternates: {
     canonical: `${seoConfig.baseUrl}/`,
+    languages: {
+      'en-US': `${seoConfig.baseUrl}/`,
+      'en': `${seoConfig.baseUrl}/`,
+    },
   },
   openGraph: {
     title: 'Free Discord Tools – Discord Utilities for Everyone',
@@ -201,7 +205,7 @@ export default function HomePage() {
                   {faq.question}
                   <span className="text-[#5865F2] ml-2">+</span>
                 </summary>
-                <p className="mt-3 text-[#5b6282] text-sm leading-relaxed">{faq.answer}</p>
+                <p className="mt-3 text-[#5b6282] text-base leading-relaxed">{faq.answer}</p>
               </details>
             ))}
           </div>
