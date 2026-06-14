@@ -16,3 +16,5 @@ docs/*.pdf
 # Exception: Ignore all .txt files, EXCEPT notes.txt
 *.txt
 !notes.txt
+
+.next

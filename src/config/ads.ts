@@ -9,5 +9,9 @@ export const adsConfig = {
     timestampBelowTool:  'XXXXXXXXXX',
     timestampContentMid: 'XXXXXXXXXX',
     timestampAboveFaq:   'XXXXXXXXXX',
+    fontBelowTitle:      'XXXXXXXXXX',
+    fontBelowTool:       'XXXXXXXXXX',
+    fontContentMid:      'XXXXXXXXXX',
+    fontAboveFaq:        'XXXXXXXXXX',
   },
 } as const;
