@@ -15,4 +15,11 @@ export const tools: Tool[] = [
     href: '/tools/discord-font-generator',
     keywords: ['discord font', 'discord fonts', 'discord font generator', 'fonts for discord', 'fancy text discord', 'discord username fonts', 'discord bio fonts'],
   },
+  {
+    slug: 'discord-color-text-generator',
+    name: 'Discord Colored Text Generator',
+    description: 'Create colorful Discord messages with ANSI escape codes. Our generator makes it easy to pick colors and styles for your Discord code blocks.',
+    href: '/tools/discord-color-text-generator',
+    keywords: ['discord colored text generator', 'discord ansi color generator', 'discord color text', 'ansi colored text for discord'],
+  },
 ];

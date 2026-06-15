@@ -1,7 +1,5 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/tools/discord-font-generator/page": "app/tools/discord-font-generator/page.js",
-  "/tools/page": "app/tools/page.js",
-  "/page": "app/page.js",
-  "/tools/discord-timestamp-generator/page": "app/tools/discord-timestamp-generator/page.js"
+  "/tools/discord-color-text-generator/page": "app/tools/discord-color-text-generator/page.js",
+  "/page": "app/page.js"
 }

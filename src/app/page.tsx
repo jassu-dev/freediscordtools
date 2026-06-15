@@ -122,6 +122,16 @@ export default function HomePage() {
               The combined formats provide even more detail. The short date/time format (<code className="bg-white px-1 rounded text-[#5865F2]">f</code>) displays both the full date and time together, while the long date/time format (<code className="bg-white px-1 rounded text-[#5865F2]">F</code>) includes the full weekday name as well. The relative format (<code className="bg-white px-1 rounded text-[#5865F2]">R</code>) is perhaps the most useful for event announcements — it shows a human-readable relative time like &quot;in 2 hours&quot;, &quot;3 days ago&quot;, or &quot;next week&quot;, and it updates in real time as time passes.
             </p>
 
+            <h3 className="text-xl font-semibold text-[#1a1d2e] mb-3 mt-6">Discord Colored Text and ANSI Formatting</h3>
+
+            <p className="text-[#5b6282] mb-4">
+              Another exciting feature is the ability to send <strong className="text-[#1a1d2e]">discord colored text</strong> using ANSI escape codes within code blocks. By using the <code className="bg-white px-1 rounded text-[#5865F2]">ansi</code> language identifier, you can apply foreground and background colors to your messages. This is perfect for creating <strong className="text-[#1a1d2e]">discord colorful code blocks</strong> that highlight important information or add flair to your server announcements.
+            </p>
+
+            <p className="text-[#5b6282] mb-4">
+              Our <strong className="text-[#1a1d2e]">Discord Colored Text Generator</strong> provides a visual <strong className="text-[#1a1d2e]">discord code block color picker</strong>, making it easy to design colorful messages without needing to know the complex escape codes. Simply type your text, pick your colors, and copy the ready-to-use code block directly into Discord.
+            </p>
+
             <h3 className="text-xl font-semibold text-[#1a1d2e] mb-3 mt-6">Why Discord Timestamps Matter for Communities</h3>
 
             <p className="text-[#5b6282] mb-4">
