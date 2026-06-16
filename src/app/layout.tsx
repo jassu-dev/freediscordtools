@@ -1,10 +1,17 @@
 import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import './globals.css';
 import SkipLink from '@/components/layout/SkipLink';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import GoogleAnalytics from '@/components/seo/GoogleAnalytics';
 import { seoConfig } from '@/config/seo';
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(seoConfig.baseUrl),
@@ -50,7 +57,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col bg-[#F8F9FF] text-[#1a1d2e]">
+      <body className={`${inter.className} ${inter.variable} min-h-screen flex flex-col bg-[#F8F9FF] text-[#1a1d2e]`}>
         <GoogleAnalytics />
         <SkipLink />
         <Header />
