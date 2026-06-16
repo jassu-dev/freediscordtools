@@ -3,6 +3,7 @@ import './globals.css';
 import SkipLink from '@/components/layout/SkipLink';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import GoogleAnalytics from '@/components/seo/GoogleAnalytics';
 import { seoConfig } from '@/config/seo';
 
 export const metadata: Metadata = {
@@ -50,6 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen flex flex-col bg-[#F8F9FF] text-[#1a1d2e]">
+        <GoogleAnalytics />
         <SkipLink />
         <Header />
         <main id="main-content" className="flex-1">
