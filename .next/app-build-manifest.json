@@ -1,25 +1,85 @@
 {
   "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-7ac0e04c8d8079ce.js",
+      "static/chunks/4bd1b696-640aabc2b96c0448.js",
+      "static/chunks/684-9fc812b3754784c0.js",
+      "static/chunks/main-app-0d80c9e2bbec714f.js",
+      "static/chunks/app/_not-found/page-398cd26384e1647e.js"
+    ],
     "/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/layout.css",
-      "static/chunks/app/layout.js"
+      "static/chunks/webpack-7ac0e04c8d8079ce.js",
+      "static/chunks/4bd1b696-640aabc2b96c0448.js",
+      "static/chunks/684-9fc812b3754784c0.js",
+      "static/chunks/main-app-0d80c9e2bbec714f.js",
+      "static/css/f74cfeb4c29bf8c6.css",
+      "static/chunks/874-bca5537af98e3c44.js",
+      "static/chunks/app/layout-d09245b2f4c3c510.js"
+    ],
+    "/privacy-policy/page": [
+      "static/chunks/webpack-7ac0e04c8d8079ce.js",
+      "static/chunks/4bd1b696-640aabc2b96c0448.js",
+      "static/chunks/684-9fc812b3754784c0.js",
+      "static/chunks/main-app-0d80c9e2bbec714f.js",
+      "static/chunks/app/privacy-policy/page-e4abd7acbd99871d.js"
+    ],
+    "/about/page": [
+      "static/chunks/webpack-7ac0e04c8d8079ce.js",
+      "static/chunks/4bd1b696-640aabc2b96c0448.js",
+      "static/chunks/684-9fc812b3754784c0.js",
+      "static/chunks/main-app-0d80c9e2bbec714f.js",
+      "static/chunks/app/about/page-b8ae6c45e0dbd10f.js"
     ],
     "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/webpack-7ac0e04c8d8079ce.js",
+      "static/chunks/4bd1b696-640aabc2b96c0448.js",
+      "static/chunks/684-9fc812b3754784c0.js",
+      "static/chunks/main-app-0d80c9e2bbec714f.js",
+      "static/chunks/874-bca5537af98e3c44.js",
+      "static/chunks/app/page-53e675897850e589.js"
+    ],
+    "/terms/page": [
+      "static/chunks/webpack-7ac0e04c8d8079ce.js",
+      "static/chunks/4bd1b696-640aabc2b96c0448.js",
+      "static/chunks/684-9fc812b3754784c0.js",
+      "static/chunks/main-app-0d80c9e2bbec714f.js",
+      "static/chunks/app/terms/page-93484c0d2c6e462b.js"
+    ],
+    "/contact/page": [
+      "static/chunks/webpack-7ac0e04c8d8079ce.js",
+      "static/chunks/4bd1b696-640aabc2b96c0448.js",
+      "static/chunks/684-9fc812b3754784c0.js",
+      "static/chunks/main-app-0d80c9e2bbec714f.js",
+      "static/chunks/app/contact/page-79e15f3180afdb07.js"
     ],
     "/tools/discord-color-text-generator/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/tools/discord-color-text-generator/page.js"
+      "static/chunks/webpack-7ac0e04c8d8079ce.js",
+      "static/chunks/4bd1b696-640aabc2b96c0448.js",
+      "static/chunks/684-9fc812b3754784c0.js",
+      "static/chunks/main-app-0d80c9e2bbec714f.js",
+      "static/chunks/app/tools/discord-color-text-generator/page-a392ef5d7d019017.js"
     ],
-    "/_not-found/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+    "/tools/page": [
+      "static/chunks/webpack-7ac0e04c8d8079ce.js",
+      "static/chunks/4bd1b696-640aabc2b96c0448.js",
+      "static/chunks/684-9fc812b3754784c0.js",
+      "static/chunks/main-app-0d80c9e2bbec714f.js",
+      "static/chunks/874-bca5537af98e3c44.js",
+      "static/chunks/app/tools/page-79c52e3054d17e07.js"
+    ],
+    "/tools/discord-timestamp-generator/page": [
+      "static/chunks/webpack-7ac0e04c8d8079ce.js",
+      "static/chunks/4bd1b696-640aabc2b96c0448.js",
+      "static/chunks/684-9fc812b3754784c0.js",
+      "static/chunks/main-app-0d80c9e2bbec714f.js",
+      "static/chunks/app/tools/discord-timestamp-generator/page-a5e5e9263a6c1571.js"
+    ],
+    "/tools/discord-font-generator/page": [
+      "static/chunks/webpack-7ac0e04c8d8079ce.js",
+      "static/chunks/4bd1b696-640aabc2b96c0448.js",
+      "static/chunks/684-9fc812b3754784c0.js",
+      "static/chunks/main-app-0d80c9e2bbec714f.js",
+      "static/chunks/app/tools/discord-font-generator/page-3ed4f0cc92bd1a25.js"
     ]
   }
 }
