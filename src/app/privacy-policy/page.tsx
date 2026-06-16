@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
       <h1 className="text-4xl font-bold text-[#1a1d2e] mb-6">Privacy Policy</h1>
-      <div className="text-[#5b6282] space-y-4">
+      <div className="text-[#373b4d] space-y-4">
         <p><strong className="text-[#1a1d2e]">Last updated: June 12, 2026</strong></p>
         <p>
           FreeDiscordTools does not collect, store, or transmit any personally identifiable information. All tools on this site operate entirely within your browser.

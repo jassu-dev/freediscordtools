@@ -23,7 +23,7 @@ export default function ContactPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
       <h1 className="text-4xl font-bold text-[#1a1d2e] mb-6">Contact</h1>
-      <div className="text-[#5b6282] space-y-4">
+      <div className="text-[#373b4d] space-y-4">
         <p>
           Have a question, feedback, or a suggestion for a new tool? We would love to hear from you.
         </p>

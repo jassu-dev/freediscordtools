@@ -23,7 +23,7 @@ export default function TermsPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
       <h1 className="text-4xl font-bold text-[#1a1d2e] mb-6">Terms of Service</h1>
-      <div className="text-[#5b6282] space-y-4">
+      <div className="text-[#373b4d] space-y-4">
         <p><strong className="text-[#1a1d2e]">Last updated: June 12, 2026</strong></p>
         <p>
           By using FreeDiscordTools, you agree to these terms of service. If you do not agree, please do not use the site.
