@@ -10,10 +10,11 @@ import { seoConfig } from '@/config/seo';
 
 // ─── Metadata ────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Discord Unix Timestamp Generator – Convert Unix Time for Discord',
+  title: 'Discord Timestamp Generator – All 7 Formats',
   description:
-    'Free Discord Unix timestamp generator. Convert Unix time, pick a date, or use the Unix timestamp converter for Discord formats instantly. No sign-up required.',
+    'Free Discord timestamp generator and unix timestamp converter. Pick a date or use our unix time converter to generate all 7 Discord timestamp formats instantly.',
   keywords: [
+    'discord timestamp generator',
     'discord unix timestamp',
     'discord timestamp',
     'discord timestamps',
@@ -21,7 +22,6 @@ export const metadata: Metadata = {
     'unix timestamp conversion',
     'unix timestamp converter',
     'unix time converter',
-    'discord timestamp generator',
     'discord timestamp converter',
     'discord timestamp maker',
     'discord timestamp format',
@@ -35,17 +35,17 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Discord Unix Timestamp Generator – Free & Instant',
+    title: 'Discord Timestamp Generator – All 7 Formats',
     description:
       'Convert any date and time into all 7 Discord timestamp formats using our Unix timestamp converter. No account needed.',
     url: `${seoConfig.baseUrl}/tools/discord-timestamp-generator/`,
     type: 'website',
     locale: 'en_US',
-    images: [{ url: seoConfig.defaultOgImage, width: 1200, height: 630, alt: 'Discord Unix Timestamp Generator' }],
+    images: [{ url: seoConfig.defaultOgImage, width: 1200, height: 630, alt: 'Discord Timestamp Generator' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Discord Unix Timestamp Generator – Free & Instant',
+    title: 'Discord Timestamp Generator – All 7 Formats',
     description:
       'Convert Unix time into Discord timestamps. The fastest Discord Unix timestamp converter available online.',
     site: seoConfig.twitterHandle,
@@ -109,8 +109,8 @@ export default function DiscordTimestampGeneratorPage() {
     <>
       <WebSiteSchema />
       <SoftwareAppSchema
-        name="Discord Unix Timestamp Generator"
-        description="Free Discord unix timestamp generator and unix time converter. Convert any date into Discord timestamps instantly. No account required."
+        name="Discord Timestamp Generator"
+        description="Free Discord timestamp generator and unix timestamp converter. Convert any date into Discord timestamps instantly. No account required."
         url={PAGE_URL}
         applicationCategory="UtilitiesApplication"
       />
@@ -118,7 +118,7 @@ export default function DiscordTimestampGeneratorPage() {
         items={[
           { name: 'Home',  href: `${seoConfig.baseUrl}/` },
           { name: 'Tools', href: `${seoConfig.baseUrl}/tools/` },
-          { name: 'Discord Unix Timestamp Generator', href: PAGE_URL },
+          { name: 'Discord Timestamp Generator', href: PAGE_URL },
         ]}
       />
       <FaqSchema items={faqItems} />
@@ -128,10 +128,10 @@ export default function DiscordTimestampGeneratorPage() {
         {/* ── H1 ── */}
         <header className="mb-6">
           <h1 className="text-3xl font-bold text-[#1a1d2e] mb-2">
-            Discord Unix Timestamp Generator
+            Discord Timestamp Generator
           </h1>
           <p className="text-lg text-[#5b6282] leading-relaxed">
-            The ultimate <strong className="text-[#1a1d2e]">Discord unix timestamp</strong> converter. Convert unix time, pick a date, and generate all 7 Discord formats. Perfect for <strong className="text-[#1a1d2e]">unix timestamp conversion</strong> for global communities.
+            The ultimate <strong className="text-[#1a1d2e]">Discord unix timestamp</strong> converter. Convert unix time, pick a date, and generate all 7 Discord formats instantly. Perfect for <strong className="text-[#1a1d2e]">unix timestamp conversion</strong> for your global community.
           </p>
         </header>
 
@@ -142,7 +142,7 @@ export default function DiscordTimestampGeneratorPage() {
 
         {/* ── Tool ── */}
         <section aria-labelledby="tool-heading" className="mb-6">
-          <h2 id="tool-heading" className="sr-only">Discord Unix Timestamp Converter</h2>
+          <h2 id="tool-heading" className="sr-only">Discord Timestamp Maker</h2>
           <TimestampGenerator />
         </section>
 
@@ -154,7 +154,7 @@ export default function DiscordTimestampGeneratorPage() {
         {/* ── How to use ── */}
         <section aria-labelledby="how-to-heading" className="mb-10">
           <h2 id="how-to-heading" className="text-2xl font-bold text-[#1a1d2e] mb-4">
-            How to Use the Discord Unix Timestamp Converter
+            How to Use the Discord Timestamp Maker
           </h2>
           <ol className="space-y-3 text-[#5b6282] text-base">
             <li className="flex gap-3">
