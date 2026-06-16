@@ -10,9 +10,9 @@ import { seoConfig } from '@/config/seo';
 
 // ─── Metadata ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Discord Font Generator - 100+ Fancy Fonts for Discord',
+  title: 'Discord Font Generator - 160+ Fancy Fonts for Discord',
   description:
-    'Free Discord font generator with 100+ fancy fonts for Discord. Create aesthetic Discord fonts, cool Discord fonts, and fancy text for Discord usernames, bios, and messages. One-click copy.',
+    'Free Discord font generator with 160+ fancy fonts for Discord. Create aesthetic Discord fonts, cool Discord fonts, and fancy text for Discord usernames, bios, and messages. One-click copy.',
   keywords: [
     'discord font',
     'discord fonts',
@@ -35,6 +35,7 @@ export const metadata: Metadata = {
     'discord nickname font',
     'discord profile font',
   ],
+  robots: 'index, follow',
   alternates: {
     canonical: `${seoConfig.baseUrl}/tools/discord-font-generator/`,
     languages: {
@@ -43,9 +44,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Discord Font Generator – 100+ Fancy Fonts for Discord',
+    title: 'Discord Font Generator – 160+ Fancy Fonts for Discord',
     description:
-      'Generate 100+ fancy fonts for Discord instantly. Aesthetic Discord fonts, cool Discord fonts, discord bio fonts, and discord username fonts — live preview, one-click copy, free.',
+      'Generate 160+ fancy fonts for Discord instantly. Aesthetic Discord fonts, cool Discord fonts, discord bio fonts, and discord username fonts — live preview, one-click copy, free.',
     url: `${seoConfig.baseUrl}/tools/discord-font-generator/`,
     type: 'website',
     locale: 'en_US',
@@ -54,13 +55,13 @@ export const metadata: Metadata = {
         url: seoConfig.defaultOgImage,
         width: 1200,
         height: 630,
-        alt: 'Discord Font Generator – 100+ Fancy Fonts for Discord',
+        alt: 'Discord Font Generator – 160+ Fancy Fonts for Discord',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Discord Font Generator – 100+ Fancy Fonts for Discord',
+    title: 'Discord Font Generator – 160+ Fancy Fonts for Discord',
     description:
       'Aesthetic, gothic, gaming, cute, and glitch discord fonts with live preview. Best discord font generator — free, instant, no sign-up.',
     site: seoConfig.twitterHandle,
@@ -155,7 +156,7 @@ export default function DiscordFontGeneratorPage() {
       />
       <BreadcrumbSchema
         items={[
-          { name: 'Home',                   href: seoConfig.baseUrl },
+          { name: 'Home',                   href: `${seoConfig.baseUrl}/` },
           { name: 'Tools',                  href: `${seoConfig.baseUrl}/tools/` },
           { name: 'Discord Font Generator', href: PAGE_URL },
         ]}

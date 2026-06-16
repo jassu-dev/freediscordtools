@@ -97,7 +97,7 @@ export default function DiscordColorTextGeneratorPage() {
       />
       <BreadcrumbSchema
         items={[
-          { name: 'Home',  href: seoConfig.baseUrl },
+          { name: 'Home',  href: `${seoConfig.baseUrl}/` },
           { name: 'Tools', href: `${seoConfig.baseUrl}/tools/` },
           { name: 'Discord Colored Text Generator', href: PAGE_URL },
         ]}

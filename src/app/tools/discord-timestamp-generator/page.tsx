@@ -138,7 +138,7 @@ export default function DiscordTimestampGeneratorPage() {
       />
       <BreadcrumbSchema
         items={[
-          { name: 'Home',  href: seoConfig.baseUrl },
+          { name: 'Home',  href: `${seoConfig.baseUrl}/` },
           { name: 'Tools', href: `${seoConfig.baseUrl}/tools/` },
           { name: 'Discord Timestamp Generator', href: PAGE_URL },
         ]}
