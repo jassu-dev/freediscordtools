@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { seoConfig } from '@/config/seo';
 import FaqSchema from '@/components/seo/FaqSchema';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
+import AtsScannerTool from '@/components/tools/ats/AtsScannerTool';
 
 export const metadata: Metadata = {
   title: 'Free ATS Resume Checker & ATS Score Scanner (2026)',
@@ -37,11 +38,11 @@ const faqItems = [
   },
   {
     question: 'How does the free ATS score checker work?',
-    answer: 'Our free ATS score checker analyzes your resume content against common ATS parsing rules. It checks for keyword density, proper heading usage, file compatibility, and structural clarity to calculate an ATS score that reflects your optimization level.',
+    answer: 'Our free ATS score checker analyzes your resume content against common ATS parsing rules. It checks for keyword density, proper heading usage, and structural clarity to calculate an ATS score that reflects your optimization level.',
   },
   {
     question: 'How do I check my resume score for free?',
-    answer: 'You can check your resume score for free using our dedicated ATS scanner. Simply upload your resume or paste your text content to receive an instant analysis, actionable feedback, and your comprehensive ATS score.',
+    answer: 'You can check your resume score for free using our dedicated ATS scanner. Simply paste your text content to receive an instant ATS score analysis and actionable feedback to improve your CV.',
   },
   {
     question: 'What is a good ATS score?',
@@ -49,7 +50,7 @@ const faqItems = [
   },
   {
     question: 'Why is my resume failing the ATS scanner?',
-    answer: 'If your resume is failing the ATS scanner, it is likely due to: 1. Use of complex graphics/tables, 2. Non-standard headings, 3. Lack of industry-specific keywords, or 4. Using a file format not supported by the system (always use .docx or PDF).',
+    answer: 'If your resume is failing the ATS scanner, it is likely due to: 1. Use of complex graphics/tables, 2. Non-standard headings, 3. Lack of industry-specific keywords, or 4. Improper file formatting.',
   },
 ];
 
@@ -68,36 +69,41 @@ export default function AtsResumeCheckerPage() {
 
       <section className="bg-white p-8 rounded-2xl border-2 border-[#5865F2] mb-10 shadow-lg text-center">
         <h2 className="text-2xl font-bold mb-4">Get Your ATS Score Now</h2>
-        <p className="text-[#5b6282] mb-6">Upload your resume to our <strong>ATS score checker</strong> for a detailed optimization report.</p>
-        <p className="text-[#5b6282]">Tool coming soon: Powered by the industry-leading <strong>ATS scanner</strong> engine.</p>
+        <p className="text-[#5b6282] mb-6">Paste your resume content below for a detailed <strong>ATS score</strong> analysis.</p>
+        <AtsScannerTool />
       </section>
 
       <article className="prose prose-lg max-w-none text-[#5b6282]">
-        <h2>Why Use Our Best Free ATS Resume Checker?</h2>
+        <h2>The Ultimate Guide to Beating Applicant Tracking Systems</h2>
         <p>
-          In today’s job market, 90% of large companies use an <strong>Applicant Tracking System (ATS)</strong> to filter candidates. If you don't <strong>check resume for ATS</strong> compliance, your application may never be seen by a human. Our <strong>free ATS resume checker</strong> provides the analysis you need to increase your <strong>ATS score</strong> and land more interviews.
+          In today’s competitive job market, your resume needs to do more than just impress a recruiter; it needs to impress the <strong>Applicant Tracking System (ATS)</strong> first. If you don't <strong>check resume for ATS</strong> compliance, your application may be automatically rejected before it ever reaches human eyes. Our <strong>free ATS resume checker</strong> provides the critical analysis you need to optimize your CV, boost your <strong>ATS score</strong>, and land more interviews.
         </p>
 
-        <h3>Features of our ATS Scanner:</h3>
+        <h3>Why You Need an ATS Score Checker</h3>
+        <p>
+          Think of the ATS as a gatekeeper. It scans thousands of resumes and ranks them based on specific criteria. An <strong>ATS resume checker</strong> simulates this gatekeeping process. By using an <strong>ATS scanner</strong>, you can identify if your resume structure, keyword usage, or formatting is holding you back. A low <strong>ATS score</strong> is a clear signal that your resume needs optimization.
+        </p>
+
+        <h3>Key Features of Our ATS Scanner:</h3>
         <ul>
-          <li><strong>Deep ATS Score Analysis:</strong> Get a numerical <strong>ATS score</strong> based on industry standards.</li>
-          <li><strong>Keyword Optimization:</strong> Identify critical terms to beat the <strong>cv scanner</strong>.</li>
-          <li><strong>Formatting Check:</strong> Ensure your layout is readable by any <strong>ats scanner</strong>.</li>
+          <li><strong>Real-time ATS Score Analysis:</strong> Get a numerical <strong>ATS score</strong> based on industry standards, not just a guess.</li>
+          <li><strong>Keyword Optimization:</strong> Identify critical terms missing from your resume to beat the <strong>cv scanner</strong>.</li>
+          <li><strong>Formatting Audit:</strong> Ensure your layout is clean and readable by any <strong>ats scanner</strong>, avoiding the pitfalls of non-standard designs.</li>
         </ul>
 
         <h2>How to Improve Your ATS Score</h2>
         <p>
-          To improve your <strong>ATS score checker</strong> results, focus on these areas:
+          Improving your <strong>ATS score checker</strong> results doesn't require a total rewrite. Focus on these actionable steps:
         </p>
         <ol>
-          <li><strong>Keywords:</strong> Use the <strong>best ats resume checker free</strong> tool to find gaps in your skill representation.</li>
-          <li><strong>Standard Formatting:</strong> Keep it clean. Avoid images and fancy tables that confuse the <strong>ats scanner</strong>.</li>
-          <li><strong>Re-scanning:</strong> Always <strong>check resume score</strong> again after making changes to verify your improvements.</li>
+          <li><strong>Master the Keywords:</strong> Tailor your resume to each job description. Use the <strong>best ats resume checker free</strong> tools to compare your skills against the job requirements.</li>
+          <li><strong>Adopt Standard Formatting:</strong> Bots hate complexity. Stick to standard headings like "Work Experience," "Education," and "Skills." Avoid images, icons, or complex tables that confuse the <strong>ats scanner</strong>.</li>
+          <li><strong>Iterate and Re-scan:</strong> Optimization is a process. Use our <strong>free ats resume checker</strong> as a continuous improvement tool. <strong>Check resume score</strong> again after every set of revisions to verify that your <strong>ATS score</strong> is trending upwards.</li>
         </ol>
 
         <h2>Final Thoughts on the ATS Checker</h2>
         <p>
-          Don't let an automated <strong>cv scanner</strong> reject your dream job. Use our <strong>free ats resume checker</strong> regularly. Whether you call it an <strong>ats scanner</strong>, <strong>resume score checker</strong>, or <strong>ats score checker free</strong> tool, the goal remains the same: beating the bots and getting hired. 
+          Don't let a poorly optimized resume be the reason you don't get the interview. An automated <strong>cv scanner</strong> should not be a roadblock to your dream career. Use our <strong>free ats resume checker</strong> as part of your application routine. Whether you call it an <strong>ats scanner</strong>, <strong>resume score checker</strong>, or <strong>ats score checker free</strong> tool, the goal is the same: beating the bots and getting your resume into the hands of a hiring manager.
         </p>
       </article>
     </div>
