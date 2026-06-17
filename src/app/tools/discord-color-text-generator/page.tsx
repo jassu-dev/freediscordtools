@@ -10,7 +10,7 @@ import { seoConfig } from '@/config/seo';
 
 // ─── Metadata ────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Discord Colored Text Generator – ANSI Color Code Picker',
+  title: 'Discord Colored Text Generator | Free ANSI Color Picker',
   description:
     'Free Discord colored text generator. Create colorful Discord messages using ANSI escape codes. Copy and paste colorful code blocks into Discord easily.',
   keywords: [

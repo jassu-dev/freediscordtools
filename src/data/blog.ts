@@ -10,7 +10,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: 'how-to-use-discord-timestamps',
-    title: 'How to Use Discord Timestamps for Event Scheduling',
+    title: 'How to Use Discord Timestamps: Ultimate Guide',
     excerpt: 'Learn how to use Discord timestamps to schedule events across different timezones automatically.',
     date: 'June 17, 2026',
     keywords: ['discord timestamps', 'discord event scheduling', 'discord unix timestamp guide'],
@@ -30,7 +30,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'aesthetic-discord-profile-guide',
-    title: 'The Ultimate Guide to an Aesthetic Discord Profile',
+    title: 'Aesthetic Discord Profile Guide: Custom Fonts & Bios',
     excerpt: 'Make your Discord profile stand out with custom fonts, colors, and a unique bio.',
     date: 'June 17, 2026',
     keywords: ['aesthetic discord profile', 'discord bio fonts', 'discord colored text', 'cool discord bio ideas'],
@@ -51,7 +51,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'what-is-a-discord-snowflake-id',
-    title: 'What is a Discord Snowflake ID? Understanding Discord IDs',
+    title: 'What is a Discord Snowflake ID? ID Anatomy Explained',
     excerpt: 'Every ID on Discord has a hidden timestamp. Learn how to decode them and find account ages.',
     date: 'June 17, 2026',
     keywords: ['discord snowflake id', 'discord id to date', 'how discord ids work', 'discord account age'],

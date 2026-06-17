@@ -10,7 +10,7 @@ import { seoConfig } from '@/config/seo';
 
 // ─── Metadata ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Discord Font Generator - 160+ Fancy Fonts for Discord',
+  title: 'Discord Font Generator | 160+ Fancy Text Styles',
   description:
     'Free Discord font generator with 160+ fancy fonts for Discord. Create aesthetic Discord fonts, cool Discord fonts, and fancy text for Discord usernames, bios, and messages. One-click copy.',
   keywords: [

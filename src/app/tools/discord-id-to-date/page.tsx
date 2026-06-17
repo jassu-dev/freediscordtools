@@ -10,7 +10,7 @@ import { seoConfig } from '@/config/seo';
 
 // ─── Metadata ────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Discord ID to Date – Discord Snowflake Converter',
+  title: 'Discord ID to Date: Snowflake Converter',
   description:
     'Convert any Discord ID (snowflake) into its exact creation date and time. Find out when a Discord account, server, or channel was created instantly.',
   keywords: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Discord ID to Date – Discord Snowflake Converter',
+    title: 'Discord ID to Date: Snowflake Converter',
     description:
       'Instantly convert Discord IDs into creation dates. Our free tool decodes Discord snowflakes to show you the exact age of any account or server.',
     url: `${seoConfig.baseUrl}/tools/discord-id-to-date/`,
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Discord ID to Date – Discord Snowflake Converter',
+    title: 'Discord ID to Date: Snowflake Converter',
     description:
       'Ever wondered when a Discord account was made? Use our Snowflake converter to find the exact creation date from any Discord ID.',
     site: seoConfig.twitterHandle,

@@ -10,7 +10,7 @@ import { seoConfig } from '@/config/seo';
 
 // ─── Metadata ────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Discord Webhook Sender – Send Webhook Messages Online',
+  title: 'Discord Webhook Sender: Send Messages Online',
   description:
     'Free Discord webhook sender and tester. Send messages to any Discord webhook URL instantly. Customize username, avatar, and message content.',
   keywords: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Discord Webhook Sender – Send Webhook Messages Online',
+    title: 'Discord Webhook Sender: Send Messages Online',
     description:
       'The easiest way to send and test Discord webhooks. Enter your URL, customize your bot, and send messages instantly from your browser.',
     url: `${seoConfig.baseUrl}/tools/discord-webhook-sender/`,
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Discord Webhook Sender – Send Webhook Messages Online',
+    title: 'Discord Webhook Sender: Send Messages Online',
     description:
       'Test your Discord webhooks with our free online sender. Customize your bot and send messages without any coding.',
     site: seoConfig.twitterHandle,

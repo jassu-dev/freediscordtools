@@ -10,7 +10,7 @@ import { seoConfig } from '@/config/seo';
 
 // ─── Metadata ────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Discord Timestamp Generator – All 7 Formats',
+  title: 'Discord Timestamp Generator: All Formats',
   description:
     'Free Discord timestamp generator and unix timestamp converter. Pick a date or use our unix time converter to generate all 7 Discord timestamp formats instantly.',
   keywords: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Discord Timestamp Generator – All 7 Formats',
+    title: 'Discord Timestamp Generator: All Formats',
     description:
       'Convert any date and time into all 7 Discord timestamp formats using our Unix timestamp converter. No account needed.',
     url: `${seoConfig.baseUrl}/tools/discord-timestamp-generator/`,
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Discord Timestamp Generator – All 7 Formats',
+    title: 'Discord Timestamp Generator: All Formats',
     description:
       'Convert Unix time into Discord timestamps. The fastest Discord Unix timestamp converter available online.',
     site: seoConfig.twitterHandle,
