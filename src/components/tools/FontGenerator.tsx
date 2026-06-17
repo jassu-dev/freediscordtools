@@ -92,21 +92,21 @@ function FontCard({ font, transformed, isFavorite, isRecent, isSelected, copiedI
       {/* Top row: favorite button pinned right, badges wrap freely below */}
       <div className="flex items-start justify-between px-4 pt-3 pb-1 gap-2">
         <div className="flex flex-wrap items-center gap-1.5 min-w-0">
-          <span className="text-xs font-medium text-[#5b6282] uppercase tracking-wide">
+          <span className="text-xs font-medium text-[#8b8fa8] uppercase tracking-wide">
             {font.category}
           </span>
           {font.trending && (
-            <span className="text-[10px] font-bold bg-[#5865F2]/20 text-[#7289da] rounded-full px-2 py-0.5 whitespace-nowrap">
+            <span className="text-[10px] font-bold bg-[#5865F2]/20 text-[#a5b4fc] rounded-full px-2 py-0.5 whitespace-nowrap">
               TRENDING
             </span>
           )}
           {isRecent && (
-            <span className="text-[10px] font-bold bg-amber-500/20 text-amber-400 rounded-full px-2 py-0.5 whitespace-nowrap">
+            <span className="text-[10px] font-bold bg-amber-500/20 text-amber-200 rounded-full px-2 py-0.5 whitespace-nowrap">
               RECENT
             </span>
           )}
           {isSelected && (
-            <span className="text-[10px] font-bold bg-green-500/20 text-green-400 rounded-full px-2 py-0.5 whitespace-nowrap">
+            <span className="text-[10px] font-bold bg-green-500/20 text-green-300 rounded-full px-2 py-0.5 whitespace-nowrap">
               PREVIEWING
             </span>
           )}

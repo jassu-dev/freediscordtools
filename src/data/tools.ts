@@ -22,4 +22,18 @@ export const tools: Tool[] = [
     href: '/tools/discord-color-text-generator/',
     keywords: ['discord colored text generator', 'discord ansi color generator', 'discord color text', 'ansi colored text for discord'],
   },
+  {
+    slug: 'discord-id-to-date',
+    name: 'Discord ID to Date (Snowflake)',
+    description: 'Convert any Discord ID (snowflake) into its exact creation date. Find out when an account or server was made instantly.',
+    href: '/tools/discord-id-to-date/',
+    keywords: ['discord id to date', 'discord snowflake converter', 'discord account age checker', 'discord id lookup'],
+  },
+  {
+    slug: 'discord-webhook-sender',
+    name: 'Discord Webhook Sender',
+    description: 'Send and test Discord webhooks online. Customize username, avatar, and message content without coding.',
+    href: '/tools/discord-webhook-sender/',
+    keywords: ['discord webhook sender', 'discord webhook tester', 'send message to discord webhook'],
+  },
 ];

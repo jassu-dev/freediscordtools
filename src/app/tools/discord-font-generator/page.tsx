@@ -34,6 +34,12 @@ export const metadata: Metadata = {
     'discord font changer',
     'discord nickname font',
     'discord profile font',
+    'discord username fonts copy and paste',
+    'small text generator for discord',
+    'gothic fonts for discord bio',
+    'cursive discord font generator',
+    'invisible text for discord username',
+    'discord channel name font generator',
   ],
   robots: 'index, follow',
   alternates: {
@@ -406,6 +412,22 @@ export default function DiscordFontGeneratorPage() {
                 <strong className="text-[#e3e5f5]">🖼️ Profile</strong> tabs in the live Discord preview
                 to audition every <strong className="text-[#e3e5f5]">discord bio font</strong> before
                 copying your fancy text for discord.
+              </p>
+            </div>
+          </section>
+
+          {/* ── Glitch Text & Vaporwave ── */}
+          <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            <div className="bg-[#1e2030] rounded-2xl p-6 border border-[#2e3147]">
+              <h2 className="text-xl font-bold text-white mb-3">Glitch Text Discord</h2>
+              <p className="text-[#8b8fa8] text-sm leading-relaxed mb-4">
+                The <strong className="text-[#e3e5f5]">glitch text discord</strong> style (Zalgo) uses combining characters to create a corrupted look. It&apos;s perfect for horror themes, edgy bios, and grabbing attention in busy channels. Our generator offers several levels of glitch intensity.
+              </p>
+            </div>
+            <div className="bg-[#1e2030] rounded-2xl p-6 border border-[#2e3147]">
+              <h2 className="text-xl font-bold text-white mb-3">Vaporwave Text Generator</h2>
+              <p className="text-[#8b8fa8] text-sm leading-relaxed mb-4">
+                Create the iconic <strong className="text-[#e3e5f5]">vaporwave text</strong> look with full-width characters. This aesthetic style (Ａｅｓｔｈｅｔｉｃ) is a staple of Discord profile design, providing a clean yet retro-futuristic vibe for usernames and channel titles.
               </p>
             </div>
           </section>

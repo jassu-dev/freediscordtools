@@ -8,6 +8,11 @@ export default function Footer() {
         <nav aria-label="Footer navigation">
           <ul className="flex flex-wrap gap-4 justify-center list-none m-0 p-0 mb-4">
             <li>
+              <Link href="/blog" className="text-[#5b6282] hover:text-[#5865F2] transition-colors text-sm">
+                Blog
+              </Link>
+            </li>
+            <li>
               <Link href="/about" className="text-[#5b6282] hover:text-[#5865F2] transition-colors text-sm">
                 About
               </Link>

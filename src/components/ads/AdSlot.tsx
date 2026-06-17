@@ -61,11 +61,19 @@ export default function AdSlot({ slotId, width, height, className }: AdSlotProps
   return (
     <div
       ref={containerRef}
-      className={className}
-      style={{ minHeight: `${height}px`, width: `${width}px`, maxWidth: '100%' }}
+      className={`relative overflow-hidden bg-gray-50/50 flex flex-col items-center justify-center ${className || ''}`}
+      style={{ 
+        minHeight: `${height}px`, 
+        minWidth: `${width}px`,
+        maxWidth: '100%' 
+      }}
       data-testid="ad-slot"
       data-slot-id={slotId}
       aria-hidden="true"
-    />
+    >
+      <span className="absolute inset-0 flex items-center justify-center text-[10px] font-bold text-gray-300 uppercase tracking-widest pointer-events-none">
+        Advertisement
+      </span>
+    </div>
   );
 }

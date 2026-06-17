@@ -13,7 +13,7 @@ export default function ToolCard({ tool }: ToolCardProps) {
       data-testid="tool-card"
     >
       <h2 className="text-lg font-semibold text-[#1a1d2e] mb-2">{tool.name}</h2>
-      <p className="text-sm text-[#5b6282] leading-relaxed">{tool.description}</p>
+      <p className="text-sm text-[#373b4d] leading-relaxed">{tool.description}</p>
       <span className="mt-4 inline-flex items-center text-sm text-[#5865F2] font-medium">
         Use tool →
       </span>

@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import SkipLink from '@/components/layout/SkipLink';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import GoogleAnalytics from '@/components/seo/GoogleAnalytics';
 import { seoConfig } from '@/config/seo';
+import { adsConfig } from '@/config/ads';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -59,6 +61,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} ${inter.variable} min-h-screen flex flex-col bg-[#F8F9FF] text-[#1a1d2e]`}>
         <GoogleAnalytics />
+        <Script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsConfig.publisherId}`}
+          crossOrigin="anonymous"
+          strategy="lazyOnload"
+        />
         <SkipLink />
         <Header />
         <main id="main-content" className="flex-1">

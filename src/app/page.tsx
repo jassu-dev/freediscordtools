@@ -52,6 +52,14 @@ const homepageFaqs = [
     question: 'Is my data stored anywhere?',
     answer: 'No. All tools operate entirely client-side in your browser. No data is sent to any server, stored, or logged.',
   },
+  {
+    question: 'What is a Discord ID to Date converter?',
+    answer: 'A Discord ID to Date converter (or snowflake converter) decodes the 64-bit integer ID used by Discord to find the exact creation time of a user account, server, channel, or message.',
+  },
+  {
+    question: 'How do I use a Discord Webhook Sender?',
+    answer: 'Simply copy your webhook URL from Discord, paste it into our tool, customize your bot name and avatar, and send messages instantly without any coding.',
+  },
 ];
 
 export default function HomePage() {
@@ -130,6 +138,26 @@ export default function HomePage() {
 
             <p className="text-[#373b4d] mb-4">
               Our <strong className="text-[#1a1d2e]">Discord Colored Text Generator</strong> provides a visual <strong className="text-[#1a1d2e]">discord code block color picker</strong>, making it easy to design colorful messages without needing to know the complex escape codes. Simply type your text, pick your colors, and copy the ready-to-use code block directly into Discord.
+            </p>
+
+            <h3 className="text-xl font-semibold text-[#1a1d2e] mb-3 mt-6">Decoding Discord Snowflakes</h3>
+
+            <p className="text-[#373b4d] mb-4">
+              Every object in Discord, from users to messages, has a unique 64-bit ID called a <strong className="text-[#1a1d2e]">snowflake</strong>. These IDs are not random; they contain an encoded timestamp representing the exact millisecond the object was created.
+            </p>
+
+            <p className="text-[#373b4d] mb-4">
+              Our <strong className="text-[#1a1d2e]">Discord ID to Date</strong> converter allows you to perform a <strong className="text-[#1a1d2e]">discord snowflake lookup</strong> to find the creation date of any account or server. This is a popular tool for checking the age of a Discord account or finding out exactly when a community was started.
+            </p>
+
+            <h3 className="text-xl font-semibold text-[#1a1d2e] mb-3 mt-6">Discord Webhook Testing Made Easy</h3>
+
+            <p className="text-[#373b4d] mb-4">
+              Webhooks are a powerful way to send automated messages to Discord channels. However, testing them often requires coding knowledge or command-line tools. Our <strong className="text-[#1a1d2e]">Discord Webhook Sender</strong> simplifies this by providing a clean, easy-to-use interface.
+            </p>
+
+            <p className="text-[#373b4d] mb-4">
+              You can use our <strong className="text-[#1a1d2e]">discord webhook tester</strong> to send messages, customize the bot&apos;s username, and change the avatar image instantly. It&apos;s the fastest way to verify your webhook integrations are working correctly.
             </p>
 
             <h3 className="text-xl font-semibold text-[#1a1d2e] mb-3 mt-6">Why Discord Timestamps Matter for Communities</h3>
