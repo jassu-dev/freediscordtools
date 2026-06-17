@@ -36,4 +36,11 @@ export const tools: Tool[] = [
     href: '/tools/discord-webhook-sender/',
     keywords: ['discord webhook sender', 'discord webhook tester', 'send message to discord webhook'],
   },
+  {
+    slug: 'ats-resume-checker',
+    name: 'ATS Resume Checker',
+    description: 'Free ATS resume checker. Analyze your CV for keyword optimization, formatting, and ATS compatibility to increase your interview chances.',
+    href: '/tools/ats-resume-checker/',
+    keywords: ['ats resume checker', 'ats score', 'cv scanner', 'resume scanner'],
+  },
 ];
