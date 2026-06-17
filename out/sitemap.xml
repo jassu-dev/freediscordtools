@@ -31,6 +31,42 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://freediscordtools.in/tools/discord-id-to-date/</loc>
+    <lastmod>2026-06-17T00:00:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://freediscordtools.in/tools/discord-webhook-sender/</loc>
+    <lastmod>2026-06-17T00:00:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://freediscordtools.in/blog/</loc>
+    <lastmod>2026-06-17T00:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freediscordtools.in/blog/how-to-use-discord-timestamps/</loc>
+    <lastmod>2026-06-17T00:00:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://freediscordtools.in/blog/aesthetic-discord-profile-guide/</loc>
+    <lastmod>2026-06-17T00:00:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://freediscordtools.in/blog/what-is-a-discord-snowflake-id/</loc>
+    <lastmod>2026-06-17T00:00:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://freediscordtools.in/about/</loc>
     <lastmod>2026-06-15T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>

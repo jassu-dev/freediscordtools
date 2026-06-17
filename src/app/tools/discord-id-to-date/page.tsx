@@ -125,7 +125,7 @@ export default function DiscordIdToDatePage() {
             <div className="space-y-6">
               <div className="bg-[#F8F9FF] p-5 rounded-xl border border-[#E3E6F0]">
                 <h3 className="text-lg font-bold text-[#1a1d2e] mb-2">Step 1: Enable Developer Mode</h3>
-                <p>By default, Discord hides IDs. To show them, go to <strong>User Settings</strong> > <strong>Advanced</strong> and toggle on <strong>Developer Mode</strong>. This works on Desktop, Web, and Mobile versions of Discord.</p>
+                <p>By default, Discord hides IDs. To show them, go to <strong>User Settings</strong> &gt; <strong>Advanced</strong> and toggle on <strong>Developer Mode</strong>. This works on Desktop, Web, and Mobile versions of Discord.</p>
               </div>
               <div className="bg-[#F8F9FF] p-5 rounded-xl border border-[#E3E6F0]">
                 <h3 className="text-lg font-bold text-[#1a1d2e] mb-2">Step 2: Copy the ID</h3>

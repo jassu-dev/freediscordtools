@@ -1,12 +1,16 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
+  "/blog/page": "app/blog/page.js",
   "/privacy-policy/page": "app/privacy-policy/page.js",
   "/about/page": "app/about/page.js",
-  "/page": "app/page.js",
-  "/terms/page": "app/terms/page.js",
   "/contact/page": "app/contact/page.js",
+  "/blog/[slug]/page": "app/blog/[slug]/page.js",
+  "/terms/page": "app/terms/page.js",
+  "/tools/discord-id-to-date/page": "app/tools/discord-id-to-date/page.js",
+  "/page": "app/page.js",
   "/tools/discord-color-text-generator/page": "app/tools/discord-color-text-generator/page.js",
   "/tools/page": "app/tools/page.js",
+  "/tools/discord-webhook-sender/page": "app/tools/discord-webhook-sender/page.js",
   "/tools/discord-timestamp-generator/page": "app/tools/discord-timestamp-generator/page.js",
   "/tools/discord-font-generator/page": "app/tools/discord-font-generator/page.js"
 }
