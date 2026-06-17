@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { seoConfig } from '@/config/seo';
 import FaqSchema from '@/components/seo/FaqSchema';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import AtsScannerTool from '@/components/tools/ats/AtsScannerTool';
 
 export const metadata: Metadata = {
@@ -54,11 +55,20 @@ const faqItems = [
   },
 ];
 
+const PAGE_URL = `${seoConfig.baseUrl}/tools/ats-resume-checker/`;
+
 export default function AtsResumeCheckerPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <WebSiteSchema />
       <FaqSchema items={faqItems} />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home',  href: `${seoConfig.baseUrl}/` },
+          { name: 'Tools', href: `${seoConfig.baseUrl}/tools/` },
+          { name: 'ATS Resume Checker', href: PAGE_URL },
+        ]}
+      />
       
       <header className="mb-10 text-center">
         <h1 className="text-4xl font-extrabold text-[#1a1d2e] mb-4">Free ATS Resume Checker & ATS Score Scanner</h1>
@@ -88,7 +98,7 @@ export default function AtsResumeCheckerPage() {
         <ul>
           <li><strong>Real-time ATS Score Analysis:</strong> Get a numerical <strong>ATS score</strong> based on industry standards, not just a guess.</li>
           <li><strong>Keyword Optimization:</strong> Identify critical terms missing from your resume to beat the <strong>cv scanner</strong>.</li>
-          <li><strong>Formatting Audit:</strong> Ensure your layout is clean and readable by any <strong>ats scanner</strong>, avoiding the pitfalls of non-standard designs.</li>
+          <li><strong>Formatting Audit:</strong> Ensure your layout is readable by any <strong>ats scanner</strong>, avoiding the pitfalls of non-standard designs.</li>
         </ul>
 
         <h2>How to Improve Your ATS Score</h2>
