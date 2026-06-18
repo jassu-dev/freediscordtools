@@ -6,9 +6,8 @@ import FaqSchema from '@/components/seo/FaqSchema';
 import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
 import { seoConfig } from '@/config/seo';
 
-// ─── Metadata ────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Discord Timestamp Generator: #1 Unix Time Converter (2026)',
+  title: 'Discord Timestamp Generator – All 7 Formats',
   description:
     'The best free Discord timestamp generator. Learn how to use unix timestamp discord and convert dates into all 7 discord time stamps instantly. Accurate unix time converter.',
   keywords: [
