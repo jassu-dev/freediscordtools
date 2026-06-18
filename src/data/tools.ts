@@ -43,4 +43,11 @@ export const tools: Tool[] = [
     href: '/tools/ats-resume-checker/',
     keywords: ['ats resume checker', 'ats score', 'cv scanner', 'resume scanner'],
   },
+  {
+    slug: 'discord-banner-downloader',
+    name: 'Discord Banner & Icon Downloader',
+    description: 'Download high-quality Discord server banners and icons instantly. The best free tool to grab server assets.',
+    href: '/tools/discord-banner-downloader/',
+    keywords: ['discord server banner download', 'discord icon grabber', 'download discord server banner'],
+  },
 ];
