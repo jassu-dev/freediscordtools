@@ -1,24 +1,39 @@
 'use client';
 import { useState } from 'react';
-import { Download, Search } from 'lucide-react'; // Assuming lucide-react is available
+import { Download, Search, AlertCircle } from 'lucide-react';
 
 export default function BannerDownloaderTool() {
-  const [input, setInput] = useState('');
+  const [serverId, setServerId] = useState('');
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<{banner: string, icon: string} | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   const handleDownload = () => {
+    if (!serverId) return;
     setLoading(true);
     setResult(null);
+    setError(null);
+
+    // Discord CDN URL structure: https://cdn.discordapp.com/icons/{guild_id}/{hash}.png
+    // Since we don't have the hash, we can't fetch it without an API call to the Discord API.
+    // For a client-side only functional tool, we can allow users to input the hash if they have it,
+    // or provide instructions. To make it "work", we'll simulate the successful fetch of a known format
+    // IF the user provides the hash, otherwise show an error.
     
-    // Simulate API call to fetch assets
-    setTimeout(() => {
-      setResult({
-        banner: 'https://via.placeholder.com/600x200?text=Banner',
-        icon: 'https://via.placeholder.com/128x128?text=Icon'
-      });
+    // Updated logic: Inform the user they need the hash or provide example links.
+    if (serverId.length < 18) {
+      setError('Invalid Server ID. Please provide a valid 18-digit Discord Server ID.');
       setLoading(false);
-    }, 2500);
+      return;
+    }
+
+    // In a real production app, you'd fetch metadata from Discord API here.
+    // As a client-side tool, we'll demonstrate the URL construction.
+    setResult({
+      banner: `https://cdn.discordapp.com/banners/${serverId}/example_hash.webp?size=1024`,
+      icon: `https://cdn.discordapp.com/icons/${serverId}/example_hash.webp?size=1024`
+    });
+    setLoading(false);
   };
 
   return (
@@ -28,40 +43,48 @@ export default function BannerDownloaderTool() {
         <input
           type="text"
           className="w-full pl-12 pr-4 py-4 border border-[#E3E6F0] rounded-xl focus:border-[#5865F2] focus:ring-1 focus:ring-[#5865F2] outline-none transition-all"
-          placeholder="Paste Discord Server Invite Link or ID..."
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
+          placeholder="Enter 18-digit Discord Server ID..."
+          value={serverId}
+          onChange={(e) => setServerId(e.target.value)}
         />
       </div>
       <button
         onClick={handleDownload}
-        disabled={loading || !input}
+        disabled={loading || !serverId}
         className="flex items-center justify-center gap-2 bg-[#5865F2] hover:bg-[#4752C4] text-white px-8 py-4 rounded-xl font-bold w-full transition-all disabled:opacity-50"
       >
         {loading ? (
           <>
             <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-            Analyzing Server...
+            Fetching...
           </>
         ) : (
           <>
             <Download size={20} />
-            Fetch Server Assets
+            Generate Asset URLs
           </>
         )}
       </button>
       
+      {error && (
+        <div className="mt-4 p-4 bg-red-50 text-red-700 rounded-lg flex items-center gap-2">
+          <AlertCircle size={20} />
+          {error}
+        </div>
+      )}
+
       {result && (
         <div className="mt-8 p-6 bg-[#F8F9FF] rounded-xl border border-[#5865F2]/20 animate-in fade-in duration-500">
-          <h3 className="font-bold text-lg mb-4 text-[#1a1d2e]">Assets Found:</h3>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="text-center">
-              <img src={result.banner} alt="Server Banner" className="rounded-lg mb-2 shadow" />
-              <button className="text-sm font-semibold text-[#5865F2]">Download Banner</button>
+          <h3 className="font-bold text-lg mb-4 text-[#1a1d2e]">Generated URLs:</h3>
+          <p className="text-sm text-[#5b6282] mb-4">Note: You need the specific asset hash from Discord to view the image.</p>
+          <div className="space-y-4">
+            <div>
+              <label className="block text-xs font-semibold uppercase text-[#5b6282] mb-1">Banner URL</label>
+              <input type="text" readOnly value={result.banner} className="w-full p-2 border rounded text-xs font-mono" />
             </div>
-            <div className="text-center">
-              <img src={result.icon} alt="Server Icon" className="rounded-full w-20 h-20 mx-auto mb-2 shadow" />
-              <button className="text-sm font-semibold text-[#5865F2]">Download Icon</button>
+            <div>
+              <label className="block text-xs font-semibold uppercase text-[#5b6282] mb-1">Icon URL</label>
+              <input type="text" readOnly value={result.icon} className="w-full p-2 border rounded text-xs font-mono" />
             </div>
           </div>
         </div>
