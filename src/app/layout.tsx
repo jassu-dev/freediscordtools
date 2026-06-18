@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Script from 'next/script';
 import './globals.css';
 import SkipLink from '@/components/layout/SkipLink';
 import Header from '@/components/layout/Header';
@@ -59,14 +58,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${inter.variable} min-h-screen flex flex-col bg-[#F8F9FF] text-[#1a1d2e]`}>
-        <GoogleAnalytics />
-        <Script
+      <head>
+        <script
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsConfig.publisherId}`}
           crossOrigin="anonymous"
-          strategy="lazyOnload"
         />
+      </head>
+      <body className={`${inter.className} ${inter.variable} min-h-screen flex flex-col bg-[#F8F9FF] text-[#1a1d2e]`}>
+        <GoogleAnalytics />
         <SkipLink />
         <Header />
         <main id="main-content" className="flex-1">
