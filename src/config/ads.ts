@@ -1,5 +1,5 @@
 export const adsConfig = {
-  publisherId: 'ca-pub-XXXXXXXXXXXXXXXX',
+  publisherId: 'ca-pub-3540392459216784',
   slots: {
     homepageBelowTitle:  'XXXXXXXXXX',
     homepageBelowGrid:   'XXXXXXXXXX',
