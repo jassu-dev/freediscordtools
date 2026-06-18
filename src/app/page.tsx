@@ -2,12 +2,10 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import ToolCard from '@/components/tools/ToolCard';
 import BlogCard from '@/components/blog/BlogCard';
-import AdSlot from '@/components/ads/AdSlot';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import { tools } from '@/data/tools';
 import { blogPosts } from '@/data/blog';
-import { adsConfig } from '@/config/ads';
 import { seoConfig } from '@/config/seo';
 
 export const metadata: Metadata = {
@@ -110,11 +108,6 @@ export default function HomePage() {
       </section>
 
       <div className="max-w-6xl mx-auto px-4 py-16">
-        {/* Ad: Below Hero */}
-        <div className="flex justify-center mb-16">
-          <AdSlot slotId={adsConfig.slots.homepageBelowTitle} width={728} height={90} />
-        </div>
-
         {/* Categorized Tool Grid */}
         <section aria-label="Available tools" className="mb-20">
           <h2 className="text-3xl font-bold text-[#1a1d2e] mb-12 text-center">Popular Tools</h2>
@@ -133,11 +126,6 @@ export default function HomePage() {
             </div>
           ))}
         </section>
-
-        {/* Ad: Below tools */}
-        <div className="flex justify-center mb-20">
-          <AdSlot slotId={adsConfig.slots.homepageBelowGrid} width={728} height={90} />
-        </div>
 
         {/* Latest from Blog */}
         <section className="mb-20">
@@ -216,11 +204,6 @@ export default function HomePage() {
           </article>
         </section>
 
-        {/* Ad: Mid content */}
-        <div className="flex justify-center mb-20">
-          <AdSlot slotId={adsConfig.slots.homepageContentMid} width={728} height={90} />
-        </div>
-
         {/* FAQ */}
         <section aria-labelledby="faq-heading" className="mb-20">
           <h2 id="faq-heading" className="text-3xl font-bold text-[#1a1d2e] mb-8 text-center">Frequently Asked Questions</h2>
@@ -237,10 +220,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Ad: Above FAQ */}
-        <div className="flex justify-center">
-          <AdSlot slotId={adsConfig.slots.homepageAboveFaq} width={728} height={90} />
-        </div>
       </div>
     </>
   );

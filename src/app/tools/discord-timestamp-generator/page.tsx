@@ -1,11 +1,9 @@
 import type { Metadata } from 'next';
 import TimestampGenerator from '@/components/tools/TimestampGenerator';
-import AdSlot from '@/components/ads/AdSlot';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import FaqSchema from '@/components/seo/FaqSchema';
 import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
-import { adsConfig } from '@/config/ads';
 import { seoConfig } from '@/config/seo';
 
 // ─── Metadata ────────────────────────────────────────────────────────────────
@@ -129,21 +127,11 @@ export default function DiscordTimestampGeneratorPage() {
           </p>
         </header>
 
-        {/* Ad: leaderboard below H1 */}
-        <div className="flex justify-center mb-6">
-          <AdSlot slotId={adsConfig.slots.timestampBelowTitle} width={728} height={90} />
-        </div>
-
         {/* ── Tool ── */}
         <section aria-labelledby="tool-heading" className="mb-6">
           <h2 id="tool-heading" className="sr-only">Discord Timestamp Maker</h2>
           <TimestampGenerator />
         </section>
-
-        {/* Ad: rectangle below tool */}
-        <div className="flex justify-center mb-10">
-          <AdSlot slotId={adsConfig.slots.timestampBelowTool} width={728} height={250} />
-        </div>
 
         {/* ── How to use ── */}
         <section aria-labelledby="how-to-heading" className="mb-10">
@@ -252,16 +240,6 @@ export default function DiscordTimestampGeneratorPage() {
             </p>
           </div>
         </section>
-
-        {/* Ad: mid content */}
-        <div className="flex justify-center mb-10">
-          <AdSlot slotId={adsConfig.slots.timestampContentMid} width={728} height={90} />
-        </div>
-
-        {/* Ad: above FAQ */}
-        <div className="flex justify-center mb-10">
-          <AdSlot slotId={adsConfig.slots.timestampAboveFaq} width={728} height={90} />
-        </div>
 
         {/* ── FAQ ── */}
         <section aria-labelledby="faq-heading" className="mb-10">

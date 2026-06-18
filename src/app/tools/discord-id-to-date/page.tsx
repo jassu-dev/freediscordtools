@@ -1,11 +1,9 @@
 import type { Metadata } from 'next';
 import SnowflakeConverter from '@/components/tools/SnowflakeConverter';
-import AdSlot from '@/components/ads/AdSlot';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import FaqSchema from '@/components/seo/FaqSchema';
 import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
-import { adsConfig } from '@/config/ads';
 import { seoConfig } from '@/config/seo';
 
 // ─── Metadata ────────────────────────────────────────────────────────────────

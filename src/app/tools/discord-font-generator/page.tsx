@@ -1,11 +1,9 @@
 import type { Metadata } from 'next';
 import FontGenerator from '@/components/tools/FontGenerator';
-import AdSlot from '@/components/ads/AdSlot';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import FaqSchema from '@/components/seo/FaqSchema';
 import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
-import { adsConfig } from '@/config/ads';
 import { seoConfig } from '@/config/seo';
 
 // ─── Metadata ─────────────────────────────────────────────────────────────────
@@ -189,21 +187,11 @@ export default function DiscordFontGeneratorPage() {
               Want to create a stunning profile? Read our <a href="/blog/aesthetic-discord-profile-guide/" className="text-[#5865F2] font-bold hover:underline">Aesthetic Discord Profile Guide</a>.
               </p>
               </header>
-          {/* Ad: below H1 */}
-          <div className="flex justify-center mb-6">
-            <AdSlot slotId={adsConfig.slots.fontBelowTitle} width={728} height={90} />
-          </div>
-
           {/* ── Tool ── */}
           <section aria-labelledby="tool-section-heading" className="mb-8">
             <h2 id="tool-section-heading" className="sr-only">Discord Font Generator Tool</h2>
             <FontGenerator />
           </section>
-
-          {/* Ad: below tool */}
-          <div className="flex justify-center mb-10">
-            <AdSlot slotId={adsConfig.slots.fontBelowTool} width={728} height={250} />
-          </div>
 
           {/* ── Fancy Discord Fonts ── */}
           <section
@@ -434,11 +422,6 @@ export default function DiscordFontGeneratorPage() {
             </div>
           </section>
 
-          {/* Ad: mid-content */}
-          <div className="flex justify-center mb-10">
-            <AdSlot slotId={adsConfig.slots.fontContentMid} width={728} height={90} />
-          </div>
-
           {/* ── How Unicode fonts work ── */}
           <section
             aria-labelledby="unicode-heading"
@@ -545,11 +528,6 @@ export default function DiscordFontGeneratorPage() {
               </p>
             </div>
           </section>
-
-          {/* Ad: above FAQ */}
-          <div className="flex justify-center mb-10">
-            <AdSlot slotId={adsConfig.slots.fontAboveFaq} width={728} height={90} />
-          </div>
 
           {/* ── FAQ ── */}
           <section aria-labelledby="faq-heading" className="mb-10">

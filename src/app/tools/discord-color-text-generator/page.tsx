@@ -1,11 +1,9 @@
 import type { Metadata } from 'next';
 import ColorTextGenerator from '@/components/tools/ColorTextGenerator';
-import AdSlot from '@/components/ads/AdSlot';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import FaqSchema from '@/components/seo/FaqSchema';
 import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
-import { adsConfig } from '@/config/ads';
 import { seoConfig } from '@/config/seo';
 
 // ─── Metadata ────────────────────────────────────────────────────────────────
@@ -119,21 +117,11 @@ export default function DiscordColorTextGeneratorPage() {
           </p>
         </header>
 
-        {/* Ad Slot */}
-        <div className="flex justify-center mb-6">
-          <AdSlot slotId={adsConfig.slots.timestampBelowTitle} width={728} height={90} />
-        </div>
-
         {/* ── Tool ── */}
         <section aria-labelledby="tool-heading" className="mb-6">
           <h2 id="tool-heading" className="sr-only">Discord ANSI Color Generator</h2>
           <ColorTextGenerator />
         </section>
-
-        {/* Ad Slot */}
-        <div className="flex justify-center mb-10">
-          <AdSlot slotId={adsConfig.slots.timestampBelowTool} width={728} height={250} />
-        </div>
 
         {/* ── How to use ── */}
         <section aria-labelledby="how-to-heading" className="mb-10">
@@ -200,11 +188,6 @@ export default function DiscordColorTextGeneratorPage() {
             For example, to get red text, the code is <code className="bg-[#F0F2FF] px-1 rounded text-[#5865F2]">31</code>. For a blue background, it&apos;s <code className="bg-[#F0F2FF] px-1 rounded text-[#5865F2]">44</code>. Our <strong className="text-[#1a1d2e]">discord background text color generator</strong> allows you to mix and match these effortlessly.
           </p>
         </section>
-
-        {/* Ad Slot */}
-        <div className="flex justify-center mb-10">
-          <AdSlot slotId={adsConfig.slots.timestampAboveFaq} width={728} height={90} />
-        </div>
 
         {/* ── FAQ ── */}
         <section aria-labelledby="faq-heading" className="mb-10">
