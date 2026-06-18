@@ -50,4 +50,11 @@ export const tools: Tool[] = [
     href: '/tools/discord-banner-downloader/',
     keywords: ['discord server banner download', 'discord icon grabber', 'download discord server banner'],
   },
+  {
+    slug: 'discord-permission-calculator',
+    name: 'Discord Permission Calculator',
+    description: 'Calculate raw integer values for Discord role permissions instantly. Perfect for bot configuration and role management.',
+    href: '/tools/discord-permission-calculator/',
+    keywords: ['discord permission calculator', 'discord role permission integer', 'discord bot permissions'],
+  },
 ];
