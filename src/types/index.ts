@@ -4,6 +4,7 @@ export interface Tool {
   description: string;
   href: string;
   keywords: string[];
+  category: string;
 }
 
 export type DiscordFormatCode = 't' | 'T' | 'd' | 'D' | 'f' | 'F' | 'R';

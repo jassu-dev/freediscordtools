@@ -25,15 +25,19 @@ export const metadata: Metadata = {
 const faqItems = [
   {
     question: 'How do I download a Discord server banner?',
-    answer: 'To download a Discord server banner, simply paste the server invite link or server ID into our tool. It will fetch the high-resolution banner for you to download instantly.',
+    answer: 'To download a Discord server banner, simply paste the server invite link or server ID into our tool. If you use an invite link, we will automatically fetch the high-resolution banner and icon for you.',
+  },
+  {
+    question: 'Do I need a server ID or an invite link?',
+    answer: 'Using an invite link is the easiest way as it automatically finds all assets. If you only have a server ID, you will also need to provide the specific asset hash to generate the download link.',
   },
   {
     question: 'Can I download a server icon?',
-    answer: 'Yes, our tool allows you to download both server banners and icons in high quality directly from the Discord server ID or invite link.',
+    answer: 'Yes, our tool allows you to download server icons, banners, and even invite splash screens in high quality.',
   },
   {
     question: 'Is this Discord asset downloader free?',
-    answer: 'Yes, our Discord server banner and icon downloader is completely free to use with no account required.',
+    answer: 'Yes, our Discord server banner and icon downloader is completely free to use with no account or bot required.',
   },
 ];
 
@@ -68,6 +72,9 @@ export default function DiscordBannerDownloaderPage() {
         <h2>Easily Download Discord Server Banners & Icons</h2>
         <p>
           Finding high-quality <strong>discord server banner</strong> images or <strong>discord icons</strong> can be tricky. Whether you want to save a server's aesthetic assets or need a clean copy of an icon for your own design work, our tool makes the process simple.
+        </p>
+        <p className="bg-[#F8F9FF] border border-[#5865F2]/20 rounded-xl p-4 italic text-sm text-[#5b6282] mt-4 mb-8">
+          Confused about how to get the right link from Discord? See our <a href="/blog/download-discord-server-assets-guide/" class="text-[#5865F2] font-bold hover:underline">Full Guide to Downloading Discord Assets</a>.
         </p>
 
         <h3>Why use our Discord Asset Downloader?</h3>

@@ -184,9 +184,11 @@ export default function DiscordFontGeneratorPage() {
               <strong className="text-[#7289da]">cool Discord fonts</strong>, and{' '}
               <strong className="text-[#7289da]">fancy text for Discord</strong> usernames, bios, and messages.
               Live preview. One-click copy. No sign-up.
-            </p>
-          </header>
-
+              </p>
+              <p className="bg-[#1e2030] border-l-4 border-[#5865F2] p-4 italic text-sm text-[#8b8fa8] mt-4">
+              Want to create a stunning profile? Read our <a href="/blog/aesthetic-discord-profile-guide/" class="text-[#5865F2] font-bold hover:underline">Aesthetic Discord Profile Guide</a>.
+              </p>
+              </header>
           {/* Ad: below H1 */}
           <div className="flex justify-center mb-6">
             <AdSlot slotId={adsConfig.slots.fontBelowTitle} width={728} height={90} />

@@ -72,8 +72,11 @@ export default function AtsResumeCheckerPage() {
       
       <header className="mb-10 text-center">
         <h1 className="text-4xl font-extrabold text-[#1a1d2e] mb-4">Free ATS Resume Checker & ATS Score Scanner</h1>
-        <p className="text-xl text-[#5b6282]">
+        <p className="text-xl text-[#5b6282] mb-6">
           Need to <strong>check resume for ATS</strong>? Get your free <strong>ATS score</strong> instantly. Our <strong>ATS resume checker</strong> is the ultimate <strong>cv scanner</strong> to optimize your resume for applicant tracking systems.
+        </p>
+        <p className="bg-[#F8F9FF] border border-[#5865F2]/20 rounded-xl p-4 italic text-sm text-[#5b6282] max-w-2xl mx-auto">
+          New to ATS? Read our <a href="/blog/ultimate-ats-resume-checker-guide/" class="text-[#5865F2] font-bold hover:underline">Complete Guide to Optimizing Your CV for ATS</a>.
         </p>
       </header>
 

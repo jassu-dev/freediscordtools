@@ -7,6 +7,7 @@ export const tools: Tool[] = [
     description: 'Convert any date and time into Discord timestamp formats instantly. Generate all 7 Discord time format codes and copy them with one click.',
     href: '/tools/discord-timestamp-generator/',
     keywords: ['discord timestamp', 'discord time format', 'unix timestamp discord', 'discord timestamp generator'],
+    category: 'Discord Formatting',
   },
   {
     slug: 'discord-font-generator',
@@ -14,6 +15,7 @@ export const tools: Tool[] = [
     description: 'Generate 100+ Unicode font styles for Discord instantly. Fancy text for your username, bio, and messages — live preview and one-click copy.',
     href: '/tools/discord-font-generator/',
     keywords: ['discord font', 'discord fonts', 'discord font generator', 'fonts for discord', 'fancy text discord', 'discord username fonts', 'discord bio fonts'],
+    category: 'Discord Formatting',
   },
   {
     slug: 'discord-color-text-generator',
@@ -21,6 +23,7 @@ export const tools: Tool[] = [
     description: 'Create colorful Discord messages with ANSI escape codes. Our generator makes it easy to pick colors and styles for your Discord code blocks.',
     href: '/tools/discord-color-text-generator/',
     keywords: ['discord colored text generator', 'discord ansi color generator', 'discord color text', 'ansi colored text for discord'],
+    category: 'Discord Formatting',
   },
   {
     slug: 'discord-id-to-date',
@@ -28,6 +31,7 @@ export const tools: Tool[] = [
     description: 'Convert any Discord ID (snowflake) into its exact creation date. Find out when an account or server was made instantly.',
     href: '/tools/discord-id-to-date/',
     keywords: ['discord id to date', 'discord snowflake converter', 'discord account age checker', 'discord id lookup'],
+    category: 'Discord Lookup & Assets',
   },
   {
     slug: 'discord-webhook-sender',
@@ -35,6 +39,7 @@ export const tools: Tool[] = [
     description: 'Send and test Discord webhooks online. Customize username, avatar, and message content without coding.',
     href: '/tools/discord-webhook-sender/',
     keywords: ['discord webhook sender', 'discord webhook tester', 'send message to discord webhook'],
+    category: 'Discord Management & Dev',
   },
   {
     slug: 'ats-resume-checker',
@@ -42,6 +47,7 @@ export const tools: Tool[] = [
     description: 'Free ATS resume checker. Analyze your CV for keyword optimization, formatting, and ATS compatibility to increase your interview chances.',
     href: '/tools/ats-resume-checker/',
     keywords: ['ats resume checker', 'ats score', 'cv scanner', 'resume scanner'],
+    category: 'Professional Tools',
   },
   {
     slug: 'discord-banner-downloader',
@@ -49,6 +55,7 @@ export const tools: Tool[] = [
     description: 'Download high-quality Discord server banners and icons instantly. The best free tool to grab server assets.',
     href: '/tools/discord-banner-downloader/',
     keywords: ['discord server banner download', 'discord icon grabber', 'download discord server banner'],
+    category: 'Discord Lookup & Assets',
   },
   {
     slug: 'discord-permission-calculator',
@@ -56,5 +63,6 @@ export const tools: Tool[] = [
     description: 'Calculate raw integer values for Discord role permissions instantly. Perfect for bot configuration and role management.',
     href: '/tools/discord-permission-calculator/',
     keywords: ['discord permission calculator', 'discord role permission integer', 'discord bot permissions'],
+    category: 'Discord Management & Dev',
   },
 ];
