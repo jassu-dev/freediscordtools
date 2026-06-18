@@ -10,22 +10,21 @@ import { seoConfig } from '@/config/seo';
 
 // ─── Metadata ────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Discord Timestamp Generator: All Formats',
+  title: 'Discord Timestamp Generator: #1 Unix Time Converter (2026)',
   description:
-    'Free Discord timestamp generator and unix timestamp converter. Pick a date or use our unix time converter to generate all 7 Discord timestamp formats instantly.',
+    'The best free Discord timestamp generator. Learn how to use unix timestamp discord and convert dates into all 7 discord time stamps instantly. Accurate unix time converter.',
   keywords: [
     'discord timestamp generator',
-    'discord unix timestamp',
-    'discord timestamp',
+    'how to use unix timestamp discord',
     'discord timestamps',
-    'timestamp unix',
-    'unix timestamp conversion',
-    'unix timestamp converter',
-    'unix time converter',
+    'discord time stamps',
+    'discord unix timestamp',
+    'unix timestamp discord',
     'discord timestamp converter',
     'discord timestamp maker',
     'discord timestamp format',
-    'unix timestamp discord',
+    'unix timestamp converter',
+    'unix time converter',
   ],
   alternates: {
     canonical: `${seoConfig.baseUrl}/tools/discord-timestamp-generator/`,
@@ -35,9 +34,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Discord Timestamp Generator: All Formats',
+    title: 'Discord Timestamp Generator: #1 Unix Time Converter',
     description:
-      'Convert any date and time into all 7 Discord timestamp formats using our Unix timestamp converter. No account needed.',
+      'The fastest way to generate Discord timestamps. Convert any date and time into all 7 Discord time stamps formats instantly. No account needed.',
     url: `${seoConfig.baseUrl}/tools/discord-timestamp-generator/`,
     type: 'website',
     locale: 'en_US',
@@ -45,9 +44,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Discord Timestamp Generator: All Formats',
+    title: 'Discord Timestamp Generator: #1 Unix Time Converter',
     description:
-      'Convert Unix time into Discord timestamps. The fastest Discord Unix timestamp converter available online.',
+      'Learn how to use unix timestamp discord and generate discord timestamps for your server announcements.',
     site: seoConfig.twitterHandle,
   },
 };
@@ -55,39 +54,34 @@ export const metadata: Metadata = {
 // ─── FAQ data ─────────────────────────────────────────────────────────────────
 const faqItems = [
   {
-    question: 'What is a Discord unix timestamp?',
+    question: 'How do I use a discord timestamp generator?',
     answer:
-      'A Discord unix timestamp is a numerical value representing the number of seconds since January 1, 1970 (UTC), wrapped in a specific markdown syntax <t:UNIX:FORMAT>. This allows Discord to display the date and time in each user\'s local timezone.',
+      'Using a discord timestamp generator is simple: pick your date and time, choose a format (like relative or short time), and copy the generated code. Paste that code into a Discord message, and it will automatically show the correct time to every user in their own timezone.',
   },
   {
-    question: 'How do I use a unix timestamp converter for Discord?',
+    question: 'How to use unix timestamp discord correctly?',
     answer:
-      'To use our unix timestamp converter, simply select your desired date and time. The tool will instantly generate the Discord-ready unix timestamp code that you can copy and paste into any message.',
+      'To use a unix timestamp on Discord, you must wrap the 10-digit unix integer in the specific syntax <t:1234567890:F>. Replace 1234567890 with your timestamp and "F" with your desired format code. Our tool automates this process entirely.',
   },
   {
-    question: 'How do I get a unix timestamp for Discord?',
+    question: 'What are discord time stamps used for?',
     answer:
-      'You can get a unix timestamp by using this generator. Pick your event time, and we will provide the exact <t:1234567890:F> code needed for Discord to render the time correctly for everyone.',
+      'Discord time stamps are primarily used for scheduling events, tournaments, or announcements in global servers. They ensure everyone sees the "starting time" in their local clock, avoiding timezone confusion.',
   },
   {
-    question: 'What is unix timestamp conversion in Discord?',
+    question: 'How to get discord timestamps for my server?',
     answer:
-      'Unix timestamp conversion in Discord refers to the process where the Discord app takes a raw unix time value and converts it into a human-readable format based on the individual user\'s local system clock.',
+      'You can generate accurate discord timestamps using our free online tool. It converts any local date and time into a universal unix integer that Discord understands.',
   },
   {
-    question: 'Why should I use a discord unix timestamp?',
+    question: 'Why is my unix timestamp discord not working?',
     answer:
-      'Using a discord unix timestamp ensures that your global community sees the exact same moment in their own timezone. It eliminates the need for "EST/PST/GMT" labels and prevents confusion for international users.',
+      'Ensure you are using seconds (10 digits) rather than milliseconds (13 digits). Also, verify the syntax: it must start with "<t:" and end with ">". Our generator always provides the correct syntax.',
   },
   {
-    question: 'How does the Discord timestamp countdown (:R) work?',
+    question: 'How to use unix timestamp discord for a countdown?',
     answer:
-      'The :R format renders as a live relative time — "in 2 hours", "3 days ago" — that updates automatically. It is the best way to handle discord timestamps for event reminders.',
-  },
-  {
-    question: 'Can I use Discord timestamps in bot messages?',
-    answer:
-      'Yes. Discord bots can include <t:UNIX:FORMAT> strings in message content and embeds. Our tool is often used by developers as a reference for unix time converter formats.',
+      'To create a live countdown (e.g., "in 5 minutes"), use the ":R" format code at the end of your timestamp: <t:TIMESTAMP:R>. This is one of the most popular discord timestamps formats.',
   },
 ];
 
@@ -154,24 +148,29 @@ export default function DiscordTimestampGeneratorPage() {
         {/* ── How to use ── */}
         <section aria-labelledby="how-to-heading" className="mb-10">
           <h2 id="how-to-heading" className="text-2xl font-bold text-[#1a1d2e] mb-4">
-            How to Use the Discord Timestamp Maker
+            How to Use Unix Timestamp Discord & Generate Discord Time Stamps
           </h2>
+          <div className="text-base text-[#5b6282] space-y-4 mb-6 leading-relaxed">
+            <p>
+              Learning <strong>how to use unix timestamp discord</strong> is essential for anyone who wants to post time-sensitive information that automatically adjusts to every viewer&apos;s local clock. <strong>Discord time stamps</strong> are not just static text; they are dynamic elements that improve server communication.
+            </p>
+          </div>
           <ol className="space-y-3 text-[#5b6282] text-base">
             <li className="flex gap-3">
               <span className="flex-shrink-0 w-7 h-7 rounded-full bg-[#5865F2] text-white flex items-center justify-center text-sm font-bold">1</span>
-              <span>Pick a date and time — our <strong className="text-[#1a1d2e]">unix time converter</strong> handles the rest.</span>
+              <span><strong>Pick your moment:</strong> Select the exact date and time you want to share. Our <strong>discord timestamp generator</strong> handles the timezone conversion.</span>
             </li>
             <li className="flex gap-3">
               <span className="flex-shrink-0 w-7 h-7 rounded-full bg-[#5865F2] text-white flex items-center justify-center text-sm font-bold">2</span>
-              <span>Select your timezone to ensure accurate <strong className="text-[#1a1d2e]">unix timestamp conversion</strong>.</span>
+              <span><strong>Choose Format:</strong> Decide how you want the <strong>discord time stamps</strong> to appear (e.g., just the date, relative countdown, or full timestamp).</span>
             </li>
             <li className="flex gap-3">
               <span className="flex-shrink-0 w-7 h-7 rounded-full bg-[#5865F2] text-white flex items-center justify-center text-sm font-bold">3</span>
-              <span>Click Copy for the <strong className="text-[#1a1d2e]">discord timestamps</strong> format you need.</span>
+              <span><strong>Copy Code:</strong> Click the copy button to get the <code className="bg-[#F0F2FF] px-1 rounded text-[#5865F2]">&lt;t:UNIX:F&gt;</code> syntax.</span>
             </li>
             <li className="flex gap-3">
               <span className="flex-shrink-0 w-7 h-7 rounded-full bg-[#5865F2] text-white flex items-center justify-center text-sm font-bold">4</span>
-              <span>Paste it into Discord to see the live <strong className="text-[#1a1d2e]">timestamp unix</strong> effect!</span>
+              <span><strong>Paste in Chat:</strong> Simply paste the code into your Discord message. Everyone will now see your <strong>discord timestamps</strong> in their own local time!</span>
             </li>
           </ol>
         </section>

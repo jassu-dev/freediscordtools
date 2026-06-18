@@ -86,11 +86,11 @@ export default function HomePage() {
       <section className="bg-[#F8F9FF] border-b border-[#E3E6F0] py-20 px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-extrabold text-[#1a1d2e] mb-6 tracking-tight">
-            Level Up Your <span className="text-[#5865F2]">Discord</span> Experience
+            The #1 <span className="text-[#5865F2]">Discord Timestamp Generator</span> & Utilities
           </h1>
           <p className="text-xl text-[#5b6282] mb-10 leading-relaxed">
-            Free, powerful utilities for Discord users, server owners, and developers. 
-            No accounts, no limits — just simple tools that work.
+            Free, powerful utilities for Discord users. Learn <strong>how to use unix timestamp discord</strong>, 
+            generate <strong>discord time stamps</strong>, and master your server with simple tools.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link 
