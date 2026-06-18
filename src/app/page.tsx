@@ -9,8 +9,8 @@ import { blogPosts } from '@/data/blog';
 import { seoConfig } from '@/config/seo';
 
 export const metadata: Metadata = {
-  title: 'Free Discord Tools –  Utilities for Everyone',
-  description: 'Free utilities for Discord users, server owners, moderators, and developers. Generate timestamps, format text, and more — all free.',
+  title: 'Free Discord Tools & Online Utilities for Everyone',
+  description: 'A free collection of browser-based tools for Discord users, developers, and job seekers. No sign-up, no limits — just fast, useful tools.',
   alternates: {
     canonical: `${seoConfig.baseUrl}/`,
     languages: {
@@ -19,31 +19,31 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Free Discord Tools – Discord Utilities for Everyone',
-    description: 'Free Discord utilities for Discord users, server owners, moderators, and developers. Generate timestamps, format text, and more — all free.',
+    title: 'Free Discord Tools & Online Utilities for Everyone',
+    description: 'A free collection of browser-based tools for Discord users, developers, and job seekers. No sign-up, no limits — just fast, useful tools.',
     url: `${seoConfig.baseUrl}/`,
     type: 'website',
     images: [{ url: seoConfig.defaultOgImage, width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Discord Tools – Discord Utilities for Everyone',
-    description: 'Free Discord utilities for Discord users, server owners, moderators, and developers.',
+    title: 'Free Discord Tools & Online Utilities for Everyone',
+    description: 'A free collection of browser-based tools for Discord users, developers, and job seekers. No sign-up, no limits.',
   },
 };
 
 const homepageFaqs = [
   {
     question: 'What is FreeDiscordTools?',
-    answer: 'FreeDiscordTools is a free collection of web-based utilities designed to help Discord users, server owners, moderators, and developers. Our tools run entirely in your browser with no sign-up required.',
+    answer: 'FreeDiscordTools is a free collection of browser-based utilities for Discord users, server owners, developers, and job seekers. Every tool runs entirely in your browser — no account or installation required.',
   },
   {
-    question: 'What is a Discord timestamp?',
-    answer: 'A Discord timestamp is a special text code in the format <t:UNIX:FORMAT> that Discord renders as a formatted date or time. The timestamp automatically displays in each viewer\'s local timezone, making it ideal for scheduling events across different time zones.',
+    question: 'What kinds of tools are available?',
+    answer: 'We cover Discord utilities (timestamps, fonts, colored text, webhooks, permission calculators, snowflake decoders) and career tools like an ATS resume checker to help you land more job interviews.',
   },
   {
-    question: 'Are these tools free to use?',
-    answer: 'Yes, all tools on FreeDiscordTools are completely free. There is no account required, no usage limits, and no hidden fees.',
+    question: 'Are all tools free?',
+    answer: 'Yes, every tool on FreeDiscordTools is completely free with no usage limits, no account required, and no hidden fees.',
   },
   {
     question: 'Do the tools work on mobile?',
@@ -51,15 +51,15 @@ const homepageFaqs = [
   },
   {
     question: 'Is my data stored anywhere?',
-    answer: 'No. All tools operate entirely client-side in your browser. No data is sent to any server, stored, or logged.',
+    answer: 'No. All tools run entirely client-side in your browser. No data is sent to any server, stored, or logged.',
   },
   {
     question: 'What is a Discord ID to Date converter?',
-    answer: 'A Discord ID to Date converter (or snowflake converter) decodes the 64-bit integer ID used by Discord to find the exact creation time of a user account, server, channel, or message.',
+    answer: 'A Discord ID to Date converter decodes the 64-bit snowflake ID used by Discord to reveal the exact creation time of any user account, server, channel, or message.',
   },
   {
-    question: 'How do I use a Discord Webhook Sender?',
-    answer: 'Simply copy your webhook URL from Discord, paste it into our tool, customize your bot name and avatar, and send messages instantly without any coding.',
+    question: 'What is the ATS Resume Checker?',
+    answer: 'The ATS Resume Checker analyzes your CV against a job description to give you an ATS compatibility score and actionable tips to help your resume get past automated screening systems.',
   },
 ];
 
@@ -84,11 +84,10 @@ export default function HomePage() {
       <section className="bg-[#F8F9FF] border-b border-[#E3E6F0] py-20 px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-extrabold text-[#1a1d2e] mb-6 tracking-tight">
-            The #1 <span className="text-[#5865F2]">Discord Timestamp Generator</span> & Utilities
+            Free <span className="text-[#5865F2]">Online Tools</span> for Discord & Beyond
           </h1>
           <p className="text-xl text-[#5b6282] mb-10 leading-relaxed">
-            Free, powerful utilities for Discord users. Learn <strong>how to use unix timestamp discord</strong>, 
-            generate <strong>discord time stamps</strong>, and master your server with simple tools.
+            A growing collection of free, browser-based utilities — Discord tools, career tools, and developer utilities. No sign-up, no install, just open and use.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link 
@@ -145,61 +144,39 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* SEO Content — 1200+ words */}
+        {/* SEO Content */}
         <section className="prose prose-lg max-w-none mb-20 text-[#373b4d]">
           <article>
-            <h2 className="text-3xl font-bold text-[#1a1d2e] mb-6">The Complete Guide to Discord Utilities</h2>
+            <h2 className="text-3xl font-bold text-[#1a1d2e] mb-6">Free Browser-Based Tools for Everyone</h2>
 
             <p className="mb-6">
-              Discord has grown from a gaming chat application into one of the most versatile communication platforms on the internet. With hundreds of millions of registered users and servers covering every topic imaginable — from gaming and programming to art, music, education, and business — Discord has become a central hub for online communities of every size and type. As Discord has grown, so has the need for specialized utilities that help users, server owners, moderators, and developers get more out of the platform.
+              FreeDiscordTools started as a collection of Discord utilities and has grown into a broader toolkit for anyone who spends time online — whether you manage a Discord community, build bots, or are actively job hunting. Every tool on this site runs entirely in your browser. Nothing is installed, nothing is stored, and no account is ever required.
             </p>
 
             <p className="mb-6">
-              FreeDiscordTools is built to address exactly that need. This collection of free, browser-based utilities gives you powerful capabilities without requiring any account, installation, or payment. Whether you need to format dates and times for international audiences, generate special text effects for your messages, or manage complex server configurations, FreeDiscordTools provides the tools you need to communicate more effectively on Discord.
+              The goal is simple: take tasks that are tedious or technically complex and turn them into a single-page tool anyone can use in under a minute. That applies equally to generating a Discord timestamp for a global event announcement and to checking whether your resume will survive an ATS filter before a recruiter ever sees it.
             </p>
 
-            <h3 className="text-2xl font-semibold text-[#1a1d2e] mb-4 mt-10">Understanding Discord Timestamps</h3>
+            <h3 className="text-2xl font-semibold text-[#1a1d2e] mb-4 mt-10">Discord Utilities</h3>
 
             <p className="mb-6">
-              One of the most powerful and underused features of Discord is its native timestamp system. Discord timestamps allow you to embed a specific date and time into your message that automatically displays in each viewer&apos;s local timezone. This eliminates the confusion that arises when coordinating events across different time zones — a problem that affects virtually every global Discord community.
-            </p>
-
-            <p className="mb-6">
-              The syntax for a Discord timestamp is straightforward: <code className="bg-[#F8F9FF] px-2 py-0.5 rounded text-[#5865F2] font-mono">&lt;t:UNIX_TIMESTAMP:FORMAT&gt;</code>. The UNIX_TIMESTAMP is a standard Unix timestamp — the number of seconds that have elapsed since January 1, 1970 at 00:00:00 UTC. The FORMAT is a single letter code that controls how Discord displays the date and time.
+              Discord has grown from a gaming chat app into one of the most widely used communication platforms on the internet, with hundreds of millions of users across communities covering gaming, programming, art, music, education, finance, and more. As the platform has matured, so has the demand for tools that extend and simplify what you can do inside it.
             </p>
 
             <p className="mb-6">
-              Discord supports seven different timestamp format codes, each producing a different visual representation. The short time format (<code className="bg-[#F8F9FF] px-2 py-0.5 rounded text-[#5865F2] font-mono">t</code>) displays just the hours and minutes, like &quot;3:04 PM&quot;. The long time format (<code className="bg-[#F8F9FF] px-2 py-0.5 rounded text-[#5865F2] font-mono">T</code>) adds seconds, producing &quot;3:04:05 PM&quot;. The short date format (<code className="bg-[#F8F9FF] px-2 py-0.5 rounded text-[#5865F2] font-mono">d</code>) shows the date as numbers, like &quot;01/01/2025&quot;. The long date format (<code className="bg-[#F8F9FF] px-2 py-0.5 rounded text-[#5865F2] font-mono">D</code>) writes out the full month name, like &quot;January 1, 2025&quot;.
+              Our Discord tools cover the most common needs. The <strong>Timestamp Generator</strong> converts any date and time into the <code className="bg-[#F8F9FF] px-2 py-0.5 rounded text-[#5865F2] font-mono">&lt;t:UNIX:FORMAT&gt;</code> syntax Discord uses to display localized times for every viewer — essential for coordinating events across time zones. The <strong>Snowflake Decoder</strong> extracts the creation date hidden inside any Discord ID, useful for verifying account age or server history. The <strong>Colored Text Generator</strong> builds ANSI escape sequences for vivid, colorful code blocks. The <strong>Font Generator</strong> converts plain text into 160+ Unicode styles for usernames, bios, and channel names. The <strong>Webhook Sender</strong> lets you test and fire webhook messages without writing a single line of code. The <strong>Permission Calculator</strong> computes the exact bitwise integer needed for bot authorization flows.
             </p>
 
-            <h3 className="text-2xl font-semibold text-[#1a1d2e] mb-4 mt-10">Discord Colored Text and ANSI Formatting</h3>
+            <h3 className="text-2xl font-semibold text-[#1a1d2e] mb-4 mt-10">Career Tools</h3>
 
             <p className="mb-6">
-              Another exciting feature is the ability to send <strong className="text-[#1a1d2e]">discord colored text</strong> using ANSI escape codes within code blocks. By using the <code className="bg-[#F8F9FF] px-2 py-0.5 rounded text-[#5865F2] font-mono">ansi</code> language identifier, you can apply foreground and background colors to your messages. This is perfect for creating <strong className="text-[#1a1d2e]">discord colorful code blocks</strong> that highlight important information or add flair to your server announcements.
+              Beyond Discord, we offer tools aimed at job seekers. The <strong>ATS Resume Checker</strong> analyzes your CV against a job description and produces an ATS compatibility score with specific, actionable feedback. Over 90% of large employers use Applicant Tracking Systems to screen resumes before a human ever reads them. A well-formatted resume full of relevant experience can still be filtered out if it does not match the right keywords or uses a layout the parser cannot read. Our checker surfaces those issues immediately so you can fix them before submitting.
             </p>
 
-            <p className="mb-6">
-              Our <strong className="text-[#1a1d2e]">Discord Colored Text Generator</strong> provides a visual <strong className="text-[#1a1d2e]">discord code block color picker</strong>, making it easy to design colorful messages without needing to know the complex escape codes. Simply type your text, pick your colors, and copy the ready-to-use code block directly into Discord.
-            </p>
-
-            <h3 className="text-2xl font-semibold text-[#1a1d2e] mb-4 mt-10">Decoding Discord Snowflakes</h3>
+            <h3 className="text-2xl font-semibold text-[#1a1d2e] mb-4 mt-10">Privacy-First Design</h3>
 
             <p className="mb-6">
-              Every object in Discord, from users to messages, has a unique 64-bit ID called a <strong className="text-[#1a1d2e]">snowflake</strong>. These IDs are not random; they contain an encoded timestamp representing the exact millisecond the object was created.
-            </p>
-
-            <p className="mb-6">
-              Our <strong className="text-[#1a1d2e]">Discord ID to Date</strong> converter allows you to perform a <strong className="text-[#1a1d2e]">discord snowflake lookup</strong> to find the creation date of any account or server. This is a popular tool for checking the age of a Discord account or finding out exactly when a community was started.
-            </p>
-
-            <h3 className="text-2xl font-semibold text-[#1a1d2e] mb-4 mt-10">Discord Webhook Testing Made Easy</h3>
-
-            <p className="mb-6">
-              Webhooks are a powerful way to send automated messages to Discord channels. However, testing them often requires coding knowledge or command-line tools. Our <strong className="text-[#1a1d2e]">Discord Webhook Sender</strong> simplifies this by providing a clean, easy-to-use interface.
-            </p>
-
-            <p className="mb-6">
-              You can use our <strong className="text-[#1a1d2e]">discord webhook tester</strong> to send messages, customize the bot&apos;s username, and change the avatar image instantly. It&apos;s the fastest way to verify your webhook integrations are working correctly.
+              All tools are client-side by design. Your resume content, Discord IDs, webhook URLs, and any other data you enter never leave your device. There are no accounts, no cookies that track you across sessions, and no analytics attached to individual inputs. What you type stays in your browser tab.
             </p>
           </article>
         </section>
