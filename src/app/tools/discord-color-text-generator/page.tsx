@@ -115,7 +115,7 @@ export default function DiscordColorTextGeneratorPage() {
             Use our free <strong className="text-[#1a1d2e]">Discord color text generator</strong> to create eye-catching messages. Pick colors, apply styles, and copy the ANSI code block directly into your Discord chat.
           </p>
           <p className="bg-[#F0F2FF] border-l-4 border-[#5865F2] p-4 italic text-sm text-[#5b6282] mt-4">
-            Master the art of colorful messages! Check out our <a href="/blog/discord-ansi-color-formatting-guide/" class="text-[#5865F2] font-bold hover:underline">Complete Discord ANSI Color Guide</a>.
+            Master the art of colorful messages! Check out our <a href="/blog/discord-ansi-color-formatting-guide/" className="text-[#5865F2] font-bold hover:underline">Complete Discord ANSI Color Guide</a>.
           </p>
         </header>
 

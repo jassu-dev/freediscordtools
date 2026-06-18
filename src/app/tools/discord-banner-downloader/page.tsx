@@ -74,7 +74,7 @@ export default function DiscordBannerDownloaderPage() {
           Finding high-quality <strong>discord server banner</strong> images or <strong>discord icons</strong> can be tricky. Whether you want to save a server's aesthetic assets or need a clean copy of an icon for your own design work, our tool makes the process simple.
         </p>
         <p className="bg-[#F8F9FF] border border-[#5865F2]/20 rounded-xl p-4 italic text-sm text-[#5b6282] mt-4 mb-8">
-          Confused about how to get the right link from Discord? See our <a href="/blog/download-discord-server-assets-guide/" class="text-[#5865F2] font-bold hover:underline">Full Guide to Downloading Discord Assets</a>.
+          Confused about how to get the right link from Discord? See our <a href="/blog/download-discord-server-assets-guide/" className="text-[#5865F2] font-bold hover:underline">Full Guide to Downloading Discord Assets</a>.
         </p>
 
         <h3>Why use our Discord Asset Downloader?</h3>

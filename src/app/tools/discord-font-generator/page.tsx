@@ -186,7 +186,7 @@ export default function DiscordFontGeneratorPage() {
               Live preview. One-click copy. No sign-up.
               </p>
               <p className="bg-[#1e2030] border-l-4 border-[#5865F2] p-4 italic text-sm text-[#8b8fa8] mt-4">
-              Want to create a stunning profile? Read our <a href="/blog/aesthetic-discord-profile-guide/" class="text-[#5865F2] font-bold hover:underline">Aesthetic Discord Profile Guide</a>.
+              Want to create a stunning profile? Read our <a href="/blog/aesthetic-discord-profile-guide/" className="text-[#5865F2] font-bold hover:underline">Aesthetic Discord Profile Guide</a>.
               </p>
               </header>
           {/* Ad: below H1 */}

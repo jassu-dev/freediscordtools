@@ -76,7 +76,7 @@ export default function AtsResumeCheckerPage() {
           Need to <strong>check resume for ATS</strong>? Get your free <strong>ATS score</strong> instantly. Our <strong>ATS resume checker</strong> is the ultimate <strong>cv scanner</strong> to optimize your resume for applicant tracking systems.
         </p>
         <p className="bg-[#F8F9FF] border border-[#5865F2]/20 rounded-xl p-4 italic text-sm text-[#5b6282] max-w-2xl mx-auto">
-          New to ATS? Read our <a href="/blog/ultimate-ats-resume-checker-guide/" class="text-[#5865F2] font-bold hover:underline">Complete Guide to Optimizing Your CV for ATS</a>.
+          New to ATS? Read our <a href="/blog/ultimate-ats-resume-checker-guide/" className="text-[#5865F2] font-bold hover:underline">Complete Guide to Optimizing Your CV for ATS</a>.
         </p>
       </header>
 

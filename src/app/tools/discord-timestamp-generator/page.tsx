@@ -194,7 +194,7 @@ export default function DiscordTimestampGeneratorPage() {
               Manually calculating <strong className="text-[#1a1d2e]">timestamp unix</strong> values is difficult. Our tool serves as a reliable <strong className="text-[#1a1d2e]">unix time converter</strong> specifically designed for the Discord community. Whether you are a server owner or a developer, getting the right <strong className="text-[#1a1d2e]">discord timestamps</strong> has never been easier.
             </p>
             <p className="bg-[#F8F9FF] border-l-4 border-[#5865F2] p-4 italic text-sm">
-              Want to learn more about scheduling? Check out our <a href="/blog/how-to-use-discord-timestamps/" class="text-[#5865F2] font-bold hover:underline">Ultimate Guide to Discord Timestamps</a>.
+              Want to learn more about scheduling? Check out our <a href="/blog/how-to-use-discord-timestamps/" className="text-[#5865F2] font-bold hover:underline">Ultimate Guide to Discord Timestamps</a>.
             </p>
             <div className="bg-[#F0F2FF] rounded-lg p-4 font-mono text-sm text-[#5865F2]">
               &lt;t:UNIX_TIMESTAMP:FORMAT_CODE&gt;

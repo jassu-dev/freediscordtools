@@ -3,6 +3,8 @@ import { tools } from '@/data/tools';
 import { blogPosts } from '@/data/blog';
 import { seoConfig } from '@/config/seo';
 
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = seoConfig.baseUrl.endsWith('/') ? seoConfig.baseUrl.slice(0, -1) : seoConfig.baseUrl;
 

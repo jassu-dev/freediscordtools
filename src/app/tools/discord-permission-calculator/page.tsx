@@ -75,7 +75,7 @@ export default function DiscordPermissionCalculatorPage() {
           toggle individual permissions and instantly seeing the resulting <strong>permission integer</strong>.
         </p>
         <p className="bg-[#F8F9FF] border-l-4 border-[#5865F2] p-4 italic text-sm text-[#5b6282] mt-8">
-          Need a deeper understanding of how these integers are calculated? Read our <a href="/blog/discord-permission-integer-guide/" class="text-[#5865F2] font-bold hover:underline">Ultimate Guide to Discord Permission Integers</a>.
+          Need a deeper understanding of how these integers are calculated? Read our <a href="/blog/discord-permission-integer-guide/" className="text-[#5865F2] font-bold hover:underline">Ultimate Guide to Discord Permission Integers</a>.
         </p>
       </article>
     </div>

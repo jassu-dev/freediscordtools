@@ -108,7 +108,7 @@ export default function DiscordIdToDatePage() {
             Instantly convert any <strong className="text-[#1a1d2e]">Discord ID to date</strong>. Our <strong className="text-[#1a1d2e]">Discord snowflake converter</strong> decodes IDs to show you exactly when an account, server, or channel was created.
           </p>
           <p className="bg-[#F8F9FF] border-l-4 border-[#5865F2] p-4 italic text-sm text-[#5b6282] mt-4">
-            Curious about how these IDs work? Read our deep dive: <a href="/blog/what-is-a-discord-snowflake-id/" class="text-[#5865F2] font-bold hover:underline">What is a Discord Snowflake ID?</a>.
+            Curious about how these IDs work? Read our deep dive: <a href="/blog/what-is-a-discord-snowflake-id/" className="text-[#5865F2] font-bold hover:underline">What is a Discord Snowflake ID?</a>.
           </p>
         </header>
 
