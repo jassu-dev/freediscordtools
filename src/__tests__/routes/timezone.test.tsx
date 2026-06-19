@@ -19,7 +19,8 @@ describe('P11: Timezone selector contains all Intl timezones', () => {
     const { getByTestId } = render(<TimestampGenerator />);
 
     await act(async () => {
-      // allow useEffect to run
+      const select = getByTestId('timezone-select') as HTMLSelectElement;
+      select.focus();
     });
 
     await waitFor(
