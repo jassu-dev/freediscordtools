@@ -105,4 +105,21 @@ export const tools: Tool[] = [
     keywords: ['discord emoji text generator', 'discord regional indicator maker', 'discord big block letters', 'discord emoji keyboard text'],
     category: 'Discord Formatting',
   },
+  {
+    slug: 'bionic-reading-converter',
+    name: 'Bionic Reading Converter',
+    description: 'Free Bionic Reading converter online. Convert any text into bionic reading font style instantly to read faster, improve focus, and boost comprehension. Perfect for ADHD readers.',
+    href: '/tools/bionic-reading-converter/',
+    keywords: ['bionic reading converter', 'bionic reading font', 'bionic reading generator', 'bionic reading text converter', 'bionic reading online free', 'adhd speed reader'],
+    category: 'Productivity & Developer Tools',
+  },
+  {
+    slug: 'px-to-rem-converter',
+    name: 'PX to REM Converter',
+    description: 'Free online PX to REM converter. Convert pixels to rem/em units instantly based on custom root font sizes. Interactive conversion table included for developers.',
+    href: '/tools/px-to-rem-converter/',
+    keywords: ['px to rem', 'pixels to rem', 'px to rem calculator', 'rem to px converter', 'pixel to rem calculator', 'px to rem conversion', 'px to rem converter'],
+    category: 'Productivity & Developer Tools',
+  },
 ];
+
