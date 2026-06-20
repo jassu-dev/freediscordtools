@@ -51,3 +51,141 @@ body {
   clip: auto;
   white-space: normal;
 }
+
+/* Custom Blog Prose Typography Styles */
+.prose {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+}
+
+.prose h2 {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-top: 2.75rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.35;
+  letter-spacing: -0.025em;
+}
+
+.prose h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+.prose h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.prose ul {
+  list-style-type: disc;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.prose ol {
+  list-style-type: decimal;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0.25rem;
+}
+
+.prose pre {
+  background-color: #11131e;
+  color: #e2e8f0;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  overflow-x: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+  border: 1px solid var(--color-border);
+}
+
+.prose code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background-color: var(--color-surface-2);
+  color: var(--color-blurple);
+  font-size: 0.875rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+}
+
+.prose pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.prose th {
+  font-weight: 700;
+  color: var(--color-text);
+  border-bottom: 2px solid var(--color-border);
+  padding: 0.85rem 1rem;
+  background-color: #f3f4f6;
+}
+
+.prose td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.prose a {
+  color: var(--color-blurple);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.prose a:hover {
+  color: var(--color-blurple-hover);
+}
+
+.prose blockquote {
+  font-style: italic;
+  border-left: 4px solid var(--color-blurple);
+  padding-left: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-text-muted);
+}
+
