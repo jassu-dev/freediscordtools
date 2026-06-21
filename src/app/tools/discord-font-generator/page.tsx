@@ -6,8 +6,8 @@ import FaqSchema from '@/components/seo/FaqSchema';
 import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
 import { seoConfig } from '@/config/seo';
 
-// ─── Metadata ────────────────────�export const metadata: Metadata = {
-  title: 'Discord Font Generator — Copy & Paste Aesthetic Discord Fonts',
+// â”€â”€â”€ Metadata â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€âexport const metadata: Metadata = {
+  title: 'Discord Font Generator â€” Copy & Paste Aesthetic Discord Fonts',
   description:
     'Free Discord font generator to change your default Discord fonts. Copy and paste 160+ aesthetic Discord fonts, cool Discord fonts, and fancy text for usernames, nicknames, bios, and messages.',
   keywords: [
@@ -47,9 +47,9 @@ import { seoConfig } from '@/config/seo';
     },
   },
   openGraph: {
-    title: 'Discord Font Generator — Copy & Paste Aesthetic Discord Fonts',
+    title: 'Discord Font Generator â€” Copy & Paste Aesthetic Discord Fonts',
     description:
-      'Generate 160+ fancy fonts for Discord instantly. Custom Discord fonts, aesthetic Discord fonts, discord bio fonts, and discord nickname styles — live preview, copy and paste, free.',
+      'Generate 160+ fancy fonts for Discord instantly. Custom Discord fonts, aesthetic Discord fonts, discord bio fonts, and discord nickname styles â€” live preview, copy and paste, free.',
     url: `${seoConfig.baseUrl}/tools/discord-font-generator/`,
     type: 'website',
     locale: 'en_US',
@@ -58,20 +58,20 @@ import { seoConfig } from '@/config/seo';
         url: seoConfig.defaultOgImage,
         width: 1200,
         height: 630,
-        alt: 'Discord Font Generator — Copy & Paste Aesthetic Discord Fonts',
+        alt: 'Discord Font Generator â€” Copy & Paste Aesthetic Discord Fonts',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Discord Font Generator — Copy & Paste Aesthetic Discord Fonts',
+    title: 'Discord Font Generator â€” Copy & Paste Aesthetic Discord Fonts',
     description:
       'Change your default Discord font. Generate aesthetic, gothic, gaming, cute, and glitch discord fonts with live preview. Copy and paste instantly.',
     site: seoConfig.twitterHandle,
   },
 };
 
-// ─── FAQ data — keyword-dense Q&A ─────────────────────────────────────────────
+// â”€â”€â”€ FAQ data â€” keyword-dense Q&A â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const faqItems = [
   {
     question: 'How do I change my Discord font?',
@@ -86,17 +86,17 @@ const faqItems = [
   {
     question: 'How do custom Discord fonts work?',
     answer:
-      'Discord fonts work using Unicode character encoding. The generator replaces default keyboard letters with unique Unicode glyphs, such as mapping A to 𝐀 (bold serif) or 𝒜 (mathematical script). Because these are actual Unicode characters rather than stylesheet classes, they display as fancy text on Windows, Mac, iOS, Android, and web clients.',
+      'Discord fonts work using Unicode character encoding. The generator replaces default keyboard letters with unique Unicode glyphs, such as mapping A to ð€ (bold serif) or ð’œ (mathematical script). Because these are actual Unicode characters rather than stylesheet classes, they display as fancy text on Windows, Mac, iOS, Android, and web clients.',
   },
   {
     question: 'Can I use a custom Discord font for my username or nickname?',
     answer:
-      'Yes. Custom Discord username fonts and discord nickname fonts are fully supported. You can copy the generated text and paste it into your Display Name, Username, or Server Nickname settings. Compact styles like Bold (𝐁𝐨𝐥𝐝), Small Caps (ꜱᴍᴀʟʟ), or Monospace (𝙼𝚘𝚗𝚘) are recommended for readability.',
+      'Yes. Custom Discord username fonts and discord nickname fonts are fully supported. You can copy the generated text and paste it into your Display Name, Username, or Server Nickname settings. Compact styles like Bold (ðð¨ð¥ð), Small Caps (êœ±á´á´€ÊŸÊŸ), or Monospace (ð™¼ðš˜ðš—ðš˜) are recommended for readability.',
   },
   {
     question: 'What are the best Discord bio fonts?',
     answer:
-      'The best discord bio fonts are styles that remain legible in full sentences. Popular options include Bold Script (𝓕𝓪𝓷𝓬𝔂) for elegance, Italic (𝐼𝑡𝑎𝑙𝑖𝑐) for emphasis, and Spaced (S p a c e d) for a minimal aesthetic look. Use our live profile simulator to preview how your bio font looks before applying it.',
+      'The best discord bio fonts are styles that remain legible in full sentences. Popular options include Bold Script (ð“•ð“ªð“·ð“¬ð”‚) for elegance, Italic (ð¼ð‘¡ð‘Žð‘™ð‘–ð‘) for emphasis, and Spaced (S p a c e d) for a minimal aesthetic look. Use our live profile simulator to preview how your bio font looks before applying it.',
   },
   {
     question: 'Are Discord fonts safe to copy and paste?',
@@ -144,7 +144,7 @@ export default function DiscordFontGeneratorPage() {
       <div className="min-h-screen bg-[#13141f]">
         <div className="max-w-5xl mx-auto px-4 py-8">
 
-          {/* ── H1 ── */}
+          {/* â”€â”€ H1 â”€â”€ */}
           <header className="mb-6">
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
               Discord Font Generator
@@ -157,13 +157,13 @@ export default function DiscordFontGeneratorPage() {
             </p>
           </header>
 
-          {/* ── Tool ── */}
+          {/* â”€â”€ Tool â”€â”€ */}
           <section aria-labelledby="tool-section-heading" className="mb-8">
             <h2 id="tool-section-heading" className="sr-only">Discord Font Generator Tool</h2>
             <FontGenerator />
           </section>
 
-          {/* ── Fancy Discord Fonts ── */}
+          {/* â”€â”€ Fancy Discord Fonts â”€â”€ */}
           <section
             aria-labelledby="fancy-fonts-heading"
             className="mb-10 bg-[#1e2030] rounded-2xl p-6 border border-[#2e3147]"
@@ -179,12 +179,12 @@ export default function DiscordFontGeneratorPage() {
                 Because these fancy fonts for Discord use official Unicode standards, they render identically on Windows, Mac, iOS, Android, and web browsers. Your server members and friends will see the same cool Discord fonts you chose, ensuring your profile brand stays consistent everywhere.
               </p>
               <p>
-                The most popular fancy Discord fonts in 2026 are <strong className="text-[#e3e5f5]">Bold Serif (𝐁𝐨𝐥𝐝)</strong>, <strong className="text-[#e3e5f5]">Bold Script (𝓑𝓸𝓵𝓭)</strong>, <strong className="text-[#e3e5f5]">Gothic / Fraktur (𝔉𝔯𝔞𝔨𝔱𝔲𝔯)</strong>, <strong className="text-[#e3e5f5]">Vaporwave (Ｖａｐｏｒ)</strong>, and <strong className="text-[#e3e5f5]">Glitch / Zalgo</strong> text. Filter by categories above to browse styles that match your exact gaming or aesthetic preference.
+                The most popular fancy Discord fonts in 2026 are <strong className="text-[#e3e5f5]">Bold Serif (ðð¨ð¥ð)</strong>, <strong className="text-[#e3e5f5]">Bold Script (ð“‘ð“¸ð“µð“­)</strong>, <strong className="text-[#e3e5f5]">Gothic / Fraktur (ð”‰ð”¯ð”žð”¨ð”±ð”²ð”¯)</strong>, <strong className="text-[#e3e5f5]">Vaporwave (ï¼¶ï½ï½ï½ï½’)</strong>, and <strong className="text-[#e3e5f5]">Glitch / Zalgo</strong> text. Filter by categories above to browse styles that match your exact gaming or aesthetic preference.
               </p>
             </div>
           </section>
 
-          {/* ── Aesthetic Fonts for Discord ── */}
+          {/* â”€â”€ Aesthetic Fonts for Discord â”€â”€ */}
           <section
             aria-labelledby="aesthetic-fonts-heading"
             className="mb-10 bg-[#1e2030] rounded-2xl p-6 border border-[#2e3147]"
@@ -201,16 +201,16 @@ export default function DiscordFontGeneratorPage() {
               </p>
               <ul className="list-none space-y-2.5 pl-0">
                 {[
-                  { name: 'Vaporwave — Ｖａｐｏｒｗａｖｅ',   desc: 'Fullwidth Unicode letters — the ultimate aesthetic discord font for usernames.' },
-                  { name: 'Spaced — S p a c e d',              desc: 'Clean letter-spaced formatting, perfect for subtitle headers in discord bio fonts.' },
-                  { name: 'Sparkle — S✦p✦a✦r✦k✦l✦e',          desc: 'Sparkle-separated fancy text for discord, designed for announcements.' },
-                  { name: 'Stars — ★ Discord ★',               desc: 'Star-wrapped decorative styles for custom server channel labels.' },
-                  { name: 'Hearts — ♡ Discord ♡',              desc: 'Cute heart-accented aesthetic discord font ideal for gaming profiles.' },
+                  { name: 'Vaporwave â€” ï¼¶ï½ï½ï½ï½’ï½—ï½ï½–ï½…',   desc: 'Fullwidth Unicode letters â€” the ultimate aesthetic discord font for usernames.' },
+                  { name: 'Spaced â€” S p a c e d',              desc: 'Clean letter-spaced formatting, perfect for subtitle headers in discord bio fonts.' },
+                  { name: 'Sparkle â€” Sâœ¦pâœ¦aâœ¦râœ¦kâœ¦lâœ¦e',          desc: 'Sparkle-separated fancy text for discord, designed for announcements.' },
+                  { name: 'Stars â€” â˜… Discord â˜…',               desc: 'Star-wrapped decorative styles for custom server channel labels.' },
+                  { name: 'Hearts â€” â™¡ Discord â™¡',              desc: 'Cute heart-accented aesthetic discord font ideal for gaming profiles.' },
                 ].map((item) => (
                   <li key={item.name} className="flex gap-3">
-                    <span className="text-[#5865F2] font-mono shrink-0 mt-0.5">▸</span>
+                    <span className="text-[#5865F2] font-mono shrink-0 mt-0.5">â–¸</span>
                     <span>
-                      <strong className="text-[#e3e5f5]">{item.name}</strong> — {item.desc}
+                      <strong className="text-[#e3e5f5]">{item.name}</strong> â€” {item.desc}
                     </span>
                   </li>
                 ))}
@@ -221,7 +221,7 @@ export default function DiscordFontGeneratorPage() {
             </div>
           </section>
 
-          {/* ── How to Use Discord Fonts ── */}
+          {/* â”€â”€ How to Use Discord Fonts â”€â”€ */}
           <section
             aria-labelledby="how-to-heading"
             className="mb-10 bg-[#1e2030] rounded-2xl p-6 border border-[#2e3147]"
@@ -238,17 +238,17 @@ export default function DiscordFontGeneratorPage() {
                   {
                     n: '1',
                     title: 'Type your Discord text',
-                    body: 'Enter your discord username, discord nickname, bio text, or message into the input box. The discord font generator converts your text across all 160+ discord fonts in real time — no need to press enter.',
+                    body: 'Enter your discord username, discord nickname, bio text, or message into the input box. The discord font generator converts your text across all 160+ discord fonts in real time â€” no need to press enter.',
                   },
                   {
                     n: '2',
                     title: 'Pick a discord font style',
-                    body: 'Browse the discord font grid or search by name. Filter by category — Aesthetic, Gothic, Gaming, Cute, Anime, Cyberpunk, and more. Click any card to instantly preview that discord font in the live Discord preview (message, username, bio, profile views).',
+                    body: 'Browse the discord font grid or search by name. Filter by category â€” Aesthetic, Gothic, Gaming, Cute, Anime, Cyberpunk, and more. Click any card to instantly preview that discord font in the live Discord preview (message, username, bio, profile views).',
                   },
                   {
                     n: '3',
                     title: 'Copy and paste your fancy Discord text',
-                    body: 'Hit Copy on any discord font card to copy the fancy text for discord to your clipboard. Open Discord, go to your username, bio, or message box, and paste with Ctrl+V (Windows) or Cmd+V (Mac). Done — your cool discord font is live.',
+                    body: 'Hit Copy on any discord font card to copy the fancy text for discord to your clipboard. Open Discord, go to your username, bio, or message box, and paste with Ctrl+V (Windows) or Cmd+V (Mac). Done â€” your cool discord font is live.',
                   },
                 ].map((step) => (
                   <li key={step.n} className="flex gap-4">
@@ -265,7 +265,7 @@ export default function DiscordFontGeneratorPage() {
             </div>
           </section>
 
-          {/* ── Discord Username Font Generator ── */}
+          {/* â”€â”€ Discord Username Font Generator â”€â”€ */}
           <section
             aria-labelledby="username-fonts-heading"
             className="mb-10 bg-[#1e2030] rounded-2xl p-6 border border-[#2e3147]"
@@ -282,12 +282,12 @@ export default function DiscordFontGeneratorPage() {
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
-                  { style: '𝐁𝐨𝐥𝐝 𝐒𝐞𝐫𝐢𝐟',   reason: 'Highly readable and thick — the #1 discord username font.' },
-                  { style: '𝔉𝔯𝔞𝔨𝔱𝔲𝔯',       reason: 'Dark gothic styling — the classic choice for gaming profiles.' },
-                  { style: 'ꜱᴍᴀʟʟ ᴄᴀᴩ',   reason: 'Clean capital letters shrunk down — subtle yet custom.' },
-                  { style: 'Ｖａｐｏｒｗａｖｅ', reason: 'Spaced out fullwidth letters — the iconic lo-fi discord font.' },
-                  { style: 'ⓑⓤⓑⓑⓛⓔ',       reason: 'Circled bubble numbers and letters — cute, friendly look.' },
-                  { style: '𝙼𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎',    reason: 'Code typewriter design — great for programmers and developers.' },
+                  { style: 'ðð¨ð¥ð ð’ðžð«ð¢ðŸ',   reason: 'Highly readable and thick â€” the #1 discord username font.' },
+                  { style: 'ð”‰ð”¯ð”žð”¨ð”±ð”²ð”¯',       reason: 'Dark gothic styling â€” the classic choice for gaming profiles.' },
+                  { style: 'êœ±á´á´€ÊŸÊŸ á´„á´€á´©',   reason: 'Clean capital letters shrunk down â€” subtle yet custom.' },
+                  { style: 'ï¼¶ï½ï½ï½ï½’ï½—ï½ï½–ï½…', reason: 'Spaced out fullwidth letters â€” the iconic lo-fi discord font.' },
+                  { style: 'â“‘â“¤â“‘â“‘â“›â“”',       reason: 'Circled bubble numbers and letters â€” cute, friendly look.' },
+                  { style: 'ð™¼ðš˜ðš—ðš˜ðšœðš™ðšŠðšŒðšŽ',    reason: 'Code typewriter design â€” great for programmers and developers.' },
                 ].map((item) => (
                   <div key={item.style} className="bg-[#13141f] rounded-lg p-3 border border-[#2e3147]">
                     <p className="text-[#e3e5f5] text-base mb-0.5">{item.style}</p>
@@ -296,12 +296,12 @@ export default function DiscordFontGeneratorPage() {
                 ))}
               </div>
               <p>
-                Use the <strong className="text-[#e3e5f5]">👤 Username</strong> tab in the live mockup preview to confirm readability of your new nickname.
+                Use the <strong className="text-[#e3e5f5]">ðŸ‘¤ Username</strong> tab in the live mockup preview to confirm readability of your new nickname.
               </p>
             </div>
           </section>
 
-          {/* ── Discord Bio Font Generator ── */}
+          {/* â”€â”€ Discord Bio Font Generator â”€â”€ */}
           <section
             aria-labelledby="bio-fonts-heading"
             className="mb-10 bg-[#1e2030] rounded-2xl p-6 border border-[#2e3147]"
@@ -318,26 +318,26 @@ export default function DiscordFontGeneratorPage() {
               </p>
               <ul className="list-none space-y-2.5">
                 {[
-                  { style: 'Script & Bold Script', desc: '𝒮𝒸𝓇𝒾𝓅𝓉 — elegant cursive flow, excellent for quotes.' },
-                  { style: 'Italic Serif',         desc: '𝐼𝑡𝑎𝑙𝑖𝑐 — highly legible, clean accenting for sentences.' },
-                  { style: 'Vaporwave Style',      desc: 'Ａｅｓｔｈｅｔｉｃ — wide space layout, sets a distinct retro vibe.' },
-                  { style: 'Small Caps',            desc: 'ꜱᴍᴀʟʟ ᴄᴀᴩꜱ — structured block layout that maximizes character limits.' },
+                  { style: 'Script & Bold Script', desc: 'ð’®ð’¸ð“‡ð’¾ð“…ð“‰ â€” elegant cursive flow, excellent for quotes.' },
+                  { style: 'Italic Serif',         desc: 'ð¼ð‘¡ð‘Žð‘™ð‘–ð‘ â€” highly legible, clean accenting for sentences.' },
+                  { style: 'Vaporwave Style',      desc: 'ï¼¡ï½…ï½“ï½”ï½ˆï½…ï½”ï½‰ï½ƒ â€” wide space layout, sets a distinct retro vibe.' },
+                  { style: 'Small Caps',            desc: 'êœ±á´á´€ÊŸÊŸ á´„á´€á´©êœ± â€” structured block layout that maximizes character limits.' },
                 ].map((item) => (
                   <li key={item.style} className="flex gap-3">
-                    <span className="text-[#5865F2] font-mono shrink-0 mt-0.5">▸</span>
+                    <span className="text-[#5865F2] font-mono shrink-0 mt-0.5">â–¸</span>
                     <span>
-                      <strong className="text-[#e3e5f5]">{item.style}</strong> — {item.desc}
+                      <strong className="text-[#e3e5f5]">{item.style}</strong> â€” {item.desc}
                     </span>
                   </li>
                 ))}
               </ul>
               <p>
-                Toggle the <strong className="text-[#e3e5f5]">📝 Bio</strong> tab in our preview simulator to inspect paragraph alignments.
+                Toggle the <strong className="text-[#e3e5f5]">ðŸ“ Bio</strong> tab in our preview simulator to inspect paragraph alignments.
               </p>
             </div>
           </section>
 
-          {/* ── Glitch Text & Vaporwave ── */}
+          {/* â”€â”€ Glitch Text & Vaporwave â”€â”€ */}
           <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             <div className="bg-[#1e2030] rounded-2xl p-6 border border-[#2e3147]">
               <h2 className="text-xl font-bold text-white mb-3">Glitch Text Discord Font</h2>
@@ -353,7 +353,7 @@ export default function DiscordFontGeneratorPage() {
             </div>
           </section>
 
-          {/* ── How Unicode fonts work ── */}
+          {/* â”€â”€ How Unicode fonts work â”€â”€ */}
           <section
             aria-labelledby="unicode-heading"
             className="mb-10 bg-[#1e2030] rounded-2xl p-6 border border-[#2e3147]"
@@ -371,7 +371,7 @@ export default function DiscordFontGeneratorPage() {
             </div>
           </section>
 
-          {/* ── Discord text formatting guide ── */}
+          {/* â”€â”€ Discord text formatting guide â”€â”€ */}
           <section
             aria-labelledby="formatting-heading"
             className="mb-10 bg-[#1e2030] rounded-2xl p-6 border border-[#2e3147]"
@@ -417,7 +417,7 @@ export default function DiscordFontGeneratorPage() {
             </div>
           </section>
 
-          {/* ── FAQ ── */}
+          {/* â”€â”€ FAQ â”€â”€ */}
           <section aria-labelledby="faq-heading" className="mb-10">
             <h2 id="faq-heading" className="text-2xl font-bold text-white mb-4">
               FAQs About Discord Fonts & Generator Options
