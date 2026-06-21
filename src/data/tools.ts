@@ -121,5 +121,21 @@ export const tools: Tool[] = [
     keywords: ['px to rem', 'pixels to rem', 'px to rem calculator', 'rem to px converter', 'pixel to rem calculator', 'px to rem conversion', 'px to rem converter'],
     category: 'Productivity & Developer Tools',
   },
+  {
+    slug: 'discord-username-checker',
+    name: 'Discord Username Checker',
+    description: 'Instantly validate your Discord username against all naming rules. Get an availability score, see format errors, and get alternate suggestions — all in one click.',
+    href: '/tools/discord-username-checker/',
+    keywords: ['discord username checker', 'discord username availability checker', 'check discord username', 'discord username validator', 'discord username rules'],
+    category: 'Discord Lookup & Assets',
+  },
+  {
+    slug: 'discord-status-generator',
+    name: 'Discord Status Generator',
+    description: 'Browse 50+ cool, funny, and aesthetic Discord custom status ideas or build your own with live preview and one-click copy.',
+    href: '/tools/discord-status-generator/',
+    keywords: ['discord status generator', 'discord custom status ideas', 'cool discord status', 'discord status ideas', 'funny discord status'],
+    category: 'Discord Formatting',
+  },
 ];
 
