@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Discord Colored Text Generator – Free & Instant',
     description:
-      'Generate ANSI colored text for Discord. Free Discord color text maker — no account needed.',
+      'Generate ANSI colored text for Discord. Free Discord color text maker no account needed.',
     url: `${seoConfig.baseUrl}/tools/discord-color-text-generator/`,
     type: 'website',
     locale: 'en_US',

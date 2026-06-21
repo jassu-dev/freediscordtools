@@ -163,7 +163,7 @@ export default function MessageLinkExtractorPage() {
           </h2>
           
           <p>
-            Discord uses a distributed unique ID generation system inspired by Twitter, called <strong>Snowflake IDs</strong>. Every entity inside the Discord database — including guilds (servers), text and voice channels, user profiles, emojis, and every single message sent — is assigned a unique 64-bit integer.
+            Discord uses a distributed unique ID generation system inspired by Twitter, called <strong>Snowflake IDs</strong>. Every entity inside the Discord database including guilds (servers), text and voice channels, user profiles, emojis, and every single message sent is assigned a unique 64-bit integer.
           </p>
 
           <h3 className="text-xl font-bold text-[#1a1d2e]">Why Are Discord Message Links Structured This Way?</h3>

@@ -119,7 +119,7 @@ export default function EmojiTextGeneratorPage() {
 
           <h3 className="text-xl font-bold text-[#1a1d2e] pt-2">What Are Discord Regional Indicator Symbols?</h3>
           <p>
-            Regional indicators are a set of 26 special Unicode characters (U+1F1E6 through U+1F1FF) originally designed for representing country flags when paired together. However, when used individually in Discord, each character renders as a large blue square block with a white letter inside — creating the &quot;big letter&quot; effect that Discord communities love.
+            Regional indicators are a set of 26 special Unicode characters (U+1F1E6 through U+1F1FF) originally designed for representing country flags when paired together. However, when used individually in Discord, each character renders as a large blue square block with a white letter inside creating the &quot;big letter&quot; effect that Discord communities love.
           </p>
           <p>
             These are the emoji equivalents of the alphabet:
@@ -153,7 +153,7 @@ export default function EmojiTextGeneratorPage() {
           <ul className="list-disc pl-5 space-y-2">
             <li><strong>Channel Headers:</strong> Pin a message at the top of a channel using big letter text like &quot;🇷 🇺 🇱 🇪 🇸&quot; to create a visual section title that stands out from regular chat.</li>
             <li><strong>Welcome Messages:</strong> Greet new members with a personalized &quot;🇼 🇪 🇱 🇨 🇴 🇲 🇪&quot; banner that feels warm and community-oriented.</li>
-            <li><strong>Event Announcements:</strong> Use caps and numbers together for event dates — like &quot;🇬 🇮 🇻 🇪 🇦 🇼 🇦 🇾&quot; to make promotions impossible to miss.</li>
+            <li><strong>Event Announcements:</strong> Use caps and numbers together for event dates like &quot;🇬 🇮 🇻 🇪 🇦 🇼 🇦 🇾&quot; to make promotions impossible to miss.</li>
             <li><strong>Game Results:</strong> Post game server results with team names in big letters to celebrate victories in a visually exciting way.</li>
             <li><strong>Reaction Polls:</strong> Create react-to-vote polls where different reaction emojis correspond to lettered options (A, B, C).</li>
           </ul>
@@ -174,7 +174,7 @@ export default function EmojiTextGeneratorPage() {
             Our generator includes a word spacing slider that controls how many gap emojis are inserted between words. On default settings, words can look cramped, especially on smaller mobile screens. Increasing the gap slightly (1–2 spacer emojis) makes multi-word headers much more legible.
           </p>
           <p>
-            Once your emoji text looks perfect in the preview, click Copy to copy the full output to your clipboard. Then paste it directly into Discord — no extra formatting steps are needed. The emojis render automatically in Discord&apos;s desktop app, browser client, and mobile apps on both iOS and Android.
+            Once your emoji text looks perfect in the preview, click Copy to copy the full output to your clipboard. Then paste it directly into Discord no extra formatting steps are needed. The emojis render automatically in Discord&apos;s desktop app, browser client, and mobile apps on both iOS and Android.
           </p>
           <p className="bg-[#F8F9FF] border-l-4 border-[#5865F2] p-4 italic text-sm">
             Combine emoji headers with formatted body text! Use our <a href="/tools/discord-markdown-previewer/" className="text-[#5865F2] font-bold hover:underline">Discord Markdown Previewer</a> to design the body content, then add your big letter header on top for maximum visual impact.

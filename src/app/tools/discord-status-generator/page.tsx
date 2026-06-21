@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Discord Status Generator – 50+ Cool Custom Status Ideas',
-    description: '50+ cool Discord status ideas by category — gaming, aesthetic, coding, studying, funny. Copy in one click.',
+    description: '50+ cool Discord status ideas by category gaming, aesthetic, coding, studying, funny. Copy in one click.',
     site: seoConfig.twitterHandle,
   },
 };
@@ -78,7 +78,7 @@ const faqItems = [
   {
     question: 'What is the difference between a custom status and a Rich Presence status?',
     answer:
-      'A custom status is text you write yourself in User Settings. Rich Presence status is automatic — it\'s populated by Discord-integrated applications (like games or Spotify) to show what you\'re playing or listening to. Both can be visible simultaneously.',
+      'A custom status is text you write yourself in User Settings. Rich Presence status is automatic it\'s populated by Discord-integrated applications (like games or Spotify) to show what you\'re playing or listening to. Both can be visible simultaneously.',
   },
   {
     question: 'Are there Discord status rules or restrictions?',
@@ -120,7 +120,7 @@ export default function DiscordStatusGeneratorPage() {
             Discord Status Generator
           </h1>
           <p className="text-lg text-[#5b6282] leading-relaxed">
-            Find the perfect <strong className="text-[#1a1d2e]">Discord custom status</strong>. Browse 50+ ideas across Gaming, Aesthetic, Coding, Studying, Funny, and Motivational categories — or build your own with a live Discord preview.
+            Find the perfect <strong className="text-[#1a1d2e]">Discord custom status</strong>. Browse 50+ ideas across Gaming, Aesthetic, Coding, Studying, Funny, and Motivational categories or build your own with a live Discord preview.
           </p>
           <p className="bg-[#F0F2FF] border-l-4 border-[#5865F2] p-4 italic text-sm text-[#5b6282] mt-4">
             Want your status text in a unique style? Use our <a href="/tools/discord-font-generator/" className="text-[#5865F2] font-bold hover:underline">Discord Font Generator</a> to stylize any text with Unicode fonts.
@@ -165,7 +165,7 @@ export default function DiscordStatusGeneratorPage() {
           </div>
 
           <p>
-            Your status is visible to all users who can see your profile — friends, server members (when online), and anyone who visits your profile card. It updates immediately after saving.
+            Your status is visible to all users who can see your profile friends, server members (when online), and anyone who visits your profile card. It updates immediately after saving.
           </p>
         </section>
 
@@ -197,7 +197,7 @@ export default function DiscordStatusGeneratorPage() {
             },
             {
               title: '😄 Funny Status Ideas',
-              desc: 'Humor is always a crowd-pleaser. Funny statuses get reactions and start conversations. They work across all server types and demographics — from gaming communities to study groups.',
+              desc: 'Humor is always a crowd-pleaser. Funny statuses get reactions and start conversations. They work across all server types and demographics from gaming communities to study groups.',
               examples: ['"aggressively doing nothing 🦥"', '"melting gently into the couch 🫠"', '"pretending to have my life together 🎭"'],
             },
           ].map((cat) => (

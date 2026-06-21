@@ -71,7 +71,7 @@ export default function DiscordWebhookSenderPage() {
             Discord Webhook Message Sender
           </h1>
           <p className="text-lg text-[#5b6282] leading-relaxed">
-            The easiest <strong>Discord webhook message sender</strong>. Instantly send and test messages with our <strong>webhook message sender</strong> tool. No coding required—customize your bot, preview, and send!
+            The easiest <strong>Discord webhook message sender</strong>. Instantly send and test messages with our <strong>webhook message sender</strong> tool. No coding requiredcustomize your bot, preview, and send!
           </p>
         </header>
 
@@ -104,7 +104,7 @@ export default function DiscordWebhookSenderPage() {
           </h2>
           <div className="text-base text-[#5b6282] space-y-4 leading-relaxed">
             <p>
-              Our <strong>Discord webhook message sender</strong> is designed for speed. Whether you are a developer testing a new integration or a server owner sending automated notifications, this <strong>webhook message sender</strong> simplifies the process. No more testing with curl—just paste, customize, and send.
+              Our <strong>Discord webhook message sender</strong> is designed for speed. Whether you are a developer testing a new integration or a server owner sending automated notifications, this <strong>webhook message sender</strong> simplifies the process. No more testing with curljust paste, customize, and send.
             </p>
           </div>
         </section>
@@ -116,7 +116,7 @@ export default function DiscordWebhookSenderPage() {
             The Complete Guide to Discord Webhooks
           </h2>
           <p>
-            Discord webhooks are one of the most powerful and flexible features available to server owners and developers. A <strong>Discord webhook</strong> is essentially a unique URL tied to a specific channel that allows any external application or script to post messages directly — without needing a full Discord bot account or OAuth authentication.
+            Discord webhooks are one of the most powerful and flexible features available to server owners and developers. A <strong>Discord webhook</strong> is essentially a unique URL tied to a specific channel that allows any external application or script to post messages directly without needing a full Discord bot account or OAuth authentication.
           </p>
           <p>
             This makes webhooks ideal for a huge range of use cases: automated status reports, GitHub commit notifications, game server alerts, monitoring dashboards, RSS feed updates, e-commerce order confirmations, and much more. Our <strong>free Discord webhook sender</strong> lets you test and use webhooks without writing a single line of code.
@@ -132,7 +132,7 @@ export default function DiscordWebhookSenderPage() {
             <li>Go to the <strong>Integrations</strong> tab in the left sidebar.</li>
             <li>Click <strong>Webhooks → New Webhook</strong>.</li>
             <li>Give your webhook a name and optionally set a custom avatar image.</li>
-            <li>Click <strong>Copy Webhook URL</strong> — this is the URL you paste into our tool.</li>
+            <li>Click <strong>Copy Webhook URL</strong> this is the URL you paste into our tool.</li>
           </ol>
 
           <h3 className="text-xl font-bold text-[#1a1d2e] pt-4">Webhooks vs Bots: What Is the Difference?</h3>
@@ -152,7 +152,7 @@ export default function DiscordWebhookSenderPage() {
             Plain text messages are fine for simple notifications, but for professional-looking messages, Discord webhooks support <strong>rich embeds</strong>. Embeds can include colored sidebars, titles with links, images, custom fields, and footers. They look far more polished than raw text.
           </p>
           <p>
-            Use our <a href="/tools/discord-embed-generator/" className="text-[#5865F2] font-bold hover:underline">Discord Embed Generator</a> to visually design your embed and copy the exact JSON payload. Then paste that JSON body into any webhook client — including this tool — to send it instantly.
+            Use our <a href="/tools/discord-embed-generator/" className="text-[#5865F2] font-bold hover:underline">Discord Embed Generator</a> to visually design your embed and copy the exact JSON payload. Then paste that JSON body into any webhook client including this tool to send it instantly.
           </p>
 
           <h3 className="text-xl font-bold text-[#1a1d2e] pt-4">Webhook Security Best Practices</h3>

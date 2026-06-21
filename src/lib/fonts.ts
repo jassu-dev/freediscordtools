@@ -180,13 +180,13 @@ const squaredMap = new Map([
   ...rangeMap(LOWER, 0x1F130), // lowercase maps to uppercase squared
 ]);
 
-// Small Caps (IPA phonetic) — only lowercase, verified 26 chars
+// Small Caps (IPA phonetic) only lowercase, verified 26 chars
 const smallCapsMap = makeMap(
   LOWER,
   'ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘQʀꜱᴛᴜᴠᴡxʏᴢ'
 );
 
-// Superscript — best available per letter
+// Superscript best available per letter
 const superscriptMap = makeMap(
   LOWER + UPPER + DIGITS,
   'ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖqʳˢᵗᵘᵛʷˣʸᶻ' +
@@ -194,7 +194,7 @@ const superscriptMap = makeMap(
   '⁰¹²³⁴⁵⁶⁷⁸⁹'
 );
 
-// Subscript — available characters only
+// Subscript available characters only
 const subscriptMap = makeMap(
   LOWER + DIGITS,
   'ₐbcdₑfgₕᵢⱼₖₗₘₙₒₚqᵣₛₜᵤᵥwₓyz' +
@@ -244,7 +244,7 @@ const Z_UP:   string[] = ['\u030d','\u030e','\u0304','\u0305','\u033f','\u0311',
 const Z_DOWN: string[] = ['\u0316','\u0317','\u0318','\u0319','\u031c','\u031d','\u031e','\u031f','\u0320','\u0324'];
 const Z_MID:  string[] = ['\u0300','\u0301','\u0302','\u0303','\u0307','\u0308','\u030a','\u030b','\u030c','\u0350'];
 
-// ONLY apply glitch to ASCII chars — never to already-transformed astral SMP chars.
+// ONLY apply glitch to ASCII chars never to already-transformed astral SMP chars.
 // This prevents the "stacked marks on fullwidth" breakage reported by the user.
 function glitch(text: string, intensity: number): string {
   const chars = [...text];
@@ -398,7 +398,7 @@ export const FONT_STYLES: FontStyle[] = [
   { id:'squared-spaced',   name:'Squared Spaced',    category:'Bubble',    transform:t=>joinWith(' ')(applyMap(t,squaredMap)),         preview:'🄢 🄠 🄤',      popular:49 },
 
   // ══════════════════════════════════════════════════════════════════════ GLITCH
-  // Glitch only applied to ASCII-range text — avoids broken fullwidth + combining combos
+  // Glitch only applied to ASCII-range text avoids broken fullwidth + combining combos
 
   { id:'glitch-mild',      name:'Glitch',            category:'Glitch',    transform:t=>glitch(t,2),                   preview:'G̷l̴i̸t̵c̷h̴',          trending:true, popular:93 },
   { id:'glitch-heavy',     name:'Heavy Glitch',      category:'Glitch',    transform:t=>glitch(t,4),                   preview:'H̵e̸a̴v̷y̶',            popular:82 },

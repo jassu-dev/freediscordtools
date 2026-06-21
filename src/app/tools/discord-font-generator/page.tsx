@@ -212,7 +212,7 @@ export default function DiscordFontGeneratorPage() {
               </p>
               <ul className="list-none space-y-2.5 pl-0">
                 {[
-                  { name: 'Vaporwave', desc: 'Fullwidth Unicode letters — the ultimate aesthetic discord font for usernames.' },
+                  { name: 'Vaporwave', desc: 'Fullwidth Unicode letters the ultimate aesthetic discord font for usernames.' },
                   { name: 'Spaced',    desc: 'Clean letter-spaced formatting, perfect for subtitle headers in discord bio fonts.' },
                   { name: 'Sparkle',   desc: 'Sparkle-separated fancy text for discord, designed for announcements.' },
                   { name: 'Stars',     desc: 'Star-wrapped decorative styles for custom server channel labels.' },
@@ -221,7 +221,7 @@ export default function DiscordFontGeneratorPage() {
                   <li key={item.name} className="flex gap-3">
                     <span className="text-[#5865F2] font-mono shrink-0 mt-0.5">&#x25B8;</span>
                     <span>
-                      <strong className="text-[#e3e5f5]">{item.name}</strong> — {item.desc}
+                      <strong className="text-[#e3e5f5]">{item.name}</strong> {item.desc}
                     </span>
                   </li>
                 ))}
@@ -241,7 +241,7 @@ export default function DiscordFontGeneratorPage() {
               <ol className="space-y-3 list-none">
                 {[
                   { n: '1', title: 'Type your Discord text', body: 'Enter your username, nickname, bio, or message. The generator converts your text across all 160+ fonts in real time.' },
-                  { n: '2', title: 'Pick a font style', body: 'Browse the font grid or filter by category — Aesthetic, Gothic, Gaming, Cute, Anime, Cyberpunk, and more. Click any card to preview in the live Discord mockup.' },
+                  { n: '2', title: 'Pick a font style', body: 'Browse the font grid or filter by category Aesthetic, Gothic, Gaming, Cute, Anime, Cyberpunk, and more. Click any card to preview in the live Discord mockup.' },
                   { n: '3', title: 'Copy and paste', body: 'Hit Copy on any font card. Open Discord, paste with Ctrl+V (Windows) or Cmd+V (Mac). Your cool discord font is live.' },
                 ].map((step) => (
                   <li key={step.n} className="flex gap-4">
@@ -275,12 +275,12 @@ export default function DiscordFontGeneratorPage() {
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
-                  { style: 'Bold Serif',   reason: 'Highly readable and thick — the #1 discord username font.' },
-                  { style: 'Fraktur',      reason: 'Dark gothic styling — the classic choice for gaming profiles.' },
-                  { style: 'Small Caps',   reason: 'Clean capital letters shrunk down — subtle yet custom.' },
-                  { style: 'Vaporwave',    reason: 'Spaced fullwidth letters — the iconic lo-fi discord font.' },
-                  { style: 'Bubble',       reason: 'Circled letters — cute, friendly look.' },
-                  { style: 'Monospace',    reason: 'Code typewriter design — great for developers.' },
+                  { style: 'Bold Serif',   reason: 'Highly readable and thick the #1 discord username font.' },
+                  { style: 'Fraktur',      reason: 'Dark gothic styling the classic choice for gaming profiles.' },
+                  { style: 'Small Caps',   reason: 'Clean capital letters shrunk down subtle yet custom.' },
+                  { style: 'Vaporwave',    reason: 'Spaced fullwidth letters the iconic lo-fi discord font.' },
+                  { style: 'Bubble',       reason: 'Circled letters cute, friendly look.' },
+                  { style: 'Monospace',    reason: 'Code typewriter design great for developers.' },
                 ].map((item) => (
                   <div key={item.style} className="bg-[#13141f] rounded-lg p-3 border border-[#2e3147]">
                     <p className="text-[#e3e5f5] text-base mb-0.5 font-semibold">{item.style}</p>
@@ -315,7 +315,7 @@ export default function DiscordFontGeneratorPage() {
                   <li key={item.style} className="flex gap-3">
                     <span className="text-[#5865F2] font-mono shrink-0 mt-0.5">&#x25B8;</span>
                     <span>
-                      <strong className="text-[#e3e5f5]">{item.style}</strong> — {item.desc}
+                      <strong className="text-[#e3e5f5]">{item.style}</strong> {item.desc}
                     </span>
                   </li>
                 ))}

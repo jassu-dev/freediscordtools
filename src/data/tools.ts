@@ -12,7 +12,7 @@ export const tools: Tool[] = [
   {
     slug: 'discord-font-generator',
     name: 'Discord Font Generator',
-    description: 'Generate 100+ Unicode font styles for Discord instantly. Fancy text for your username, bio, and messages — live preview and one-click copy.',
+    description: 'Generate 100+ Unicode font styles for Discord instantly. Fancy text for your username, bio, and messages live preview and one-click copy.',
     href: '/tools/discord-font-generator/',
     keywords: ['discord font', 'discord fonts', 'discord font generator', 'fonts for discord', 'fancy text discord', 'discord username fonts', 'discord bio fonts'],
     category: 'Discord Formatting',
@@ -124,7 +124,7 @@ export const tools: Tool[] = [
   {
     slug: 'discord-username-checker',
     name: 'Discord Username Checker',
-    description: 'Instantly validate your Discord username against all naming rules. Get an availability score, see format errors, and get alternate suggestions — all in one click.',
+    description: 'Instantly validate your Discord username against all naming rules. Get an availability score, see format errors, and get alternate suggestions all in one click.',
     href: '/tools/discord-username-checker/',
     keywords: ['discord username checker', 'discord username availability checker', 'check discord username', 'discord username validator', 'discord username rules'],
     category: 'Discord Lookup & Assets',

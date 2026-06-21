@@ -52,7 +52,7 @@ const faqItems = [
   {
     question: 'How do I check if a Discord username is available?',
     answer:
-      'Our checker validates your username against Discord\'s formatting rules and gives an availability score based on length, uniqueness, and character patterns. For a definitive live check, you must attempt to create the account inside Discord directly — but our tool filters out invalid formats first.',
+      'Our checker validates your username against Discord\'s formatting rules and gives an availability score based on length, uniqueness, and character patterns. For a definitive live check, you must attempt to create the account inside Discord directly but our tool filters out invalid formats first.',
   },
   {
     question: 'What are the Discord username rules?',
@@ -77,7 +77,7 @@ const faqItems = [
   {
     question: 'What is the difference between a Discord username and display name?',
     answer:
-      'Your username (handle) is your unique account identifier and follows strict format rules. Your display name is what others see in servers and DMs — it can contain spaces, emojis, and special characters, and does not need to be unique.',
+      'Your username (handle) is your unique account identifier and follows strict format rules. Your display name is what others see in servers and DMs it can contain spaces, emojis, and special characters, and does not need to be unique.',
   },
   {
     question: 'Are Discord usernames case-sensitive?',
@@ -119,7 +119,7 @@ export default function DiscordUsernameCheckerPage() {
             Discord Username Checker
           </h1>
           <p className="text-lg text-[#5b6282] leading-relaxed">
-            Instantly validate your Discord username against all naming rules, get an <strong className="text-[#1a1d2e]">availability score</strong>, and see suggested alternatives — all before you open Discord.
+            Instantly validate your Discord username against all naming rules, get an <strong className="text-[#1a1d2e]">availability score</strong>, and see suggested alternatives all before you open Discord.
           </p>
           <p className="bg-[#F0F2FF] border-l-4 border-[#5865F2] p-4 italic text-sm text-[#5b6282] mt-4">
             Want a unique-looking username? Try our <a href="/tools/discord-font-generator/" className="text-[#5865F2] font-bold hover:underline">Discord Font Generator</a> to create stylized Unicode display names.
@@ -157,7 +157,7 @@ export default function DiscordUsernameCheckerPage() {
                   ['Starting character', 'Must begin with a letter or number (not _ or .)'],
                   ['Ending character', 'Must end with a letter or number (not _ or .)'],
                   ['Consecutive characters', 'No double periods (..) or double underscores (__)'],
-                  ['Case sensitivity', 'Not case-sensitive — "User" and "user" are the same'],
+                  ['Case sensitivity', 'Not case-sensitive "User" and "user" are the same'],
                   ['Reserved words', '"discord", "admin", "system", "clyde" and others are blocked'],
                 ].map(([rule, detail]) => (
                   <tr key={rule as string}>
@@ -171,7 +171,7 @@ export default function DiscordUsernameCheckerPage() {
 
           <h3 className="text-xl font-semibold text-[#1a1d2e]">Username vs Display Name</h3>
           <p>
-            Discord has two separate name fields. Your <strong className="text-[#1a1d2e]">username</strong> (also called your handle) is the unique identifier that follows the rules above. It is what appears after the @ symbol and is used for friend requests and profile URLs. Your <strong className="text-[#1a1d2e]">display name</strong> is separate — it can contain spaces, emoji, uppercase letters, and most Unicode characters, and does not need to be unique. Display names are what others see in server member lists and DMs.
+            Discord has two separate name fields. Your <strong className="text-[#1a1d2e]">username</strong> (also called your handle) is the unique identifier that follows the rules above. It is what appears after the @ symbol and is used for friend requests and profile URLs. Your <strong className="text-[#1a1d2e]">display name</strong> is separate it can contain spaces, emoji, uppercase letters, and most Unicode characters, and does not need to be unique. Display names are what others see in server member lists and DMs.
           </p>
           <p>
             To make your display name visually unique and stylized, try our <a href="/tools/discord-font-generator/" className="text-[#5865F2] font-bold hover:underline">Discord Font Generator</a> which converts any text into 160+ Unicode font styles that work in display names.
@@ -188,7 +188,7 @@ export default function DiscordUsernameCheckerPage() {
             <li>Combine two words: <code className="bg-[#F0F2FF] px-1 rounded text-[#5865F2]">swift.code</code> or <code className="bg-[#F0F2FF] px-1 rounded text-[#5865F2]">dark_pixel</code></li>
             <li>Add a prefix like <code className="bg-[#F0F2FF] px-1 rounded text-[#5865F2]">the_</code>, <code className="bg-[#F0F2FF] px-1 rounded text-[#5865F2]">real_</code>, or <code className="bg-[#F0F2FF] px-1 rounded text-[#5865F2]">its_</code></li>
             <li>Use a hobby + noun combo: <code className="bg-[#F0F2FF] px-1 rounded text-[#5865F2]">pixel.chef</code>, <code className="bg-[#F0F2FF] px-1 rounded text-[#5865F2]">void.coder</code></li>
-            <li>Aim for 8–15 characters — unique enough to be available, short enough to be memorable.</li>
+            <li>Aim for 8–15 characters unique enough to be available, short enough to be memorable.</li>
           </ul>
         </section>
 

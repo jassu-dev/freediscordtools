@@ -3,7 +3,7 @@ import { seoConfig } from '@/config/seo';
 
 export const metadata: Metadata = {
   title: 'About FreeDiscordTools',
-  description: 'Learn about FreeDiscordTools — free, fast Discord utilities built for users, server owners, and developers.',
+  description: 'Learn about FreeDiscordTools free, fast Discord utilities built for users, server owners, and developers.',
   alternates: { canonical: `${seoConfig.baseUrl}/about/` },
   openGraph: {
     title: 'About FreeDiscordTools',
@@ -25,7 +25,7 @@ export default function AboutPage() {
       <h1 className="text-4xl font-bold text-[#1a1d2e] mb-6">About FreeDiscordTools</h1>
       <div className="prose prose-invert max-w-none text-[#373b4d] space-y-4">
         <p>
-          FreeDiscordTools is a collection of free, browser-based utilities designed to make Discord easier to use for everyone — from casual users to professional server administrators and bot developers.
+          FreeDiscordTools is a collection of free, browser-based utilities designed to make Discord easier to use for everyone from casual users to professional server administrators and bot developers.
         </p>
         <p>
           Every tool on this site runs entirely in your browser. No data is ever sent to a server, no account or login is required, and there are no usage limits. Our tools are designed to be fast, accurate, and accessible on any device.

@@ -123,14 +123,14 @@ export default function EmbedGeneratorPage() {
           </p>
           <ul className="list-disc pl-5 space-y-2">
             <li><strong>Color (Sidebar):</strong> A hex color code that sets the left accent border. Use brand colors or status colors (green for success, red for errors, yellow for warnings) to make embeds immediately scannable.</li>
-            <li><strong>Author:</strong> Displayed at the very top of the embed above the title. It can include a small icon image URL and a hyperlink — perfect for crediting a bot or data source.</li>
+            <li><strong>Author:</strong> Displayed at the very top of the embed above the title. It can include a small icon image URL and a hyperlink perfect for crediting a bot or data source.</li>
             <li><strong>Title:</strong> The main headline of the embed. It can optionally link to an external URL, making it clickable in the Discord client.</li>
             <li><strong>Description:</strong> The body of your embed. Supports Discord markdown formatting including bold, italics, code blocks, bullet lists, and more. This is where most of your content lives.</li>
             <li><strong>Fields:</strong> Key-value pairs of information displayed below the description. Fields can be set to &quot;inline&quot; so they appear side by side, creating a clean grid layout ideal for displaying stats, prices, or specifications.</li>
             <li><strong>Thumbnail:</strong> A small square image shown in the top-right corner. Often used for profile pictures, item icons, or mini logos.</li>
             <li><strong>Image:</strong> A large wide image displayed below the fields. Use this for screenshots, charts, maps, or promotional banners.</li>
             <li><strong>Footer:</strong> Text and optional icon shown at the bottom of the embed. Commonly used for timestamps, version numbers, or source credits.</li>
-            <li><strong>Timestamp:</strong> An ISO 8601 date/time string that Discord automatically renders in the local timezone of each viewer — similar to how <a href="/tools/discord-timestamp-generator/" className="text-[#5865F2] font-bold hover:underline">Discord timestamps</a> work in chat.</li>
+            <li><strong>Timestamp:</strong> An ISO 8601 date/time string that Discord automatically renders in the local timezone of each viewer similar to how <a href="/tools/discord-timestamp-generator/" className="text-[#5865F2] font-bold hover:underline">Discord timestamps</a> work in chat.</li>
           </ul>
 
           <h3 className="text-xl font-bold text-[#1a1d2e] pt-4">How to Send a Discord Webhook Embed</h3>
@@ -138,7 +138,7 @@ export default function EmbedGeneratorPage() {
             Sending an embed via a <strong>Discord webhook</strong> is a three-step process. First, create a webhook in your server channel: go to <em>Channel Settings → Integrations → Webhooks → New Webhook</em>. Copy the webhook URL.
           </p>
           <p>
-            Second, use our <strong>discord embed maker online</strong> to build the payload. Our export tab gives you a ready-to-use JSON body that matches the Discord webhook API format exactly. Third, send the JSON payload to the webhook URL using any HTTP client. The quickest way is our built-in <a href="/tools/discord-webhook-sender/" className="text-[#5865F2] font-bold hover:underline">Discord Webhook Sender tool</a> — just paste the URL and JSON and hit Send.
+            Second, use our <strong>discord embed maker online</strong> to build the payload. Our export tab gives you a ready-to-use JSON body that matches the Discord webhook API format exactly. Third, send the JSON payload to the webhook URL using any HTTP client. The quickest way is our built-in <a href="/tools/discord-webhook-sender/" className="text-[#5865F2] font-bold hover:underline">Discord Webhook Sender tool</a> just paste the URL and JSON and hit Send.
           </p>
           <p>
             For automated systems, you can also send it with <code>curl</code>:
@@ -157,11 +157,11 @@ export default function EmbedGeneratorPage() {
 
           <h3 className="text-xl font-bold text-[#1a1d2e] pt-4">Best Practices for Discord Embeds</h3>
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Keep descriptions under 4096 characters</strong> — this is Discord&apos;s hard limit for embed descriptions.</li>
-            <li><strong>Limit embeds per message to 10</strong> — though most use cases only need one or two per message.</li>
-            <li><strong>Use inline fields in groups of 3</strong> — Discord renders inline fields in rows of three, so grouping them accordingly creates the cleanest visual layout.</li>
-            <li><strong>Use HTTPS for all image URLs</strong> — Discord will not load images from non-secure HTTP URLs.</li>
-            <li><strong>Avoid all-caps titles</strong> — they can feel aggressive. Use sentence case for professional server communications.</li>
+            <li><strong>Keep descriptions under 4096 characters</strong> this is Discord&apos;s hard limit for embed descriptions.</li>
+            <li><strong>Limit embeds per message to 10</strong> though most use cases only need one or two per message.</li>
+            <li><strong>Use inline fields in groups of 3</strong> Discord renders inline fields in rows of three, so grouping them accordingly creates the cleanest visual layout.</li>
+            <li><strong>Use HTTPS for all image URLs</strong> Discord will not load images from non-secure HTTP URLs.</li>
+            <li><strong>Avoid all-caps titles</strong> they can feel aggressive. Use sentence case for professional server communications.</li>
           </ul>
           <p>
             Whether you are building a status dashboard, posting game announcements, or automating moderation logs, our <strong>Discord embed generator</strong> is the fastest way to go from idea to finished embed. Need to test the output? Pair it with our <a href="/tools/discord-webhook-sender/" className="text-[#5865F2] font-bold hover:underline">Webhook Sender</a> for a complete end-to-end workflow.

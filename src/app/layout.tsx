@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: '%s | FreeDiscordTools',
   },
   description:
-    'Free browser-based tools for Discord users, server owners, developers, and job seekers. Discord timestamp generator, font generator, ATS resume checker, and more — no sign-up, no limits.',
+    'Free browser-based tools for Discord users, server owners, developers, and job seekers. Discord timestamp generator, font generator, ATS resume checker, and more no sign-up, no limits.',
   keywords: [
     'free discord tools',
     'discord timestamp generator',

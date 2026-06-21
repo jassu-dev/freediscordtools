@@ -124,7 +124,7 @@ function FontCard({ font, transformed, isFavorite, isRecent, isSelected, copiedI
       {/* Font name */}
       <p className="px-4 pb-1 text-sm font-semibold text-[#e3e5f5]">{font.name}</p>
 
-      {/* Transformed preview — flex-1 so it grows but never pushes button off */}
+      {/* Transformed preview flex-1 so it grows but never pushes button off */}
       <div
         className="flex-1 px-4 py-3 text-base text-[#dcddde] break-all leading-loose max-h-[90px] overflow-hidden"
         aria-live="polite"
@@ -133,7 +133,7 @@ function FontCard({ font, transformed, isFavorite, isRecent, isSelected, copiedI
         {display}
       </div>
 
-      {/* Copy button — always anchored to bottom */}
+      {/* Copy button always anchored to bottom */}
       <div className="px-4 pb-4 pt-2" onClick={(e) => e.stopPropagation()}>
         <button
           onClick={() => onCopy(display, font.id)}
@@ -417,7 +417,7 @@ export default function FontGenerator() {
           )}
         </div>
         <p id="font-input-hint" className="mt-1.5 text-xs text-[#5b6282]">
-          {input.length}/120 — fonts update instantly · click any card to preview it
+          {input.length}/120 fonts update instantly · click any card to preview it
         </p>
 
         <div className="flex flex-wrap gap-2 mt-4">
@@ -513,7 +513,7 @@ export default function FontGenerator() {
           <div className="rounded-xl border border-[#2e3147] bg-[#1e2030] p-8 text-center">
             <p className="text-[#5b6282] text-base">
               {activeCategory === 'Favorites'
-                ? 'No favorites yet — click 🤍 on any font card to save it.'
+                ? 'No favorites yet click 🤍 on any font card to save it.'
                 : `No fonts found for "${search}". Try a different search term.`}
             </p>
           </div>

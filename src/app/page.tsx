@@ -10,7 +10,7 @@ import { seoConfig } from '@/config/seo';
 
 export const metadata: Metadata = {
   title: 'Free Discord Tools & Online Utilities for Everyone',
-  description: 'A free collection of browser-based tools for Discord users, developers, and job seekers. No sign-up, no limits — just fast, useful tools.',
+  description: 'A free collection of browser-based tools for Discord users, developers, and job seekers. No sign-up, no limits just fast, useful tools.',
   alternates: {
     canonical: `${seoConfig.baseUrl}/`,
     languages: {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Free Discord Tools & Online Utilities for Everyone',
-    description: 'A free collection of browser-based tools for Discord users, developers, and job seekers. No sign-up, no limits — just fast, useful tools.',
+    description: 'A free collection of browser-based tools for Discord users, developers, and job seekers. No sign-up, no limits just fast, useful tools.',
     url: `${seoConfig.baseUrl}/`,
     type: 'website',
     images: [{ url: seoConfig.defaultOgImage, width: 1200, height: 630 }],
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 const homepageFaqs = [
   {
     question: 'What is FreeDiscordTools?',
-    answer: 'FreeDiscordTools is a free collection of browser-based utilities for Discord users, server owners, developers, and job seekers. Every tool runs entirely in your browser — no account or installation required.',
+    answer: 'FreeDiscordTools is a free collection of browser-based utilities for Discord users, server owners, developers, and job seekers. Every tool runs entirely in your browser no account or installation required.',
   },
   {
     question: 'What kinds of tools are available?',
@@ -87,7 +87,7 @@ export default function HomePage() {
             Free <span className="text-[#5865F2]">Online Tools</span> for Discord & Beyond
           </h1>
           <p className="text-xl text-[#5b6282] mb-10 leading-relaxed">
-            A growing collection of free, browser-based utilities — Discord tools, career tools, and developer utilities. No sign-up, no install, just open and use.
+            A growing collection of free, browser-based utilities Discord tools, career tools, and developer utilities. No sign-up, no install, just open and use.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link 
@@ -150,7 +150,7 @@ export default function HomePage() {
             <h2 className="text-3xl font-bold text-[#1a1d2e] mb-6">Free Browser-Based Tools for Everyone</h2>
 
             <p className="mb-6">
-              FreeDiscordTools started as a collection of Discord utilities and has grown into a broader toolkit for anyone who spends time online — whether you manage a Discord community, build bots, or are actively job hunting. Every tool on this site runs entirely in your browser. Nothing is installed, nothing is stored, and no account is ever required.
+              FreeDiscordTools started as a collection of Discord utilities and has grown into a broader toolkit for anyone who spends time online whether you manage a Discord community, build bots, or are actively job hunting. Every tool on this site runs entirely in your browser. Nothing is installed, nothing is stored, and no account is ever required.
             </p>
 
             <p className="mb-6">
@@ -164,7 +164,7 @@ export default function HomePage() {
             </p>
 
             <p className="mb-6">
-              Our Discord tools cover the most common needs. The <strong>Timestamp Generator</strong> converts any date and time into the <code className="bg-[#F8F9FF] px-2 py-0.5 rounded text-[#5865F2] font-mono">&lt;t:UNIX:FORMAT&gt;</code> syntax Discord uses to display localized times for every viewer — essential for coordinating events across time zones. The <strong>Snowflake Decoder</strong> extracts the creation date hidden inside any Discord ID, useful for verifying account age or server history. The <strong>Colored Text Generator</strong> builds ANSI escape sequences for vivid, colorful code blocks. The <strong>Font Generator</strong> converts plain text into 160+ Unicode styles for usernames, bios, and channel names. The <strong>Webhook Sender</strong> lets you test and fire webhook messages without writing a single line of code. The <strong>Permission Calculator</strong> computes the exact bitwise integer needed for bot authorization flows.
+              Our Discord tools cover the most common needs. The <strong>Timestamp Generator</strong> converts any date and time into the <code className="bg-[#F8F9FF] px-2 py-0.5 rounded text-[#5865F2] font-mono">&lt;t:UNIX:FORMAT&gt;</code> syntax Discord uses to display localized times for every viewer essential for coordinating events across time zones. The <strong>Snowflake Decoder</strong> extracts the creation date hidden inside any Discord ID, useful for verifying account age or server history. The <strong>Colored Text Generator</strong> builds ANSI escape sequences for vivid, colorful code blocks. The <strong>Font Generator</strong> converts plain text into 160+ Unicode styles for usernames, bios, and channel names. The <strong>Webhook Sender</strong> lets you test and fire webhook messages without writing a single line of code. The <strong>Permission Calculator</strong> computes the exact bitwise integer needed for bot authorization flows.
             </p>
 
             <h3 className="text-2xl font-semibold text-[#1a1d2e] mb-4 mt-10">Career Tools</h3>

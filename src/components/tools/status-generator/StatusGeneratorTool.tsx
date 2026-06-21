@@ -326,7 +326,7 @@ export default function StatusGeneratorTool() {
               aria-label="Search statuses"
             />
 
-            {/* Category filter — scrollable row */}
+            {/* Category filter scrollable row */}
             <div className="flex gap-2 mb-6 overflow-x-auto pb-1 scrollbar-hide">
               {CATEGORIES.map((c) => (
                 <button

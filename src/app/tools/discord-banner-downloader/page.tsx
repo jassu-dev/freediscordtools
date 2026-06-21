@@ -9,7 +9,7 @@ import BannerDownloaderTool from '@/components/tools/BannerDownloaderTool';
 export const metadata: Metadata = {
   title: 'Discord Server Banner & Icon Downloader – Free High-Res',
   description:
-    'Download any Discord server banner, icon, and invite splash in full resolution. Free Discord asset downloader — paste an invite link and save images instantly.',
+    'Download any Discord server banner, icon, and invite splash in full resolution. Free Discord asset downloader paste an invite link and save images instantly.',
   keywords: [
     'discord server banner download',
     'discord icon grabber',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Discord Server Banner & Icon Downloader – Free High-Res',
     description:
-      'Download Discord server banners, icons, and invite splashes in full resolution. Paste an invite link and save instantly — free.',
+      'Download Discord server banners, icons, and invite splashes in full resolution. Paste an invite link and save instantly free.',
     url: `${seoConfig.baseUrl}/tools/discord-banner-downloader/`,
     type: 'website',
     locale: 'en_US',
@@ -101,7 +101,7 @@ export default function DiscordBannerDownloaderPage() {
             Discord Server Banner & Icon Downloader
           </h1>
           <p className="text-lg text-[#5b6282] leading-relaxed">
-            Download any Discord server&apos;s <strong className="text-[#1a1d2e]">banner</strong>, <strong className="text-[#1a1d2e]">icon</strong>, and <strong className="text-[#1a1d2e]">invite splash</strong> in full resolution. Paste the invite link and get direct download links instantly — no account needed.
+            Download any Discord server&apos;s <strong className="text-[#1a1d2e]">banner</strong>, <strong className="text-[#1a1d2e]">icon</strong>, and <strong className="text-[#1a1d2e]">invite splash</strong> in full resolution. Paste the invite link and get direct download links instantly no account needed.
           </p>
           <p className="bg-[#F8F9FF] border-l-4 border-[#5865F2] p-4 italic text-sm text-[#5b6282] mt-4">
             Want to understand what types of assets Discord servers can have? Read our <a href="/blog/download-discord-server-assets-guide/" className="text-[#5865F2] font-bold hover:underline">Complete Guide to Discord Server Assets</a>.

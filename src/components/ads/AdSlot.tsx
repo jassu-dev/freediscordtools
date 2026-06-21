@@ -35,7 +35,7 @@ export default function AdSlot({ slotId, width, height, className }: AdSlotProps
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
       } catch {
-        // AdSense not loaded yet — ad will fill when script loads
+        // AdSense not loaded yet ad will fill when script loads
       }
     }
 

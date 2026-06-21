@@ -27,7 +27,7 @@ export default function Header() {
           Free<span className="text-[#1a1d2e]">Discord</span>Tools
         </Link>
 
-        {/* Search — hidden on xs, shown from sm */}
+        {/* Search hidden on xs, shown from sm */}
         <div className="hidden sm:flex flex-1 min-w-0 max-w-md">
           <div className="w-full">
             <SearchBar />

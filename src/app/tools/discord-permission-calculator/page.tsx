@@ -158,7 +158,7 @@ export default function DiscordPermissionCalculatorPage() {
 
           <h3 className="text-xl font-semibold text-[#1a1d2e]">The Permission Hierarchy</h3>
           <p>
-            Effective permissions for a user in a channel are resolved in three layers. The <strong className="text-[#1a1d2e]">@everyone role</strong> provides the base. Each additional role the user holds is OR'd on top, expanding the permission set. Finally, channel-level permission overwrites apply as the last layer — they can explicitly allow permissions not in the role set, or explicitly deny permissions that roles would otherwise grant.
+            Effective permissions for a user in a channel are resolved in three layers. The <strong className="text-[#1a1d2e]">@everyone role</strong> provides the base. Each additional role the user holds is OR'd on top, expanding the permission set. Finally, channel-level permission overwrites apply as the last layer they can explicitly allow permissions not in the role set, or explicitly deny permissions that roles would otherwise grant.
           </p>
           <p>
             The <strong className="text-[#1a1d2e]">Administrator</strong> permission (bit 3, value 8) is a special case: it bypasses all other checks and grants every permission unconditionally, including overriding channel-level denies. For this reason, avoid granting Administrator to bots unless absolutely required.
@@ -169,12 +169,12 @@ export default function DiscordPermissionCalculatorPage() {
             The following permissions carry elevated risk and should only be granted to carefully reviewed roles and bots:
           </p>
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Administrator</strong> — Full unrestricted server access.</li>
-            <li><strong>Manage Guild</strong> — Can change server settings, vanity URL, and integrations.</li>
-            <li><strong>Manage Roles</strong> — Can modify roles below the actor's highest role, enabling potential privilege escalation.</li>
-            <li><strong>Mention Everyone</strong> — Can ping @everyone and @here, sending notifications to all members.</li>
-            <li><strong>Manage Webhooks</strong> — Can create and delete webhooks, potentially bypassing moderation logging.</li>
-            <li><strong>Manage Messages</strong> — Can delete any message in channels where this permission is granted.</li>
+            <li><strong>Administrator</strong> Full unrestricted server access.</li>
+            <li><strong>Manage Guild</strong> Can change server settings, vanity URL, and integrations.</li>
+            <li><strong>Manage Roles</strong> Can modify roles below the actor's highest role, enabling potential privilege escalation.</li>
+            <li><strong>Mention Everyone</strong> Can ping @everyone and @here, sending notifications to all members.</li>
+            <li><strong>Manage Webhooks</strong> Can create and delete webhooks, potentially bypassing moderation logging.</li>
+            <li><strong>Manage Messages</strong> Can delete any message in channels where this permission is granted.</li>
           </ul>
         </section>
 

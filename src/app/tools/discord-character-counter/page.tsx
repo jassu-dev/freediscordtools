@@ -114,7 +114,7 @@ export default function CharacterCounterPage() {
             Every Discord user eventually runs into the character limit. Whether you are writing a detailed server rules document, a long event description, a bot response, or a game guide, Discord imposes strict per-message limits that cut off your content mid-sentence if you are not careful.
           </p>
           <p>
-            Understanding these limits and using a <strong>Discord character counter</strong> tool helps you manage content length before posting. This guide covers everything — from what the exact limits are, to the smartest ways to split content across multiple messages.
+            Understanding these limits and using a <strong>Discord character counter</strong> tool helps you manage content length before posting. This guide covers everything from what the exact limits are, to the smartest ways to split content across multiple messages.
           </p>
 
           <h3 className="text-xl font-bold text-[#1a1d2e] pt-2">Discord Character Limits Explained</h3>
@@ -128,7 +128,7 @@ export default function CharacterCounterPage() {
             <li><strong>Embed descriptions:</strong> Up to 4,096 characters per embed description field, independent of the message limit.</li>
           </ul>
           <p>
-            When you exceed the 2,000 character limit, Discord prevents you from sending and highlights the text input in red. There is no automatic truncation — you must either shorten your message or split it manually. This is where a <strong>Discord message splitter</strong> saves enormous time.
+            When you exceed the 2,000 character limit, Discord prevents you from sending and highlights the text input in red. There is no automatic truncation you must either shorten your message or split it manually. This is where a <strong>Discord message splitter</strong> saves enormous time.
           </p>
 
           <h3 className="text-xl font-bold text-[#1a1d2e] pt-4">How Our Discord Message Splitter Works</h3>
@@ -136,9 +136,9 @@ export default function CharacterCounterPage() {
             Rather than manually counting characters or editing paragraphs down, paste your full text into our tool. The character counter instantly displays:
           </p>
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Total characters</strong> — the exact count including spaces, punctuation, and emoji.</li>
-            <li><strong>Total words</strong> — useful for estimating reading time and verbosity.</li>
-            <li><strong>Sentences and paragraphs</strong> — helpful metrics for structuring longer content.</li>
+            <li><strong>Total characters</strong> the exact count including spaces, punctuation, and emoji.</li>
+            <li><strong>Total words</strong> useful for estimating reading time and verbosity.</li>
+            <li><strong>Sentences and paragraphs</strong> helpful metrics for structuring longer content.</li>
           </ul>
           <p>
             If your text exceeds the limit, the splitter activates automatically. You can choose from three intelligent split strategies:
@@ -151,7 +151,7 @@ export default function CharacterCounterPage() {
 
           <h3 className="text-xl font-bold text-[#1a1d2e] pt-4">How Characters Are Counted: Spaces, Emojis, and More</h3>
           <p>
-            Many users are surprised to find that spaces count toward the character total — including leading and trailing spaces. Newline characters (line breaks) also count as characters. Here is a quick breakdown:
+            Many users are surprised to find that spaces count toward the character total including leading and trailing spaces. Newline characters (line breaks) also count as characters. Here is a quick breakdown:
           </p>
           <ul className="list-disc pl-5 space-y-2">
             <li><strong>Standard Unicode emojis</strong> (like 😀) count as 1–2 characters depending on their Unicode representation.</li>

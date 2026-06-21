@@ -9,7 +9,7 @@ import DiscordBioGeneratorTool from '@/components/tools/bio-generator/DiscordBio
 export const metadata: Metadata = {
   title: 'Discord Bio Generator – 60+ Templates, Ideas & About Me Examples',
   description:
-    'Free Discord bio generator with 60+ copy-paste templates. Find aesthetic discord bio ideas, funny discord bio ideas, cool discord bios, matching discord bio templates, and discord about me ideas — all in one place.',
+    'Free Discord bio generator with 60+ copy-paste templates. Find aesthetic discord bio ideas, funny discord bio ideas, cool discord bios, matching discord bio templates, and discord about me ideas all in one place.',
   keywords: [
     'discord bio generator',
     'discord bio ideas',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Discord Bio Generator – 60+ Templates, Ideas & About Me Examples',
     description:
-      'Browse 60+ discord bio templates — aesthetic, funny, gaming, matching, coding & more. Copy any discord bio idea in one click. Free, no sign-up.',
+      'Browse 60+ discord bio templates aesthetic, funny, gaming, matching, coding & more. Copy any discord bio idea in one click. Free, no sign-up.',
     url: `${seoConfig.baseUrl}/tools/discord-bio-generator/`,
     type: 'website',
     locale: 'en_US',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Discord Bio Generator – 60+ Templates & Bio Ideas',
-    description: '60+ discord bio templates — aesthetic, funny, gaming, matching. Copy any discord about me idea instantly.',
+    description: '60+ discord bio templates aesthetic, funny, gaming, matching. Copy any discord about me idea instantly.',
     site: seoConfig.twitterHandle,
   },
 };
@@ -77,7 +77,7 @@ const faqItems = [
   },
   {
     question: 'What is a matching Discord bio?',
-    answer: 'A matching Discord bio is a paired set of bios shared between two friends or a couple. Each person uses a complementary version — for example one uses "🌙 moon to your stars" and the other uses "⭐ stars to your moon". Check our Matching category for couple and bestfriend discord bio ideas.',
+    answer: 'A matching Discord bio is a paired set of bios shared between two friends or a couple. Each person uses a complementary version for example one uses "🌙 moon to your stars" and the other uses "⭐ stars to your moon". Check our Matching category for couple and bestfriend discord bio ideas.',
   },
   {
     question: 'Can I use emoji in my Discord bio?',
@@ -116,17 +116,17 @@ export default function DiscordBioGeneratorPage() {
 
       <div className="max-w-4xl mx-auto px-4 py-8">
 
-        {/* H1 — keyword-dense opener */}
+        {/* H1 keyword-dense opener */}
         <header className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold text-[#1a1d2e] mb-3">
             Discord Bio Generator
           </h1>
           <p className="text-lg text-[#5b6282] leading-relaxed mb-3">
             The best free <strong className="text-[#1a1d2e]">Discord bio generator</strong> with 60+ copy-paste <strong className="text-[#1a1d2e]">discord bio templates</strong>.
-            Find <strong className="text-[#1a1d2e]">aesthetic discord bio ideas</strong>, <strong className="text-[#1a1d2e]">funny discord bio</strong> templates, <strong className="text-[#1a1d2e]">matching discord bio</strong> pairs, <strong className="text-[#1a1d2e]">cool discord bio</strong> lines, and <strong className="text-[#1a1d2e]">discord about me ideas</strong> — all with live profile preview and one-click copy.
+            Find <strong className="text-[#1a1d2e]">aesthetic discord bio ideas</strong>, <strong className="text-[#1a1d2e]">funny discord bio</strong> templates, <strong className="text-[#1a1d2e]">matching discord bio</strong> pairs, <strong className="text-[#1a1d2e]">cool discord bio</strong> lines, and <strong className="text-[#1a1d2e]">discord about me ideas</strong> all with live profile preview and one-click copy.
           </p>
           <p className="bg-[#F0F2FF] border-l-4 border-[#5865F2] p-4 italic text-sm text-[#5b6282]">
-            Want to stylize your bio with unique fonts? Try our <a href="/tools/discord-font-generator/" className="text-[#5865F2] font-bold hover:underline">Discord Font Generator</a> — convert any bio line into 160+ Unicode styles.
+            Want to stylize your bio with unique fonts? Try our <a href="/tools/discord-font-generator/" className="text-[#5865F2] font-bold hover:underline">Discord Font Generator</a> convert any bio line into 160+ Unicode styles.
           </p>
         </header>
 
@@ -164,7 +164,7 @@ export default function DiscordBioGeneratorPage() {
             </div>
           </div>
           <p className="text-sm text-[#5b6282] leading-relaxed">
-            Your bio is visible on your profile card — when someone clicks your username in any server, DM, or friend list. A great <strong className="text-[#1a1d2e]">discord bio template</strong> makes an instant impression and tells people who you are before you say a word.
+            Your bio is visible on your profile card when someone clicks your username in any server, DM, or friend list. A great <strong className="text-[#1a1d2e]">discord bio template</strong> makes an instant impression and tells people who you are before you say a word.
           </p>
         </section>
 
@@ -178,7 +178,7 @@ export default function DiscordBioGeneratorPage() {
           <div>
             <h3 className="text-xl font-semibold text-[#1a1d2e] mb-3">Aesthetic Discord Bio Ideas</h3>
             <p className="text-[#5b6282] text-base leading-relaxed mb-4">
-              <strong className="text-[#1a1d2e]">Aesthetic discord bio ideas</strong> use soft, poetic language to create a mood. Instead of listing facts about yourself, they capture a feeling — dreamy, lo-fi, dark academia, cottagecore, or vaporwave. The best <strong className="text-[#1a1d2e]">aesthetic discord bios</strong> are three short lines with emoji at the start of each, giving your profile card a structured, visual look.
+              <strong className="text-[#1a1d2e]">Aesthetic discord bio ideas</strong> use soft, poetic language to create a mood. Instead of listing facts about yourself, they capture a feeling dreamy, lo-fi, dark academia, cottagecore, or vaporwave. The best <strong className="text-[#1a1d2e]">aesthetic discord bios</strong> are three short lines with emoji at the start of each, giving your profile card a structured, visual look.
             </p>
             <p className="text-[#5b6282] text-base leading-relaxed">
               Popular aesthetic discord bio formats in 2026 include: moon and night imagery (<em>🌙 only alive at night</em>), nature references (<em>🌿 quietly growing in the background</em>), and music as identity (<em>🎧 headphones in, world out</em>). Use our Aesthetic filter above to browse all 10+ aesthetic <strong className="text-[#1a1d2e]">discord bio templates</strong>.
@@ -189,7 +189,7 @@ export default function DiscordBioGeneratorPage() {
           <div>
             <h3 className="text-xl font-semibold text-[#1a1d2e] mb-3">Funny Discord Bio Ideas</h3>
             <p className="text-[#5b6282] text-base leading-relaxed mb-4">
-              A <strong className="text-[#1a1d2e]">funny discord bio</strong> is the fastest way to get a reaction from someone who visits your profile. The best funny discord bio ideas are self-deprecating, relatable, or absurdist — they work because they are specific enough to feel real but universal enough to land with almost anyone.
+              A <strong className="text-[#1a1d2e]">funny discord bio</strong> is the fastest way to get a reaction from someone who visits your profile. The best funny discord bio ideas are self-deprecating, relatable, or absurdist they work because they are specific enough to feel real but universal enough to land with almost anyone.
             </p>
             <p className="text-[#5b6282] text-base leading-relaxed">
               Top <strong className="text-[#1a1d2e]">funny discord bio</strong> structures: the three-line chaos format (<em>🤡 professionally confused / 🦥 expert in doing nothing / 🫠 melting through life</em>), the sarcastic intro, or the absurd one-liner. Browse our Funny category for 8+ ready-to-copy funny discord about me ideas.
@@ -200,10 +200,10 @@ export default function DiscordBioGeneratorPage() {
           <div>
             <h3 className="text-xl font-semibold text-[#1a1d2e] mb-3">Matching Discord Bio Templates</h3>
             <p className="text-[#5b6282] text-base leading-relaxed mb-4">
-              <strong className="text-[#1a1d2e]">Matching discord bio</strong> templates are a popular trend where two people — a couple or best friends — use complementary bios that reference each other. One person might use <em>🌙 moon to your stars</em> while the other uses <em>⭐ stars to your moon</em>. They look great side by side when someone checks both profiles.
+              <strong className="text-[#1a1d2e]">Matching discord bio</strong> templates are a popular trend where two people a couple or best friends use complementary bios that reference each other. One person might use <em>🌙 moon to your stars</em> while the other uses <em>⭐ stars to your moon</em>. They look great side by side when someone checks both profiles.
             </p>
             <p className="text-[#5b6282] text-base leading-relaxed">
-              Our Matching category includes <strong className="text-[#1a1d2e]">matching discord bio</strong> pairs for couples, best friends, and server duos — all designed to look great together. Filter by &ldquo;Matching&rdquo; above to see all pairs.
+              Our Matching category includes <strong className="text-[#1a1d2e]">matching discord bio</strong> pairs for couples, best friends, and server duos all designed to look great together. Filter by &ldquo;Matching&rdquo; above to see all pairs.
             </p>
           </div>
 
@@ -262,7 +262,7 @@ export default function DiscordBioGeneratorPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               { href: '/tools/discord-font-generator/', name: 'Discord Font Generator', desc: 'Stylize any bio line with 160+ Unicode fonts.' },
-              { href: '/tools/discord-status-generator/', name: 'Discord Status Generator', desc: '200+ custom status ideas — gaming, aesthetic, coding & more.' },
+              { href: '/tools/discord-status-generator/', name: 'Discord Status Generator', desc: '200+ custom status ideas gaming, aesthetic, coding & more.' },
               { href: '/tools/discord-username-checker/', name: 'Discord Username Checker', desc: 'Validate your username and get an availability score.' },
               { href: '/tools/discord-color-text-generator/', name: 'Discord Colored Text', desc: 'Create colorful ANSI messages for your server.' },
             ].map((t) => (

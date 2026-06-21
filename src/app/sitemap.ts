@@ -33,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/terms/`,         lastModified: now, changeFrequency: 'yearly',  priority: 0.3 },
   ];
 
-  // 2. Tool Pages — priority 1.0 for key tools, 0.9 for the rest
+  // 2. Tool Pages priority 1.0 for key tools, 0.9 for the rest
   const toolPages: MetadataRoute.Sitemap = tools.map((tool) => ({
     url: `${baseUrl}${tool.href}`,
     lastModified: now,

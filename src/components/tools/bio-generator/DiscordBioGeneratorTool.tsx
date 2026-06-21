@@ -59,7 +59,7 @@ const BIO_TEMPLATES: BioTemplate[] = [
   { id: 'm5',  category: 'Motivational', tags: ['student','ambition'], text: '📚 student of life, always\n🧭 aligned with my purpose\n🦅 elevation requires separation' },
 
   // ── Anime ───────────────────────────────────────────────
-  { id: 'an1', category: 'Anime', tags: ['weeb','shonen'], text: '⛩️ on my training arc\n🌀 believe it — always\n⚡ plus ultra, no half measures' },
+  { id: 'an1', category: 'Anime', tags: ['weeb','shonen'], text: '⛩️ on my training arc\n🌀 believe it always\n⚡ plus ultra, no half measures' },
   { id: 'an2', category: 'Anime', tags: ['aesthetic','moody'], text: '🌸 shojo protagonist energy\n🎌 peak fiction enthusiast\n🍥 ramen heals the soul' },
   { id: 'an3', category: 'Anime', tags: ['dark','edgy'], text: '👁️ sharingan observer\n📓 keeping notes on everything\n🐉 dragon form unlocked' },
   { id: 'an4', category: 'Anime', tags: ['cute','fun'], text: '🦊 fox spirit in the chat\n💢 one more episode (3am)\n🌙 sailor moon did it first' },

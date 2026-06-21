@@ -111,7 +111,7 @@ export default function MarkdownPreviewerPage() {
             The Complete Guide to Discord Text Formatting
           </h2>
           <p>
-            Discord uses a customized subset of <strong>Markdown</strong> to style messages in chat. While the basics are simple, mastering every formatting rule — from spoiler tags to headers and code blocks — turns ordinary messages into polished, professional server communications. This guide covers everything a server owner, moderator, or regular user needs to know.
+            Discord uses a customized subset of <strong>Markdown</strong> to style messages in chat. While the basics are simple, mastering every formatting rule from spoiler tags to headers and code blocks turns ordinary messages into polished, professional server communications. This guide covers everything a server owner, moderator, or regular user needs to know.
           </p>
           <p>
             The easiest way to test formatting before posting publicly is to use a <strong>Discord markdown previewer</strong>. Our tool provides an interactive editor paired with a real-time dark-mode Discord chat simulation, so you can see exactly how your message will appear to other members before hitting Enter.
@@ -169,7 +169,7 @@ export default function MarkdownPreviewerPage() {
             Spoilers are one of Discord&apos;s most popular formatting features. They are essential for gaming communities sharing plot twists, puzzle solutions, or game tips without ruining the experience for others. By wrapping your content in <code>||double pipe characters||</code>, the text is hidden under a clickable dark block. Users must intentionally click to reveal it.
           </p>
           <p>
-            Spoilers work on both text and images. For images, you can right-click a message containing an image and mark it as a spoiler — it will then be blurred until clicked. Use our <strong>Discord spoiler tag generator</strong> to preview exactly how your hidden content will look in context.
+            Spoilers work on both text and images. For images, you can right-click a message containing an image and mark it as a spoiler it will then be blurred until clicked. Use our <strong>Discord spoiler tag generator</strong> to preview exactly how your hidden content will look in context.
           </p>
 
           <h3 className="text-xl font-bold text-[#1a1d2e] pt-4">
@@ -179,12 +179,12 @@ export default function MarkdownPreviewerPage() {
             Discord added native header support, which is a game-changer for server rules, FAQ channels, and structured announcements. You can use up to three levels of hierarchy:
           </p>
           <ul className="list-disc pl-5 space-y-2">
-            <li><code># Heading 1</code> — Creates a large H1-style header. Use sparingly for the top-level topic of a message.</li>
-            <li><code>## Heading 2</code> — Creates a medium H2 section header. Perfect for subsections in a rules channel.</li>
-            <li><code>### Heading 3</code> — Creates a smaller H3 sub-header. Use for individual items within a section.</li>
+            <li><code># Heading 1</code> Creates a large H1-style header. Use sparingly for the top-level topic of a message.</li>
+            <li><code>## Heading 2</code> Creates a medium H2 section header. Perfect for subsections in a rules channel.</li>
+            <li><code>### Heading 3</code> Creates a smaller H3 sub-header. Use for individual items within a section.</li>
           </ul>
           <p>
-            Always remember the required space after the hash symbols — <code>##text</code> without a space will not render as a header.
+            Always remember the required space after the hash symbols <code>##text</code> without a space will not render as a header.
           </p>
 
           <h3 className="text-xl font-bold text-[#1a1d2e] pt-4">
