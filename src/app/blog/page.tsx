@@ -5,7 +5,7 @@ import { blogPosts } from '@/data/blog';
 import { seoConfig } from '@/config/seo';
 
 export const metadata: Metadata = {
-  title: 'Blog Discord Guides, CSS Tips & Developer Tutorials',
+  title: 'Blog – Discord Guides, CSS Tips & Developer Tutorials',
   description: `Read ${blogPosts.length}+ expert guides on Discord formatting, webhooks, server management, CSS units, bionic reading, and ATS resume optimisation. Updated regularly.`,
   keywords: [
     'discord guides',
@@ -20,10 +20,11 @@ export const metadata: Metadata = {
     canonical: `${seoConfig.baseUrl}/blog/`,
   },
   openGraph: {
-    title: 'Blog Discord Guides, CSS Tips & Developer Tutorials',
+    title: 'Blog – Discord Guides, CSS Tips & Developer Tutorials',
     description: `${blogPosts.length}+ expert guides for Discord users, developers, and productivity enthusiasts.`,
     url: `${seoConfig.baseUrl}/blog/`,
     type: 'website',
+    images: [{ url: seoConfig.defaultOgImage, width: 1200, height: 630, alt: 'FreeDiscordTools Blog' }],
   },
 };
 

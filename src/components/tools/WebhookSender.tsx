@@ -25,7 +25,7 @@ export default function WebhookSender() {
     setStatus({ type: 'loading', message: 'Sending message...' });
 
     try {
-      const payload: any = {
+      const payload: Record<string, string> = {
         content: content,
       };
       if (username) payload.username = username;

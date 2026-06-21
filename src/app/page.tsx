@@ -7,30 +7,7 @@ import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import { tools } from '@/data/tools';
 import { blogPosts } from '@/data/blog';
 import { seoConfig } from '@/config/seo';
-
-export const metadata: Metadata = {
-  title: 'Free Discord Tools & Online Utilities for Everyone',
-  description: 'A free collection of browser-based tools for Discord users, developers, and job seekers. No sign-up, no limits just fast, useful tools.',
-  alternates: {
-    canonical: `${seoConfig.baseUrl}/`,
-    languages: {
-      'en-US': `${seoConfig.baseUrl}/`,
-      'en': `${seoConfig.baseUrl}/`,
-    },
-  },
-  openGraph: {
-    title: 'Free Discord Tools & Online Utilities for Everyone',
-    description: 'A free collection of browser-based tools for Discord users, developers, and job seekers. No sign-up, no limits just fast, useful tools.',
-    url: `${seoConfig.baseUrl}/`,
-    type: 'website',
-    images: [{ url: seoConfig.defaultOgImage, width: 1200, height: 630 }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Free Discord Tools & Online Utilities for Everyone',
-    description: 'A free collection of browser-based tools for Discord users, developers, and job seekers. No sign-up, no limits.',
-  },
-};
+import { buildFaqJsonLd } from '@/lib/jsonld';
 
 const homepageFaqs = [
   {
@@ -62,6 +39,33 @@ const homepageFaqs = [
     answer: 'The ATS Resume Checker analyzes your CV against a job description to give you an ATS compatibility score and actionable tips to help your resume get past automated screening systems.',
   },
 ];
+export const metadata: Metadata = {
+  title: 'Free Discord Tools & Online Utilities for Everyone',
+  description: 'A free collection of browser-based tools for Discord users, developers, and job seekers. No sign-up, no limits just fast, useful tools.',
+  alternates: {
+    canonical: `${seoConfig.baseUrl}/`,
+    languages: {
+      'en-US': `${seoConfig.baseUrl}/`,
+      'en': `${seoConfig.baseUrl}/`,
+    },
+  },
+  openGraph: {
+    title: 'Free Discord Tools & Online Utilities for Everyone',
+    description: 'A free collection of browser-based tools for Discord users, developers, and job seekers. No sign-up, no limits just fast, useful tools.',
+    url: `${seoConfig.baseUrl}/`,
+    type: 'website',
+    images: [{ url: seoConfig.defaultOgImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Discord Tools & Online Utilities for Everyone',
+    description: 'A free collection of browser-based tools for Discord users, developers, and job seekers. No sign-up, no limits.',
+  },
+  other: {
+    'script:ld+json': buildFaqJsonLd(homepageFaqs),
+  },
+};
+
 
 export default function HomePage() {
   const groupedTools = tools.reduce((acc, tool) => {

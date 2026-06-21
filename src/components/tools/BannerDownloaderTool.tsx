@@ -7,10 +7,10 @@ export default function BannerDownloaderTool() {
   const [hash, setHash] = useState('');
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<{
-    id: string,
-    hash: string,
-    type: 'icons' | 'banners' | 'splashes' | 'avatars',
-    name: string
+    id: string;
+    hash: string;
+    type: 'icons' | 'banners' | 'splashes' | 'avatars';
+    name: string;
   } | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -22,7 +22,7 @@ export default function BannerDownloaderTool() {
         const pathParts = url.pathname.split('/');
         // Format: /type/id/hash.extension
         if (pathParts.length >= 4) {
-          const type = pathParts[1] as any;
+          const type = pathParts[1] as "icons" | "banners" | "splashes" | "avatars";
           const id = pathParts[2];
           const hashWithExt = pathParts[3];
           const hash = hashWithExt.split('.')[0];
@@ -53,7 +53,7 @@ export default function BannerDownloaderTool() {
         const url = new URL(input);
         const pathParts = url.pathname.split('/');
         if (pathParts.length >= 4) {
-          const type = pathParts[1] as any;
+          const type = pathParts[1] as "icons" | "banners" | "splashes" | "avatars";
           finalId = pathParts[2];
           finalHash = pathParts[3].split('.')[0];
           

@@ -14,6 +14,19 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
+const websiteSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: seoConfig.siteName,
+  url: seoConfig.baseUrl,
+  description: 'Free browser-based tools for Discord users, developers, and job seekers.',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: { '@type': 'EntryPoint', urlTemplate: `${seoConfig.baseUrl}/tools/?q={search_term_string}` },
+    'query-input': 'required name=search_term_string',
+  },
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(seoConfig.baseUrl),
   applicationName: 'FreeDiscordTools',
@@ -24,15 +37,15 @@ export const metadata: Metadata = {
     template: '%s | FreeDiscordTools',
   },
   description:
-    'Free browser-based tools for Discord users, server owners, developers, and job seekers. Discord timestamp generator, font generator, ATS resume checker, and more no sign-up, no limits.',
+    'Free browser-based tools for Discord users, server owners, developers, and job seekers. Discord timestamp generator, font generator, ATS resume checker, and more. No sign-up, no limits.',
   keywords: [
     'free discord tools',
     'discord timestamp generator',
     'discord font generator',
     'discord colored text',
     'ats resume checker',
-    'px to rem converter',
-    'bionic reading converter',
+    'discord bio generator',
+    'discord status generator',
     'discord webhook sender',
     'discord permission calculator',
   ],
@@ -63,6 +76,7 @@ export const metadata: Metadata = {
   },
   other: {
     'theme-color': '#5865F2',
+    'script:ld+json': websiteSchema,
   },
 };
 

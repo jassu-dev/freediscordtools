@@ -41,8 +41,26 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${seoConfig.baseUrl}/tools/discord-webhook-sender/`,
   },
+  openGraph: {
+    title: 'Free Discord Webhook Message Sender & Webhook Tester',
+    description: 'Send and test Discord webhook messages instantly. Customize bot name, avatar, and content. No coding required.',
+    url: `${seoConfig.baseUrl}/tools/discord-webhook-sender/`,
+    type: 'website',
+    locale: 'en_US',
+    images: [{ url: seoConfig.defaultOgImage, width: 1200, height: 630, alt: 'Discord Webhook Sender' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Discord Webhook Message Sender & Webhook Tester',
+    description: 'Send Discord webhook messages instantly. Free, no coding, no sign-up.',
+    site: seoConfig.twitterHandle,
+  },
+  other: {
+    'script:ld+json': buildFaqJsonLd(faqItems),
+  },
 };
-
+
+
 
 const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-webhook-sender/`;
 

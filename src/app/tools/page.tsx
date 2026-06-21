@@ -5,9 +5,9 @@ import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import ToolsPageClient from '@/components/tools/ToolsPageClient';
 
 export const metadata: Metadata = {
-  title: 'Free Online Tools Discord Utilities, Resume Checkers & Developer Tools',
+  title: 'Free Online Tools – Discord Utilities, Resume Checkers & Developer Tools',
   description:
-    'Browse 15+ free browser-based tools: Discord timestamp generator, font generator, color text generator, webhook sender, ATS resume checker, PX to REM converter no sign-up, no limits.',
+    'Browse 15+ free browser-based tools: Discord timestamp generator, font generator, color text generator, webhook sender, ATS resume checker, PX to REM converter. No sign-up, no limits.',
   keywords: [
     'free discord tools',
     'discord timestamp generator',
@@ -19,11 +19,12 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: `${seoConfig.baseUrl}/tools/` },
   openGraph: {
-    title: 'Free Online Tools Discord Utilities, Resume Checkers & Developer Tools',
+    title: 'Free Online Tools – Discord Utilities, Resume Checkers & Developer Tools',
     description:
       'Browse 15+ free browser-based tools for Discord users, job seekers, and developers. No sign-up required.',
     url: `${seoConfig.baseUrl}/tools/`,
     type: 'website',
+    images: [{ url: seoConfig.defaultOgImage, width: 1200, height: 630, alt: 'Free Discord Tools' }],
   },
 };
 

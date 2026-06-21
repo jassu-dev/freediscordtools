@@ -4,6 +4,7 @@ import Link from 'next/link';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import { blogPosts } from '@/data/blog';
 import { seoConfig } from '@/config/seo';
+import { buildFaqJsonLd } from '@/lib/jsonld';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -20,8 +21,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return {};
 
+  const articleSchema = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: { '@type': 'Organization', name: seoConfig.siteName, url: seoConfig.baseUrl },
+    publisher: {
+      '@type': 'Organization',
+      name: seoConfig.siteName,
+      url: seoConfig.baseUrl,
+      logo: { '@type': 'ImageObject', url: `${seoConfig.baseUrl}/icon.png` },
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${seoConfig.baseUrl}/blog/${post.slug}/` },
+    image: { '@type': 'ImageObject', url: seoConfig.defaultOgImage, width: 1200, height: 630 },
+  });
+
   return {
-    title: `${post.title} – FreeDiscordTools Blog`,
+    title: `${post.title}`,
     description: post.excerpt,
     keywords: post.keywords,
     alternates: {
@@ -41,6 +60,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: post.excerpt,
       site: seoConfig.twitterHandle,
     },
+    other: {
+      'script:ld+json': articleSchema,
+    },
   };
 }
 
@@ -52,29 +74,12 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
-  // Related posts: other posts that share at least one keyword, limit 3
   const related = blogPosts
     .filter((p) => p.slug !== slug && p.keywords.some((k) => post.keywords.includes(k)))
     .slice(0, 3);
 
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.title,
-    description: post.excerpt,
-    datePublished: post.date,
-    dateModified: post.date,
-    author: { '@type': 'Organization', name: seoConfig.siteName, url: seoConfig.baseUrl },
-    publisher: { '@type': 'Organization', name: seoConfig.siteName, url: seoConfig.baseUrl },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `${seoConfig.baseUrl}/blog/${post.slug}/` },
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
       <BreadcrumbSchema
         items={[
           { name: 'Home', href: `${seoConfig.baseUrl}/` },
