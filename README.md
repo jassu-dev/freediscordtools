@@ -1,1 +1,1 @@
-The final hosted site : https:/freediscordtools.in
+The final hosted site : <https://freediscordtools.in>
