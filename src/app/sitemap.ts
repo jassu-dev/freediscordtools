@@ -13,6 +13,9 @@ const PRIORITY_TOOLS = new Set([
   'ats-resume-checker',
   'discord-id-to-date',
   'discord-webhook-sender',
+  'discord-bio-generator',
+  'discord-status-generator',
+  'discord-username-checker',
 ]);
 
 export default function sitemap(): MetadataRoute.Sitemap {

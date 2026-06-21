@@ -137,5 +137,13 @@ export const tools: Tool[] = [
     keywords: ['discord status generator', 'discord custom status ideas', 'cool discord status', 'discord status ideas', 'funny discord status'],
     category: 'Discord Formatting',
   },
+  {
+    slug: 'discord-bio-generator',
+    name: 'Discord Bio Generator',
+    description: 'Free Discord bio generator with 60+ copy-paste templates. Find aesthetic, funny, matching, cool discord bio ideas and discord about me templates instantly.',
+    href: '/tools/discord-bio-generator/',
+    keywords: ['discord bio generator', 'discord bio ideas', 'discord bio templates', 'aesthetic discord bio', 'funny discord bio', 'matching discord bio', 'discord about me ideas'],
+    category: 'Discord Formatting',
+  },
 ];
 

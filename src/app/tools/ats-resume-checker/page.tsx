@@ -74,7 +74,7 @@ const PAGE_URL = `${seoConfig.baseUrl}/tools/ats-resume-checker/`;
 
 export default function AtsResumeCheckerPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
+    <>
       <WebSiteSchema />
       <FaqSchema items={faqItems} />
       <BreadcrumbSchema
@@ -84,6 +84,7 @@ export default function AtsResumeCheckerPage() {
           { name: 'ATS Resume Checker', href: PAGE_URL },
         ]}
       />
+      <div className="max-w-4xl mx-auto px-4 py-8">
       
       <header className="mb-10 text-center">
         <h1 className="text-4xl font-extrabold text-[#1a1d2e] mb-4">Free ATS Resume Checker & ATS Score Scanner</h1>
@@ -135,5 +136,6 @@ export default function AtsResumeCheckerPage() {
         </p>
       </article>
     </div>
+    </>
   );
 }

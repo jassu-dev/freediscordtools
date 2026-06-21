@@ -47,7 +47,8 @@ const PAGE_URL = `${seoConfig.baseUrl}/tools/px-to-rem-converter/`;
 
 export default function PxToRemConverterPage() {
   return (
-    <div className="max-w-5xl mx-auto px-4 py-8">
+    <>
+      <div className="max-w-5xl mx-auto px-4 py-8">
       <WebSiteSchema />
       <FaqSchema items={faqItems} />
       <BreadcrumbSchema
@@ -108,5 +109,6 @@ export default function PxToRemConverterPage() {
         </p>
       </article>
     </div>
+    </>
   );
 }

@@ -47,7 +47,8 @@ const PAGE_URL = `${seoConfig.baseUrl}/tools/bionic-reading-converter/`;
 
 export default function BionicReadingConverterPage() {
   return (
-    <div className="max-w-5xl mx-auto px-4 py-8">
+    <>
+      <div className="max-w-5xl mx-auto px-4 py-8">
       <WebSiteSchema />
       <FaqSchema items={faqItems} />
       <BreadcrumbSchema
@@ -112,5 +113,6 @@ export default function BionicReadingConverterPage() {
         </p>
       </article>
     </div>
+    </>
   );
 }
