@@ -30,6 +30,21 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${seoConfig.baseUrl}/tools/ats-resume-checker/`,
   },
+  openGraph: {
+    title: 'Free ATS Resume Checker & ATS Score Scanner (2026)',
+    description:
+      'Get your ATS score instantly. The best free ATS scanner to check resume for ATS compatibility, keyword optimization, and CV scoring.',
+    url: `${seoConfig.baseUrl}/tools/ats-resume-checker/`,
+    type: 'website',
+    locale: 'en_US',
+    images: [{ url: seoConfig.defaultOgImage, width: 1200, height: 630, alt: 'Free ATS Resume Checker' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free ATS Resume Checker & ATS Score Scanner',
+    description: 'Check your resume for ATS compatibility and get an instant score. Free, no sign-up required.',
+    site: seoConfig.twitterHandle,
+  },
 };
 
 const faqItems = [
