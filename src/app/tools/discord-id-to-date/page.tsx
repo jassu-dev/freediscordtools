@@ -2,11 +2,38 @@ import type { Metadata } from 'next';
 import SnowflakeConverter from '@/components/tools/SnowflakeConverter';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import FaqSchema from '@/components/seo/FaqSchema';
+import { buildFaqJsonLd } from '@/lib/jsonld';
 import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
 import { seoConfig } from '@/config/seo';
 
 // ─── Metadata ────────────────────────────────────────────────────────────────
+const faqItems = [
+  {
+    question: 'What is a Discord Snowflake?',
+    answer:
+      'A Discord Snowflake is a unique 64-bit integer used as an ID for everything in Discord (users, servers, messages, etc.). It contains a timestamp encoded within it, which represents the exact time the object was created.',
+  },
+  {
+    question: 'How do I find a Discord ID?',
+    answer:
+      'To find a Discord ID, enable "Developer Mode" in your Discord User Settings > Advanced. Once enabled, you can right-click any user, server, or message and select "Copy User ID" or "Copy Server ID".',
+  },
+  {
+    question: 'How does the Discord ID to Date converter work?',
+    answer:
+      'The converter takes the 64-bit ID and extracts the first 42 bits. It then adds the Discord Epoch (January 1, 2015) to those bits to calculate the exact milliseconds since 1970, giving you the creation date.',
+  },
+  {
+    question: 'Is it safe to use a Discord ID lookup tool?',
+    answer:
+      'Yes, it is completely safe. Discord IDs are public information within the app. Our tool simply decodes the mathematical timestamp within the ID and does not access any private account data.',
+  },
+  {
+    question: 'Can I check when a Discord server was created?',
+    answer:
+      'Yes! By copying the Server ID (Guild ID) and pasting it into our converter, you can see the exact second the Discord server was first initialized.',
+  },
+];
 export const metadata: Metadata = {
   title: 'Discord ID to Date: Snowflake Converter',
   description:
@@ -45,36 +72,12 @@ export const metadata: Metadata = {
       'Ever wondered when a Discord account was made? Use our Snowflake converter to find the exact creation date from any Discord ID.',
     site: seoConfig.twitterHandle,
   },
+  other: {
+    'script:ld+json': buildFaqJsonLd(faqItems),
+  },
 };
 
-// ─── FAQ data ─────────────────────────────────────────────────────────────────
-const faqItems = [
-  {
-    question: 'What is a Discord Snowflake?',
-    answer:
-      'A Discord Snowflake is a unique 64-bit integer used as an ID for everything in Discord (users, servers, messages, etc.). It contains a timestamp encoded within it, which represents the exact time the object was created.',
-  },
-  {
-    question: 'How do I find a Discord ID?',
-    answer:
-      'To find a Discord ID, enable "Developer Mode" in your Discord User Settings > Advanced. Once enabled, you can right-click any user, server, or message and select "Copy User ID" or "Copy Server ID".',
-  },
-  {
-    question: 'How does the Discord ID to Date converter work?',
-    answer:
-      'The converter takes the 64-bit ID and extracts the first 42 bits. It then adds the Discord Epoch (January 1, 2015) to those bits to calculate the exact milliseconds since 1970, giving you the creation date.',
-  },
-  {
-    question: 'Is it safe to use a Discord ID lookup tool?',
-    answer:
-      'Yes, it is completely safe. Discord IDs are public information within the app. Our tool simply decodes the mathematical timestamp within the ID and does not access any private account data.',
-  },
-  {
-    question: 'Can I check when a Discord server was created?',
-    answer:
-      'Yes! By copying the Server ID (Guild ID) and pasting it into our converter, you can see the exact second the Discord server was first initialized.',
-  },
-];
+// ─── FAQ data ─────────────────────────────────────────────────────────────────
 
 const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-id-to-date/`;
 
@@ -95,7 +98,6 @@ export default function DiscordIdToDatePage() {
           { name: 'Discord ID to Date', href: PAGE_URL },
         ]}
       />
-      <FaqSchema items={faqItems} />
 
       <div className="max-w-3xl mx-auto px-4 py-8">
         <header className="mb-6">

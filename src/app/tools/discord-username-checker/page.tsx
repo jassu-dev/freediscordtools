@@ -2,51 +2,9 @@ import type { Metadata } from 'next';
 import { seoConfig } from '@/config/seo';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import FaqSchema from '@/components/seo/FaqSchema';
+import { buildFaqJsonLd } from '@/lib/jsonld';
 import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
 import UsernameCheckerTool from '@/components/tools/username-checker/UsernameCheckerTool';
-
-export const metadata: Metadata = {
-  title: 'Discord Username Checker – Validate & Check Availability',
-  description:
-    'Free Discord username checker. Instantly validate your username against Discord rules, check format errors, get an availability score, and see alternate suggestions.',
-  keywords: [
-    'discord username checker',
-    'discord username availability checker',
-    'check discord username',
-    'is my discord username taken',
-    'discord username validator',
-    'discord username rules',
-    'discord name checker',
-    'discord username ideas',
-    'discord username generator',
-    'discord display name checker',
-    'valid discord username',
-    'discord username format',
-  ],
-  alternates: {
-    canonical: `${seoConfig.baseUrl}/tools/discord-username-checker/`,
-    languages: {
-      'en-US': `${seoConfig.baseUrl}/tools/discord-username-checker/`,
-      'en': `${seoConfig.baseUrl}/tools/discord-username-checker/`,
-    },
-  },
-  openGraph: {
-    title: 'Discord Username Checker – Validate & Check Availability',
-    description:
-      'Instantly check if your Discord username is valid, format-compliant, and likely available. Get an availability score and alternate suggestions.',
-    url: `${seoConfig.baseUrl}/tools/discord-username-checker/`,
-    type: 'website',
-    locale: 'en_US',
-    images: [{ url: seoConfig.defaultOgImage, width: 1200, height: 630, alt: 'Discord Username Checker' }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Discord Username Checker – Validate & Check Availability',
-    description: 'Check if your Discord username is valid and likely available. Free, instant, no sign-up.',
-    site: seoConfig.twitterHandle,
-  },
-};
 
 const faqItems = [
   {
@@ -90,6 +48,51 @@ const faqItems = [
       'Yes. Go to User Settings → My Account → Edit Username. You can change your username freely, but popular short names may already be taken. Our tool helps you validate format before you attempt the change.',
   },
 ];
+export const metadata: Metadata = {
+  title: 'Discord Username Checker – Validate & Check Availability',
+  description:
+    'Free Discord username checker. Instantly validate your username against Discord rules, check format errors, get an availability score, and see alternate suggestions.',
+  keywords: [
+    'discord username checker',
+    'discord username availability checker',
+    'check discord username',
+    'is my discord username taken',
+    'discord username validator',
+    'discord username rules',
+    'discord name checker',
+    'discord username ideas',
+    'discord username generator',
+    'discord display name checker',
+    'valid discord username',
+    'discord username format',
+  ],
+  alternates: {
+    canonical: `${seoConfig.baseUrl}/tools/discord-username-checker/`,
+    languages: {
+      'en-US': `${seoConfig.baseUrl}/tools/discord-username-checker/`,
+      'en': `${seoConfig.baseUrl}/tools/discord-username-checker/`,
+    },
+  },
+  openGraph: {
+    title: 'Discord Username Checker – Validate & Check Availability',
+    description:
+      'Instantly check if your Discord username is valid, format-compliant, and likely available. Get an availability score and alternate suggestions.',
+    url: `${seoConfig.baseUrl}/tools/discord-username-checker/`,
+    type: 'website',
+    locale: 'en_US',
+    images: [{ url: seoConfig.defaultOgImage, width: 1200, height: 630, alt: 'Discord Username Checker' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Discord Username Checker – Validate & Check Availability',
+    description: 'Check if your Discord username is valid and likely available. Free, instant, no sign-up.',
+    site: seoConfig.twitterHandle,
+  },
+  other: {
+    'script:ld+json': buildFaqJsonLd(faqItems),
+  },
+};
+
 
 const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-username-checker/`;
 
@@ -110,7 +113,6 @@ export default function DiscordUsernameCheckerPage() {
           { name: 'Discord Username Checker', href: PAGE_URL },
         ]}
       />
-      <FaqSchema items={faqItems} />
 
       <div className="max-w-3xl mx-auto px-4 py-8">
 

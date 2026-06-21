@@ -2,11 +2,38 @@ import type { Metadata } from 'next';
 import ColorTextGenerator from '@/components/tools/ColorTextGenerator';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import FaqSchema from '@/components/seo/FaqSchema';
+import { buildFaqJsonLd } from '@/lib/jsonld';
 import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
 import { seoConfig } from '@/config/seo';
 
 // ─── Metadata ────────────────────────────────────────────────────────────────
+const faqItems = [
+  {
+    question: 'How do I type in color on Discord?',
+    answer:
+      'To type in color on Discord, you must use a code block with the "ansi" language identifier and specific ANSI escape codes. This tool generates those codes for you so you can just copy and paste.',
+  },
+  {
+    question: 'What is a Discord ANSI color generator?',
+    answer:
+      'A Discord ANSI color generator is a tool that helps you create colorful text for Discord by generating the complex ANSI escape sequences required by Discord\'s markdown renderer.',
+  },
+  {
+    question: 'Why is my Discord ANSI text not working?',
+    answer:
+      'Discord ANSI colored text currently only works on the Desktop and Web versions of Discord. If you are on mobile, you will see the raw code instead of colored text. Also, ensure you are using the correct triple backtick syntax with "ansi".',
+  },
+  {
+    question: 'Can I use Discord colored text in my bio or username?',
+    answer:
+      'No, ANSI colored text only works inside code blocks in messages. It cannot be used in usernames, bios, or channel names.',
+  },
+  {
+    question: 'What colors are available in Discord ANSI?',
+    answer:
+      'Discord supports 8 foreground colors (Gray, Red, Green, Yellow, Blue, Pink, Cyan, White) and 8 background colors. You can also use Bold and Underline formatting.',
+  },
+];
 export const metadata: Metadata = {
   title: 'Discord Colored Text Generator | Free ANSI Color Picker',
   description:
@@ -50,36 +77,12 @@ export const metadata: Metadata = {
       'Generate ANSI colored text for Discord. Free, instant, no sign-up.',
     site: seoConfig.twitterHandle,
   },
+  other: {
+    'script:ld+json': buildFaqJsonLd(faqItems),
+  },
 };
 
-// ─── FAQ data ─────────────────────────────────────────────────────────────────
-const faqItems = [
-  {
-    question: 'How do I type in color on Discord?',
-    answer:
-      'To type in color on Discord, you must use a code block with the "ansi" language identifier and specific ANSI escape codes. This tool generates those codes for you so you can just copy and paste.',
-  },
-  {
-    question: 'What is a Discord ANSI color generator?',
-    answer:
-      'A Discord ANSI color generator is a tool that helps you create colorful text for Discord by generating the complex ANSI escape sequences required by Discord\'s markdown renderer.',
-  },
-  {
-    question: 'Why is my Discord ANSI text not working?',
-    answer:
-      'Discord ANSI colored text currently only works on the Desktop and Web versions of Discord. If you are on mobile, you will see the raw code instead of colored text. Also, ensure you are using the correct triple backtick syntax with "ansi".',
-  },
-  {
-    question: 'Can I use Discord colored text in my bio or username?',
-    answer:
-      'No, ANSI colored text only works inside code blocks in messages. It cannot be used in usernames, bios, or channel names.',
-  },
-  {
-    question: 'What colors are available in Discord ANSI?',
-    answer:
-      'Discord supports 8 foreground colors (Gray, Red, Green, Yellow, Blue, Pink, Cyan, White) and 8 background colors. You can also use Bold and Underline formatting.',
-  },
-];
+// ─── FAQ data ─────────────────────────────────────────────────────────────────
 
 const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-color-text-generator/`;
 
@@ -100,7 +103,6 @@ export default function DiscordColorTextGeneratorPage() {
           { name: 'Discord Colored Text Generator', href: PAGE_URL },
         ]}
       />
-      <FaqSchema items={faqItems} />
 
       <div className="max-w-3xl mx-auto px-4 py-8">
 

@@ -1,44 +1,10 @@
 import type { Metadata } from 'next';
 import { seoConfig } from '@/config/seo';
-import FaqSchema from '@/components/seo/FaqSchema';
+import { buildFaqJsonLd } from '@/lib/jsonld';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
 import PermissionCalculatorTool from '@/components/tools/PermissionCalculatorTool';
-
-export const metadata: Metadata = {
-  title: 'Discord Permission Calculator – Generate Permission Integer',
-  description:
-    'Free Discord permission calculator. Select role permissions and instantly generate the exact bitwise permission integer for bots and server role management.',
-  keywords: [
-    'discord permission calculator',
-    'discord role permission integer',
-    'discord bot permissions',
-    'calculate discord permissions',
-    'discord permission bitwise',
-    'discord server role management',
-    'discord bot invite permissions',
-    'discord permission integer generator',
-  ],
-  alternates: {
-    canonical: `${seoConfig.baseUrl}/tools/discord-permission-calculator/`,
-  },
-  openGraph: {
-    title: 'Discord Permission Calculator – Generate Permission Integer',
-    description:
-      'Select Discord role permissions and instantly generate the exact bitwise integer for bot invites and role configuration.',
-    url: `${seoConfig.baseUrl}/tools/discord-permission-calculator/`,
-    type: 'website',
-    locale: 'en_US',
-    images: [{ url: seoConfig.defaultOgImage, width: 1200, height: 630, alt: 'Discord Permission Calculator' }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Discord Permission Calculator – Generate Permission Integer',
-    description: 'Calculate Discord permission integers for bots and roles instantly. Free, accurate, no sign-up.',
-    site: seoConfig.twitterHandle,
-  },
-};
 
 const faqItems = [
   {
@@ -72,6 +38,43 @@ const faqItems = [
       'Yes. Channel permission overwrites are the final layer and can explicitly allow or deny specific permissions for a role or user in that channel, overriding the base role permission integer.',
   },
 ];
+export const metadata: Metadata = {
+  title: 'Discord Permission Calculator – Generate Permission Integer',
+  description:
+    'Free Discord permission calculator. Select role permissions and instantly generate the exact bitwise permission integer for bots and server role management.',
+  keywords: [
+    'discord permission calculator',
+    'discord role permission integer',
+    'discord bot permissions',
+    'calculate discord permissions',
+    'discord permission bitwise',
+    'discord server role management',
+    'discord bot invite permissions',
+    'discord permission integer generator',
+  ],
+  alternates: {
+    canonical: `${seoConfig.baseUrl}/tools/discord-permission-calculator/`,
+  },
+  openGraph: {
+    title: 'Discord Permission Calculator – Generate Permission Integer',
+    description:
+      'Select Discord role permissions and instantly generate the exact bitwise integer for bot invites and role configuration.',
+    url: `${seoConfig.baseUrl}/tools/discord-permission-calculator/`,
+    type: 'website',
+    locale: 'en_US',
+    images: [{ url: seoConfig.defaultOgImage, width: 1200, height: 630, alt: 'Discord Permission Calculator' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Discord Permission Calculator – Generate Permission Integer',
+    description: 'Calculate Discord permission integers for bots and roles instantly. Free, accurate, no sign-up.',
+    site: seoConfig.twitterHandle,
+  },
+  other: {
+    'script:ld+json': buildFaqJsonLd(faqItems),
+  },
+};
+
 
 const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-permission-calculator/`;
 
@@ -85,7 +88,6 @@ export default function DiscordPermissionCalculatorPage() {
         url={PAGE_URL}
         applicationCategory="DeveloperApplication"
       />
-      <FaqSchema items={faqItems} />
       <BreadcrumbSchema
         items={[
           { name: 'Home',  href: `${seoConfig.baseUrl}/` },

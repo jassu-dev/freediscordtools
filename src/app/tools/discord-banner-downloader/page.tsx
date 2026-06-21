@@ -1,45 +1,10 @@
 import type { Metadata } from 'next';
 import { seoConfig } from '@/config/seo';
-import FaqSchema from '@/components/seo/FaqSchema';
+import { buildFaqJsonLd } from '@/lib/jsonld';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
 import BannerDownloaderTool from '@/components/tools/BannerDownloaderTool';
-
-export const metadata: Metadata = {
-  title: 'Discord Server Banner & Icon Downloader – Free High-Res',
-  description:
-    'Download any Discord server banner, icon, and invite splash in full resolution. Free Discord asset downloader paste an invite link and save images instantly.',
-  keywords: [
-    'discord server banner download',
-    'discord icon grabber',
-    'download discord server banner',
-    'discord server icon downloader',
-    'free discord asset downloader',
-    'discord server image grabber',
-    'discord banner downloader',
-    'discord invite splash downloader',
-    'save discord server icon',
-  ],
-  alternates: {
-    canonical: `${seoConfig.baseUrl}/tools/discord-banner-downloader/`,
-  },
-  openGraph: {
-    title: 'Discord Server Banner & Icon Downloader – Free High-Res',
-    description:
-      'Download Discord server banners, icons, and invite splashes in full resolution. Paste an invite link and save instantly free.',
-    url: `${seoConfig.baseUrl}/tools/discord-banner-downloader/`,
-    type: 'website',
-    locale: 'en_US',
-    images: [{ url: seoConfig.defaultOgImage, width: 1200, height: 630, alt: 'Discord Banner Downloader' }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Discord Server Banner & Icon Downloader – Free High-Res',
-    description: 'Download Discord server banners and icons in full resolution. Free, instant, no account needed.',
-    site: seoConfig.twitterHandle,
-  },
-};
 
 const faqItems = [
   {
@@ -73,6 +38,44 @@ const faqItems = [
       'You can download assets from any server with a valid public invite link. Private servers or servers requiring verification before joining may not return assets.',
   },
 ];
+export const metadata: Metadata = {
+  title: 'Discord Server Banner & Icon Downloader – Free High-Res',
+  description:
+    'Download any Discord server banner, icon, and invite splash in full resolution. Free Discord asset downloader paste an invite link and save images instantly.',
+  keywords: [
+    'discord server banner download',
+    'discord icon grabber',
+    'download discord server banner',
+    'discord server icon downloader',
+    'free discord asset downloader',
+    'discord server image grabber',
+    'discord banner downloader',
+    'discord invite splash downloader',
+    'save discord server icon',
+  ],
+  alternates: {
+    canonical: `${seoConfig.baseUrl}/tools/discord-banner-downloader/`,
+  },
+  openGraph: {
+    title: 'Discord Server Banner & Icon Downloader – Free High-Res',
+    description:
+      'Download Discord server banners, icons, and invite splashes in full resolution. Paste an invite link and save instantly free.',
+    url: `${seoConfig.baseUrl}/tools/discord-banner-downloader/`,
+    type: 'website',
+    locale: 'en_US',
+    images: [{ url: seoConfig.defaultOgImage, width: 1200, height: 630, alt: 'Discord Banner Downloader' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Discord Server Banner & Icon Downloader – Free High-Res',
+    description: 'Download Discord server banners and icons in full resolution. Free, instant, no account needed.',
+    site: seoConfig.twitterHandle,
+  },
+  other: {
+    'script:ld+json': buildFaqJsonLd(faqItems),
+  },
+};
+
 
 const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-banner-downloader/`;
 
@@ -86,7 +89,6 @@ export default function DiscordBannerDownloaderPage() {
         url={PAGE_URL}
         applicationCategory="UtilitiesApplication"
       />
-      <FaqSchema items={faqItems} />
       <BreadcrumbSchema
         items={[
           { name: 'Home',  href: `${seoConfig.baseUrl}/` },

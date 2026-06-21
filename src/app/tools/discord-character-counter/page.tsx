@@ -2,10 +2,32 @@ import type { Metadata } from 'next';
 import CharacterCounter from '@/components/tools/CharacterCounter';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import FaqSchema from '@/components/seo/FaqSchema';
+import { buildFaqJsonLd } from '@/lib/jsonld';
 import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
 import { seoConfig } from '@/config/seo';
 
+const faqItems = [
+  {
+    question: 'What is the character limit on Discord?',
+    answer:
+      'Regular Discord users have a strict limit of 2,000 characters per message. Users with Discord Nitro can send messages up to 4,000 characters long.',
+  },
+  {
+    question: 'How does the Discord text splitter work?',
+    answer:
+      'Our tool counts your character length. If it exceeds 2,000 (or 4,000 in Nitro mode), it divides the text using smart formatting boundaries (like paragraph breaks or sentence terminals) and adds numbered suffixes (e.g. 1/3) so you can copy and paste them sequentially.',
+  },
+  {
+    question: 'What is the best way to bypass the 2000 limit?',
+    answer:
+      'The safest and cleanest way is splitting your text into multiple logical messages. Splitting by paragraph ensures your lists and announcements remain visually readable for server members.',
+  },
+  {
+    question: 'Does this counter count spaces and emojis?',
+    answer:
+      'Yes, all letters, spaces, numbers, and emojis are counted. Note that Discord represents custom server emojis under the hood as code sequences like <:emoji_name:id>, which can count as more characters than a regular Unicode emoji.',
+  },
+];
 export const metadata: Metadata = {
   title: 'Discord Character Counter & Message Splitter Tool',
   description:
@@ -41,30 +63,11 @@ export const metadata: Metadata = {
       'Split long announcements at sentence or paragraph breaks. Free Discord length counter.',
     site: seoConfig.twitterHandle,
   },
+  other: {
+    'script:ld+json': buildFaqJsonLd(faqItems),
+  },
 };
 
-const faqItems = [
-  {
-    question: 'What is the character limit on Discord?',
-    answer:
-      'Regular Discord users have a strict limit of 2,000 characters per message. Users with Discord Nitro can send messages up to 4,000 characters long.',
-  },
-  {
-    question: 'How does the Discord text splitter work?',
-    answer:
-      'Our tool counts your character length. If it exceeds 2,000 (or 4,000 in Nitro mode), it divides the text using smart formatting boundaries (like paragraph breaks or sentence terminals) and adds numbered suffixes (e.g. 1/3) so you can copy and paste them sequentially.',
-  },
-  {
-    question: 'What is the best way to bypass the 2000 limit?',
-    answer:
-      'The safest and cleanest way is splitting your text into multiple logical messages. Splitting by paragraph ensures your lists and announcements remain visually readable for server members.',
-  },
-  {
-    question: 'Does this counter count spaces and emojis?',
-    answer:
-      'Yes, all letters, spaces, numbers, and emojis are counted. Note that Discord represents custom server emojis under the hood as code sequences like <:emoji_name:id>, which can count as more characters than a regular Unicode emoji.',
-  },
-];
 
 const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-character-counter/`;
 
@@ -85,7 +88,6 @@ export default function CharacterCounterPage() {
           { name: 'Discord Character Counter', href: PAGE_URL },
         ]}
       />
-      <FaqSchema items={faqItems} />
 
       <div className="max-w-6xl mx-auto px-4 py-8">
         {/* H1 */}

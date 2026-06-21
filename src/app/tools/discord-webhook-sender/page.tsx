@@ -2,11 +2,28 @@ import type { Metadata } from 'next';
 import WebhookSender from '@/components/tools/WebhookSender';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import FaqSchema from '@/components/seo/FaqSchema';
+import { buildFaqJsonLd } from '@/lib/jsonld';
 import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
 import { seoConfig } from '@/config/seo';
 
 // ─── Metadata ────────────────────────────────────────────────────────────────
+const faqItems = [
+  {
+    question: 'How to use a Discord webhook message sender?',
+    answer:
+      'To use our Discord webhook message sender, paste your webhook URL, enter your desired message in the message sender tool, customize your bot name or avatar, and click "Send". It is the fastest webhook message sender online.',
+  },
+  {
+    question: 'Why use an online webhook message sender?',
+    answer:
+      'An online webhook message sender allows developers and server admins to quickly test webhook integrations, send announcements, or post formatted messages without writing any code. It is an essential webhook message sender utility.',
+  },
+  {
+    question: 'Is this a free Discord webhook message sender?',
+    answer:
+      'Yes, our tool is a 100% free Discord webhook message sender. You can send as many messages as you need for testing or server management without any limitations or sign-up requirements.',
+  },
+];
 export const metadata: Metadata = {
   title: 'Free Discord Webhook Message Sender & Webhook Tester',
   description:
@@ -25,24 +42,7 @@ export const metadata: Metadata = {
     canonical: `${seoConfig.baseUrl}/tools/discord-webhook-sender/`,
   },
 };
-
-const faqItems = [
-  {
-    question: 'How to use a Discord webhook message sender?',
-    answer:
-      'To use our Discord webhook message sender, paste your webhook URL, enter your desired message in the message sender tool, customize your bot name or avatar, and click "Send". It is the fastest webhook message sender online.',
-  },
-  {
-    question: 'Why use an online webhook message sender?',
-    answer:
-      'An online webhook message sender allows developers and server admins to quickly test webhook integrations, send announcements, or post formatted messages without writing any code. It is an essential webhook message sender utility.',
-  },
-  {
-    question: 'Is this a free Discord webhook message sender?',
-    answer:
-      'Yes, our tool is a 100% free Discord webhook message sender. You can send as many messages as you need for testing or server management without any limitations or sign-up requirements.',
-  },
-];
+
 
 const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-webhook-sender/`;
 
@@ -63,7 +63,6 @@ export default function DiscordWebhookSenderPage() {
           { name: 'Discord Webhook Message Sender', href: PAGE_URL },
         ]}
       />
-      <FaqSchema items={faqItems} />
 
       <div className="max-w-3xl mx-auto px-4 py-8">
         <header className="mb-6">

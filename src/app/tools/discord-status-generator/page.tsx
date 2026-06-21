@@ -2,52 +2,9 @@ import type { Metadata } from 'next';
 import { seoConfig } from '@/config/seo';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import FaqSchema from '@/components/seo/FaqSchema';
+import { buildFaqJsonLd } from '@/lib/jsonld';
 import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
 import StatusGeneratorTool from '@/components/tools/status-generator/StatusGeneratorTool';
-
-export const metadata: Metadata = {
-  title: 'Discord Status Generator – 50+ Cool Custom Status Ideas',
-  description:
-    'Free Discord custom status generator. Browse 50+ cool Discord status ideas by category or build your own with a live preview. Copy and paste in seconds.',
-  keywords: [
-    'discord status generator',
-    'discord custom status ideas',
-    'cool discord status',
-    'discord status ideas',
-    'discord status copy paste',
-    'funny discord status',
-    'aesthetic discord status',
-    'discord status maker',
-    'good discord status ideas',
-    'discord status for gamers',
-    'discord status text generator',
-    'best discord custom status',
-    'cute discord status ideas',
-  ],
-  alternates: {
-    canonical: `${seoConfig.baseUrl}/tools/discord-status-generator/`,
-    languages: {
-      'en-US': `${seoConfig.baseUrl}/tools/discord-status-generator/`,
-      'en': `${seoConfig.baseUrl}/tools/discord-status-generator/`,
-    },
-  },
-  openGraph: {
-    title: 'Discord Status Generator – 50+ Cool Custom Status Ideas',
-    description:
-      'Browse 50+ cool, funny, and aesthetic Discord status ideas or build a custom one with live preview. Copy and paste instantly.',
-    url: `${seoConfig.baseUrl}/tools/discord-status-generator/`,
-    type: 'website',
-    locale: 'en_US',
-    images: [{ url: seoConfig.defaultOgImage, width: 1200, height: 630, alt: 'Discord Status Generator' }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Discord Status Generator – 50+ Cool Custom Status Ideas',
-    description: '50+ cool Discord status ideas by category gaming, aesthetic, coding, studying, funny. Copy in one click.',
-    site: seoConfig.twitterHandle,
-  },
-};
 
 const faqItems = [
   {
@@ -91,6 +48,52 @@ const faqItems = [
       'Popular gamer statuses include: "grinding for that rare drop 🕹️", "git gud or go home ⚔️", "carrying the whole team again 🥇", or "not dead, just respawning 🎮". Browse our Gaming category for 10+ ready-to-copy ideas.',
   },
 ];
+export const metadata: Metadata = {
+  title: 'Discord Status Generator – 50+ Cool Custom Status Ideas',
+  description:
+    'Free Discord custom status generator. Browse 50+ cool Discord status ideas by category or build your own with a live preview. Copy and paste in seconds.',
+  keywords: [
+    'discord status generator',
+    'discord custom status ideas',
+    'cool discord status',
+    'discord status ideas',
+    'discord status copy paste',
+    'funny discord status',
+    'aesthetic discord status',
+    'discord status maker',
+    'good discord status ideas',
+    'discord status for gamers',
+    'discord status text generator',
+    'best discord custom status',
+    'cute discord status ideas',
+  ],
+  alternates: {
+    canonical: `${seoConfig.baseUrl}/tools/discord-status-generator/`,
+    languages: {
+      'en-US': `${seoConfig.baseUrl}/tools/discord-status-generator/`,
+      'en': `${seoConfig.baseUrl}/tools/discord-status-generator/`,
+    },
+  },
+  openGraph: {
+    title: 'Discord Status Generator – 50+ Cool Custom Status Ideas',
+    description:
+      'Browse 50+ cool, funny, and aesthetic Discord status ideas or build a custom one with live preview. Copy and paste instantly.',
+    url: `${seoConfig.baseUrl}/tools/discord-status-generator/`,
+    type: 'website',
+    locale: 'en_US',
+    images: [{ url: seoConfig.defaultOgImage, width: 1200, height: 630, alt: 'Discord Status Generator' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Discord Status Generator – 50+ Cool Custom Status Ideas',
+    description: '50+ cool Discord status ideas by category gaming, aesthetic, coding, studying, funny. Copy in one click.',
+    site: seoConfig.twitterHandle,
+  },
+  other: {
+    'script:ld+json': buildFaqJsonLd(faqItems),
+  },
+};
+
 
 const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-status-generator/`;
 
@@ -111,7 +114,6 @@ export default function DiscordStatusGeneratorPage() {
           { name: 'Discord Status Generator', href: PAGE_URL },
         ]}
       />
-      <FaqSchema items={faqItems} />
 
       <div className="max-w-3xl mx-auto px-4 py-8">
 

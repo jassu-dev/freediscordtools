@@ -1,28 +1,9 @@
 import type { Metadata } from 'next';
 import { seoConfig } from '@/config/seo';
-import FaqSchema from '@/components/seo/FaqSchema';
+import { buildFaqJsonLd } from '@/lib/jsonld';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import BionicReadingConverter from '@/components/tools/BionicReadingConverter';
-
-export const metadata: Metadata = {
-  title: 'Bionic Reading Converter Online | Free Bionic Reading Font Tool',
-  description:
-    'Use our free Bionic Reading Converter online to convert any text into a Bionic Reading font style instantly. Speed read articles, improve concentration, and download formatted HTML.',
-  keywords: [
-    'bionic reading font',
-    'bionic reading converter',
-    'bionic reading generator',
-    'bionic reading text converter',
-    'bionic reading online free',
-    'bionic reading app free',
-    'adhd speed reader',
-    'bionic text generator',
-  ],
-  alternates: {
-    canonical: `${seoConfig.baseUrl}/tools/bionic-reading-converter/`,
-  },
-};
 
 const faqItems = [
   {
@@ -42,6 +23,25 @@ const faqItems = [
     answer: 'Yes, our online bionic reading converter tool is 100% free with no registration, word limits, or premium paywalls. You can convert essays, books, and articles without restriction.',
   },
 ];
+export const metadata: Metadata = {
+  title: 'Bionic Reading Converter Online | Free Bionic Reading Font Tool',
+  description:
+    'Use our free Bionic Reading Converter online to convert any text into a Bionic Reading font style instantly. Speed read articles, improve concentration, and download formatted HTML.',
+  keywords: [
+    'bionic reading font',
+    'bionic reading converter',
+    'bionic reading generator',
+    'bionic reading text converter',
+    'bionic reading online free',
+    'bionic reading app free',
+    'adhd speed reader',
+    'bionic text generator',
+  ],
+  alternates: {
+    canonical: `${seoConfig.baseUrl}/tools/bionic-reading-converter/`,
+  },
+};
+
 
 const PAGE_URL = `${seoConfig.baseUrl}/tools/bionic-reading-converter/`;
 
@@ -50,7 +50,6 @@ export default function BionicReadingConverterPage() {
     <>
       <div className="max-w-5xl mx-auto px-4 py-8">
       <WebSiteSchema />
-      <FaqSchema items={faqItems} />
       <BreadcrumbSchema
         items={[
           { name: 'Home', href: `${seoConfig.baseUrl}/` },

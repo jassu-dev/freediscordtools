@@ -2,10 +2,32 @@ import type { Metadata } from 'next';
 import MarkdownPreviewer from '@/components/tools/MarkdownPreviewer';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import FaqSchema from '@/components/seo/FaqSchema';
+import { buildFaqJsonLd } from '@/lib/jsonld';
 import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
 import { seoConfig } from '@/config/seo';
 
+const faqItems = [
+  {
+    question: 'How do you format bold, italics, and underlines in Discord?',
+    answer:
+      'Use these markdown rules: **bold** (double asterisks), *italics* or _italics_ (single asterisk or underscore), __underlines__ (double underscores), and ~~strikethrough~~ (double tildes).',
+  },
+  {
+    question: 'How do you create spoiler text in Discord?',
+    answer:
+      'To hide text behind a black spoiler block in Discord, wrap your text in double vertical bars like this: ||spoiler text||. Users must click the black block to reveal the content.',
+  },
+  {
+    question: 'How do you write multiline code blocks on Discord?',
+    answer:
+      'To create a code block, wrap your code in triple backticks like this: ```\\ncode goes here\\n```. You can optionally append the language name immediately after the first set of triple backticks for syntax highlighting.',
+  },
+  {
+    question: 'How do headers work in Discord messages?',
+    answer:
+      'Discord supports header sizes. Start a line with "# " for H1 (large), "## " for H2 (medium), or "### " for H3 (small). Note that there must be a space after the hash symbols.',
+  },
+];
 export const metadata: Metadata = {
   title: 'Discord Markdown Previewer & Spoiler Text Generator',
   description:
@@ -41,30 +63,11 @@ export const metadata: Metadata = {
       'Interactive visual preview of Discord chat formatting. Test code blocks and spoilers online.',
     site: seoConfig.twitterHandle,
   },
+  other: {
+    'script:ld+json': buildFaqJsonLd(faqItems),
+  },
 };
 
-const faqItems = [
-  {
-    question: 'How do you format bold, italics, and underlines in Discord?',
-    answer:
-      'Use these markdown rules: **bold** (double asterisks), *italics* or _italics_ (single asterisk or underscore), __underlines__ (double underscores), and ~~strikethrough~~ (double tildes).',
-  },
-  {
-    question: 'How do you create spoiler text in Discord?',
-    answer:
-      'To hide text behind a black spoiler block in Discord, wrap your text in double vertical bars like this: ||spoiler text||. Users must click the black block to reveal the content.',
-  },
-  {
-    question: 'How do you write multiline code blocks on Discord?',
-    answer:
-      'To create a code block, wrap your code in triple backticks like this: ```\\ncode goes here\\n```. You can optionally append the language name immediately after the first set of triple backticks for syntax highlighting.',
-  },
-  {
-    question: 'How do headers work in Discord messages?',
-    answer:
-      'Discord supports header sizes. Start a line with "# " for H1 (large), "## " for H2 (medium), or "### " for H3 (small). Note that there must be a space after the hash symbols.',
-  },
-];
 
 const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-markdown-previewer/`;
 
@@ -85,7 +88,6 @@ export default function MarkdownPreviewerPage() {
           { name: 'Discord Markdown Previewer', href: PAGE_URL },
         ]}
       />
-      <FaqSchema items={faqItems} />
 
       <div className="max-w-6xl mx-auto px-4 py-8">
         {/* H1 */}

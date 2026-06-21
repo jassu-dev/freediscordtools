@@ -1,10 +1,32 @@
 import type { Metadata } from 'next';
 import { seoConfig } from '@/config/seo';
-import FaqSchema from '@/components/seo/FaqSchema';
+import { buildFaqJsonLd } from '@/lib/jsonld';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import AtsScannerTool from '@/components/tools/ats/AtsScannerTool';
 
+const faqItems = [
+  {
+    question: 'What is an ATS resume checker?',
+    answer: 'An ATS resume checker is an online tool that simulates how Applicant Tracking Systems (ATS) scan, analyze, and score your resume. It identifies missing keywords, formatting errors, and structural issues that could prevent your CV from reaching a human recruiter.',
+  },
+  {
+    question: 'How does the free ATS score checker work?',
+    answer: 'Our free ATS score checker analyzes your resume content against common ATS parsing rules. It checks for keyword density, proper heading usage, and structural clarity to calculate an ATS score that reflects your optimization level.',
+  },
+  {
+    question: 'How do I check my resume score for free?',
+    answer: 'You can check your resume score for free using our dedicated ATS scanner. Simply paste your text content to receive an instant ATS score analysis and actionable feedback to improve your CV.',
+  },
+  {
+    question: 'What is a good ATS score?',
+    answer: 'A good ATS score is generally above 80/100. This indicates that your resume is well-structured, contains relevant job keywords, and is easily readable by parsing software. Aiming for an ATS score in the 90s provides the best chance of bypassing automated filters.',
+  },
+  {
+    question: 'Why is my resume failing the ATS scanner?',
+    answer: 'If your resume is failing the ATS scanner, it is likely due to: 1. Use of complex graphics/tables, 2. Non-standard headings, 3. Lack of industry-specific keywords, or 4. Improper file formatting.',
+  },
+];
 export const metadata: Metadata = {
   title: 'Free ATS Resume Checker & ATS Score Scanner (2026)',
   description:
@@ -45,30 +67,11 @@ export const metadata: Metadata = {
     description: 'Check your resume for ATS compatibility and get an instant score. Free, no sign-up required.',
     site: seoConfig.twitterHandle,
   },
+  other: {
+    'script:ld+json': buildFaqJsonLd(faqItems),
+  },
 };
-
-const faqItems = [
-  {
-    question: 'What is an ATS resume checker?',
-    answer: 'An ATS resume checker is an online tool that simulates how Applicant Tracking Systems (ATS) scan, analyze, and score your resume. It identifies missing keywords, formatting errors, and structural issues that could prevent your CV from reaching a human recruiter.',
-  },
-  {
-    question: 'How does the free ATS score checker work?',
-    answer: 'Our free ATS score checker analyzes your resume content against common ATS parsing rules. It checks for keyword density, proper heading usage, and structural clarity to calculate an ATS score that reflects your optimization level.',
-  },
-  {
-    question: 'How do I check my resume score for free?',
-    answer: 'You can check your resume score for free using our dedicated ATS scanner. Simply paste your text content to receive an instant ATS score analysis and actionable feedback to improve your CV.',
-  },
-  {
-    question: 'What is a good ATS score?',
-    answer: 'A good ATS score is generally above 80/100. This indicates that your resume is well-structured, contains relevant job keywords, and is easily readable by parsing software. Aiming for an ATS score in the 90s provides the best chance of bypassing automated filters.',
-  },
-  {
-    question: 'Why is my resume failing the ATS scanner?',
-    answer: 'If your resume is failing the ATS scanner, it is likely due to: 1. Use of complex graphics/tables, 2. Non-standard headings, 3. Lack of industry-specific keywords, or 4. Improper file formatting.',
-  },
-];
+
 
 const PAGE_URL = `${seoConfig.baseUrl}/tools/ats-resume-checker/`;
 
@@ -76,7 +79,6 @@ export default function AtsResumeCheckerPage() {
   return (
     <>
       <WebSiteSchema />
-      <FaqSchema items={faqItems} />
       <BreadcrumbSchema
         items={[
           { name: 'Home',  href: `${seoConfig.baseUrl}/` },

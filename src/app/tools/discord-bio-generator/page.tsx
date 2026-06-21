@@ -2,10 +2,48 @@ import type { Metadata } from 'next';
 import { seoConfig } from '@/config/seo';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import FaqSchema from '@/components/seo/FaqSchema';
+import { buildFaqJsonLd } from '@/lib/jsonld';
 import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
 import DiscordBioGeneratorTool from '@/components/tools/bio-generator/DiscordBioGeneratorTool';
 
+const faqItems = [
+  {
+    question: 'What is a Discord bio?',
+    answer: 'A Discord bio (also called About Me) is a short text section on your Discord profile that lets you introduce yourself. It supports up to 190 characters and can include emoji, line breaks, and Unicode text styles. Your Discord bio is visible to anyone who views your profile card.',
+  },
+  {
+    question: 'How do I add a bio on Discord?',
+    answer: 'To add a Discord bio, open User Settings (click the gear icon near your avatar), go to Profiles, and click the "About Me" field. Type or paste your bio text and click Save. On mobile, tap your avatar → Edit Profile → About Me.',
+  },
+  {
+    question: 'How long can a Discord bio be?',
+    answer: 'Discord bios have a maximum length of 190 characters, including emoji and line breaks. Each line break counts as one character. Our generator shows a live character count so you stay within the limit.',
+  },
+  {
+    question: 'What are good Discord bio ideas?',
+    answer: 'Good Discord bio ideas match your personality and the servers you are in. Popular formats include: three emoji-led lines describing your interests, an aesthetic quote, a gaming tagline, or a matching bio with a friend. Browse our 60+ templates across Aesthetic, Funny, Gaming, Coding, Motivational, Anime, Music, and Matching categories.',
+  },
+  {
+    question: 'What is an aesthetic Discord bio?',
+    answer: 'An aesthetic Discord bio uses soft, poetic, or vaporwave-inspired language to set a mood rather than listing facts. Popular aesthetic discord bios feature moon and star emoji, lo-fi references, nature imagery, and minimal sentence structure. Check our Aesthetic category for 10+ ready-to-copy aesthetic discord bio templates.',
+  },
+  {
+    question: 'What is a matching Discord bio?',
+    answer: 'A matching Discord bio is a paired set of bios shared between two friends or a couple. Each person uses a complementary version for example one uses "🌙 moon to your stars" and the other uses "⭐ stars to your moon". Check our Matching category for couple and bestfriend discord bio ideas.',
+  },
+  {
+    question: 'Can I use emoji in my Discord bio?',
+    answer: 'Yes. Standard Unicode emoji work in Discord bios on all platforms. Discord Nitro subscribers can also use custom server emoji in their bio. Adding emoji at the start of each line is the most popular discord bio format because it creates strong visual hierarchy.',
+  },
+  {
+    question: 'What is the best Discord bio template for gamers?',
+    answer: 'The best discord bio templates for gamers are short, bold, and show your playstyle. Examples: "🎮 top frag or nothing / ⚔️ ranked grinder / 💀 skill issue not in my vocabulary" or "🕹️ casual chaos enjoyer / 🏆 bronze with gold tier dreams". See all gamer discord bio ideas in the Gaming category.',
+  },
+  {
+    question: 'How do I make a funny Discord bio?',
+    answer: 'A funny Discord bio works best when it is self-aware, specific, and punchy. Use relatable humor about your habits ("🤡 professionally confused / 🦥 expert in doing nothing") or absurdist observations. Browse our Funny category for 8+ ready-to-use funny discord bio ideas.',
+  },
+];
 export const metadata: Metadata = {
   title: 'Discord Bio Generator – 60+ Templates, Ideas & About Me Examples',
   description:
@@ -52,46 +90,11 @@ export const metadata: Metadata = {
     description: '60+ discord bio templates aesthetic, funny, gaming, matching. Copy any discord about me idea instantly.',
     site: seoConfig.twitterHandle,
   },
+  other: {
+    'script:ld+json': buildFaqJsonLd(faqItems),
+  },
 };
-
-const faqItems = [
-  {
-    question: 'What is a Discord bio?',
-    answer: 'A Discord bio (also called About Me) is a short text section on your Discord profile that lets you introduce yourself. It supports up to 190 characters and can include emoji, line breaks, and Unicode text styles. Your Discord bio is visible to anyone who views your profile card.',
-  },
-  {
-    question: 'How do I add a bio on Discord?',
-    answer: 'To add a Discord bio, open User Settings (click the gear icon near your avatar), go to Profiles, and click the "About Me" field. Type or paste your bio text and click Save. On mobile, tap your avatar → Edit Profile → About Me.',
-  },
-  {
-    question: 'How long can a Discord bio be?',
-    answer: 'Discord bios have a maximum length of 190 characters, including emoji and line breaks. Each line break counts as one character. Our generator shows a live character count so you stay within the limit.',
-  },
-  {
-    question: 'What are good Discord bio ideas?',
-    answer: 'Good Discord bio ideas match your personality and the servers you are in. Popular formats include: three emoji-led lines describing your interests, an aesthetic quote, a gaming tagline, or a matching bio with a friend. Browse our 60+ templates across Aesthetic, Funny, Gaming, Coding, Motivational, Anime, Music, and Matching categories.',
-  },
-  {
-    question: 'What is an aesthetic Discord bio?',
-    answer: 'An aesthetic Discord bio uses soft, poetic, or vaporwave-inspired language to set a mood rather than listing facts. Popular aesthetic discord bios feature moon and star emoji, lo-fi references, nature imagery, and minimal sentence structure. Check our Aesthetic category for 10+ ready-to-copy aesthetic discord bio templates.',
-  },
-  {
-    question: 'What is a matching Discord bio?',
-    answer: 'A matching Discord bio is a paired set of bios shared between two friends or a couple. Each person uses a complementary version for example one uses "🌙 moon to your stars" and the other uses "⭐ stars to your moon". Check our Matching category for couple and bestfriend discord bio ideas.',
-  },
-  {
-    question: 'Can I use emoji in my Discord bio?',
-    answer: 'Yes. Standard Unicode emoji work in Discord bios on all platforms. Discord Nitro subscribers can also use custom server emoji in their bio. Adding emoji at the start of each line is the most popular discord bio format because it creates strong visual hierarchy.',
-  },
-  {
-    question: 'What is the best Discord bio template for gamers?',
-    answer: 'The best discord bio templates for gamers are short, bold, and show your playstyle. Examples: "🎮 top frag or nothing / ⚔️ ranked grinder / 💀 skill issue not in my vocabulary" or "🕹️ casual chaos enjoyer / 🏆 bronze with gold tier dreams". See all gamer discord bio ideas in the Gaming category.',
-  },
-  {
-    question: 'How do I make a funny Discord bio?',
-    answer: 'A funny Discord bio works best when it is self-aware, specific, and punchy. Use relatable humor about your habits ("🤡 professionally confused / 🦥 expert in doing nothing") or absurdist observations. Browse our Funny category for 8+ ready-to-use funny discord bio ideas.',
-  },
-];
+
 
 const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-bio-generator/`;
 
@@ -112,7 +115,6 @@ export default function DiscordBioGeneratorPage() {
           { name: 'Discord Bio Generator', href: PAGE_URL },
         ]}
       />
-      <FaqSchema items={faqItems} />
 
       <div className="max-w-4xl mx-auto px-4 py-8">
 

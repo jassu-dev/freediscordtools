@@ -2,10 +2,32 @@ import type { Metadata } from 'next';
 import EmojiTextGenerator from '@/components/tools/EmojiTextGenerator';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import FaqSchema from '@/components/seo/FaqSchema';
+import { buildFaqJsonLd } from '@/lib/jsonld';
 import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
 import { seoConfig } from '@/config/seo';
 
+const faqItems = [
+  {
+    question: 'What are Discord regional indicators?',
+    answer:
+      'Discord regional indicators are a set of 26 Unicode characters (🇦 through 🇿) representing letters. When sent inside Discord chat, they render as large blue squares with white alphabetical symbols.',
+  },
+  {
+    question: 'How do you make big emoji letters in Discord?',
+    answer:
+      'Type your text into our online generator. It automatically maps each character to its corresponding emoji representation (like :regional_indicator_a: for A) and copies the text directly to your clipboard.',
+  },
+  {
+    question: 'Why does my emoji text exceed the character limit?',
+    answer:
+      'Each translated letter (e.g. :regional_indicator_m:) is around 22 characters long. Short phrases can quickly hit Discord\'s 2,000 character limit. Keep your big text headers short for announcement titles.',
+  },
+  {
+    question: 'Can I translate numbers and symbols?',
+    answer:
+      'Yes, our translator maps numbers 0-9 into text emojis (e.g. :one:, :two:) and supports punctuation like question marks (!, ?) and hashes (#).',
+  },
+];
 export const metadata: Metadata = {
   title: 'Discord Emoji Text Generator – Big Block Letter Maker',
   description:
@@ -41,30 +63,11 @@ export const metadata: Metadata = {
       'Translate headers into large emoji letters. Easy copy-paste for Discord server announcements.',
     site: seoConfig.twitterHandle,
   },
+  other: {
+    'script:ld+json': buildFaqJsonLd(faqItems),
+  },
 };
 
-const faqItems = [
-  {
-    question: 'What are Discord regional indicators?',
-    answer:
-      'Discord regional indicators are a set of 26 Unicode characters (🇦 through 🇿) representing letters. When sent inside Discord chat, they render as large blue squares with white alphabetical symbols.',
-  },
-  {
-    question: 'How do you make big emoji letters in Discord?',
-    answer:
-      'Type your text into our online generator. It automatically maps each character to its corresponding emoji representation (like :regional_indicator_a: for A) and copies the text directly to your clipboard.',
-  },
-  {
-    question: 'Why does my emoji text exceed the character limit?',
-    answer:
-      'Each translated letter (e.g. :regional_indicator_m:) is around 22 characters long. Short phrases can quickly hit Discord\'s 2,000 character limit. Keep your big text headers short for announcement titles.',
-  },
-  {
-    question: 'Can I translate numbers and symbols?',
-    answer:
-      'Yes, our translator maps numbers 0-9 into text emojis (e.g. :one:, :two:) and supports punctuation like question marks (!, ?) and hashes (#).',
-  },
-];
 
 const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-emoji-text-generator/`;
 
@@ -85,7 +88,6 @@ export default function EmojiTextGeneratorPage() {
           { name: 'Discord Emoji Text Generator', href: PAGE_URL },
         ]}
       />
-      <FaqSchema items={faqItems} />
 
       <div className="max-w-6xl mx-auto px-4 py-8">
         {/* H1 */}

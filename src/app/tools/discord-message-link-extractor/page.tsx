@@ -2,10 +2,32 @@ import type { Metadata } from 'next';
 import MessageLinkExtractorTool from '@/components/tools/message-extractor/MessageLinkExtractorTool';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import FaqSchema from '@/components/seo/FaqSchema';
+import { buildFaqJsonLd } from '@/lib/jsonld';
 import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
 import { seoConfig } from '@/config/seo';
 
+const faqItems = [
+  {
+    question: 'What is a Discord message link?',
+    answer:
+      'A Discord message link is a direct URL pointing to a specific message in a Discord server. It follows the format: https://discord.com/channels/SERVER_ID/CHANNEL_ID/MESSAGE_ID.',
+  },
+  {
+    question: 'How do I extract IDs from a Discord link?',
+    answer:
+      'Simply paste the Discord message link into our online extractor tool. It parses the URL instantly and separates the Server (Guild) ID, Channel ID, and Message ID into copyable text fields.',
+  },
+  {
+    question: 'What are the three IDs in a Discord link?',
+    answer:
+      'The three IDs are: 1. Server ID (the unique identifier for the guild), 2. Channel ID (the specific text channel where the message was posted), and 3. Message ID (the unique identifier of the message itself).',
+  },
+  {
+    question: 'How do I get a Discord message link?',
+    answer:
+      'To get a message link, hover over any message in Discord, click the three dots (More) on the right side, and select "Copy Message Link". Make sure Developer Mode is enabled in settings if you want to copy raw IDs directly.',
+  },
+];
 export const metadata: Metadata = {
   title: 'Discord Message Link Extractor – ID Lookup Tool',
   description:
@@ -41,30 +63,11 @@ export const metadata: Metadata = {
       'Extract Server ID, Channel ID, and Message ID from any Discord message link instantly.',
     site: seoConfig.twitterHandle,
   },
+  other: {
+    'script:ld+json': buildFaqJsonLd(faqItems),
+  },
 };
 
-const faqItems = [
-  {
-    question: 'What is a Discord message link?',
-    answer:
-      'A Discord message link is a direct URL pointing to a specific message in a Discord server. It follows the format: https://discord.com/channels/SERVER_ID/CHANNEL_ID/MESSAGE_ID.',
-  },
-  {
-    question: 'How do I extract IDs from a Discord link?',
-    answer:
-      'Simply paste the Discord message link into our online extractor tool. It parses the URL instantly and separates the Server (Guild) ID, Channel ID, and Message ID into copyable text fields.',
-  },
-  {
-    question: 'What are the three IDs in a Discord link?',
-    answer:
-      'The three IDs are: 1. Server ID (the unique identifier for the guild), 2. Channel ID (the specific text channel where the message was posted), and 3. Message ID (the unique identifier of the message itself).',
-  },
-  {
-    question: 'How do I get a Discord message link?',
-    answer:
-      'To get a message link, hover over any message in Discord, click the three dots (More) on the right side, and select "Copy Message Link". Make sure Developer Mode is enabled in settings if you want to copy raw IDs directly.',
-  },
-];
 
 const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-message-link-extractor/`;
 
@@ -85,7 +88,6 @@ export default function MessageLinkExtractorPage() {
           { name: 'Discord Message Link Extractor', href: PAGE_URL },
         ]}
       />
-      <FaqSchema items={faqItems} />
 
       <div className="max-w-3xl mx-auto px-4 py-8">
         {/* H1 */}

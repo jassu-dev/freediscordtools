@@ -1,28 +1,9 @@
 import type { Metadata } from 'next';
 import { seoConfig } from '@/config/seo';
-import FaqSchema from '@/components/seo/FaqSchema';
+import { buildFaqJsonLd } from '@/lib/jsonld';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import PxToRemConverter from '@/components/tools/PxToRemConverter';
-
-export const metadata: Metadata = {
-  title: 'PX to REM Converter | Pixels to REM Calculator & REM to PX Converter',
-  description:
-    'Free online PX to REM converter and pixels to REM calculator. Easily perform PX to REM conversion or REM to PX calculations with custom root font sizes.',
-  keywords: [
-    'px to rem',
-    'pixels to rem',
-    'px to rem calculator',
-    'rem to px converter',
-    'pixel to rem calculator',
-    'px to rem conversion',
-    'px to rem converter',
-    'pixels to rem converter',
-  ],
-  alternates: {
-    canonical: `${seoConfig.baseUrl}/tools/px-to-rem-converter/`,
-  },
-};
 
 const faqItems = [
   {
@@ -42,6 +23,25 @@ const faqItems = [
     answer: 'Converting pixels to REM is critical for responsive web design and accessibility (a11y). Relative REM units scale based on browser preferences, while absolute pixels remain fixed, which can prevent visually impaired users from scaling text sizes.',
   },
 ];
+export const metadata: Metadata = {
+  title: 'PX to REM Converter | Pixels to REM Calculator & REM to PX Converter',
+  description:
+    'Free online PX to REM converter and pixels to REM calculator. Easily perform PX to REM conversion or REM to PX calculations with custom root font sizes.',
+  keywords: [
+    'px to rem',
+    'pixels to rem',
+    'px to rem calculator',
+    'rem to px converter',
+    'pixel to rem calculator',
+    'px to rem conversion',
+    'px to rem converter',
+    'pixels to rem converter',
+  ],
+  alternates: {
+    canonical: `${seoConfig.baseUrl}/tools/px-to-rem-converter/`,
+  },
+};
+
 
 const PAGE_URL = `${seoConfig.baseUrl}/tools/px-to-rem-converter/`;
 
@@ -50,7 +50,6 @@ export default function PxToRemConverterPage() {
     <>
       <div className="max-w-5xl mx-auto px-4 py-8">
       <WebSiteSchema />
-      <FaqSchema items={faqItems} />
       <BreadcrumbSchema
         items={[
           { name: 'Home', href: `${seoConfig.baseUrl}/` },

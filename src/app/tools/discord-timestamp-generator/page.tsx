@@ -2,10 +2,42 @@ import type { Metadata } from 'next';
 import TimestampGenerator from '@/components/tools/TimestampGenerator';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import FaqSchema from '@/components/seo/FaqSchema';
 import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
 import { seoConfig } from '@/config/seo';
+import { buildFaqJsonLd } from '@/lib/jsonld';
 
+const faqItems = [
+  {
+    question: 'How do I use a discord timestamp generator?',
+    answer:
+      'Using a discord timestamp generator is simple: pick your date and time, choose a format (like relative or short time), and copy the generated code. Paste that code into a Discord message, and it will automatically show the correct time to every user in their own timezone.',
+  },
+  {
+    question: 'How to use unix timestamp discord correctly?',
+    answer:
+      'To use a unix timestamp on Discord, you must wrap the 10-digit unix integer in the specific syntax <t:1234567890:F>. Replace 1234567890 with your timestamp and "F" with your desired format code. Our tool automates this process entirely.',
+  },
+  {
+    question: 'What are discord time stamps used for?',
+    answer:
+      'Discord time stamps are primarily used for scheduling events, tournaments, or announcements in global servers. They ensure everyone sees the "starting time" in their local clock, avoiding timezone confusion.',
+  },
+  {
+    question: 'How to get discord timestamps for my server?',
+    answer:
+      'You can generate accurate discord timestamps using our free online tool. It converts any local date and time into a universal unix integer that Discord understands.',
+  },
+  {
+    question: 'Why is my unix timestamp discord not working?',
+    answer:
+      'Ensure you are using seconds (10 digits) rather than milliseconds (13 digits). Also, verify the syntax: it must start with "<t:" and end with ">". Our generator always provides the correct syntax.',
+  },
+  {
+    question: 'How to use unix timestamp discord for a countdown?',
+    answer:
+      'To create a live countdown (e.g., "in 5 minutes"), use the ":R" format code at the end of your timestamp: <t:TIMESTAMP:R>. This is one of the most popular discord timestamps formats.',
+  },
+];
 export const metadata: Metadata = {
   title: 'Discord Timestamp Generator – All 7 Formats',
   description:
@@ -46,41 +78,12 @@ export const metadata: Metadata = {
       'Learn how to use unix timestamp discord and generate discord timestamps for your server announcements.',
     site: seoConfig.twitterHandle,
   },
+  other: {
+    'script:ld+json': buildFaqJsonLd(faqItems),
+  },
 };
 
-// ─── FAQ data ─────────────────────────────────────────────────────────────────
-const faqItems = [
-  {
-    question: 'How do I use a discord timestamp generator?',
-    answer:
-      'Using a discord timestamp generator is simple: pick your date and time, choose a format (like relative or short time), and copy the generated code. Paste that code into a Discord message, and it will automatically show the correct time to every user in their own timezone.',
-  },
-  {
-    question: 'How to use unix timestamp discord correctly?',
-    answer:
-      'To use a unix timestamp on Discord, you must wrap the 10-digit unix integer in the specific syntax <t:1234567890:F>. Replace 1234567890 with your timestamp and "F" with your desired format code. Our tool automates this process entirely.',
-  },
-  {
-    question: 'What are discord time stamps used for?',
-    answer:
-      'Discord time stamps are primarily used for scheduling events, tournaments, or announcements in global servers. They ensure everyone sees the "starting time" in their local clock, avoiding timezone confusion.',
-  },
-  {
-    question: 'How to get discord timestamps for my server?',
-    answer:
-      'You can generate accurate discord timestamps using our free online tool. It converts any local date and time into a universal unix integer that Discord understands.',
-  },
-  {
-    question: 'Why is my unix timestamp discord not working?',
-    answer:
-      'Ensure you are using seconds (10 digits) rather than milliseconds (13 digits). Also, verify the syntax: it must start with "<t:" and end with ">". Our generator always provides the correct syntax.',
-  },
-  {
-    question: 'How to use unix timestamp discord for a countdown?',
-    answer:
-      'To create a live countdown (e.g., "in 5 minutes"), use the ":R" format code at the end of your timestamp: <t:TIMESTAMP:R>. This is one of the most popular discord timestamps formats.',
-  },
-];
+// ─── FAQ data ─────────────────────────────────────────────────────────────────
 
 const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-timestamp-generator/`;
 
@@ -112,7 +115,6 @@ export default function DiscordTimestampGeneratorPage() {
           { name: 'Discord Timestamp Generator', href: PAGE_URL },
         ]}
       />
-      <FaqSchema items={faqItems} />
 
       <div className="max-w-3xl mx-auto px-4 py-8">
 
