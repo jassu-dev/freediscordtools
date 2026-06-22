@@ -1,10 +1,7 @@
 import type { Metadata } from 'next';
 
 import FaqSchema from '@/components/seo/FaqSchema';import FontGenerator from '@/components/tools/FontGenerator';
-import WebSiteSchema from '@/components/seo/WebSiteSchema';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import { buildFaqJsonLd } from '@/lib/jsonld';
-import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
+import PageSchema from '@/components/seo/PageSchema';
 import { seoConfig } from '@/config/seo';
 
 const faqItems = [
@@ -118,23 +115,22 @@ export const metadata: Metadata = {
     site: seoConfig.twitterHandle,
   },
 };
-
+
+
 
 const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-font-generator/`;
 
 export default function DiscordFontGeneratorPage() {
   return (
     <>
-      <FaqSchema items={faqItems} />
-      <WebSiteSchema />
-      <SoftwareAppSchema
-        name="Discord Font Generator"
-        description="Free Discord font generator to change your default Discord fonts. Copy and paste 160+ aesthetic Discord fonts, cool Discord fonts, and fancy text for usernames, bios, and messages."
-        url={PAGE_URL}
-        applicationCategory="UtilitiesApplication"
-      />
-      <BreadcrumbSchema
-        items={[
+      <PageSchema
+        faqItems={faqItems}
+        softwareApp={{
+          name: "Discord Font Generator",
+          description: "Free Discord font generator to change your default Discord fonts. Copy and paste 160+ aesthetic Discord fonts, cool Discord fonts, and fancy text for usernames, bios, and messages.",
+          url: PAGE_URL,
+        }}
+        breadcrumbs={[
           { name: 'Home',                   href: `${seoConfig.baseUrl}/` },
           { name: 'Tools',                  href: `${seoConfig.baseUrl}/tools/` },
           { name: 'Discord Font Generator', href: PAGE_URL },

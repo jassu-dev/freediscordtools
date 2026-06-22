@@ -1,10 +1,7 @@
 import type { Metadata } from 'next';
 
 import FaqSchema from '@/components/seo/FaqSchema';import { seoConfig } from '@/config/seo';
-import WebSiteSchema from '@/components/seo/WebSiteSchema';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import { buildFaqJsonLd } from '@/lib/jsonld';
-import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
+import PageSchema from '@/components/seo/PageSchema';
 import StatusGeneratorTool from '@/components/tools/status-generator/StatusGeneratorTool';
 
 const faqItems = [
@@ -98,16 +95,14 @@ const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-status-generator/`;
 export default function DiscordStatusGeneratorPage() {
   return (
     <>
-      <FaqSchema items={faqItems} />
-      <WebSiteSchema />
-      <SoftwareAppSchema
-        name="Discord Status Generator"
-        description="Free Discord custom status generator with 50+ cool, funny, and aesthetic status ideas. Browse by category or build a custom status with live preview."
-        url={PAGE_URL}
-        applicationCategory="UtilitiesApplication"
-      />
-      <BreadcrumbSchema
-        items={[
+      <PageSchema
+        faqItems={faqItems}
+        softwareApp={{
+          name: "Discord Status Generator",
+          description: "Browse 50+ cool, funny, and aesthetic Discord status ideas or build a custom one with live preview. Copy and paste instantly.",
+          url: PAGE_URL,
+        }}
+        breadcrumbs={[
           { name: 'Home',  href: `${seoConfig.baseUrl}/` },
           { name: 'Tools', href: `${seoConfig.baseUrl}/tools/` },
           { name: 'Discord Status Generator', href: PAGE_URL },

@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
 
 import FaqSchema from '@/components/seo/FaqSchema';import TimestampGenerator from '@/components/tools/TimestampGenerator';
-import WebSiteSchema from '@/components/seo/WebSiteSchema';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
+import PageSchema from '@/components/seo/PageSchema';
 import { seoConfig } from '@/config/seo';
 import { buildFaqJsonLd } from '@/lib/jsonld';
 
@@ -81,7 +79,8 @@ export const metadata: Metadata = {
   },
 };
 
-// ─── FAQ data ─────────────────────────────────────────────────────────────────
+// ─── FAQ data ─────────────────────────────────────────────────────────────────
+
 
 const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-timestamp-generator/`;
 
@@ -99,16 +98,14 @@ const FORMAT_ROWS = [
 export default function DiscordTimestampGeneratorPage() {
   return (
     <>
-      <FaqSchema items={faqItems} />
-      <WebSiteSchema />
-      <SoftwareAppSchema
-        name="Discord Timestamp Generator"
-        description="Free Discord timestamp generator and unix timestamp converter. Convert any date into Discord timestamps instantly. No account required."
-        url={PAGE_URL}
-        applicationCategory="UtilitiesApplication"
-      />
-      <BreadcrumbSchema
-        items={[
+      <PageSchema
+        faqItems={faqItems}
+        softwareApp={{
+          name: "Discord Timestamp Generator",
+          description: "Free Discord timestamp generator and unix timestamp converter. Convert any date into Discord timestamps instantly. No account required.",
+          url: PAGE_URL,
+        }}
+        breadcrumbs={[
           { name: 'Home',  href: `${seoConfig.baseUrl}/` },
           { name: 'Tools', href: `${seoConfig.baseUrl}/tools/` },
           { name: 'Discord Timestamp Generator', href: PAGE_URL },

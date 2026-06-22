@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
 
 import FaqSchema from '@/components/seo/FaqSchema';import { seoConfig } from '@/config/seo';
-import { buildFaqJsonLd } from '@/lib/jsonld';
-import WebSiteSchema from '@/components/seo/WebSiteSchema';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import PageSchema from '@/components/seo/PageSchema';
 import AtsScannerTool from '@/components/tools/ats/AtsScannerTool';
 
 const faqItems = [
@@ -69,17 +67,22 @@ export const metadata: Metadata = {
     site: seoConfig.twitterHandle,
   },
 };
-
+
+
 
 const PAGE_URL = `${seoConfig.baseUrl}/tools/ats-resume-checker/`;
 
 export default function AtsResumeCheckerPage() {
   return (
     <>
-      <FaqSchema items={faqItems} />
-      <WebSiteSchema />
-      <BreadcrumbSchema
-        items={[
+      <PageSchema
+        faqItems={faqItems}
+        softwareApp={{
+          name: "ATS Resume Checker",
+          description: "Free ATS resume checker. Analyze your CV for keyword optimization, formatting, and ATS compatibility.",
+          url: PAGE_URL,
+        }}
+        breadcrumbs={[
           { name: 'Home',  href: `${seoConfig.baseUrl}/` },
           { name: 'Tools', href: `${seoConfig.baseUrl}/tools/` },
           { name: 'ATS Resume Checker', href: PAGE_URL },

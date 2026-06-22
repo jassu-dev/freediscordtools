@@ -1,8 +1,8 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import FaqSchema from '@/components/seo/FaqSchema';
+import PageSchema from '@/components/seo/PageSchema';
 import { blogPosts } from '@/data/blog';
 import { seoConfig } from '@/config/seo';
 
@@ -77,20 +77,18 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <BreadcrumbSchema
-        items={[
+      <PageSchema
+        faqItems={post.faqItems}
+        breadcrumbs={[
           { name: 'Home', href: `${seoConfig.baseUrl}/` },
           { name: 'Blog', href: `${seoConfig.baseUrl}/blog/` },
           { name: post.title, href: `${seoConfig.baseUrl}/blog/${post.slug}/` },
         ]}
       />
-      {post.faqItems && post.faqItems.length > 0 && (
-        <FaqSchema items={post.faqItems} />
-      )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
 
       <article className="max-w-3xl mx-auto px-4 py-12">
         <header className="mb-10">

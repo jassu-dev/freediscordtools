@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import { tools } from '@/data/tools';
 import { seoConfig } from '@/config/seo';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import FaqSchema from '@/components/seo/FaqSchema';
+import PageSchema from '@/components/seo/PageSchema';
 import ToolsPageClient from '@/components/tools/ToolsPageClient';
 
 export const metadata: Metadata = {
@@ -67,13 +66,13 @@ export default function ToolsPage() {
 
   return (
     <>
-      <BreadcrumbSchema
-        items={[
+      <PageSchema
+        faqItems={faqItems}
+        breadcrumbs={[
           { name: 'Home', href: `${seoConfig.baseUrl}/` },
           { name: 'Tools', href: `${seoConfig.baseUrl}/tools/` },
         ]}
       />
-      <FaqSchema items={faqItems} />
 
       <div className="max-w-6xl mx-auto px-4 pt-12 pb-20">
         {/* Page header */}

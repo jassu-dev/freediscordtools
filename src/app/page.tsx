@@ -5,6 +5,7 @@ import BlogCard from '@/components/blog/BlogCard';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import FaqSchema from '@/components/seo/FaqSchema';
+import PageSchema from '@/components/seo/PageSchema';
 import { tools } from '@/data/tools';
 import { blogPosts } from '@/data/blog';
 import { seoConfig } from '@/config/seo';
@@ -81,11 +82,10 @@ export default function HomePage() {
 
   return (
     <>
-      <WebSiteSchema />
-      <BreadcrumbSchema
-        items={[{ name: 'Home', href: seoConfig.baseUrl }]}
+      <PageSchema
+        faqItems={homepageFaqs}
+        breadcrumbs={[{ name: 'Home', href: seoConfig.baseUrl }]}
       />
-      <FaqSchema items={homepageFaqs} />
       
       {/* Hero Section */}
       <section className="bg-[#F8F9FF] border-b border-[#E3E6F0] py-20 px-4 text-center">

@@ -1,10 +1,7 @@
 import type { Metadata } from 'next';
 
 import FaqSchema from '@/components/seo/FaqSchema';import { seoConfig } from '@/config/seo';
-import WebSiteSchema from '@/components/seo/WebSiteSchema';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import { buildFaqJsonLd } from '@/lib/jsonld';
-import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
+import PageSchema from '@/components/seo/PageSchema';
 import DiscordBioGeneratorTool from '@/components/tools/bio-generator/DiscordBioGeneratorTool';
 
 const faqItems = [
@@ -99,16 +96,14 @@ const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-bio-generator/`;
 export default function DiscordBioGeneratorPage() {
   return (
     <>
-      <FaqSchema items={faqItems} />
-      <WebSiteSchema />
-      <SoftwareAppSchema
-        name="Discord Bio Generator"
-        description="Free Discord bio generator with 60+ copy-paste templates. Find aesthetic, funny, gaming, matching, and cool discord bio ideas instantly."
-        url={PAGE_URL}
-        applicationCategory="UtilitiesApplication"
-      />
-      <BreadcrumbSchema
-        items={[
+      <PageSchema
+        faqItems={faqItems}
+        softwareApp={{
+          name: "Discord Bio Generator",
+          description: "Free Discord bio generator with 60+ copy-paste templates. Find aesthetic, funny, gaming, matching, and cool discord bio ideas instantly.",
+          url: PAGE_URL,
+        }}
+        breadcrumbs={[
           { name: 'Home',  href: `${seoConfig.baseUrl}/` },
           { name: 'Tools', href: `${seoConfig.baseUrl}/tools/` },
           { name: 'Discord Bio Generator', href: PAGE_URL },

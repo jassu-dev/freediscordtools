@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import { seoConfig } from '@/config/seo';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
-import FaqSchema from '@/components/seo/FaqSchema';
+import PageSchema from '@/components/seo/PageSchema';
 import CaseConverterTool from '@/components/tools/CaseConverterTool';
 
 const PAGE_TITLE = 'Online Case Converter & Word Counter – Free Text Transformer';
@@ -62,15 +60,14 @@ const faqItems = [
 export default function CaseConverterPage() {
   return (
     <>
-      <FaqSchema items={faqItems} />
-      <SoftwareAppSchema
-        name="Online Case Converter & Word Counter"
-        description={PAGE_DESCRIPTION}
-        url={PAGE_URL}
-        applicationCategory="UtilitiesApplication"
-      />
-      <BreadcrumbSchema
-        items={[
+      <PageSchema
+        faqItems={faqItems}
+        softwareApp={{
+          name: "Online Case Converter & Word Counter",
+          description: PAGE_DESCRIPTION,
+          url: PAGE_URL,
+        }}
+        breadcrumbs={[
           { name: 'Home', href: `${seoConfig.baseUrl}/` },
           { name: 'Tools', href: `${seoConfig.baseUrl}/tools/` },
           { name: 'Case Converter', href: PAGE_URL },

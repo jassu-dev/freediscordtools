@@ -1,10 +1,7 @@
 import type { Metadata } from 'next';
 
 import FaqSchema from '@/components/seo/FaqSchema';import { seoConfig } from '@/config/seo';
-import { buildFaqJsonLd } from '@/lib/jsonld';
-import WebSiteSchema from '@/components/seo/WebSiteSchema';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
+import PageSchema from '@/components/seo/PageSchema';
 import BannerDownloaderTool from '@/components/tools/BannerDownloaderTool';
 
 const faqItems = [
@@ -73,23 +70,22 @@ export const metadata: Metadata = {
     site: seoConfig.twitterHandle,
   },
 };
-
+
+
 
 const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-banner-downloader/`;
 
 export default function DiscordBannerDownloaderPage() {
   return (
     <>
-      <FaqSchema items={faqItems} />
-      <WebSiteSchema />
-      <SoftwareAppSchema
-        name="Discord Banner & Icon Downloader"
-        description="Download Discord server banners, icons, and invite splash images in full resolution. Free, no account required."
-        url={PAGE_URL}
-        applicationCategory="UtilitiesApplication"
-      />
-      <BreadcrumbSchema
-        items={[
+      <PageSchema
+        faqItems={faqItems}
+        softwareApp={{
+          name: "Discord Banner & Icon Downloader",
+          description: "Download Discord server banners, icons, and invite splash images in full resolution. Free, no account required.",
+          url: PAGE_URL,
+        }}
+        breadcrumbs={[
           { name: 'Home',  href: `${seoConfig.baseUrl}/` },
           { name: 'Tools', href: `${seoConfig.baseUrl}/tools/` },
           { name: 'Discord Banner Downloader', href: PAGE_URL },
