@@ -1,19 +1,34 @@
 'use client';
 
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo, useRef } from 'react';
 import { Copy, RotateCcw, Download, Sparkles, FileText, Check } from 'lucide-react';
 
 const DEMO_TEXT = `Bionic Reading is a new method facilitating the reading process by guiding the eyes through text with artificial fixation points. The eye is guided through the text by bolding the first letters of each word.
 
 This allows the reader to focus on only the bolded letters and let the brain complete the rest of the words. It is especially helpful for people with ADHD, dyslexia, or anyone looking to read and study much faster. Try adjusting the sliders to see what feels most natural for your brain.`;
 
+// Debounce utility function
+const debounce = <T extends (...args: unknown[]) => unknown>(
+  func: T,
+  wait: number
+) => {
+  let timeout: NodeJS.Timeout | null = null;
+  return (...args: Parameters<T>) => {
+    if (timeout) clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
+  };
+};
+
 export default function BionicReadingConverter() {
   const [text, setText] = useState('');
-  const [fixation, setFixation] = useState(50); // percentage of word bolded
-  const [skipShort, setSkipShort] = useState(false); // skip words <= 3 chars
-  const [fontSize, setFontSize] = useState(18); // font size in px
-  const [lineHeight, setLineHeight] = useState(1.6); // line-height
+  const [fixation, setFixation] = useState(50);
+  const [skipShort, setSkipShort] = useState(false);
+  const [fontSize, setFontSize] = useState(18);
+  const [lineHeight, setLineHeight] = useState(1.6);
   const [copiedType, setCopiedType] = useState<'html' | 'md' | 'text' | null>(null);
+  
+  // Use a ref for real-time text, debounce state for computation
+  const textRef = useRef('');
 
   const escapeHtml = useCallback((str: string) => {
     return str
@@ -97,6 +112,17 @@ export default function BionicReadingConverter() {
     URL.revokeObjectURL(url);
   }, [text, bionicHtml]);
 
+  // Debounced text setter
+  const debouncedSetText = useMemo(
+    () => debounce((value: string) => setText(value), 150),
+    []
+  );
+
+  const handleTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    textRef.current = e.target.value;
+    debouncedSetText(e.target.value);
+  };
+
   return (
     <div className="w-full max-w-5xl mx-auto space-y-8">
       {/* Interactive Controls & Input Panel */}
@@ -106,19 +132,25 @@ export default function BionicReadingConverter() {
         <div className="lg:col-span-6 space-y-6">
           <div className="bg-white p-6 rounded-2xl border border-[#E3E6F0] shadow-sm space-y-4">
             <div className="flex justify-between items-center">
-              <label htmlFor="input-text" className="text-sm font-bold text-[#1a1d2e] uppercase tracking-wider">
+              <label htmlFor="input-text" className="text-sm font-bold text-[#0f111a] uppercase tracking-wider">
                 Enter Your Text
               </label>
               <div className="flex gap-2">
                 <button
-                  onClick={() => setText(DEMO_TEXT)}
-                  className="px-3 py-1.5 rounded-lg bg-[#F0F2FF] hover:bg-[#E3E6FF] text-[#5865F2] font-semibold text-xs transition-colors flex items-center gap-1 cursor-pointer"
+                  onClick={() => {
+                    textRef.current = DEMO_TEXT;
+                    setText(DEMO_TEXT);
+                  }}
+                  className="px-3 py-1.5 rounded-lg bg-[#F0F2FF] hover:bg-[#E3E6FF] text-[#5865F2] font-semibold text-xs transition-colors flex items-center gap-1 cursor-pointer min-h-[44px] min-w-[44px]"
                 >
                   <Sparkles size={12} /> Load Demo
                 </button>
                 <button
-                  onClick={() => setText('')}
-                  className="px-3 py-1.5 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-600 font-semibold text-xs transition-colors flex items-center gap-1 cursor-pointer"
+                  onClick={() => {
+                    textRef.current = '';
+                    setText('');
+                  }}
+                  className="px-3 py-1.5 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-600 font-semibold text-xs transition-colors flex items-center gap-1 cursor-pointer min-h-[44px] min-w-[44px]"
                 >
                   <RotateCcw size={12} /> Clear
                 </button>
@@ -127,21 +159,21 @@ export default function BionicReadingConverter() {
 
             <textarea
               id="input-text"
-              className="w-full h-80 px-4 py-3 rounded-xl border border-[#E3E6F0] text-[#1a1d2e] placeholder-gray-400 focus:outline-none focus:border-[#5865F2] focus:ring-2 focus:ring-[#5865F2]/20 font-sans resize-none text-base"
+              className="w-full h-80 px-4 py-3 rounded-xl border border-[#E3E6F0] text-[#0f111a] placeholder-gray-400 focus:outline-none focus:border-[#5865F2] focus:ring-2 focus:ring-[#5865F2]/20 font-sans resize-none text-base"
               placeholder="Paste or type your text here to convert it..."
               value={text}
-              onChange={(e) => setText(e.target.value)}
+              onChange={handleTextChange}
             />
           </div>
 
           {/* Config Sliders */}
           <div className="bg-white p-6 rounded-2xl border border-[#E3E6F0] shadow-sm space-y-5">
-            <h3 className="text-sm font-bold text-[#1a1d2e] uppercase tracking-wider mb-2">Bionic Settings</h3>
+            <h3 className="text-sm font-bold text-[#0f111a] uppercase tracking-wider mb-2">Bionic Settings</h3>
             
             {/* Fixation Slider */}
             <div>
               <div className="flex justify-between text-sm mb-1">
-                <span className="font-semibold text-[#373b4d]">Fixation (Bolding Strength)</span>
+                <span className="font-semibold text-[#2d3149]">Fixation (Bolding Strength)</span>
                 <span className="text-[#5865F2] font-bold">{fixation}%</span>
               </div>
               <input
@@ -153,7 +185,7 @@ export default function BionicReadingConverter() {
                 onChange={(e) => setFixation(Number(e.target.value))}
                 className="w-full h-2 bg-[#F0F2FF] rounded-lg appearance-none cursor-pointer accent-[#5865F2]"
               />
-              <span className="text-xs text-[#5b6282]">Controls what percentage of each word is bolded.</span>
+              <span className="text-xs text-[#2d3149]">Controls what percentage of each word is bolded.</span>
             </div>
 
             {/* Skip Short Words Checkbox */}
@@ -163,9 +195,9 @@ export default function BionicReadingConverter() {
                 id="skip-short-checkbox"
                 checked={skipShort}
                 onChange={(e) => setSkipShort(e.target.checked)}
-                className="w-5 h-5 rounded border-[#E3E6F0] text-[#5865F2] focus:ring-[#5865F2] accent-[#5865F2] cursor-pointer"
+                className="w-5 h-5 rounded border-[#E3E6F0] text-[#5865F2] focus:ring-[#5865F2] accent-[#5865F2] cursor-pointer min-h-[44px] min-w-[44px]"
               />
-              <label htmlFor="skip-short-checkbox" className="text-sm font-semibold text-[#373b4d] cursor-pointer select-none">
+              <label htmlFor="skip-short-checkbox" className="text-sm font-semibold text-[#2d3149] cursor-pointer select-none min-h-[44px] flex items-center">
                 Skip short words (3 letters or fewer)
               </label>
             </div>
@@ -173,13 +205,13 @@ export default function BionicReadingConverter() {
             <div className="h-px bg-[#E3E6F0]" />
 
             {/* Reader Adjustments */}
-            <h3 className="text-sm font-bold text-[#1a1d2e] uppercase tracking-wider">Reader Layout</h3>
+            <h3 className="text-sm font-bold text-[#0f111a] uppercase tracking-wider">Reader Layout</h3>
             
             <div className="grid grid-cols-2 gap-4">
               {/* Font Size */}
               <div>
                 <div className="flex justify-between text-xs mb-1">
-                  <span className="font-semibold text-[#373b4d]">Font Size</span>
+                  <span className="font-semibold text-[#2d3149]">Font Size</span>
                   <span className="font-bold text-[#5865F2]">{fontSize}px</span>
                 </div>
                 <input
@@ -196,7 +228,7 @@ export default function BionicReadingConverter() {
               {/* Line Height */}
               <div>
                 <div className="flex justify-between text-xs mb-1">
-                  <span className="font-semibold text-[#373b4d]">Line Spacing</span>
+                  <span className="font-semibold text-[#2d3149]">Line Spacing</span>
                   <span className="font-bold text-[#5865F2]">{lineHeight}</span>
                 </div>
                 <input
@@ -219,7 +251,7 @@ export default function BionicReadingConverter() {
             
             {/* Output Header */}
             <div className="px-6 py-4 border-b border-[#E3E6F0] flex flex-wrap justify-between items-center gap-3">
-              <span className="text-sm font-bold text-[#1a1d2e] uppercase tracking-wider">
+              <span className="text-sm font-bold text-[#0f111a] uppercase tracking-wider">
                 Bionic Reader View
               </span>
               
@@ -227,12 +259,12 @@ export default function BionicReadingConverter() {
                 <button
                   disabled={!text}
                   onClick={() => handleCopy('text', text)}
-                  className={`px-3 py-1.5 rounded-lg border text-xs font-semibold flex items-center gap-1 transition-all ${
+                  className={`px-3 py-1.5 rounded-lg border text-xs font-semibold flex items-center gap-1 transition-all min-h-[44px] min-w-[44px] ${
                     !text 
                       ? 'opacity-40 cursor-not-allowed border-gray-200 text-gray-400 bg-gray-50'
                       : copiedType === 'text'
                         ? 'bg-green-50 border-green-200 text-green-600'
-                        : 'border-[#E3E6F0] bg-white hover:bg-gray-50 text-[#373b4d] cursor-pointer'
+                        : 'border-[#E3E6F0] bg-white hover:bg-gray-50 text-[#2d3149] cursor-pointer'
                   }`}
                 >
                   {copiedType === 'text' ? <Check size={12} /> : <Copy size={12} />} Copy Text
@@ -240,12 +272,12 @@ export default function BionicReadingConverter() {
                 <button
                   disabled={!text}
                   onClick={() => handleCopy('md', bionicMarkdown)}
-                  className={`px-3 py-1.5 rounded-lg border text-xs font-semibold flex items-center gap-1 transition-all ${
+                  className={`px-3 py-1.5 rounded-lg border text-xs font-semibold flex items-center gap-1 transition-all min-h-[44px] min-w-[44px] ${
                     !text 
                       ? 'opacity-40 cursor-not-allowed border-gray-200 text-gray-400 bg-gray-50'
                       : copiedType === 'md'
                         ? 'bg-green-50 border-green-200 text-green-600'
-                        : 'border-[#E3E6F0] bg-white hover:bg-gray-50 text-[#373b4d] cursor-pointer'
+                        : 'border-[#E3E6F0] bg-white hover:bg-gray-50 text-[#2d3149] cursor-pointer'
                   }`}
                 >
                   {copiedType === 'md' ? <Check size={12} /> : <FileText size={12} />} Copy Markdown
@@ -253,10 +285,10 @@ export default function BionicReadingConverter() {
                 <button
                   disabled={!text}
                   onClick={handleDownload}
-                  className={`px-3 py-1.5 rounded-lg border text-xs font-semibold flex items-center gap-1 transition-all ${
+                  className={`px-3 py-1.5 rounded-lg border text-xs font-semibold flex items-center gap-1 transition-all min-h-[44px] min-w-[44px] ${
                     !text 
                       ? 'opacity-40 cursor-not-allowed border-gray-200 text-gray-400 bg-gray-50'
-                      : 'border-[#E3E6F0] bg-white hover:bg-gray-50 text-[#373b4d] cursor-pointer'
+                      : 'border-[#E3E6F0] bg-white hover:bg-gray-50 text-[#2d3149] cursor-pointer'
                   }`}
                 >
                   <Download size={12} /> Download HTML
@@ -268,7 +300,7 @@ export default function BionicReadingConverter() {
             <div className="p-6 flex-1 overflow-y-auto max-h-[440px]">
               {text ? (
                 <div
-                  className="font-sans text-[#1a1d2e] leading-relaxed break-words outline-none"
+                  className="font-sans text-[#0f111a] leading-relaxed break-words outline-none"
                   style={{
                     fontSize: `${fontSize}px`,
                     lineHeight: lineHeight,
