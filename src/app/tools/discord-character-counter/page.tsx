@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import CharacterCounter from '@/components/tools/CharacterCounter';
+
+import FaqSchema from '@/components/seo/FaqSchema';import CharacterCounter from '@/components/tools/CharacterCounter';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import { buildFaqJsonLd } from '@/lib/jsonld';
@@ -63,9 +64,6 @@ export const metadata: Metadata = {
       'Split long announcements at sentence or paragraph breaks. Free Discord length counter.',
     site: seoConfig.twitterHandle,
   },
-  other: {
-    'script:ld+json': buildFaqJsonLd(faqItems),
-  },
 };
 
 
@@ -74,6 +72,7 @@ const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-character-counter/`;
 export default function CharacterCounterPage() {
   return (
     <>
+      <FaqSchema items={faqItems} />
       <WebSiteSchema />
       <SoftwareAppSchema
         name="Discord Character Counter & Splitter"

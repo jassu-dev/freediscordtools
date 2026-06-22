@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { seoConfig } from '@/config/seo';
+
+import FaqSchema from '@/components/seo/FaqSchema';import { seoConfig } from '@/config/seo';
 import { buildFaqJsonLd } from '@/lib/jsonld';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
@@ -67,9 +68,6 @@ export const metadata: Metadata = {
     description: 'Check your resume for ATS compatibility and get an instant score. Free, no sign-up required.',
     site: seoConfig.twitterHandle,
   },
-  other: {
-    'script:ld+json': buildFaqJsonLd(faqItems),
-  },
 };
 
 
@@ -78,6 +76,7 @@ const PAGE_URL = `${seoConfig.baseUrl}/tools/ats-resume-checker/`;
 export default function AtsResumeCheckerPage() {
   return (
     <>
+      <FaqSchema items={faqItems} />
       <WebSiteSchema />
       <BreadcrumbSchema
         items={[
@@ -137,6 +136,24 @@ export default function AtsResumeCheckerPage() {
           Don't let a poorly optimized resume be the reason you don't get the interview. An automated <strong>cv scanner</strong> should not be a roadblock to your dream career. Use our <strong>free ats resume checker</strong> as part of your application routine. Whether you call it an <strong>ats scanner</strong>, <strong>resume score checker</strong>, or <strong>ats score checker free</strong> tool, the goal is the same: beating the bots and getting your resume into the hands of a hiring manager.
         </p>
       </article>
+
+      {/* Visible FAQ Section for Search Console */}
+      <section className="mt-16">
+        <h2 className="text-3xl font-bold text-[#1a1d2e] mb-8 text-center">Frequently Asked Questions about ATS Resume Checker</h2>
+        <div className="space-y-4 max-w-3xl mx-auto">
+          {faqItems.map((faq, i) => (
+            <details key={i} className="rounded-xl bg-white border border-[#E3E6F0] overflow-hidden group shadow-sm">
+              <summary className="px-6 py-4 font-bold text-[#1a1d2e] cursor-pointer list-none flex justify-between items-center hover:bg-[#F8F9FF] transition-colors">
+                <span>{faq.question}</span>
+                <span className="text-[#5865F2] text-xl group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <div className="px-6 pb-4 pt-2 text-[#5b6282] leading-relaxed border-t border-[#E3E6F0]/50 bg-[#F8F9FF]/30">
+                {faq.answer}
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
     </div>
     </>
   );

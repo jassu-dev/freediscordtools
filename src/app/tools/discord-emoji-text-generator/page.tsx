@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import EmojiTextGenerator from '@/components/tools/EmojiTextGenerator';
+
+import FaqSchema from '@/components/seo/FaqSchema';import EmojiTextGenerator from '@/components/tools/EmojiTextGenerator';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import { buildFaqJsonLd } from '@/lib/jsonld';
@@ -63,9 +64,6 @@ export const metadata: Metadata = {
       'Translate headers into large emoji letters. Easy copy-paste for Discord server announcements.',
     site: seoConfig.twitterHandle,
   },
-  other: {
-    'script:ld+json': buildFaqJsonLd(faqItems),
-  },
 };
 
 
@@ -74,6 +72,7 @@ const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-emoji-text-generator/`;
 export default function EmojiTextGeneratorPage() {
   return (
     <>
+      <FaqSchema items={faqItems} />
       <WebSiteSchema />
       <SoftwareAppSchema
         name="Discord Emoji Big Text Generator"

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import FontGenerator from '@/components/tools/FontGenerator';
+
+import FaqSchema from '@/components/seo/FaqSchema';import FontGenerator from '@/components/tools/FontGenerator';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import { buildFaqJsonLd } from '@/lib/jsonld';
@@ -116,9 +117,6 @@ export const metadata: Metadata = {
       'Change your default Discord font. Generate aesthetic, gothic, gaming, cute, and glitch discord fonts with live preview. Copy and paste instantly.',
     site: seoConfig.twitterHandle,
   },
-  other: {
-    'script:ld+json': buildFaqJsonLd(faqItems),
-  },
 };
 
 
@@ -127,6 +125,7 @@ const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-font-generator/`;
 export default function DiscordFontGeneratorPage() {
   return (
     <>
+      <FaqSchema items={faqItems} />
       <WebSiteSchema />
       <SoftwareAppSchema
         name="Discord Font Generator"

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { seoConfig } from '@/config/seo';
+
+import FaqSchema from '@/components/seo/FaqSchema';import { seoConfig } from '@/config/seo';
 import { buildFaqJsonLd } from '@/lib/jsonld';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
@@ -48,6 +49,7 @@ const PAGE_URL = `${seoConfig.baseUrl}/tools/bionic-reading-converter/`;
 export default function BionicReadingConverterPage() {
   return (
     <>
+      <FaqSchema items={faqItems} />
       <div className="max-w-5xl mx-auto px-4 py-8">
       <WebSiteSchema />
       <BreadcrumbSchema

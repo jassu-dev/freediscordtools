@@ -16,6 +16,7 @@ const PRIORITY_TOOLS = new Set([
   'discord-bio-generator',
   'discord-status-generator',
   'discord-username-checker',
+  'case-converter',
 ]);
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -9,8 +9,12 @@ interface FaqSchemaProps {
   items: FaqItem[];
 }
 
+/**
+ * Renders FAQPage JSON-LD as a <script type="application/ld+json"> tag.
+ * Must be used inside a Server Component page return (not 'use client').
+ */
 export default function FaqSchema({ items }: FaqSchemaProps) {
-  const data = {
+  const schema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: items.map((item) => ({
@@ -22,5 +26,6 @@ export default function FaqSchema({ items }: FaqSchemaProps) {
       },
     })),
   };
-  return <JsonLd data={data} />;
+
+  return <JsonLd data={schema as any} />;
 }

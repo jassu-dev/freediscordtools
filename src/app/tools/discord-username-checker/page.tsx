@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { seoConfig } from '@/config/seo';
+
+import FaqSchema from '@/components/seo/FaqSchema';import { seoConfig } from '@/config/seo';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import { buildFaqJsonLd } from '@/lib/jsonld';
@@ -88,9 +89,6 @@ export const metadata: Metadata = {
     description: 'Check if your Discord username is valid and likely available. Free, instant, no sign-up.',
     site: seoConfig.twitterHandle,
   },
-  other: {
-    'script:ld+json': buildFaqJsonLd(faqItems),
-  },
 };
 
 
@@ -99,6 +97,7 @@ const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-username-checker/`;
 export default function DiscordUsernameCheckerPage() {
   return (
     <>
+      <FaqSchema items={faqItems} />
       <WebSiteSchema />
       <SoftwareAppSchema
         name="Discord Username Checker"

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { seoConfig } from '@/config/seo';
+
+import FaqSchema from '@/components/seo/FaqSchema';import { seoConfig } from '@/config/seo';
 import { buildFaqJsonLd } from '@/lib/jsonld';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
@@ -70,9 +71,6 @@ export const metadata: Metadata = {
     description: 'Calculate Discord permission integers for bots and roles instantly. Free, accurate, no sign-up.',
     site: seoConfig.twitterHandle,
   },
-  other: {
-    'script:ld+json': buildFaqJsonLd(faqItems),
-  },
 };
 
 
@@ -81,6 +79,7 @@ const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-permission-calculator/`;
 export default function DiscordPermissionCalculatorPage() {
   return (
     <>
+      <FaqSchema items={faqItems} />
       <WebSiteSchema />
       <SoftwareAppSchema
         name="Discord Permission Calculator"

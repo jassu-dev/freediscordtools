@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import TimestampGenerator from '@/components/tools/TimestampGenerator';
+
+import FaqSchema from '@/components/seo/FaqSchema';import TimestampGenerator from '@/components/tools/TimestampGenerator';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
@@ -78,9 +79,6 @@ export const metadata: Metadata = {
       'Learn how to use unix timestamp discord and generate discord timestamps for your server announcements.',
     site: seoConfig.twitterHandle,
   },
-  other: {
-    'script:ld+json': buildFaqJsonLd(faqItems),
-  },
 };
 
 // ─── FAQ data ─────────────────────────────────────────────────────────────────
@@ -101,6 +99,7 @@ const FORMAT_ROWS = [
 export default function DiscordTimestampGeneratorPage() {
   return (
     <>
+      <FaqSchema items={faqItems} />
       <WebSiteSchema />
       <SoftwareAppSchema
         name="Discord Timestamp Generator"

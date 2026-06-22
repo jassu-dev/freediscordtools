@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import ColorTextGenerator from '@/components/tools/ColorTextGenerator';
+
+import FaqSchema from '@/components/seo/FaqSchema';import ColorTextGenerator from '@/components/tools/ColorTextGenerator';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import { buildFaqJsonLd } from '@/lib/jsonld';
@@ -77,9 +78,6 @@ export const metadata: Metadata = {
       'Generate ANSI colored text for Discord. Free, instant, no sign-up.',
     site: seoConfig.twitterHandle,
   },
-  other: {
-    'script:ld+json': buildFaqJsonLd(faqItems),
-  },
 };
 
 // ─── FAQ data ─────────────────────────────────────────────────────────────────
@@ -89,6 +87,7 @@ const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-color-text-generator/`;
 export default function DiscordColorTextGeneratorPage() {
   return (
     <>
+      <FaqSchema items={faqItems} />
       <WebSiteSchema />
       <SoftwareAppSchema
         name="Discord Colored Text Generator"

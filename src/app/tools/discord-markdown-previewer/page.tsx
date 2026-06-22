@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import MarkdownPreviewer from '@/components/tools/MarkdownPreviewer';
+
+import FaqSchema from '@/components/seo/FaqSchema';import MarkdownPreviewer from '@/components/tools/MarkdownPreviewer';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import { buildFaqJsonLd } from '@/lib/jsonld';
@@ -63,9 +64,6 @@ export const metadata: Metadata = {
       'Interactive visual preview of Discord chat formatting. Test code blocks and spoilers online.',
     site: seoConfig.twitterHandle,
   },
-  other: {
-    'script:ld+json': buildFaqJsonLd(faqItems),
-  },
 };
 
 
@@ -74,6 +72,7 @@ const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-markdown-previewer/`;
 export default function MarkdownPreviewerPage() {
   return (
     <>
+      <FaqSchema items={faqItems} />
       <WebSiteSchema />
       <SoftwareAppSchema
         name="Discord Markdown & Spoiler Previewer"

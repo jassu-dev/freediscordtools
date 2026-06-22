@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import MessageLinkExtractorTool from '@/components/tools/message-extractor/MessageLinkExtractorTool';
+
+import FaqSchema from '@/components/seo/FaqSchema';import MessageLinkExtractorTool from '@/components/tools/message-extractor/MessageLinkExtractorTool';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import { buildFaqJsonLd } from '@/lib/jsonld';
@@ -63,9 +64,6 @@ export const metadata: Metadata = {
       'Extract Server ID, Channel ID, and Message ID from any Discord message link instantly.',
     site: seoConfig.twitterHandle,
   },
-  other: {
-    'script:ld+json': buildFaqJsonLd(faqItems),
-  },
 };
 
 
@@ -74,6 +72,7 @@ const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-message-link-extractor/`;
 export default function MessageLinkExtractorPage() {
   return (
     <>
+      <FaqSchema items={faqItems} />
       <WebSiteSchema />
       <SoftwareAppSchema
         name="Discord Message Link Extractor"

@@ -33,11 +33,11 @@ export const metadata: Metadata = {
   authors: [{ name: 'FreeDiscordTools Team', url: seoConfig.baseUrl }],
   category: 'Technology',
   title: {
-    default: 'FreeDiscordTools – Free Discord Tools & Online Utilities',
+    default: 'FreeDiscordTools – Free Discord Utilities & Online Web Tools',
     template: '%s | FreeDiscordTools',
   },
   description:
-    'Free browser-based tools for Discord users, server owners, developers, and job seekers. Discord timestamp generator, font generator, ATS resume checker, and more. No sign-up, no limits.',
+    'The #1 collection of free browser-based tools for Discord users, developers, and creators. Discord timestamp generator, font generator, case converter, ATS resume checker, and more. 100% free, no sign-up, no limits.',
   keywords: [
     'free discord tools',
     'discord timestamp generator',
@@ -48,6 +48,10 @@ export const metadata: Metadata = {
     'discord status generator',
     'discord webhook sender',
     'discord permission calculator',
+    'case converter',
+    'word counter',
+    'px to rem converter',
+    'bionic reading converter',
   ],
   openGraph: {
     siteName: seoConfig.siteName,

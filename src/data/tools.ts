@@ -145,5 +145,13 @@ export const tools: Tool[] = [
     keywords: ['discord bio generator', 'discord bio ideas', 'discord bio templates', 'aesthetic discord bio', 'funny discord bio', 'matching discord bio', 'discord about me ideas'],
     category: 'Discord Formatting',
   },
+  {
+    slug: 'case-converter',
+    name: 'Case Converter & Word Counter',
+    description: 'Free online case converter and word counter. Easily transform text between uppercase, lowercase, title case, sentence case, and more. Instant statistics for words, characters, and lines.',
+    href: '/tools/case-converter/',
+    keywords: ['case converter', 'word counter', 'uppercase to lowercase', 'title case converter', 'sentence case converter', 'text transformer', 'character counter'],
+    category: 'Productivity & Developer Tools',
+  },
 ];
 

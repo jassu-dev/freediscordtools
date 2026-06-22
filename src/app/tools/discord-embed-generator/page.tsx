@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import EmbedGenerator from '@/components/tools/EmbedGenerator';
+
+import FaqSchema from '@/components/seo/FaqSchema';import EmbedGenerator from '@/components/tools/EmbedGenerator';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import { buildFaqJsonLd } from '@/lib/jsonld';
@@ -63,9 +64,6 @@ export const metadata: Metadata = {
       'Design Discord embeds visually with a real-time dark mode preview. Free Webhook generator.',
     site: seoConfig.twitterHandle,
   },
-  other: {
-    'script:ld+json': buildFaqJsonLd(faqItems),
-  },
 };
 
 
@@ -74,6 +72,7 @@ const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-embed-generator/`;
 export default function EmbedGeneratorPage() {
   return (
     <>
+      <FaqSchema items={faqItems} />
       <WebSiteSchema />
       <SoftwareAppSchema
         name="Discord Visual Embed Generator"

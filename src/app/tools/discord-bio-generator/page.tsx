@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { seoConfig } from '@/config/seo';
+
+import FaqSchema from '@/components/seo/FaqSchema';import { seoConfig } from '@/config/seo';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import { buildFaqJsonLd } from '@/lib/jsonld';
@@ -90,9 +91,6 @@ export const metadata: Metadata = {
     description: '60+ discord bio templates aesthetic, funny, gaming, matching. Copy any discord about me idea instantly.',
     site: seoConfig.twitterHandle,
   },
-  other: {
-    'script:ld+json': buildFaqJsonLd(faqItems),
-  },
 };
 
 
@@ -101,6 +99,7 @@ const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-bio-generator/`;
 export default function DiscordBioGeneratorPage() {
   return (
     <>
+      <FaqSchema items={faqItems} />
       <WebSiteSchema />
       <SoftwareAppSchema
         name="Discord Bio Generator"

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import SnowflakeConverter from '@/components/tools/SnowflakeConverter';
+
+import FaqSchema from '@/components/seo/FaqSchema';import SnowflakeConverter from '@/components/tools/SnowflakeConverter';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import { buildFaqJsonLd } from '@/lib/jsonld';
@@ -72,9 +73,6 @@ export const metadata: Metadata = {
       'Ever wondered when a Discord account was made? Use our Snowflake converter to find the exact creation date from any Discord ID.',
     site: seoConfig.twitterHandle,
   },
-  other: {
-    'script:ld+json': buildFaqJsonLd(faqItems),
-  },
 };
 
 // ─── FAQ data ─────────────────────────────────────────────────────────────────
@@ -84,6 +82,7 @@ const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-id-to-date/`;
 export default function DiscordIdToDatePage() {
   return (
     <>
+      <FaqSchema items={faqItems} />
       <WebSiteSchema />
       <SoftwareAppSchema
         name="Discord ID to Date Converter"

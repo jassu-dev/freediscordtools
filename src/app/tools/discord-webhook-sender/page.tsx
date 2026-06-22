@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import WebhookSender from '@/components/tools/WebhookSender';
+
+import FaqSchema from '@/components/seo/FaqSchema';import WebhookSender from '@/components/tools/WebhookSender';
 import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import { buildFaqJsonLd } from '@/lib/jsonld';
@@ -55,9 +56,6 @@ export const metadata: Metadata = {
     description: 'Send Discord webhook messages instantly. Free, no coding, no sign-up.',
     site: seoConfig.twitterHandle,
   },
-  other: {
-    'script:ld+json': buildFaqJsonLd(faqItems),
-  },
 };
 
 
@@ -67,6 +65,7 @@ const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-webhook-sender/`;
 export default function DiscordWebhookSenderPage() {
   return (
     <>
+      <FaqSchema items={faqItems} />
       <WebSiteSchema />
       <SoftwareAppSchema
         name="Discord Webhook Message Sender"
