@@ -2,10 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import ToolCard from '@/components/tools/ToolCard';
 import BlogCard from '@/components/blog/BlogCard';
-import WebSiteSchema from '@/components/seo/WebSiteSchema';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import FaqSchema from '@/components/seo/FaqSchema';
 import PageSchema from '@/components/seo/PageSchema';
+import VisibleFAQ from '@/components/seo/VisibleFAQ';
 import { tools } from '@/data/tools';
 import { blogPosts } from '@/data/blog';
 import { seoConfig } from '@/config/seo';
@@ -44,6 +42,7 @@ const homepageFaqs = [
     answer: 'The Case Converter allows you to instantly change text to Title Case or Sentence Case, which is essential for professional-looking SEO headings and meta descriptions.',
   },
 ];
+
 export const metadata: Metadata = {
   title: 'FreeDiscordTools – #1 Collection of Discord Utilities & Web Tools',
   description: 'Free, fast, and secure browser-based tools for Discord users, developers, and job seekers. Discord timestamp generator, font generator, case converter, ATS resume checker, and more. No sign-up required.',
@@ -68,8 +67,6 @@ export const metadata: Metadata = {
   },
 };
 
-
-
 export default function HomePage() {
   const groupedTools = tools.reduce((acc, tool) => {
     if (!acc[tool.category]) acc[tool.category] = [];
@@ -86,7 +83,7 @@ export default function HomePage() {
         faqItems={homepageFaqs}
         breadcrumbs={[{ name: 'Home', href: seoConfig.baseUrl }]}
       />
-      
+
       {/* Hero Section */}
       <section className="bg-[#F8F9FF] border-b border-[#E3E6F0] py-20 px-4 text-center">
         <div className="max-w-4xl mx-auto">
@@ -97,14 +94,14 @@ export default function HomePage() {
             A growing collection of <strong>free online tools</strong> including <strong>discord utilities</strong>, career tools, and developer utilities. No sign-up, no install, just 100% free browser-based tools.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link 
-              href="/tools/" 
+            <Link
+              href="/tools/"
               className="px-8 py-4 bg-[#5865F2] text-white font-bold rounded-xl hover:bg-[#4752C4] transition-all shadow-lg shadow-[#5865F2]/20"
             >
               Explore All {tools.length}+ Tools
             </Link>
-            <Link 
-              href="/blog/" 
+            <Link
+              href="/blog/"
               className="px-8 py-4 bg-white text-[#1a1d2e] font-bold rounded-xl border border-[#E3E6F0] hover:bg-gray-50 transition-all"
             >
               Read SEO Guides
@@ -117,7 +114,7 @@ export default function HomePage() {
         {/* Categorized Tool Grid */}
         <section aria-label="Available tools" className="mb-20">
           <h2 className="text-3xl font-bold text-[#1a1d2e] mb-12 text-center">Popular Free Online Tools</h2>
-          
+
           {categories.map((category) => (
             <div key={category} className="mb-12 last:mb-0">
               <h3 className="text-xl font-bold text-[#5b6282] mb-6 flex items-center gap-3">
@@ -180,22 +177,7 @@ export default function HomePage() {
           </article>
         </section>
 
-        {/* FAQ */}
-        <section aria-labelledby="faq-heading" className="mb-20">
-          <h2 id="faq-heading" className="text-3xl font-bold text-[#1a1d2e] mb-8 text-center">Frequently Asked Questions about our Tools</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {homepageFaqs.map((faq, i) => (
-              <details key={i} className="p-5 rounded-xl bg-white border border-[#E3E6F0] group transition-all hover:border-[#5865F2]/30 shadow-sm">
-                <summary className="font-bold text-[#1a1d2e] cursor-pointer list-none flex justify-between items-center">
-                  {faq.question}
-                  <span className="text-[#5865F2] ml-2 text-xl group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <p className="mt-4 text-[#5b6282] text-base leading-relaxed">{faq.answer}</p>
-              </details>
-            ))}
-          </div>
-        </section>
-
+        <VisibleFAQ items={homepageFaqs} />
       </div>
     </>
   );

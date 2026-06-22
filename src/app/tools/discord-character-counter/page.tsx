@@ -1,10 +1,7 @@
 import type { Metadata } from 'next';
-
-import FaqSchema from '@/components/seo/FaqSchema';import CharacterCounter from '@/components/tools/CharacterCounter';
-import WebSiteSchema from '@/components/seo/WebSiteSchema';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import { buildFaqJsonLd } from '@/lib/jsonld';
-import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
+import PageSchema from '@/components/seo/PageSchema';
+import VisibleFAQ from '@/components/seo/VisibleFAQ';
+import CharacterCounter from '@/components/tools/CharacterCounter';
 import { seoConfig } from '@/config/seo';
 
 const faqItems = [
@@ -29,6 +26,7 @@ const faqItems = [
       'Yes, all letters, spaces, numbers, and emojis are counted. Note that Discord represents custom server emojis under the hood as code sequences like <:emoji_name:id>, which can count as more characters than a regular Unicode emoji.',
   },
 ];
+
 export const metadata: Metadata = {
   title: 'Discord Character Counter & Message Splitter Tool',
   description:
@@ -66,23 +64,20 @@ export const metadata: Metadata = {
   },
 };
 
-
 const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-character-counter/`;
 
 export default function CharacterCounterPage() {
   return (
     <>
-      <FaqSchema items={faqItems} />
-      <WebSiteSchema />
-      <SoftwareAppSchema
-        name="Discord Character Counter & Splitter"
-        description="Free online utility to count text characters and automatically split messages exceeding Discord character limits."
-        url={PAGE_URL}
-        applicationCategory="UtilitiesApplication"
-      />
-      <BreadcrumbSchema
-        items={[
-          { name: 'Home',  href: `${seoConfig.baseUrl}/` },
+      <PageSchema
+        faqItems={faqItems}
+        softwareApp={{
+          name: 'Discord Character Counter & Splitter',
+          description: 'Free online utility to count text characters and automatically split messages exceeding Discord character limits.',
+          url: PAGE_URL,
+        }}
+        breadcrumbs={[
+          { name: 'Home', href: `${seoConfig.baseUrl}/` },
           { name: 'Tools', href: `${seoConfig.baseUrl}/tools/` },
           { name: 'Discord Character Counter', href: PAGE_URL },
         ]}
@@ -174,23 +169,7 @@ export default function CharacterCounterPage() {
           </p>
         </article>
 
-        {/* FAQs */}
-        <section aria-labelledby="faq-heading" className="max-w-3xl mx-auto mt-16">
-          <h2 id="faq-heading" className="text-2xl font-bold text-[#1a1d2e] mb-6 text-center">
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-2">
-            {faqItems.map((faq, i) => (
-              <details key={i} className="rounded-lg bg-white border border-[#E3E6F0]">
-                <summary className="px-4 py-3 font-medium text-[#1a1d2e] text-base cursor-pointer list-none flex justify-between items-center gap-2">
-                  <span>{faq.question}</span>
-                  <span className="text-[#5865F2] shrink-0 text-xl leading-none" aria-hidden="true">+</span>
-                </summary>
-                <p className="px-4 pb-4 pt-1 text-[#5b6282] text-base leading-relaxed">{faq.answer}</p>
-              </details>
-            ))}
-          </div>
-        </section>
+        <VisibleFAQ items={faqItems} />
       </div>
     </>
   );

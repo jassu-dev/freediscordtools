@@ -1,10 +1,8 @@
 import type { Metadata } from 'next';
-
-import FaqSchema from '@/components/seo/FaqSchema';import { seoConfig } from '@/config/seo';
-import { buildFaqJsonLd } from '@/lib/jsonld';
-import WebSiteSchema from '@/components/seo/WebSiteSchema';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import PageSchema from '@/components/seo/PageSchema';
+import VisibleFAQ from '@/components/seo/VisibleFAQ';
 import BionicReadingConverter from '@/components/tools/BionicReadingConverter';
+import { seoConfig } from '@/config/seo';
 
 const faqItems = [
   {
@@ -24,6 +22,7 @@ const faqItems = [
     answer: 'Yes, our online bionic reading converter tool is 100% free with no registration, word limits, or premium paywalls. You can convert essays, books, and articles without restriction.',
   },
 ];
+
 export const metadata: Metadata = {
   title: 'Bionic Reading Converter Online | Free Bionic Reading Font Tool',
   description:
@@ -42,78 +41,82 @@ export const metadata: Metadata = {
     canonical: `${seoConfig.baseUrl}/tools/bionic-reading-converter/`,
   },
 };
-
 
 const PAGE_URL = `${seoConfig.baseUrl}/tools/bionic-reading-converter/`;
 
 export default function BionicReadingConverterPage() {
   return (
     <>
-      <FaqSchema items={faqItems} />
-      <div className="max-w-5xl mx-auto px-4 py-8">
-      <WebSiteSchema />
-      <BreadcrumbSchema
-        items={[
+      <PageSchema
+        faqItems={faqItems}
+        softwareApp={{
+          name: 'Bionic Reading Converter',
+          description: 'Free Bionic Reading converter to transform text into bionic reading font with fixation anchors for faster reading.',
+          url: PAGE_URL,
+        }}
+        breadcrumbs={[
           { name: 'Home', href: `${seoConfig.baseUrl}/` },
           { name: 'Tools', href: `${seoConfig.baseUrl}/tools/` },
           { name: 'Bionic Reading Converter', href: PAGE_URL },
         ]}
       />
+      <div className="max-w-5xl mx-auto px-4 py-8">
+        <header className="mb-10 text-center space-y-4">
+          <h1 className="text-4xl font-extrabold text-[#1a1d2e] leading-tight">
+            Free Bionic Reading Converter & Bionic Reading Font Generator
+          </h1>
+          <p className="text-xl text-[#5b6282] max-w-3xl mx-auto">
+            Speed up your reading. Paste any text into our <strong>Bionic Reading converter</strong> to generate a custom <strong>Bionic Reading font</strong> output. Optimize fixation anchors and typography live for a superior reading experience.
+          </p>
+          <p className="bg-[#F8F9FF] border border-[#5865F2]/20 rounded-xl p-4 italic text-sm text-[#5b6282] max-w-2xl mx-auto">
+            Curious about the science of reading? Read our in-depth article: <a href="/blog/how-bionic-reading-works/" className="text-[#5865F2] font-bold hover:underline">How Bionic Reading Works: The Science of Fast Reading</a>.
+          </p>
+        </header>
 
-      <header className="mb-10 text-center space-y-4">
-        <h1 className="text-4xl font-extrabold text-[#1a1d2e] leading-tight">
-          Free Bionic Reading Converter & Bionic Reading Font Generator
-        </h1>
-        <p className="text-xl text-[#5b6282] max-w-3xl mx-auto">
-          Speed up your reading. Paste any text into our <strong>Bionic Reading converter</strong> to generate a custom <strong>Bionic Reading font</strong> output. Optimize fixation anchors and typography live for a superior reading experience.
-        </p>
-        <p className="bg-[#F8F9FF] border border-[#5865F2]/20 rounded-xl p-4 italic text-sm text-[#5b6282] max-w-2xl mx-auto">
-          Curious about the science of reading? Read our in-depth article: <a href="/blog/how-bionic-reading-works/" className="text-[#5865F2] font-bold hover:underline">How Bionic Reading Works: The Science of Fast Reading</a>.
-        </p>
-      </header>
+        {/* Main Tool Component */}
+        <section className="mb-12">
+          <BionicReadingConverter />
+        </section>
 
-      {/* Main Tool Component */}
-      <section className="mb-12">
-        <BionicReadingConverter />
-      </section>
+        {/* SEO Optimized Content Article */}
+        <article className="prose prose-lg max-w-none text-[#5b6282] bg-white p-8 md:p-12 rounded-2xl border border-[#E3E6F0] shadow-sm">
+          <h2>Why You Need a Bionic Reading Converter</h2>
+          <p>
+            Reading on digital screens is often slow and tiring. Between browser ads, small font sizes, and uniform layout styles, our brains struggle to stay focused on long documents. Using a <strong>bionic reading converter</strong> is one of the most effective ways to bypass these reading blocks. By converting standard text into a <strong>bionic reading font</strong> style, you highlight the crucial syllables of each word, letting your brain skip the extra noise and read up to 2-3 times faster.
+          </p>
 
-      {/* SEO Optimized Content Article */}
-      <article className="prose prose-lg max-w-none text-[#5b6282] bg-white p-8 md:p-12 rounded-2xl border border-[#E3E6F0] shadow-sm">
-        <h2>Why You Need a Bionic Reading Converter</h2>
-        <p>
-          Reading on digital screens is often slow and tiring. Between browser ads, small font sizes, and uniform layout styles, our brains struggle to stay focused on long documents. Using a <strong>bionic reading converter</strong> is one of the most effective ways to bypass these reading blocks. By converting standard text into a <strong>bionic reading font</strong> style, you highlight the crucial syllables of each word, letting your brain skip the extra noise and read up to 2-3 times faster.
-        </p>
+          <h3>How the Bionic Reading Font Helps ADHD & Neurodivergent Readers</h3>
+          <p>
+            Neurodivergent readers, particularly those with ADHD or dyslexia, face unique challenges with traditional layouts. Walls of monotone text offer no visual hierarchy, making it easy for the eye to jump lines or drift away.
+          </p>
+          <p>
+            Our online <strong>bionic reading converter</strong> formats text into a responsive <strong>bionic reading font</strong> layout that acts as a visual guide. The bolded prefixes capture your eyes' attention immediately. By jumping from one bold anchor to another, your brain consumes words with less effort, reducing eye strain and keeping your reading focused.
+          </p>
 
-        <h3>How the Bionic Reading Font Helps ADHD & Neurodivergent Readers</h3>
-        <p>
-          Neurodivergent readers, particularly those with ADHD or dyslexia, face unique challenges with traditional layouts. Walls of monotone text offer no visual hierarchy, making it easy for the eye to jump lines or drift away.
-        </p>
-        <p>
-          Our online <strong>bionic reading converter</strong> formats text into a responsive <strong>bionic reading font</strong> layout that acts as a visual guide. The bolded prefixes capture your eyes\' attention immediately. By jumping from one bold anchor to another, your brain consumes words with less effort, reducing eye strain and keeping your reading focused.
-        </p>
+          <h3>Powerful Customization in Our Bionic Reading Converter</h3>
+          <p>
+            No two readers have the same speed requirements. That is why our <strong>bionic reading converter</strong> comes equipped with full customization features to generate the perfect layout:
+          </p>
+          <ul>
+            <li>
+              <strong>Adjust Bionic Reading Font Fixation:</strong> Slide the fixation controls to adjust the exact percentage of letters bolded in each word. A 50% ratio is ideal for general speed reading, while a higher ratio helps readers with dyslexia or concentration challenges.
+            </li>
+            <li>
+              <strong>Refine Font Size and Spacing:</strong> Zoom in on the typography or increase line height to make the text cleaner. Space between lines relieves layout crowding, which further speeds up your reading flow.
+            </li>
+            <li>
+              <strong>Offline Export Options:</strong> Copy your converted content as HTML, grab the Markdown equivalent with standard bold indicators, or download the styled text as a standalone HTML file for offline reading.
+            </li>
+          </ul>
 
-        <h3>Powerful Customization in Our Bionic Reading Converter</h3>
-        <p>
-          No two readers have the same speed requirements. That is why our <strong>bionic reading converter</strong> comes equipped with full customization features to generate the perfect layout:
-        </p>
-        <ul>
-          <li>
-            <strong>Adjust Bionic Reading Font Fixation:</strong> Slide the fixation controls to adjust the exact percentage of letters bolded in each word. A 50% ratio is ideal for general speed reading, while a higher ratio helps readers with dyslexia or concentration challenges.
-          </li>
-          <li>
-            <strong>Refine Font Size and Spacing:</strong> Zoom in on the typography or increase line height to make the text cleaner. Space between lines relieves layout crowding, which further speeds up your reading flow.
-          </li>
-          <li>
-            <strong>Offline Export Options:</strong> Copy your converted content as HTML, grab the Markdown equivalent with standard bold indicators, or download the styled text as a standalone HTML file for offline reading.
-          </li>
-        </ul>
+          <h3>A 100% Free and Private Bionic Reading Font Tool</h3>
+          <p>
+            Most converters on the internet require paid subscriptions, impose strict word limits, or force you to upload text to their servers. Our free <strong>bionic reading converter</strong> is entirely client-side. The conversion runs inside your browser, meaning your text is never sent or stored anywhere. It is completely safe, private, and free to use for any book, article, or document.
+          </p>
+        </article>
 
-        <h3>A 100% Free and Private Bionic Reading Font Tool</h3>
-        <p>
-          Most converters on the internet require paid subscriptions, impose strict word limits, or force you to upload text to their servers. Our free <strong>bionic reading converter</strong> is entirely client-side. The conversion runs inside your browser, meaning your text is never sent or stored anywhere. It is completely safe, private, and free to use for any book, article, or document.
-        </p>
-      </article>
-    </div>
+        <VisibleFAQ items={faqItems} />
+      </div>
     </>
   );
 }
