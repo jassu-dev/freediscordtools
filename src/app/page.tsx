@@ -91,7 +91,7 @@ export default function HomePage() {
             Free <span className="text-[#5865F2]">Online Tools</span> & Discord Utilities
           </h1>
           <p className="text-xl text-[#5b6282] mb-10 leading-relaxed max-w-3xl mx-auto">
-            A growing collection of <strong>free online tools</strong> including <strong>discord utilities</strong>, career tools, and developer utilities. No sign-up, no install, just 100% free browser-based tools.
+            A growing collection of <strong>free online tools</strong> including <strong>discord utilities</strong>, career tools, and developer utilities. From password generator, color converter, QR code generator, JSON formatter, and Base64 encoder/decoder. No sign-up, no install, just 100% free browser-based tools.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
@@ -154,7 +154,7 @@ export default function HomePage() {
             <h2 className="text-3xl font-bold text-[#1a1d2e] mb-6">The Best Collection of Free Online Tools & Discord Utilities</h2>
 
             <p className="mb-6 leading-relaxed">
-              FreeDiscordTools is your one-stop shop for the <strong>best free online tools</strong> and <strong>discord utilities</strong>. Whether you're managing a community, building a brand, or looking for a job, our <strong>web utilities</strong> are designed to save you time and effort. Every tool on our site, from the <strong>discord font generator</strong> to the <strong>case converter</strong>, is built to run entirely in your browser for maximum privacy and speed.
+              FreeDiscordTools is your one-stop shop for the <strong>best free online tools</strong> and <strong>discord utilities</strong>. Whether you're managing a community, building a brand, or looking for a job, our <strong>web utilities</strong> are designed to save you time and effort. Every tool on our site, from the <strong>discord font generator</strong> to the <strong>case converter</strong>, <strong>password generator</strong>, <strong>color converter</strong>, <strong>QR code generator</strong>, <strong>JSON formatter</strong>, and <strong>Base64 encoder/decoder</strong>, is built to run entirely in your browser for maximum privacy and speed.
             </p>
 
             <h3 className="text-2xl font-semibold text-[#1a1d2e] mb-4 mt-10">Powerful Discord Tools for Server Owners</h3>
@@ -166,7 +166,7 @@ export default function HomePage() {
             <h3 className="text-2xl font-semibold text-[#1a1d2e] mb-4 mt-10">Essential Career & Productivity Web Utilities</h3>
 
             <p className="mb-6 leading-relaxed">
-              Our <strong>career tools</strong> are designed to give you an edge in the job market. The <strong>ATS resume checker</strong> provides an instant <strong>ATS score</strong> and optimization tips to help your CV pass automated filters. Additionally, our <strong>case converter</strong> and <strong>word counter</strong> are perfect for content creators who need to maintain professional formatting and meet strict character limits. All these <strong>free online tools</strong> are accessible without any sign-up or installation.
+              Our <strong>career tools</strong> are designed to give you an edge in the job market. The <strong>ATS resume checker</strong> provides an instant <strong>ATS score</strong> and optimization tips to help your CV pass automated filters. Additionally, our <strong>case converter</strong> and <strong>word counter</strong> are perfect for content creators who need to maintain professional formatting and meet strict character limits. We also offer a <strong>password generator</strong> to create strong, secure passwords, a <strong>color converter</strong> for designers, a <strong>QR code generator</strong> for marketing, a <strong>JSON formatter</strong> for developers, and a <strong>Base64 encoder/decoder</strong> for encoding data. All these <strong>free online tools</strong> are accessible without any sign-up or installation.
             </p>
 
             <h3 className="text-2xl font-semibold text-[#1a1d2e] mb-4 mt-10">Why Choose Our Free Web Utilities?</h3>

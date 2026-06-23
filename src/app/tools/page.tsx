@@ -20,6 +20,11 @@ export const metadata: Metadata = {
     'case converter',
     'word counter',
     'bionic reading converter',
+    'password generator',
+    'color converter',
+    'qr code generator',
+    'json formatter',
+    'base64 encoder',
     'web utilities',
   ],
   alternates: { canonical: `${seoConfig.baseUrl}/tools/` },
@@ -108,7 +113,7 @@ export default function ToolsPage() {
             <div>
               <h2 className="text-2xl font-bold text-[#1a1d2e] mb-4">Professional Career & Developer Utilities</h2>
               <p className="text-[#5b6282] leading-relaxed">
-                Beyond Discord, we provide essential <strong>web utilities</strong> for professionals. Our <strong>ATS resume checker</strong> helps job seekers optimize their CVs for automated screening systems, while our <strong>PX to REM converter</strong> and <strong>case converter</strong> tools assist developers in their daily workflow. Every <strong>online tool</strong> on our site is optimized for speed and privacy.
+                Beyond Discord, we provide essential <strong>web utilities</strong> for professionals. Our <strong>ATS resume checker</strong> helps job seekers optimize their CVs for automated screening systems, while our <strong>PX to REM converter</strong> and <strong>case converter</strong> tools assist developers in their daily workflow. We also offer a <strong>password generator</strong> for secure passwords, a <strong>color converter</strong> for designers, a <strong>QR code generator</strong> for marketing, a <strong>JSON formatter</strong> for developers, and a <strong>Base64 encoder/decoder</strong> for encoding data. Every <strong>online tool</strong> on our site is optimized for speed and privacy.
               </p>
             </div>
           </div>

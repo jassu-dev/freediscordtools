@@ -52,6 +52,11 @@ export const metadata: Metadata = {
     'word counter',
     'px to rem converter',
     'bionic reading converter',
+    'password generator',
+    'color converter',
+    'qr code generator',
+    'json formatter',
+    'base64 encoder',
   ],
   openGraph: {
     siteName: seoConfig.siteName,
