@@ -17,6 +17,13 @@ const PRIORITY_TOOLS = new Set([
   'discord-status-generator',
   'discord-username-checker',
   'case-converter',
+  'password-generator',
+  'color-converter',
+  'qr-code-generator',
+  'json-formatter',
+  'base64-encoder-decoder',
+  'discord-role-color-gradient-generator',
+  'discord-server-icon-resizer',
 ]);
 
 export default function sitemap(): MetadataRoute.Sitemap {
