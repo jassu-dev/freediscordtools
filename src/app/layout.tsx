@@ -60,6 +60,9 @@ export const metadata: Metadata = {
     'discord role color gradient generator',
     'discord server icon resizer',
   ],
+  verification: {
+    yandex: '284657c1f56e4315',
+  },
   openGraph: {
     siteName: seoConfig.siteName,
     type: 'website',
