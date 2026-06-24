@@ -57,6 +57,8 @@ export const metadata: Metadata = {
     'qr code generator',
     'json formatter',
     'base64 encoder',
+    'discord role color gradient generator',
+    'discord server icon resizer',
   ],
   openGraph: {
     siteName: seoConfig.siteName,

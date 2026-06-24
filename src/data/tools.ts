@@ -193,5 +193,21 @@ export const tools: Tool[] = [
     keywords: ['base64 encoder', 'base64 decoder', 'base64 encode', 'base64 decode', 'online base64 encoder', 'free base64 decoder'],
     category: 'Productivity & Developer Tools',
   },
+  {
+    slug: 'discord-role-color-gradient-generator',
+    name: 'Discord Role Color Gradient Generator',
+    description: 'Free Discord role color gradient generator. Create stunning gradient colors for your Discord roles with ease. The best Discord role color generator with live preview.',
+    href: '/tools/discord-role-color-gradient-generator/',
+    keywords: ['discord role color gradient generator', 'discord gradient role color', 'discord role color generator', 'discord gradient generator', 'discord role gradient', 'free discord role color generator'],
+    category: 'Discord Formatting',
+  },
+  {
+    slug: 'discord-server-icon-resizer',
+    name: 'Discord Server Icon Resizer',
+    description: 'Free Discord server icon resizer. Resize your image to perfect Discord icon dimensions (512x512, 256x256, 128x128, 64x64) instantly. The best Discord icon resizer online.',
+    href: '/tools/discord-server-icon-resizer/',
+    keywords: ['discord server icon resizer', 'discord icon resizer', 'resize discord icon', 'discord server icon size', 'discord icon size', 'free discord icon resizer'],
+    category: 'Discord Lookup & Assets',
+  },
 ];
 

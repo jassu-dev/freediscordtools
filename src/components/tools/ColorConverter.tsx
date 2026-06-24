@@ -15,7 +15,7 @@ const hexToRgb = (hex: string) => {
 
 const rgbToHex = (r: number, g: number, b: number) => {
   const toHex = (c: number) => {
-    const hex = c.toString(16);
+    const hex = Math.max(0, Math.min(255, c)).toString(16);
     return hex.length === 1 ? '0' + hex : hex;
   };
   return '#' + toHex(r) + toHex(g) + toHex(b);
@@ -98,9 +98,13 @@ export default function ColorConverter() {
   const [copied, setCopied] = useState<string | null>(null);
 
   useEffect(() => {
-    const newRgb = hexToRgb(hex);
-    setRgb(newRgb);
-    setHsl(rgbToHsl(newRgb.r, newRgb.g, newRgb.b));
+    try {
+      const newRgb = hexToRgb(hex);
+      setRgb(newRgb);
+      setHsl(rgbToHsl(newRgb.r, newRgb.g, newRgb.b));
+    } catch (e) {
+      // Invalid hex, ignore
+    }
   }, [hex]);
 
   const handleHexChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
@@ -142,7 +146,7 @@ export default function ColorConverter() {
       }
       setCopied(id);
       setTimeout(() => setCopied(null), 1500);
-    } catch {
+    } catch (e) {
       // ignore
     }
   }, []);
@@ -169,7 +173,7 @@ export default function ColorConverter() {
                 type="color"
                 value={hex}
                 onChange={handleHexChange}
-                className="absolute left-0 top-0 w-12 h-full rounded-l-xl"
+                className="absolute left-0 top-0 w-12 h-full rounded-l-xl cursor-pointer"
               />
               <input
                 type="text"
@@ -192,15 +196,17 @@ export default function ColorConverter() {
           <div className="space-y-4">
             <h3 className="text-lg font-bold text-[#1a1d2e]">RGB</h3>
             <div className="space-y-3">
-              {(['r', 'g', 'b']).map((channel) => (
+              {(['r', 'g', 'b'] as const).map((channel) => (
                 <div key={channel} className="flex items-center gap-3">
-                  <span className="w-12 font-semibold text-[#5b6282]">{channel.toUpperCase()}</span>
+                  <span className="w-12 font-semibold text-[#5b6282]">
+                    {channel.toUpperCase()}
+                  </span>
                   <input
                     type="number"
                     min="0"
                     max="255"
-                    value={rgb[channel as keyof typeof rgb]}
-                    onChange={(e) => handleRgbChange(channel as 'r' | 'g' | 'b', e.target.value)}
+                    value={rgb[channel]}
+                    onChange={(e) => handleRgbChange(channel, e.target.value)}
                     className="flex-1 px-3 py-2 rounded-xl bg-gray-50 border border-[#E3E6F0] text-[#1a1d2e] focus:outline-none focus:border-[#5865F2] focus:ring-2 focus:ring-[#5865F2]/20"
                   />
                 </div>

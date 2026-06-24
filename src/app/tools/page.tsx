@@ -25,6 +25,8 @@ export const metadata: Metadata = {
     'qr code generator',
     'json formatter',
     'base64 encoder',
+    'discord role color gradient generator',
+    'discord server icon resizer',
     'web utilities',
   ],
   alternates: { canonical: `${seoConfig.baseUrl}/tools/` },
@@ -107,7 +109,7 @@ export default function ToolsPage() {
             <div>
               <h2 className="text-2xl font-bold text-[#1a1d2e] mb-4">The Best Collection of Free Discord Tools</h2>
               <p className="text-[#5b6282] leading-relaxed">
-                Our platform offers the most comprehensive set of <strong>free discord tools</strong> available online. Whether you need to generate a <strong>discord timestamp</strong> for your server announcements, create fancy text with our <strong>discord font generator</strong>, or test webhooks with our <strong>discord webhook sender</strong>, we have you covered. All our <strong>discord utilities</strong> are built with the community in mind, ensuring they are easy to use and always free.
+                Our platform offers the most comprehensive set of <strong>free discord tools</strong> available online. Whether you need to generate a <strong>discord timestamp</strong> for your server announcements, create fancy text with our <strong>discord font generator</strong>, test webhooks with our <strong>discord webhook sender</strong>, create beautiful gradients with our <strong>discord role color gradient generator</strong>, or resize your server icon with our <strong>discord server icon resizer</strong>, we have you covered. All our <strong>discord utilities</strong> are built with the community in mind, ensuring they are easy to use and always free.
               </p>
             </div>
             <div>
