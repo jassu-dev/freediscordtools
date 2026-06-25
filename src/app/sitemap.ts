@@ -24,6 +24,7 @@ const PRIORITY_TOOLS = new Set([
   'base64-encoder-decoder',
   'discord-role-color-gradient-generator',
   'discord-server-icon-resizer',
+  'discord-rules-generator',
 ]);
 
 export default function sitemap(): MetadataRoute.Sitemap {

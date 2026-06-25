@@ -209,5 +209,13 @@ export const tools: Tool[] = [
     keywords: ['discord server icon resizer', 'discord icon resizer', 'resize discord icon', 'discord server icon size', 'discord icon size', 'free discord icon resizer'],
     category: 'Discord Lookup & Assets',
   },
+  {
+    slug: 'discord-rules-generator',
+    name: 'Discord Rules Generator',
+    description: 'Free Discord rules generator with 100+ ready-to-use rules templates. Create perfect discord server rules, best discord rules for gaming servers, and comprehensive discord rules lists instantly. The #1 discord rules generator online.',
+    href: '/tools/discord-rules-generator/',
+    keywords: ['discord rules generator', 'discord server rules', 'best discord rules', 'discord rules template', 'discord rules list', 'gaming discord rules', 'how to make discord rules', 'free discord rules generator'],
+    category: 'Discord Management & Dev',
+  },
 ];
 

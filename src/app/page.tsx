@@ -91,7 +91,7 @@ export default function HomePage() {
             Free <span className="text-[#5865F2]">Online Tools</span> & Discord Utilities
           </h1>
           <p className="text-xl text-[#5b6282] mb-10 leading-relaxed max-w-3xl mx-auto">
-            A growing collection of <strong>free online tools</strong> including <strong>discord utilities</strong>, career tools, and developer utilities. From password generator, color converter, QR code generator, JSON formatter, Base64 encoder/decoder, Discord role color gradient generator, and Discord server icon resizer. No sign-up, no install, just 100% free browser-based tools.
+            A growing collection of <strong>free online tools</strong> including <strong>discord utilities</strong>, career tools, and developer utilities. From password generator, color converter, QR code generator, JSON formatter, Base64 encoder/decoder, Discord role color gradient generator, Discord server icon resizer, and Discord rules generator. No sign-up, no install, just 100% free browser-based tools.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
@@ -154,13 +154,13 @@ export default function HomePage() {
             <h2 className="text-3xl font-bold text-[#1a1d2e] mb-6">The Best Collection of Free Online Tools & Discord Utilities</h2>
 
             <p className="mb-6 leading-relaxed">
-              FreeDiscordTools is your one-stop shop for the <strong>best free online tools</strong> and <strong>discord utilities</strong>. Whether you're managing a community, building a brand, or looking for a job, our <strong>web utilities</strong> are designed to save you time and effort. Every tool on our site, from the <strong>discord font generator</strong> to the <strong>case converter</strong>, <strong>password generator</strong>, <strong>color converter</strong>, <strong>QR code generator</strong>, <strong>JSON formatter</strong>, <strong>Base64 encoder/decoder</strong>, <strong>discord role color gradient generator</strong>, and <strong>discord server icon resizer</strong>, is built to run entirely in your browser for maximum privacy and speed.
+              FreeDiscordTools is your one-stop shop for the <strong>best free online tools</strong> and <strong>discord utilities</strong>. Whether you're managing a community, building a brand, or looking for a job, our <strong>web utilities</strong> are designed to save you time and effort. Every tool on our site, from the <strong>discord font generator</strong> to the <strong>case converter</strong>, <strong>password generator</strong>, <strong>color converter</strong>, <strong>QR code generator</strong>, <strong>JSON formatter</strong>, <strong>Base64 encoder/decoder</strong>, <strong>discord role color gradient generator</strong>, <strong>discord server icon resizer</strong>, and <strong>discord rules generator</strong>, is built to run entirely in your browser for maximum privacy and speed.
             </p>
 
             <h3 className="text-2xl font-semibold text-[#1a1d2e] mb-4 mt-10">Powerful Discord Tools for Server Owners</h3>
 
             <p className="mb-6 leading-relaxed">
-              Managing a Discord server requires the right <strong>discord tools</strong>. Our <strong>discord timestamp generator</strong> is a favorite among server owners for coordinating global events. We also provide a <strong>discord colored text generator</strong>, <strong>webhook sender</strong>, and <strong>permission calculator</strong> to help you customize and secure your community. If you're looking for <strong>aesthetic discord fonts</strong>, our <strong>font generator</strong> offers 160+ styles to make your profile stand out. And don't forget our <strong>discord role color gradient generator</strong> for beautiful gradients, and <strong>discord server icon resizer</strong> for perfect server icons!
+              Managing a Discord server requires the right <strong>discord tools</strong>. Our <strong>discord timestamp generator</strong> is a favorite among server owners for coordinating global events. We also provide a <strong>discord colored text generator</strong>, <strong>webhook sender</strong>, and <strong>permission calculator</strong> to help you customize and secure your community. If you're looking for <strong>aesthetic discord fonts</strong>, our <strong>font generator</strong> offers 160+ styles to make your profile stand out. And don't forget our <strong>discord role color gradient generator</strong> for beautiful gradients, <strong>discord server icon resizer</strong> for perfect server icons, and <strong>discord rules generator</strong> to create the perfect discord server rules for your community!
             </p>
 
             <h3 className="text-2xl font-semibold text-[#1a1d2e] mb-4 mt-10">Essential Career & Productivity Web Utilities</h3>

@@ -15,6 +15,297 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: '50-discord-server-rules-examples',
+    title: '50 Discord Server Rules Examples - The Ultimate List for 2026',
+    excerpt: 'The ultimate list of 50 discord server rules examples. Perfect for any community, including gaming, art, tech, and general servers. Copy-paste ready discord rules list ideas.',
+    date: 'June 25, 2026',
+    keywords: ['discord server rules examples', 'discord rules list', 'discord rules examples', 'good discord rules', 'simple discord rules', '50 discord rules', 'best discord rules'],
+    faqItems: [
+      { question: 'What are the most essential Discord server rules?', answer: 'The most essential discord server rules are: 1) Be respectful, 2) No harassment/hate speech, 3) No NSFW content, 4) No spamming, 5) Follow Discord ToS, 6) No doxxing, and 7) Use appropriate channels. These 7 rules form the foundation of any good discord rules list.' },
+      { question: 'How many rules should a Discord server have?', answer: 'Most servers have 5-15 clear, concise rules. Too many rules can overwhelm members, while too few can leave gaps. Aim for 8-12 well-written rules that cover all essential behavior guidelines without being overly long.' },
+      { question: 'Where do I put Discord server rules?', answer: 'Always put your discord rules in a dedicated #rules channel, pin the rules message to the channel, and link to the rules channel in your server description, welcome message, and onboarding flow.' },
+    ],
+    content: `
+      <h2>The Ultimate List of 50 Discord Server Rules Examples</h2>
+      <p>Creating good discord rules is hard — but it doesn't have to be! We've compiled the ultimate list of 50 discord server rules examples that you can copy and paste directly into your server. Whether you're looking for simple discord rules, gaming discord rules, or something in between, this list has you covered.</p>
+
+      <p>Every community is different, so pick and choose the discord rules examples that fit your server's unique vibe and needs. And for an even faster way to build your perfect rules list, use our free <a href="/tools/discord-rules-generator/" class="text-[#5865F2] font-bold">Discord Rules Generator</a>!</p>
+
+      <div class="my-6 p-5 bg-[#F0F2FF] border-l-4 border-[#5865F2] rounded-r-xl">
+        <strong>Quick Tip:</strong> Don't use all 50 rules! Pick 8-15 of the most relevant discord server rules examples for your community to keep your rules list readable and enforceable.
+      </div>
+
+      <h3 class="text-xl font-bold text-[#1a1d2e] mb-3">General Discord Server Rules Examples (20 Rules)</h3>
+      <ol class="list-decimal list-inside space-y-2 mb-6">
+        <li>Be respectful and civil to all members at all times.</li>
+        <li>No harassment, hate speech, or discrimination of any kind.</li>
+        <li>No NSFW or inappropriate content, including explicit images, links, or discussions.</li>
+        <li>No spamming, flooding, or excessive self-promotion.</li>
+        <li>Keep conversations relevant to the channel topic.</li>
+        <li>No sharing of personal information (doxing) without explicit consent.</li>
+        <li>Follow Discord's Terms of Service and Community Guidelines.</li>
+        <li>No excessive tagging or pinging of members, especially @everyone/@here.</li>
+        <li>Use appropriate channels for discussions — no off-topic posts in on-topic channels.</li>
+        <li>English only in public channels unless otherwise specified.</li>
+        <li>No drama, gossip, or personal attacks.</li>
+        <li>Respect others' opinions even if you disagree with them.</li>
+        <li>No advertising or promotion without staff permission.</li>
+        <li>No phishing, malicious links, or suspicious downloads.</li>
+        <li>Keep debates civil and focused on ideas, not people.</li>
+        <li>No impersonation of other members or staff.</li>
+        <li>Use trigger warnings for sensitive content when appropriate.</li>
+        <li>No backseat moderating — report issues to staff instead.</li>
+        <li>Have fun and be a positive part of the community!</li>
+        <li>Staff decisions are final, but you can appeal privately if you disagree.</li>
+      </ol>
+
+      <h3 class="text-xl font-bold text-[#1a1d2e] mb-3">Gaming Discord Rules Examples (15 Rules)</h3>
+      <ol class="list-decimal list-inside space-y-2 mb-6" start="21">
+        <li>No cheating, hacking, or exploiting in any games.</li>
+        <li>No toxicity, flaming, or griefing other players.</li>
+        <li>Respect team members and follow team leaders' instructions.</li>
+        <li>No spoiling game endings or major plot points without spoiler tags.</li>
+        <li>Only use verified game links and downloads — no pirated software.</li>
+        <li>Follow game-specific rules in dedicated channels.</li>
+        <li>No rage-quitting or intentionally ruining matches.</li>
+        <li>Be a good sport whether you win or lose.</li>
+        <li>No advertising cheat tools, hacks, or exploits.</li>
+        <li>Use voice channels appropriately — don't hog the mic.</li>
+        <li>Respect in-game cooldowns and loot rules.</li>
+        <li>No stream sniping without explicit permission from the streamer.</li>
+        <li>Keep trash talk lighthearted and friendly, not mean-spirited.</li>
+        <li>Report cheaters to game developers and server staff.</li>
+        <li>Have fun and focus on enjoying the game with others!</li>
+      </ol>
+
+      <h3 class="text-xl font-bold text-[#1a1d2e] mb-3">Art & Content Creator Discord Rules Examples (10 Rules)</h3>
+      <ol class="list-decimal list-inside space-y-2 mb-6" start="36">
+        <li>Always credit the original artist when sharing artwork that isn't yours.</li>
+        <li>No art theft, tracing, or plagiarism without explicit permission.</li>
+        <li>Mark NSFW artwork appropriately and keep it in designated channels.</li>
+        <li>Constructive criticism is welcome, but avoid mean-spirited comments.</li>
+        <li>Respect artists' boundaries regarding commissions and requests.</li>
+        <li>No claiming others' work as your own.</li>
+        <li>Share your own art, but don't spam it repeatedly.</li>
+        <li>Follow content-specific rules in dedicated channels.</li>
+        <li>Respect copyright and intellectual property laws.</li>
+        <li>Be encouraging and supportive of other creators!</li>
+      </ol>
+
+      <h3 class="text-xl font-bold text-[#1a1d2e] mb-3">Moderation & Staff Discord Rules Examples (5 Rules)</h3>
+      <ol class="list-decimal list-inside space-y-2 mb-6" start="46">
+        <li>Follow the instructions of moderators and staff members without argument.</li>
+        <li>Disputes with staff should be handled privately with server owners/admins.</li>
+        <li>Do not DM staff members without permission unless it's an emergency.</li>
+        <li>Moderators reserve the right to remove content or warn/ban members at their discretion.</li>
+        <li>Treat staff with respect — they're volunteering their time to help the community!</li>
+      </ol>
+
+      <h3 class="text-xl font-bold text-[#1a1d2e] mb-3">How to Use These Discord Rules Examples</h3>
+      <p>Now that you have 50 discord server rules examples to choose from, here's how to use them effectively:</p>
+      <ul class="list-disc list-inside space-y-2 mb-6">
+        <li><strong>Don't use all 50!</strong> Pick 8-15 of the most relevant rules for your community.</li>
+        <li><strong>Customize them:</strong> Edit the wording to match your server's tone and style.</li>
+        <li><strong>Organize them:</strong> Group similar rules together and use headings for clarity.</li>
+        <li><strong>Use our generator:</strong> Save time by using our <a href="/tools/discord-rules-generator/" class="text-[#5865F2] font-bold">Discord Rules Generator</a> to build your list!</li>
+        <li><strong>Keep it readable:</strong> Use Discord markdown to make your rules easy to scan.</li>
+      </ul>
+
+      <p>Remember, the best discord rules are the ones that fit your community perfectly. Don't copy rules just because they're on this list — pick the discord server rules examples that make sense for your specific server and the people in it!</p>
+    `,
+  },
+  {
+    slug: 'best-discord-rules-for-gaming-servers',
+    title: 'Best Discord Rules for Gaming Servers - The Complete Guide 2026',
+    excerpt: 'The definitive guide to the best discord rules for gaming servers. Covers competitive, casual, and specific genre gaming discord rules. Free template included.',
+    date: 'June 25, 2026',
+    keywords: ['best discord rules for gaming servers', 'gaming discord rules', 'gaming server rules discord', 'discord rules for gaming server', 'game discord rules', 'competitive discord rules', 'discord gaming server rules template'],
+    faqItems: [
+      { question: 'What are the most important rules for a Discord gaming server?', answer: 'The most important gaming discord rules are: no cheating/hacking, no toxicity/griefing, no spoilers without tags, respect team members, and no pirated software. These rules protect the integrity of gameplay and keep your community fun.' },
+      { question: 'How do I write gaming Discord rules that people will actually follow?', answer: 'Keep gaming discord rules simple, clear, and focused on gameplay. Avoid overly harsh wording, explain why each rule exists, and enforce them fairly and consistently.' },
+      { question: 'What\'s the difference between casual and competitive gaming server rules?', answer: 'Casual gaming servers focus more on fun and inclusivity, while competitive servers have stricter rules around cheating, team play, and sportsmanship. Both should still have core rules against toxicity and harassment.' },
+    ],
+    content: `
+      <h2>The Best Discord Rules for Gaming Servers - The Complete Guide</h2>
+      <p>Gaming servers have unique needs that require specific rules to keep gameplay fun, fair, and enjoyable for everyone. If you're struggling to write the perfect gaming discord rules, you're in the right place — this guide covers everything you need to know about the best discord rules for gaming servers, with examples, templates, and tips for every type of gaming community.</p>
+
+      <p>And for an even faster way to build your rules, don't forget to use our free <a href="/tools/discord-rules-generator/" class="text-[#5865F2] font-bold">Discord Rules Generator</a> which includes a dedicated gaming rules template!</p>
+
+      <div class="my-6 p-5 bg-[#F0F2FF] border-l-4 border-[#5865F2] rounded-r-xl">
+        <strong>Pro Tip:</strong> The best gaming discord rules balance fairness with fun. Don't make your rules so strict that people can't enjoy themselves, but don't make them so loose that toxic players ruin the experience for everyone.
+      </div>
+
+      <h3 class="text-xl font-bold text-[#1a1d2e] mb-3">Core Gaming Discord Rules (Must-Haves for Every Gaming Server)</h3>
+      <p>These are the foundation of any good gaming server — every gaming discord should include these rules no matter what type of games you play:</p>
+      <ol class="list-decimal list-inside space-y-2 mb-6">
+        <li><strong>No Cheating, Hacking, or Exploiting:</strong> This is non-negotiable for most gaming servers. Cheating ruins the game for everyone and should result in an immediate ban.</li>
+        <li><strong>No Toxicity or Griefing:</strong> No flaming, insults, hate speech, or intentionally ruining gameplay for others.</li>
+        <li><strong>No Spoilers Without Tags:</strong> Use Discord's built-in spoiler tags for major plot points, endings, or surprise content.</li>
+        <li><strong>Respect Team Members:</strong> Follow team leaders, communicate clearly, and work together during matches.</li>
+        <li><strong>No Pirated Software:</strong> Only allow legitimate game copies — no cracks, keygens, or pirated downloads.</li>
+        <li><strong>Follow Game-Specific Rules:</strong> Different games have different norms — make sure to cover game-specific rules in dedicated channels.</li>
+      </ol>
+
+      <h3 class="text-xl font-bold text-[#1a1d2e] mb-3">Competitive Gaming Discord Rules</h3>
+      <p>Competitive gaming servers need stricter rules to maintain fair play and sportsmanship:</p>
+      <ul class="list-disc list-inside space-y-2 mb-6">
+        <li>No smurfing or using alternate accounts to play against lower-skilled players</li>
+        <li>Follow tournament or match rules exactly</li>
+        <li>No leaving matches early without a valid reason</li>
+        <li>Respect the results of matches and tournaments</li>
+        <li>No stream sniping without explicit permission</li>
+        <li>Keep trash talk friendly and sportsmanlike</li>
+        <li>Report bugs to game developers, don't exploit them</li>
+      </ul>
+
+      <h3 class="text-xl font-bold text-[#1a1d2e] mb-3">Casual Gaming Discord Rules</h3>
+      <p>Casual gaming servers can be more relaxed, but still need basic rules to keep things fun:</p>
+      <ul class="list-disc list-inside space-y-2 mb-6">
+        <li>Focus on fun and inclusivity over winning</li>
+        <li>Be patient with new players</li>
+        <li>No rage-quitting or throwing games</li>
+        <li>Take turns and let everyone play</li>
+        <li>Respect people's availability and don't pressure them to play</li>
+      </ul>
+
+      <h3 class="text-xl font-bold text-[#1a1d2e] mb-3">Genre-Specific Gaming Discord Rules</h3>
+      <p>Different game genres have different cultures and needs. Here are some genre-specific discord rules examples:</p>
+
+      <h4 class="text-lg font-semibold text-[#1a1d2e] mb-2">FPS & Shooter Games</h4>
+      <ul class="list-disc list-inside space-y-2 mb-4">
+        <li>No camping in spawn areas or abusing map glitches</li>
+        <li>Communicate clearly with your team (callouts, etc.)</li>
+        <li>No toxic comments about someone's skill level</li>
+      </ul>
+
+      <h4 class="text-lg font-semibold text-[#1a1d2e] mb-2">MMORPGs</h4>
+      <ul class="list-disc list-inside space-y-2 mb-4">
+        <li>Follow guild/raid rules and loot systems</li>
+        <li>Respect other players' time during organized events</li>
+        <li>No kill-stealing or ninja-looting</li>
+      </ul>
+
+      <h4 class="text-lg font-semibold text-[#1a1d2e] mb-2">Minecraft & Building Games</h4>
+      <ul class="list-disc list-inside space-y-2 mb-4">
+        <li>No griefing or destroying others' builds</li>
+        <li>Respect claim boundaries</li>
+        <li>Ask before modifying or using others' builds</li>
+      </ul>
+
+      <h3 class="text-xl font-bold text-[#1a1d2e] mb-3">Tips for Enforcing Gaming Discord Rules</h3>
+      <p>Having great gaming discord rules is only half the battle — you also need to enforce them effectively:</p>
+      <ul class="list-disc list-inside space-y-2 mb-6">
+        <li><strong>Be consistent:</strong> Enforce rules the same way for everyone, including friends and regulars.</li>
+        <li><strong>Be fair:</strong> Give warnings before bans when appropriate, and listen to both sides of disputes.</li>
+        <li><strong>Be transparent:</strong> Let the community know when rules are enforced (without naming names).</li>
+        <li><strong>Lead by example:</strong> Staff members should follow the rules too!</li>
+        <li><strong>Use our tools:</strong> Make rule creation easy with our <a href="/tools/discord-rules-generator/" class="text-[#5865F2] font-bold">Discord Rules Generator</a>.</li>
+      </ul>
+
+      <p>By following these guidelines and using the best discord rules for gaming servers, you'll create a fun, fair, and welcoming gaming community that people will want to be part of for years to come!</p>
+    `,
+  },
+  {
+    slug: 'how-to-create-discord-rules',
+    title: 'How to Create Discord Rules - The Step-by-Step Guide for 2026',
+    excerpt: 'Complete step-by-step guide on how to create discord rules. Learn how to write, organize, present, and enforce discord server rules effectively.',
+    date: 'June 25, 2026',
+    keywords: ['how to create discord rules', 'how to make discord rules', 'how to write discord rules', 'creating discord rules', 'making discord server rules', 'how to set up discord rules', 'discord rules guide'],
+    faqItems: [
+      { question: 'How do I create Discord rules for the first time?', answer: 'Start with our free Discord Rules Generator to get a solid foundation, then customize the rules to fit your community. Keep it simple at first and add more rules as your server grows.' },
+      { question: 'Should I include consequences in my Discord rules?', answer: 'It\'s helpful to mention that rule-breaking has consequences, but you don\'t need to list every possible punishment. Just let members know that violations will result in warnings, mutes, or bans depending on severity.' },
+      { question: 'How often should I update my Discord server rules?', answer: 'Review your rules every 3-6 months, or whenever your server undergoes major changes (like a big growth spurt, new channels, or a shift in community focus).' },
+    ],
+    content: `
+      <h2>How to Create Discord Rules - The Step-by-Step Guide</h2>
+      <p>Knowing how to create discord rules is one of the most important skills for a server owner or moderator, but it's something most people figure out through trial and error. This comprehensive guide will teach you exactly how to make discord rules that are clear, enforceable, and perfect for your community.</p>
+
+      <p>We'll cover everything from brainstorming your rules to writing them, organizing them, presenting them in your server, and enforcing them fairly. And to make things even easier, we'll show you how to use our free <a href="/tools/discord-rules-generator/" class="text-[#5865F2] font-bold">Discord Rules Generator</a> to skip all the hard work!</p>
+
+      <div class="my-6 p-5 bg-[#F0F2FF] border-l-4 border-[#5865F2] rounded-r-xl">
+        <strong>Remember:</strong> There's no "one-size-fits-all" when it comes to discord rules. The best rules for your server depend on your community size, purpose, and culture.
+      </div>
+
+      <h3 class="text-xl font-bold text-[#1a1d2e] mb-3">Step 1: Define Your Community's Purpose & Values</h3>
+      <p>Before you write a single rule, take some time to think about what your server is for and what kind of culture you want to create. This is the foundation of how to create discord rules that actually work.</p>
+      <ul class="list-disc list-inside space-y-2 mb-6">
+        <li>What's the main topic or focus of your server?</li>
+        <li>What kind of people do you want to attract?</li>
+        <li>What values are most important to your community?</li>
+        <li>What kind of behavior do you want to encourage?</li>
+        <li>What kind of behavior do you want to prevent?</li>
+      </ul>
+
+      <h3 class="text-xl font-bold text-[#1a1d2e] mb-3">Step 2: Brainstorm Core Rules</h3>
+      <p>Every good discord rules list starts with core rules that cover the essentials. Even if your server is super niche, you'll almost certainly need these rules:</p>
+      <ul class="list-disc list-inside space-y-2 mb-6">
+        <li>Respect and civility</li>
+        <li>No harassment or hate speech</li>
+        <li>Content guidelines (NSFW, spoilers, etc.)</li>
+        <li>No spamming or excessive self-promo</li>
+        <li>Following Discord's ToS</li>
+        <li>Privacy and safety rules</li>
+      </ul>
+
+      <p>For a complete list of ready-to-use rules ideas, check out our article on <a href="/blog/50-discord-server-rules-examples/" class="text-[#5865F2] font-bold">50 Discord Server Rules Examples</a>!</p>
+
+      <h3 class="text-xl font-bold text-[#1a1d2e] mb-3">Step 3: Write Your Rules Clearly and Concisely</h3>
+      <p>Knowing how to write discord rules is just as important as knowing what rules to include. Follow these guidelines for clear, effective rule wording:</p>
+      <ul class="list-disc list-inside space-y-2 mb-6">
+        <li><strong>Keep it simple:</strong> Use plain language that everyone can understand — no legal jargon.</li>
+        <li><strong>Be specific:</strong> Instead of "be good," say "no harassment, hate speech, or personal attacks."</li>
+        <li><strong>Keep it short:</strong> Aim for 8-12 rules total — too many rules overwhelm people.</li>
+        <li><strong>Use positive framing:</strong> Focus on what people should do, not just what they shouldn't.</li>
+        <li><strong>Explain why:</strong> Briefly explain why a rule exists to help people understand and follow it.</li>
+      </ul>
+
+      <h3 class="text-xl font-bold text-[#1a1d2e] mb-3">Step 4: Use Our Discord Rules Generator to Save Time</h3>
+      <p>If you want to skip all the hard work of writing rules from scratch, use our free <a href="/tools/discord-rules-generator/" class="text-[#5865F2] font-bold">Discord Rules Generator</a>! Here's how it works:</p>
+      <ol class="list-decimal list-inside space-y-2 mb-6">
+        <li>Browse our pre-written rules across multiple categories</li>
+        <li>Toggle the rules you want to include</li>
+        <li>Add your own custom rules if needed</li>
+        <li>Preview your rules in a Discord-like dark mode</li>
+        <li>Copy your rules to your clipboard with one click</li>
+      </ol>
+
+      <p>It's the fastest and easiest way to create professional discord server rules in minutes!</p>
+
+      <h3 class="text-xl font-bold text-[#1a1d2e] mb-3">Step 5: Organize and Present Your Rules</h3>
+      <p>Even the best rules won't work if people can't read and understand them. Here's how to organize and present your rules effectively:</p>
+      <ul class="list-disc list-inside space-y-2 mb-6">
+        <li><strong>Use a dedicated #rules channel:</strong> Don't hide your rules in a random place.</li>
+        <li><strong>Pin the rules message:</strong> Keep your official rules pinned to the top of the channel.</li>
+        <li><strong>Use headings and groups:</strong> Organize similar rules together with clear headings.</li>
+        <li><strong>Use Discord markdown:</strong> Bold important parts, use bullet points, and add spacing for readability.</li>
+        <li><strong>Link to your rules:</strong> Mention the rules channel in your server description, welcome message, and onboarding.</li>
+      </ul>
+
+      <h3 class="text-xl font-bold text-[#1a1d2e] mb-3">Step 6: Enforce Your Rules Fairly and Consistently</h3>
+      <p>Creating great rules is only half the battle — you also need to enforce them properly. Here are our top tips for fair, consistent enforcement:</p>
+      <ul class="list-disc list-inside space-y-2 mb-6">
+        <li><strong>Be consistent:</strong> Apply rules the same way to everyone, no exceptions.</li>
+        <li><strong>Give warnings first:</strong> Most first offenses deserve a warning, not an immediate ban.</li>
+        <li><strong>Listen to both sides:</strong> Get the full story before making a decision.</li>
+        <li><strong>Document everything:</strong> Keep records of warnings and bans for your own protection.</li>
+        <li><strong>Lead by example:</strong> Staff and server owners should follow the rules too.</li>
+        <li><strong>Be transparent:</strong> Let the community know that rules are enforced (without calling people out publicly).</li>
+      </ul>
+
+      <h3 class="text-xl font-bold text-[#1a1d2e] mb-3">Step 7: Review and Update Your Rules Regularly</h3>
+      <p>Your server will change over time, and your rules should change with it. Here's when to review and update your rules:</p>
+      <ul class="list-disc list-inside space-y-2 mb-6">
+        <li>Every 3-6 months as a regular check-in</li>
+        <li>When your server experiences a big growth spurt</li>
+        <li>When you add new channels or features</li>
+        <li>When you notice a new type of behavior that isn't covered</li>
+        <li>When Discord updates their Terms of Service</li>
+      </ul>
+
+      <p>Congratulations! Now you know exactly how to create discord rules that work. Remember to start with our <a href="/tools/discord-rules-generator/" class="text-[#5865F2] font-bold">Discord Rules Generator</a> to make the process even faster, and check out our other blog posts for more tips and ideas!</p>
+    `,
+  },
+  {
     slug: 'how-to-use-discord-timestamps',
     title: 'How to Use Unix Timestamp Discord: The Ultimate 2026 Guide',
     excerpt: 'Master how to use unix timestamp discord to schedule events. Generate accurate discord time stamps and automate timezone conversions for your server.',
