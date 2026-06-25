@@ -4,6 +4,7 @@ import { blogPosts } from '@/data/blog';
 import { seoConfig } from '@/config/seo';
 
 export const dynamic = 'force-static';
+export const revalidate = false;
 
 // High-value tool slugs that deserve priority 1.0
 const PRIORITY_TOOLS = new Set([
