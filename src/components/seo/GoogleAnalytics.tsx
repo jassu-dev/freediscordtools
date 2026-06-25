@@ -10,11 +10,12 @@ export default function GoogleAnalytics() {
       />
       <Script id="google-analytics" strategy="afterInteractive">
         {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-EP6PTV8DRL');
+          if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-EP6PTV8DRL');
+          }
         `}
       </Script>
     </>
