@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { FONT_STYLES } from '@/lib/fonts';
 
 const adjectiveList = [
   'Cool', 'Epic', 'Dark', 'Light', 'Shadow', 'Fire', 'Ice', 'Storm', 'Thunder', 'Lightning',
@@ -28,17 +29,12 @@ const nounList = [
 
 const emojiList = ['🔥', '⚡', '💎', '🎮', '👑', '🐺', '🦊', '🐱', '🐶', '🦅'];
 
-const styles = {
-  'bold': (t: string) => t.split('').map((c, i) => '𝗮𝗯𝗰𝗱𝗲𝗳𝗴𝗵𝗶𝗷𝗸𝗹𝗺𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇'.charAt(c.toLowerCase().charCodeAt(0) - 97) || c).join(''),
-  'italic': (t: string) => t.split('').map((c, i) => '𝘢𝘣𝘤𝘥𝘦𝘧𝘨𝘩𝘪𝘫𝘬𝘭𝘮𝘯𝘰𝘱𝘲𝘳𝘴𝘵𝘶𝘷𝘸𝘹𝘺𝘻'.charAt(c.toLowerCase().charCodeAt(0) - 97) || c).join(''),
-  'bolditalic': (t: string) => t.split('').map((c, i) => '𝙖𝙗𝙘𝙙𝙚𝙛𝙜𝙝𝙞𝙟𝙠𝙡𝙢𝙣𝙤𝙥𝙦𝙧𝙨𝙩𝙪𝙫𝙬𝙭𝙮𝙯'.charAt(c.toLowerCase().charCodeAt(0) - 97) || c).join(''),
-  'monospace': (t: string) => t.split('').map((c, i) => '𝚊𝚋𝚌𝚍𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣'.charAt(c.toLowerCase().charCodeAt(0) - 97) || c).join(''),
-};
+// Use the first 4 font styles for quick selection
+const quickFonts = FONT_STYLES.filter(f => ['bold', 'italic', 'monospace', 'small-caps'].includes(f.id)).slice(0, 4);
 
 export default function DiscordNicknameIdeaGenerator() {
   const [nicknames, setNicknames] = useState<string[]>([]);
-  const [category, setCategory] = useState<string>('all');
-  const [selectedStyle, setSelectedStyle] = useState<string>('none');
+  const [selectedStyleId, setSelectedStyleId] = useState<string>('none');
 
   const generateNicknames = () => {
     const newNicknames: string[] = [];
@@ -56,9 +52,9 @@ export default function DiscordNicknameIdeaGenerator() {
   };
 
   const applyStyle = (text: string) => {
-    if (selectedStyle === 'none') return text;
-    const styleFn = styles[selectedStyle as keyof typeof styles];
-    return styleFn ? styleFn(text) : text;
+    if (selectedStyleId === 'none') return text;
+    const style = FONT_STYLES.find(f => f.id === selectedStyleId);
+    return style ? style.transform(text) : text;
   };
 
   return (
@@ -72,14 +68,14 @@ export default function DiscordNicknameIdeaGenerator() {
             🎲 Generate 10 Nicknames
           </button>
           <select
-            value={selectedStyle}
-            onChange={(e) => setSelectedStyle(e.target.value)}
+            value={selectedStyleId}
+            onChange={(e) => setSelectedStyleId(e.target.value)}
             className="px-4 py-2 border-2 border-[#E3E6F0] rounded-lg"
           >
             <option value="none">Plain Text</option>
-            <option value="bold">Bold</option>
-            <option value="italic">Italic</option>
-            <option value="monospace">Monospace</option>
+            {quickFonts.map(font => (
+              <option key={font.id} value={font.id}>{font.name}</option>
+            ))}
           </select>
         </div>
 
