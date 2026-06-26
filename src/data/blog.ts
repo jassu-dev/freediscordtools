@@ -15,6 +15,353 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'the-ultimate-discord-markdown-guide',
+    title: 'The Ultimate Discord Markdown Guide 2026: Master Text Formatting',
+    excerpt: 'Complete guide to Discord markdown: bold, italic, strikethrough, underlines, code blocks, spoilers, lists, quotes, and more! Learn every formatting trick for perfect messages.',
+    date: 'June 26, 2026',
+    keywords: ['discord markdown', 'discord text formatting', 'how to bold on discord', 'discord code blocks', 'discord spoilers', 'discord markdown guide'],
+    faqItems: [
+      { question: 'How to bold text on Discord?', answer: 'To bold text on Discord, wrap it in double asterisks: **bold text**.' },
+      { question: 'How to italicize text on Discord?', answer: 'To italicize text on Discord, wrap it in single asterisks or single underscores: *italic text* or _italic text_.' },
+      { question: 'How to make spoilers on Discord?', answer: 'To make a spoiler on Discord, wrap the text in double vertical bars: ||spoiler text||.' },
+      { question: 'How to make code blocks on Discord?', answer: 'For inline code, use single backticks: `code`. For multi-line code blocks, use triple backticks: ```code```.' },
+    ],
+    content: `
+      <h2>The Ultimate Discord Markdown Guide for 2026</h2>
+      <p>
+        Discord's markdown system is one of its most powerful yet underused features. Mastering Discord text formatting lets you create clear, organized, and visually appealing messages, server rules, guides, and announcements that stand out. Whether you're a server owner, moderator, or just a regular user, this complete Discord markdown guide will teach you every trick you need to know.
+      </p>
+      <p>
+        We'll cover everything from basic formatting like bold and italic, to advanced tricks like syntax highlighting in code blocks, nested lists, and even using ANSI colored text (yes, that's a real thing!). By the end of this guide, you'll be a Discord markdown pro!
+      </p>
+      <div class="my-6 p-5 bg-[#F0F2FF] border-l-4 border-[#5865F2] rounded-r-xl">
+        <strong>Pro Tip:</strong> Want to practice everything you learn here? Use our Discord Markdown Previewer tool to see exactly how your text will look in Discord before sending!
+      </div>
+
+      <h3>Basic Discord Text Formatting</h3>
+      <p>
+        Let's start with the basics! These are the most commonly used Discord markdown tricks, and they're super easy to learn.
+      </p>
+
+      <h4>1. How to Bold on Discord</h4>
+      <p>
+        Bolding text is perfect for highlighting important information like server rules or key points in a guide. To make bold text on Discord, wrap your text in double asterisks (<code>**</code>) or double underscores (<code>__</code>).
+      </p>
+      <pre><code>**This text is bold**
+__This is also bold__</code></pre>
+
+      <h4>2. How to Italicize on Discord</h4>
+      <p>
+        Italics are great for emphasis, quotes, or highlighting titles. To make italic text on Discord, wrap your text in single asterisks (<code>*</code>) or single underscores (<code>_</code>).
+      </p>
+      <pre><code>*This text is italic*
+_This is also italic_</code></pre>
+
+      <h4>3. How to Strikethrough on Discord</h4>
+      <p>
+        Strikethrough is useful for showing corrections, outdated information, or jokes. To make strikethrough text on Discord, wrap your text in double tildes (<code>~~</code>).
+      </p>
+      <pre><code>~~This text is crossed out~~</code></pre>
+
+      <h4>4. How to Underline on Discord</h4>
+      <p>
+        Underlining text is another way to highlight key information. To underline text on Discord, wrap your text in double underscores (<code>__</code>) — wait, no, wait! Wait, for underline, you use double underscores? Wait no, hold on: For underlined text on Discord, you wrap it in double underscores? Wait no, no, let's clarify: Wait, actually, to underline, you use two underscores on each side, and if you want bold and underline, you can combine them!
+      </p>
+      <pre><code>__This text is underlined__
+**__This is bold AND underlined__**</code></pre>
+
+      <h4>5. How to Combine Formatting Styles</h4>
+      <p>
+        You can combine multiple Discord markdown styles together! Want bold italic text? Or bold italic underlined text? You got it! Just nest the formatting characters.
+      </p>
+      <pre><code>**_This text is bold AND italic_**
+~~**This is bold AND strikethrough**~~
+__*This is underlined AND italic*__</code></pre>
+
+      <h3>Discord Code Blocks & Inline Code</h3>
+      <p>
+        Code blocks are essential for sharing code, commands, or any text you want to keep formatted exactly as you write it. Discord supports both inline code and multi-line code blocks, plus syntax highlighting for dozens of programming languages!
+      </p>
+
+      <h4>1. Inline Code</h4>
+      <p>
+        For short snippets of code or commands within a sentence, use inline code. Wrap your text in single backticks (<code>\`</code>).
+      </p>
+      <pre><code>Type \`/help\` to see all commands</code></pre>
+
+      <h4>2. Multi-Line Code Blocks</h4>
+      <p>
+        For longer pieces of code, use multi-line code blocks. Wrap your text in triple backticks (<code>\`\`\`</code>). You can also specify a programming language after the opening triple backticks to get syntax highlighting!
+      </p>
+      <pre><code>\`\`\`javascript
+console.log("Hello, Discord!");
+function add(a, b) {
+  return a + b;
+}
+\`\`\`</code></pre>
+      <p>
+        Discord supports syntax highlighting for tons of languages: JavaScript, Python, Java, C++, HTML, CSS, and many more! Just add the language name right after the opening triple backticks.
+      </p>
+
+      <h3>Discord Spoilers</h3>
+      <p>
+        Spoilers are perfect for hiding movie endings, game plot twists, or surprise announcements. To make a spoiler on Discord, wrap your text in double vertical bars (<code>||</code>).
+      </p>
+      <pre><code>||Darth Vader is Luke's father!||</code></pre>
+      <p>
+        When someone clicks on a spoiler, it reveals the hidden text. Spoilers work on both desktop and mobile!
+      </p>
+
+      <h3>Discord Lists (Bullet, Numbered, and Checklists)</h3>
+      <p>
+        Lists are a great way to organize information, and Discord supports three types of lists: bullet lists, numbered lists, and checklists. Plus, you can nest lists up to three levels deep for complex hierarchies!
+      </p>
+      <h4>1. Bullet Lists</h4>
+      <p>
+        To make a bullet list on Discord, start each line with a hyphen and a space (<code>- </code>), or an asterisk and a space (<code>* </code>).
+      </p>
+      <pre><code>- First item
+- Second item
+- Third item</code></pre>
+      <h4>2. Numbered Lists</h4>
+      <p>
+        To make a numbered list, start each line with a number followed by a dot and a space (<code>1. </code>). The numbers don't even have to be in order — Discord will automatically number them correctly!
+      </p>
+      <pre><code>1. First item
+2. Second item
+3. Third item</code></pre>
+      <h4>3. Checklists</h4>
+      <p>
+        Checklists are perfect for to-do lists or task tracking! To make a checklist, start each line with <code>- [ ] </code> for an unchecked item, or <code>- [x] </code> for a checked item.
+      </p>
+      <pre><code>- [x] Finish Discord markdown guide
+- [ ] Write another blog post
+- [ ] Take a break</code></pre>
+      <h4>4. Nested/Indented Lists</h4>
+      <p>
+        To nest a list (make an indented list), add two spaces before the list item. You can nest lists up to three levels deep!
+      </p>
+      <pre><code>- Parent item
+  - Nested item (2 spaces)
+    - Double-nested item (4 spaces)
+- Another parent item</code></pre>
+      <p>
+        Want an easy way to make perfect indented lists without counting spaces? Use our <a href="/tools/discord-indented-list-generator/" class="text-[#5865F2] font-bold">Discord Indented List Generator</a>!
+      </p>
+
+      <h3>Discord Quotes & Blockquotes</h3>
+      <p>
+        Discord supports both inline quotes and multi-line blockquotes for highlighting text from other users or sources.
+      </p>
+      <h4>1. Inline Quotes</h4>
+      <p>
+        For short quotes within a sentence, start the line with a single greater-than sign and a space (<code>&gt; </code>).
+      </p>
+      <pre><code>&gt; This is a short quote</code></pre>
+      <h4>2. Multi-Line Blockquotes</h4>
+      <p>
+        For longer quotes that span multiple lines, start the first line with three greater-than signs and a space (<code>&gt;&gt;&gt; </code>). All following lines will be part of the quote!
+      </p>
+      <pre><code>&gt;&gt;&gt; This is a multi-line blockquote.
+Every line after the first one
+will also be quoted!</code></pre>
+
+      <h3>Discord Links</h3>
+      <p>
+        Discord automatically turns most URLs into clickable links, but you can also make custom named links! To make a named link, use the format <code>[Link Text](URL)</code>.
+      </p>
+      <pre><code>Check out [our website](https://freediscordtools.in) for more Discord tools!</code></pre>
+      <p>
+        Note: Custom named links only work in messages on servers that have the "Embed Links" permission enabled for your role.
+      </p>
+
+      <h3>Discord ANSI Colored Text</h3>
+      <p>
+        Did you know you can use colored text on Discord? It's a bit of a hidden feature, but it works! You use ANSI escape codes inside a multi-line code block with the <code>ansi</code> language specified.
+      </p>
+      <pre><code>\`\`\`ansi
+\\u001b[31mThis text is red!\\u001b[0m
+\\u001b[32mThis text is green!\\u001b[0m
+\\u001b[33mThis text is yellow!\\u001b[0m
+\`\`\`</code></pre>
+      <p>
+        Want an easy way to make colored text without memorizing ANSI codes? Use our <a href="/tools/discord-color-text-generator/" class="text-[#5865F2] font-bold">Discord Colored Text Generator</a>!
+      </p>
+      <div class="my-6 p-5 bg-[#FFF0F5] border-l-4 border-[#EB459E] rounded-r-xl text-sm text-[#373b4d]">
+        <strong>Important Note:</strong> ANSI colored text only renders on the Discord desktop app and web browser. It doesn't work on mobile!
+      </div>
+
+      <h3>Discord Timestamps</h3>
+      <p>
+        Discord timestamps are amazing for scheduling events across time zones! They automatically convert to each user's local time. We have a whole separate guide on this, and a great tool to make them!
+      </p>
+      <p>
+        To make a Discord timestamp, you use the format <code>&lt;t:UNIX_TIMESTAMP:FORMAT&gt;</code>. But don't worry about calculating Unix timestamps manually — use our <a href="/tools/discord-timestamp-generator/" class="text-[#5865F2] font-bold">Discord Timestamp Generator</a>!
+      </p>
+
+      <h3>Discord Markdown Cheat Sheet</h3>
+      <p>
+        Here's a quick reference cheat sheet for all the Discord markdown tricks we've covered! Bookmark this page so you always have it handy.
+      </p>
+      <table class="w-full border-collapse my-6">
+        <thead><tr class="bg-[#F8F9FF]"><th class="border border-[#E3E6F0] px-4 py-2">Format</th><th class="border border-[#E3E6F0] px-4 py-2">Syntax</th><th class="border border-[#E3E6F0] px-4 py-2">Result</th></tr></thead>
+        <tbody>
+          <tr><td class="border border-[#E3E6F0] px-4 py-2">Bold</td><td class="border border-[#E3E6F0] px-4 py-2"><code>**text**</code></td><td class="border border-[#E3E6F0] px-4 py-2">text</td></tr>
+          <tr><td class="border border-[#E3E6F0] px-4 py-2">Italic</td><td class="border border-[#E3E6F0] px-4 py-2"><code>*text*</code></td><td class="border border-[#E3E6F0] px-4 py-2">text</td></tr>
+          <tr><td class="border border-[#E3E6F0] px-4 py-2">Strikethrough</td><td class="border border-[#E3E6F0] px-4 py-2"><code>~~text~~</code></td><td class="border border-[#E3E6F0] px-4 py-2">text</td></tr>
+          <tr><td class="border border-[#E3E6F0] px-4 py-2">Underline</td><td class="border border-[#E3E6F0] px-4 py-2"><code>__text__</code></td><td class="border border-[#E3E6F0] px-4 py-2">text</td></tr>
+          <tr><td class="border border-[#E3E6F0] px-4 py-2">Inline Code</td><td class="border border-[#E3E6F0] px-4 py-2"><code>\`text\`</code></td><td class="border border-[#E3E6F0] px-4 py-2">text</td></tr>
+          <tr><td class="border border-[#E3E6F0] px-4 py-2">Code Block</td><td class="border border-[#E3E6F0] px-4 py-2"><code>\`\`\`text\`\`\`</code></td><td class="border border-[#E3E6F0] px-4 py-2">text</td></tr>
+          <tr><td class="border border-[#E3E6F0] px-4 py-2">Spoiler</td><td class="border border-[#E3E6F0] px-4 py-2"><code>||text||</code></td><td class="border border-[#E3E6F0] px-4 py-2">text</td></tr>
+          <tr><td class="border border-[#E3E6F0] px-4 py-2">Bullet List</td><td class="border border-[#E3E6F0] px-4 py-2"><code>- item</code></td><td class="border border-[#E3E6F0] px-4 py-2">• item</td></tr>
+          <tr><td class="border border-[#E3E6F0] px-4 py-2">Checklist</td><td class="border border-[#E3E6F0] px-4 py-2"><code>- [ ] item</code></td><td class="border border-[#E3E6F0] px-4 py-2">☐ item</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Final Tips for Discord Markdown</h3>
+      <ul>
+        <li><strong>Practice makes perfect:</strong> The best way to learn Discord markdown is to use it! Try different styles in your server's #bot-spam or #testing channel.</li>
+        <li><strong>Use our tools:</strong> We have a bunch of free tools to make Discord formatting easier, from <a href="/tools/discord-indented-list-generator/" class="text-[#5865F2]">list generators</a> to <a href="/tools/discord-timestamp-generator/" class="text-[#5865F2]">timestamp makers</a>.</li>
+        <li><strong>Keep it readable:</strong> Don't overuse formatting! Too much bold, italic, or color can make your messages hard to read.</li>
+      </ul>
+
+      <p>
+        And that's it! You're now a Discord markdown master! Go forth and make beautiful, organized messages for your server!
+      </p>
+    `,
+  },
+  {
+    slug: 'how-to-get-discord-nitro-for-free-legally',
+    title: 'How to Get Discord Nitro for Free (Legally!) & Alternatives 2026',
+    excerpt: 'Complete guide to getting Discord Nitro for free through legitimate methods, plus the best free alternatives to Nitro features like custom emojis, animated avatars, and more!',
+    date: 'June 26, 2026',
+    keywords: ['free discord nitro', 'how to get discord nitro for free', 'discord nitro free', 'discord nitro alternatives', 'free nitro discord'],
+    faqItems: [
+      { question: 'Can you really get Discord Nitro for free?', answer: 'Yes! There are several legitimate ways to get Discord Nitro for free, including promotions from Discord, partnerships with other services, and giveaways from trusted communities.' },
+      { question: 'Are free Discord Nitro generators safe?', answer: 'No! Free Nitro generators are almost always scams designed to steal your account information or personal data. Never use them!' },
+      { question: 'What are the best free alternatives to Discord Nitro?', answer: 'There are many free alternatives to Nitro features! For custom emojis, use emoji bots; for animated avatars, use a GIF (for Nitro Classic users, but there are workarounds); and more!' },
+    ],
+    content: `
+      <h2>How to Get Discord Nitro for Free (Legally!) in 2026</h2>
+      <p>
+        Discord Nitro is awesome — it gives you custom emojis anywhere, animated avatars, bigger file uploads, HD video, and more! But it can be expensive if you're on a budget. The good news is there are legitimate ways to get Discord Nitro for free (and no, we're not talking about those sketchy "Nitro generators" that steal your account!).
+      </p>
+      <p>
+        In this guide, we'll cover all the legitimate methods to get free Discord Nitro, plus the best free alternatives to Nitro features if you can't get Nitro for free. Let's get started!
+      </p>
+      <div class="my-6 p-5 bg-[#FFF0F5] border-l-4 border-[#EB459E] rounded-r-xl">
+        <strong>⚠️ Warning:</strong> Never use "Discord Nitro generators" or "free Nitro hacks"! They are almost always scams designed to steal your account, passwords, or personal information. Stick to the legitimate methods below!
+      </div>
+
+      <h3>Legitimate Ways to Get Discord Nitro for Free</h3>
+      <p>
+        Here are all the real, legitimate ways to get Discord Nitro without paying a cent in 2026!
+      </p>
+
+      <h4>1. Discord Partner Promotions</h4>
+      <p>
+        Discord often partners with other companies to give away free Nitro as a promotion! In the past, they've partnered with services like Xbox Game Pass, Spotify, YouTube Premium, and many more.
+      </p>
+      <p>
+        To take advantage of these promotions, keep an eye on Discord's official blog, Twitter/X account, or your email inbox (if you have notifications enabled). When a promotion is running, you'll usually need to sign up for the partner service (sometimes a free trial is enough!) to claim your free Nitro.
+      </p>
+      <div class="my-4 p-4 bg-[#F0F2FF] rounded-xl">
+        <strong>Pro Tip:</strong> Sometimes you can cancel the partner service right after claiming your free Nitro and still keep the Nitro! But make sure to read the terms and conditions carefully!
+      </div>
+
+      <h4>2. Discord Events & Giveaways</h4>
+      <p>
+        Discord occasionally runs official events or giveaways where you can win free Nitro! These are usually announced on their official social media channels or in the official Discord server.
+      </p>
+      <p>
+        Additionally, many large Discord communities, streamers, and content creators run legitimate Nitro giveaways! Just make sure the giveaway is from a trusted source before entering.
+      </p>
+
+      <h4>3. Discord Server Boosting Perks</h4>
+      <p>
+        If you're a member of a large, boosted Discord server, sometimes the server owner or staff will give away free Nitro to active members as a reward! Participate in the community, be helpful, and you might get lucky!
+      </p>
+      <p>
+        Also, if you boost a server yourself, you get some Nitro-like perks for that server, like custom emojis, a special role, and more!
+      </p>
+
+      <h4>4. Become a Discord Partner or Verified Bot Developer</h4>
+      <p>
+        If you're a content creator, server owner, or bot developer, you might be eligible for Discord's Partner Program or Verified Bot Developer program, which sometimes include free Nitro as a perk!
+      </p>
+      <p>
+        These programs have strict requirements, but they're a great way to get free Nitro while contributing to the Discord community!
+      </p>
+
+      <h3>Free Alternatives to Discord Nitro Features</h3>
+      <p>
+        If you can't get free Discord Nitro, don't worry! There are tons of free alternatives to most Nitro features! Let's go through them.
+      </p>
+
+      <h4>1. Custom Emojis Anywhere (Free Alternative)</h4>
+      <p>
+        One of the best Nitro features is using custom emojis from any server you're in, anywhere! The free alternative? Use a Discord emoji bot like <strong>NQN</strong> (Not Quite Nitro)!
+      </p>
+      <p>
+        NQN lets you use custom emojis from any server the bot is in, just like Nitro! Just add the bot to your server, and you're good to go.
+      </p>
+
+      <h4>2. Animated Avatars (Free Workaround)</h4>
+      <p>
+        Nitro lets you use animated GIFs as your avatar. The free workaround? Well, technically you still need Nitro Classic for that, but if you just want a cool profile picture, you can use a static image with a cool design instead! Or use our <a href="/tools/discord-font-generator/" class="text-[#5865F2] font-bold">Discord Font Generator</a> to make a stylized text avatar!
+      </p>
+
+      <h4>3. Bigger File Uploads (Free Alternatives)</h4>
+      <p>
+        Nitro lets you upload bigger files, but if you need to share a large file for free, use a file-sharing service like Google Drive, Dropbox, or WeTransfer! Just upload your file there and share the link in Discord!
+      </p>
+
+      <h4>4. HD Video & Screen Share (Free Workarounds)</h4>
+      <p>
+        Nitro gives you HD video and higher screen share quality, but the free version of Discord still works great for most purposes! If you need higher quality for a group call, you can use a separate service like Zoom or Google Meet alongside Discord!
+      </p>
+
+      <h4>5. Custom Profile Banner (Free Alternative)</h4>
+      <p>
+        Nitro lets you have a custom profile banner, but even without Nitro, you can still have an awesome profile! Use a cool avatar, a stylish custom status from our <a href="/tools/discord-status-generator/" class="text-[#5865F2] font-bold">Discord Status Generator</a>, and a stylized bio from our <a href="/tools/discord-bio-generator/" class="text-[#5865F2] font-bold">Discord Bio Generator</a>!
+      </p>
+
+      <h3>What is Discord Nitro, Exactly?</h3>
+      <p>
+        Just in case you're not sure what you're missing out on, let's recap what Discord Nitro gives you:
+      </p>
+      <ul>
+        <li>Use custom emojis from any server anywhere</li>
+        <li>Animated avatars and animated profile banners</li>
+        <li>2 Server Boosts (and 30% off extra boosts)</li>
+        <li>100MB file uploads (instead of 10MB for free users)</li>
+        <li>HD video and higher screen share quality</li>
+        <li>Custom Discord tag (until recently, now mostly just the other perks)</li>
+        <li>Access to Nitro-exclusive games (formerly, now mostly discontinued)</li>
+      </ul>
+
+      <h3>Is Discord Nitro Worth Paying For?</h3>
+      <p>
+        If you can't get Nitro for free, is it worth paying for? That depends on how much you use Discord!
+      </p>
+      <p>
+        If you're a heavy Discord user who's in lots of servers, loves using custom emojis, and often shares files or streams, Nitro is probably worth it! But if you only use Discord occasionally, the free alternatives we mentioned might be enough for you.
+      </p>
+
+      <h3>Final Thoughts on Free Discord Nitro</h3>
+      <p>
+        Remember: <strong>never use sketchy "Nitro generators" or "free Nitro hacks"</strong>! They are scams that will steal your account or personal information!
+      </p>
+      <p>
+        Stick to the legitimate methods we mentioned above, or use the free alternatives to Nitro features. And even without Nitro, Discord is still an amazing platform! Use our <a href="/tools/discord-rules-generator/" class="text-[#5865F2] font-bold">Discord Rules Generator</a> to make your server awesome, or our <a href="/tools/discord-timestamp-generator/" class="text-[#5865F2] font-bold">Discord Timestamp Generator</a> to schedule events!
+      </p>
+      <p>
+        Good luck getting free Nitro, and have fun on Discord!
+      </p>
+    `,
+  },
+
+  {
     slug: '50-discord-server-rules-examples',
     title: '50 Discord Server Rules Examples - The Ultimate List for 2026',
     excerpt: 'The ultimate list of 50 discord server rules examples. Perfect for any community, including gaming, art, tech, and general servers. Copy-paste ready discord rules list ideas.',

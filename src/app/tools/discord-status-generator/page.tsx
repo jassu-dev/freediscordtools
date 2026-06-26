@@ -13,7 +13,12 @@ const faqItems = [
   {
     question: 'What is the character limit for a Discord custom status?',
     answer:
-      'Discord custom statuses have a maximum length of 128 characters, including any emoji. Our generator respects this limit and warns you if your custom status is too long.',
+      'Discord custom status 128 characters official: Discord custom statuses have a maximum length of 128 characters, including any emoji. Our generator respects this limit and warns you if your custom status is too long.',
+  },
+  {
+    question: 'What are the best discord status ideas?',
+    answer:
+      'We have hundreds of good status for discord ideas! From gaming to aesthetic, funny to motivational, you\'ll find the perfect cool status ideas for your profile. Browse our categories to find discord statuses that match your vibe.',
   },
   {
     question: 'Can I use any emoji in my Discord status?',
@@ -47,9 +52,9 @@ const faqItems = [
   },
 ];
 export const metadata: Metadata = {
-  title: 'Discord Status Generator – 50+ Cool Custom Status Ideas',
+  title: 'Discord Status Generator – 50+ Best Discord Status Ideas 2026',
   description:
-    'Free Discord custom status generator. Browse 50+ cool Discord status ideas by category or build your own with a live preview. Copy and paste in seconds.',
+    'Free Discord custom status generator. Browse 50+ cool discord status ideas, good status for discord, and discord statuses. Perfect for finding status ideas for discord and best discord status ideas.',
   keywords: [
     'discord status generator',
     'discord custom status ideas',
@@ -64,6 +69,12 @@ export const metadata: Metadata = {
     'discord status text generator',
     'best discord custom status',
     'cute discord status ideas',
+    'discord custom status 128 characters official',
+    'status ideas for discord',
+    'best discord status ideas',
+    'discord statuses',
+    'cool status ideas',
+    'good status for discord',
   ],
   alternates: {
     canonical: `${seoConfig.baseUrl}/tools/discord-status-generator/`,
@@ -88,7 +99,8 @@ export const metadata: Metadata = {
     site: seoConfig.twitterHandle,
   },
 };
-
+
+
 
 const PAGE_URL = `${seoConfig.baseUrl}/tools/discord-status-generator/`;
 
@@ -113,10 +125,10 @@ export default function DiscordStatusGeneratorPage() {
 
         <header className="mb-8">
           <h1 className="text-3xl font-bold text-[#1a1d2e] mb-2">
-            Discord Status Generator
+            Discord Status Generator: Best Discord Status Ideas 2026
           </h1>
           <p className="text-lg text-[#5b6282] leading-relaxed">
-            Find the perfect <strong className="text-[#1a1d2e]">Discord custom status</strong>. Browse 50+ ideas across Gaming, Aesthetic, Coding, Studying, Funny, and Motivational categories or build your own with a live Discord preview.
+            Find the perfect <strong className="text-[#1a1d2e]">Discord custom status</strong>. Browse 50+ cool discord status ideas, status ideas for discord, and discord statuses across Gaming, Aesthetic, Coding, Studying, Funny, and Motivational categories or build your own with a live Discord preview. Whether you need a good status for discord or cool status ideas, we've got you covered!
           </p>
           <p className="bg-[#F0F2FF] border-l-4 border-[#5865F2] p-4 italic text-sm text-[#5b6282] mt-4">
             Want your status text in a unique style? Use our <a href="/tools/discord-font-generator/" className="text-[#5865F2] font-bold hover:underline">Discord Font Generator</a> to stylize any text with Unicode fonts.

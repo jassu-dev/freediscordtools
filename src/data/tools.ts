@@ -2,6 +2,22 @@ import type { Tool } from '@/types';
 
 export const tools: Tool[] = [
   {
+    slug: 'discord-indented-list-generator',
+    name: 'Discord Indented List Generator',
+    description: 'Free Discord indented list generator and markdown list tool. Create nested bullet lists, numbered lists, and checklists for Discord with one-click copy.',
+    href: '/tools/discord-indented-list-generator/',
+    keywords: ['discord indented list', 'discord nested list', 'discord markdown list', 'discord bullet list', 'discord checklist', 'discord numbered list', 'how to make indented lists on discord'],
+    category: 'Discord Formatting',
+  },
+  {
+    slug: 'discord-nickname-idea-generator',
+    name: 'Discord Nickname Idea Generator & Styling Tool',
+    description: 'Free Discord nickname idea generator with 1000+ unique ideas. Stylize nicknames with Unicode fonts using our built-in Discord font tool.',
+    href: '/tools/discord-nickname-idea-generator/',
+    keywords: ['discord nickname ideas', 'cool discord nicknames', 'funny discord nicknames', 'aesthetic discord nicknames', 'discord name ideas', 'nicknames for discord', 'good discord nicknames'],
+    category: 'Discord Formatting',
+  },
+  {
     slug: 'student-loan-forgiveness-tax-calculator',
     name: 'Student Loan Forgiveness Tax Calculator & Tuition Loan Calculator',
     description: 'Free student loan forgiveness tax calculator and tuition loan calculator. Calculate student loan tax bomb, 1099-C insolvency, and more. Perfect for 2026 student loan forgiveness tax planning.',

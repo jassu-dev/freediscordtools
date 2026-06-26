@@ -9,12 +9,17 @@ const faqItems = [
   {
     question: 'How do I use a discord timestamp generator?',
     answer:
-      'Using a discord timestamp generator is simple: pick your date and time, choose a format (like relative or short time), and copy the generated code. Paste that code into a Discord message, and it will automatically show the correct time to every user in their own timezone.',
+      'Using a discord timestamp generator or timestamp discord generator is simple: pick your date and time, choose a format (like relative or short time), and copy the generated code. Paste that code into a Discord message, and it will automatically show the correct time to every user in their own timezone.',
   },
   {
     question: 'How to use unix timestamp discord correctly?',
     answer:
-      'To use a unix timestamp on Discord, you must wrap the 10-digit unix integer in the specific syntax <t:1234567890:F>. Replace 1234567890 with your timestamp and "F" with your desired format code. Our tool automates this process entirely.',
+      'To use a unix timestamp on Discord or unix time discord, you must wrap the 10-digit unix integer in the specific syntax <t:1234567890:F>. Replace 1234567890 with your timestamp and "F" with your desired format code. Our tool automates this process entirely.',
+  },
+  {
+    question: 'What is a discord time calculator?',
+    answer:
+      'A discord time calculator is a tool that converts dates and times into Discord-compatible timestamps. Our tool works as a perfect discord time calculator, time converter for discord, discord timestamp maker, and discord time stamp generator!',
   },
   {
     question: 'What are discord time stamps used for?',
@@ -38,9 +43,9 @@ const faqItems = [
   },
 ];
 export const metadata: Metadata = {
-  title: 'Discord Timestamp Generator – All 7 Formats',
+  title: 'Discord Timestamp Generator – All 7 Formats & Time Calculator 2026',
   description:
-    'The best free Discord timestamp generator. Learn how to use unix timestamp discord and convert dates into all 7 discord time stamps instantly. Accurate unix time converter.',
+    'The best free Discord timestamp generator, timestamp discord generator, and discord time calculator. Learn how to use unix timestamp discord, unix time discord, and convert dates into all 7 discord time stamps with our discord timestamp maker and time converter for discord.',
   keywords: [
     'discord timestamp generator',
     'how to use unix timestamp discord',
@@ -53,6 +58,11 @@ export const metadata: Metadata = {
     'discord timestamp format',
     'unix timestamp converter',
     'unix time converter',
+    'timestamp discord generator',
+    'unix time discord',
+    'discord time calculator',
+    'discord time stamp generator',
+    'time converter for discord',
   ],
   alternates: {
     canonical: `${seoConfig.baseUrl}/tools/discord-timestamp-generator/`,
@@ -117,10 +127,10 @@ export default function DiscordTimestampGeneratorPage() {
         {/* ── H1 ── */}
         <header className="mb-6">
           <h1 className="text-3xl font-bold text-[#1a1d2e] mb-2">
-            Discord Timestamp Generator
+            Discord Timestamp Generator & Time Calculator
           </h1>
           <p className="text-lg text-[#5b6282] leading-relaxed">
-            The ultimate <strong className="text-[#1a1d2e]">Discord unix timestamp</strong> converter. Convert unix time, pick a date, and generate all 7 Discord formats instantly. Perfect for <strong className="text-[#1a1d2e]">unix timestamp conversion</strong> for your global community.
+            The ultimate <strong className="text-[#1a1d2e]">Discord unix timestamp</strong> converter, timestamp discord generator, and discord time calculator. Convert unix time discord, pick a date, and generate all 7 Discord formats with our discord timestamp maker and discord time stamp generator. Perfect time converter for discord for your global community.
           </p>
         </header>
 
