@@ -55,11 +55,26 @@ const faqItems = [
     answer:
       'Right here! Our Discord Status Generator has hundreds of discord status ideas across all categories: gaming, aesthetic, coding, studying, funny, motivational, and more. You can also use our generator to create your own custom discord status ideas!',
   },
+  {
+    question: 'What are the best aesthetic Discord status ideas?',
+    answer:
+      'Top aesthetic Discord status ideas include: "✧ lost in the static ✧", "ᴅʀᴇᴀᴍɪɴɢ ɪɴ ᴄᴏʟᴏʀ", "☾ moon child ☽", and "⋆ floating through stardust ⋆". Browse our aesthetic category for 15+ ready-to-copy aesthetic discord status ideas that make your profile stand out.',
+  },
+  {
+    question: 'Can I copy and paste Discord status ideas directly?',
+    answer:
+      'Yes! Every Discord status idea on our generator includes a one-click copy button. Just browse the categories, find a status you like, and click the copy icon to paste it directly into Discord. All our discord status ideas copy and paste options are formatted to respect the 128-character limit.',
+  },
+  {
+    question: 'What is a social battery Discord status?',
+    answer:
+      'A social battery Discord status uses emoji battery icons (🔋, 🪫) to show your current social energy level. Popular examples include "🔋 social battery: 20%" or "🪫 recharging, back soon". These statuses are great for letting friends know when you need space.',
+  },
 ];
 export const metadata: Metadata = {
-  title: 'Discord Status Ideas | Best Discord Status Ideas 2026 | Free Generator',
+  title: '70+ Discord Status Ideas 2026 — Copy & Paste Instantly',
   description:
-    'Free Discord status ideas generator. Browse 50+ cool discord status ideas, good status for discord, and discord statuses. Perfect for finding status ideas for discord and best discord status ideas. Get tons of discord status ideas now!',
+    'Browse 70+ curated Discord status ideas — funny, aesthetic, gaming, coding & motivational. Live preview, one-click copy. No sign-up needed.',
   keywords: [
     'discord status ideas',
     'discord status generator',
@@ -80,6 +95,13 @@ export const metadata: Metadata = {
     'discord statuses',
     'cool status ideas',
     'good status for discord',
+    'discord status ideas copy and paste',
+    'discord status ideas aesthetic',
+    'discord status 2026',
+    'best discord status',
+    'good discord statuses',
+    'social battery discord status',
+    'discord status',
   ],
   alternates: {
     canonical: `${seoConfig.baseUrl}/tools/discord-status-generator/`,
@@ -89,7 +111,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Discord Status Ideas | Best Discord Status Ideas 2026 | Free Generator',
+    title: '70+ Discord Status Ideas 2026 — Copy & Paste Instantly',
     description:
       'Browse 50+ cool, funny, and aesthetic Discord status ideas or build a custom one with live preview. Get tons of discord status ideas now!',
     url: `${seoConfig.baseUrl}/tools/discord-status-generator/`,
@@ -99,7 +121,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Discord Status Ideas | Best Discord Status Ideas 2026 | Free Generator',
+    title: '70+ Discord Status Ideas 2026 — Copy & Paste Instantly',
     description: '50+ cool Discord status ideas by category gaming, aesthetic, coding, studying, funny. Get the best discord status ideas now!',
     site: seoConfig.twitterHandle,
   },
@@ -130,7 +152,7 @@ export default function DiscordStatusGeneratorPage() {
 
         <header className="mb-8">
           <h1 className="text-3xl font-bold text-[#1a1d2e] mb-2">
-            Discord Status Ideas | Best Discord Status Ideas 2026 | Free Generator
+            70+ Discord Status Ideas 2026 — Copy & Paste Instantly
           </h1>
           <p className="text-lg text-[#5b6282] leading-relaxed">
             Find the perfect <strong className="text-[#1a1d2e]">Discord custom status</strong>. Browse 50+ cool discord status ideas, status ideas for discord, and discord statuses across Gaming, Aesthetic, Coding, Studying, Funny, and Motivational categories or build your own with a live Discord preview. Whether you need a good status for discord, cool status ideas, or the best discord status ideas, we've got you covered! Get tons of discord status ideas right here!
@@ -268,13 +290,41 @@ export default function DiscordStatusGeneratorPage() {
           </div>
         </section>
 
+        {/* Content paragraph for SEO depth */}
+        <section aria-labelledby="perfect-status-heading" className="mb-10 space-y-4 text-[#5b6282] text-base leading-relaxed">
+          <h2 id="perfect-status-heading" className="text-2xl font-bold text-[#1a1d2e]">
+            Find the Perfect Discord Status Idea for Every Mood
+          </h2>
+          <p>
+            Your Discord custom status is the first thing friends and server members see
+            when they check your profile. Whether you&apos;re looking for funny discord statuses
+            that get a laugh, aesthetic discord status ideas that match your profile theme,
+            or motivational quotes to inspire your community — our curated library of 70+
+            discord status ideas has you covered.
+          </p>
+          <p>
+            New to Discord? A custom status lets you share a short message (up to 128
+            characters) with an optional emoji. It appears next to your name in the member
+            list, DMs, and your profile card. Unlike Rich Presence, which shows what game
+            or app you&apos;re using, a custom status is entirely freeform — making it the
+            perfect place to express yourself. Our 2026 collection includes fresh ideas
+            across gaming, coding, studying, music, and relationship categories.
+          </p>
+          <p>
+            Looking for more ways to personalize your Discord profile? Style your status with our{' '}
+            <a href="/tools/discord-font-generator/" className="text-[#5865F2] font-bold hover:underline">Discord font generator</a>,
+            or check out our <a href="/tools/discord-bio-generator/" className="text-[#5865F2] font-bold hover:underline">Discord bio ideas</a>{' '}
+            for the perfect About Me section to match your new status.
+          </p>
+        </section>
+
         {/* Related tools */}
         <section aria-labelledby="related-heading">
           <h2 id="related-heading" className="text-xl font-bold text-[#1a1d2e] mb-4">Related Tools</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
-              { href: '/tools/discord-font-generator/', name: 'Discord Font Generator', desc: 'Stylize your status text with 160+ Unicode fonts.' },
-              { href: '/tools/discord-username-checker/', name: 'Discord Username Checker', desc: 'Validate your username and get an availability score.' },
+              { href: '/tools/discord-font-generator/', name: 'Discord Font Generator', desc: 'Style your status text with 160+ Unicode fonts.' },
+              { href: '/tools/discord-bio-generator/', name: 'Discord Bio Generator', desc: '60+ copy-paste bio templates and About Me ideas.' },
               { href: '/tools/discord-color-text-generator/', name: 'Discord Colored Text', desc: 'Create colorful ANSI messages for your server.' },
               { href: '/tools/discord-timestamp-generator/', name: 'Discord Timestamp Generator', desc: 'Generate timezone-aware timestamps for announcements.' },
             ].map((t) => (

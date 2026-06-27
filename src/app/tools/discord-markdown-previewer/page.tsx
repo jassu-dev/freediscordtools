@@ -28,6 +28,11 @@ const faqItems = [
     answer:
       'Discord supports header sizes. Start a line with "# " for H1 (large), "## " for H2 (medium), or "### " for H3 (small). Note that there must be a space after the hash symbols.',
   },
+  {
+    question: 'How do I make spoiler text in Discord?',
+    answer:
+      'Wrap text in double pipes: ||spoiler text||. The text will be hidden behind a dark overlay that users must click to reveal. Our Discord markdown previewer lets you test spoiler tags and all other formatting in real-time before posting.',
+  },
 ];
 export const metadata: Metadata = {
   title: 'Discord Markdown Previewer & Spoiler Text Generator',
@@ -40,6 +45,9 @@ export const metadata: Metadata = {
     'discord format preview',
     'how to format discord text',
     'discord chat text simulator',
+    'discord markdown',
+    'discord markdown spoiler',
+    'discord markdown generator',
   ],
   alternates: {
     canonical: `${seoConfig.baseUrl}/tools/discord-markdown-previewer/`,

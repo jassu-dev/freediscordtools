@@ -34,6 +34,11 @@ const faqItems = [
     answer:
       'Discord supports 8 foreground colors (Gray, Red, Green, Yellow, Blue, Pink, Cyan, White) and 8 background colors. You can also use Bold and Underline formatting.',
   },
+  {
+    question: 'Why is my text red in Discord?',
+    answer:
+      'Red text in Discord appears when you use a code block with specific syntax highlighting. For example, using ```diff and prefixing a line with - makes it red. This is because Discord uses highlight.js for syntax coloring in code blocks. Our colored text generator lets you pick any color using ANSI escape codes for more precise control.',
+  },
 ];
 export const metadata: Metadata = {
   title: 'Discord Colored Text Generator | Free ANSI Color Picker',
@@ -54,6 +59,11 @@ export const metadata: Metadata = {
     'discord colorful code blocks',
     'discord color text copy paste',
     'discord background text color generator',
+    'discord code block colors',
+    'how to discord color text',
+    'how to use colored text in discord',
+    'why is my text red in discord',
+    'discord coloured text',
   ],
   alternates: {
     canonical: `${seoConfig.baseUrl}/tools/discord-color-text-generator/`,

@@ -24,9 +24,9 @@ const faqItems = [
 ];
 
 export const metadata: Metadata = {
-  title: 'PX to REM Converter | Pixels to REM Calculator & REM Calculator 2026',
+  title: 'PX to REM Converter \u2014 Free Pixel to REM Calculator 2026',
   description:
-    'Free online PX to REM converter and pixels to REM calculator. Easily perform PX to REM conversion, rem calculation, or REM to PX calculations with custom root font sizes.',
+    'Convert pixels to REM instantly with our free PX to REM calculator. Supports custom root font sizes. Interactive conversion table for 12px, 14px, 16px, 18px, 20px, 24px.',
   keywords: [
     'px to rem',
     'pixels to rem',
@@ -38,6 +38,14 @@ export const metadata: Metadata = {
     'pixels to rem converter',
     'rem calculator',
     'rem calculation',
+    'pixel to rem',
+    '12px to rem',
+    '14px to rem',
+    '16px to rem',
+    '18px to rem',
+    '20px to rem',
+    '24px to rem',
+    'px into rem',
   ],
   alternates: {
     canonical: `${seoConfig.baseUrl}/tools/px-to-rem-converter/`,
@@ -113,6 +121,26 @@ export default function PxToRemConverterPage() {
             Instead of running calculations in your head or copy-pasting numbers manually, this <strong>px to rem calculator</strong> updates dynamically as you type, rendering calculations and presenting a cheat sheet table for common CSS sizes instantly.
           </p>
         </article>
+
+        {/* Common PX to REM Conversions Content */}
+        <section className="prose prose-lg max-w-none text-[#5b6282] bg-white p-8 md:p-12 rounded-2xl border border-[#E3E6F0] shadow-sm mt-8 mb-8">
+          <h2>Common PX to REM Conversions</h2>
+          <p>
+            With a 16px root font size (the browser default), here are the most
+            commonly searched conversions: 12px = 0.75rem, 14px = 0.875rem,
+            16px = 1rem, 18px = 1.125rem, 20px = 1.25rem, and 24px = 1.5rem.
+            Our pixel to rem calculator automatically generates a full conversion
+            table based on your custom root size, so you never have to do the
+            rem calculation manually again.
+          </p>
+          <p>
+            Whether you are converting a single value or refactoring an entire stylesheet
+            from pixels to rem units, our tool handles both directions instantly. Enter any
+            px value and get the rem equivalent, or enter rem to convert back to pixels.
+            For a deeper guide, read our{' '}
+            <a href="/blog/px-to-rem-conversion-guide/" className="text-[#5865F2] font-bold hover:underline">complete PX to REM conversion guide</a>.
+          </p>
+        </section>
 
         <VisibleFAQ items={faqItems} />
       </div>

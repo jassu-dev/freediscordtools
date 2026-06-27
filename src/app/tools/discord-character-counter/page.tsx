@@ -25,12 +25,22 @@ const faqItems = [
     answer:
       'Yes, all letters, spaces, numbers, and emojis are counted. Note that Discord represents custom server emojis under the hood as code sequences like <:emoji_name:id>, which can count as more characters than a regular Unicode emoji.',
   },
+  {
+    question: 'What is the Discord message character limit?',
+    answer:
+      'The standard Discord message character limit is 2,000 characters. Discord Nitro subscribers get an extended limit of 4,000 characters per message. Our splitter tool automatically breaks your text at natural paragraph boundaries to stay within these limits.',
+  },
+  {
+    question: 'How do I bypass the Discord 2000 character limit?',
+    answer:
+      'You cannot bypass it, but you can split long messages smartly. Our Discord message splitter automatically divides your text into chunks of 2,000 characters (or 4,000 for Nitro users), breaking at paragraph boundaries so your message reads naturally across multiple posts.',
+  },
 ];
 
 export const metadata: Metadata = {
-  title: 'Discord Character Counter & Message Splitter Tool',
+  title: 'Discord Message Splitter & Character Counter — Free Tool',
   description:
-    'Count characters, words, sentences, and paragraphs for your Discord posts. Automatically split long messages exceeding 2000 or 4000 (Nitro) limits.',
+    'Free Discord message splitter: auto-split messages at the 2000 or 4000 char limit. Real-time character counter, word count, and Nitro support included.',
   keywords: [
     'discord character counter',
     'discord message splitter',
@@ -38,6 +48,12 @@ export const metadata: Metadata = {
     'discord text bypass 2000 limit',
     'split text for discord',
     'discord text length checker',
+    'discord character limit',
+    'discord text limit',
+    'discord message character limit',
+    'discord word count',
+    'word limit discord',
+    'discord 2000 character limit copy and paste',
   ],
   alternates: {
     canonical: `${seoConfig.baseUrl}/tools/discord-character-counter/`,

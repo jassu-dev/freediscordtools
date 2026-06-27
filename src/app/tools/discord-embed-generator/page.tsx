@@ -28,6 +28,11 @@ const faqItems = [
     answer:
       'Yes, our generator provides automated code formats for both Discord.js (v14) and Discord.py, making it a great assistant tool for bot developers.',
   },
+  {
+    question: 'Can I use this embed generator with discord.js?',
+    answer:
+      'Yes! Our Discord embed generator creates standard JSON embed objects that are fully compatible with discord.js, discord.py, and any other Discord API library. Simply copy the generated JSON and use it in your bot\'s message send method. Our generator also has dedicated export tabs for Discord.js v14 EmbedBuilder and Discord.py discord.Embed() code.',
+  },
 ];
 export const metadata: Metadata = {
   title: 'Discord Visual Embed Generator – Webhook Builder',
@@ -40,6 +45,15 @@ export const metadata: Metadata = {
     'webhook embed json creator',
     'how to make a discord webhook embed',
     'visual discord embed builder',
+    'embed creator discord js',
+    'discord embed builder',
+    'embed builder discord',
+    'embed maker discord',
+    'embed generator',
+    'embed creator',
+    'discord embed online',
+    'discord embed creator',
+    'discord embed manager online',
   ],
   alternates: {
     canonical: `${seoConfig.baseUrl}/tools/discord-embed-generator/`,

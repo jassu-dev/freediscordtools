@@ -34,11 +34,21 @@ const faqItems = [
     answer:
       'Yes! By copying the Server ID (Guild ID) and pasting it into our converter, you can see the exact second the Discord server was first initialized.',
   },
+  {
+    question: 'How do I look up a Discord message ID?',
+    answer:
+      'Enable Developer Mode in Discord (User Settings \u2192 Advanced \u2192 Developer Mode). Then right-click any message and select "Copy Message ID". Paste the ID into our snowflake decoder to see the exact date and time the message was sent.',
+  },
+  {
+    question: 'What is a Discord Snowflake decoder?',
+    answer:
+      'A Discord Snowflake decoder is a tool that extracts the creation timestamp from any Discord ID. Since every Discord ID (user, server, channel, message, role) contains an encoded timestamp, our decoder reveals exactly when that entity was created.',
+  },
 ];
 export const metadata: Metadata = {
-  title: 'Discord ID to Date: Snowflake Converter',
+  title: 'Discord Snowflake Converter \u2014 ID to Date Decoder (Free)',
   description:
-    'Convert any Discord ID (snowflake) into its exact creation date and time. Find out when a Discord account, server, or channel was created instantly.',
+    'Decode any Discord snowflake ID to its exact creation date & time. Works for user IDs, server IDs, channel IDs, and message IDs. Free, instant results.',
   keywords: [
     'discord id to date',
     'discord snowflake converter',
@@ -49,6 +59,12 @@ export const metadata: Metadata = {
     'discord snowflake lookup',
     'discord account age checker',
     'snowflake to date discord',
+    'discord snowflake',
+    'discord snowflake decoder',
+    'discord message id',
+    'discord message id lookup',
+    'discord api snowflake',
+    'discord unix timestamp',
   ],
   alternates: {
     canonical: `${seoConfig.baseUrl}/tools/discord-id-to-date/`,
@@ -58,7 +74,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Discord ID to Date: Snowflake Converter',
+    title: 'Discord Snowflake Converter \u2014 ID to Date Decoder (Free)',
     description:
       'Instantly convert Discord IDs into creation dates. Our free tool decodes Discord snowflakes to show you the exact age of any account or server.',
     url: `${seoConfig.baseUrl}/tools/discord-id-to-date/`,
@@ -68,7 +84,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Discord ID to Date: Snowflake Converter',
+    title: 'Discord Snowflake Converter \u2014 ID to Date Decoder (Free)',
     description:
       'Ever wondered when a Discord account was made? Use our Snowflake converter to find the exact creation date from any Discord ID.',
     site: seoConfig.twitterHandle,

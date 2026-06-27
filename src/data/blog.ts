@@ -35,7 +35,7 @@ export const blogPosts: BlogPost[] = [
         We'll cover everything from basic formatting like bold and italic, to advanced tricks like syntax highlighting in code blocks, nested lists, and even using ANSI colored text (yes, that's a real thing!). By the end of this guide, you'll be a Discord markdown pro!
       </p>
       <div class="my-6 p-5 bg-[#F0F2FF] border-l-4 border-[#5865F2] rounded-r-xl">
-        <strong>Pro Tip:</strong> Want to practice everything you learn here? Use our Discord Markdown Previewer tool to see exactly how your text will look in Discord before sending!
+        <strong>Pro Tip:</strong> Want to practice everything you learn here? Use our <a href="/tools/discord-markdown-previewer/" class="text-[#5865F2] font-bold hover:underline">Discord Markdown Previewer</a> tool to see exactly how your text will look in Discord before sending!
       </div>
 
       <h3>Basic Discord Text Formatting</h3>
@@ -109,7 +109,7 @@ function add(a, b) {
       </p>
       <pre><code>||Darth Vader is Luke's father!||</code></pre>
       <p>
-        When someone clicks on a spoiler, it reveals the hidden text. Spoilers work on both desktop and mobile!
+        When someone clicks on a spoiler, it reveals the hidden text. Spoilers work on both desktop and mobile! You can test your spoiler tags in our <a href="/tools/discord-markdown-previewer/" class="text-[#5865F2] font-bold hover:underline">Discord Spoiler Previewer</a>.
       </p>
 
       <h3>Discord Lists (Bullet, Numbered, and Checklists)</h3>
@@ -221,7 +221,7 @@ will also be quoted!</code></pre>
       <h3>Final Tips for Discord Markdown</h3>
       <ul>
         <li><strong>Practice makes perfect:</strong> The best way to learn Discord markdown is to use it! Try different styles in your server's #bot-spam or #testing channel.</li>
-        <li><strong>Use our tools:</strong> We have a bunch of free tools to make Discord formatting easier, from <a href="/tools/discord-indented-list-generator/" class="text-[#5865F2]">list generators</a> to <a href="/tools/discord-timestamp-generator/" class="text-[#5865F2]">timestamp makers</a>.</li>
+        <li><strong>Use our tools:</strong> We have a bunch of free tools to make Discord formatting easier, from <a href="/tools/discord-markdown-previewer/" class="text-[#5865F2] font-bold hover:underline">Markdown Previewer</a> to <a href="/tools/discord-timestamp-generator/" class="text-[#5865F2] font-bold hover:underline">Timestamp Makers</a>.</li>
         <li><strong>Keep it readable:</strong> Don't overuse formatting! Too much bold, italic, or color can make your messages hard to read.</li>
       </ul>
 

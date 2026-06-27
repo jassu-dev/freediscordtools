@@ -21,12 +21,17 @@ const faqItems = [
     question: 'Is this Discord role color gradient generator free?',
     answer: 'Yes! Our Discord role color gradient generator is completely free to use. There are no hidden fees, no sign-up required, and no limits on how many gradients you can create. Enjoy making beautiful gradients for your Discord server!',
   },
+  {
+    question: 'How do gradient roles work in Discord?',
+    answer:
+      'Gradient roles create a smooth color transition across your server\'s role list. By assigning each role a slightly different color along a gradient spectrum, the member list appears to fade from one color to another. Our generator creates the exact hex codes you need for any number of roles.',
+  },
 ];
 
 export const metadata: Metadata = {
   title: 'Discord Role Color Gradient Generator | Free Online Tool',
   description: 'Free Discord role color gradient generator. Create stunning gradient colors for your Discord roles with ease. The best Discord role color generator with live preview.',
-  keywords: ['discord role color gradient generator', 'discord gradient role color', 'discord role color generator', 'discord gradient generator', 'discord role gradient', 'free discord role color generator'],
+  keywords: ['discord role color gradient generator', 'discord gradient role color', 'discord role color generator', 'discord gradient generator', 'discord role gradient', 'free discord role color generator', 'discord gradient roles', 'discord role colors gradient'],
   alternates: { canonical: `${seoConfig.baseUrl}/tools/discord-role-color-gradient-generator/` },
 };
 

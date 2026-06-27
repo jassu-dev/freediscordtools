@@ -53,11 +53,31 @@ const faqItems = [
     answer:
       'Our discord username checker is the best! It validates your username against all Discord rules, gives an availability score, and suggests alternatives. Whether you call it a discord username checker or a username checker discord, our tool is the perfect choice!',
   },
+  {
+    question: 'Are Discord usernames case sensitive?',
+    answer:
+      'No, Discord usernames are not case sensitive. "CoolUser" and "cooluser" are treated as the same username. Discord converts all usernames to lowercase internally, so capitalization does not create a unique identity.',
+  },
+  {
+    question: 'What characters are allowed in Discord usernames?',
+    answer:
+      'Discord usernames allow only lowercase letters (a-z), numbers (0-9), underscores (_), and periods (.). No uppercase letters, spaces, or special characters are permitted in the username (handle). Display names have different, more relaxed rules.',
+  },
+  {
+    question: 'What is the difference between a Discord handle and username?',
+    answer:
+      'In 2026, "handle" and "username" mean the same thing on Discord \u2014 it is your unique @identifier. Your "display name" is separate and can contain spaces, emojis, and special characters. The handle follows strict formatting rules while the display name is cosmetic.',
+  },
+  {
+    question: 'Can you change your Discord username in 2026?',
+    answer:
+      'Yes, you can change your Discord username in 2026. Go to User Settings \u2192 My Account \u2192 Edit Username. Note that popular short names are often taken, and there may be a cooldown period between changes. Use our checker to validate your new username before attempting the switch.',
+  },
 ];
 export const metadata: Metadata = {
-  title: 'Discord Username Checker | Username Checker Discord | Free Tool 2026',
+  title: 'Discord Username Checker — Validate Rules & Availability',
   description:
-    'Free discord username checker and username checker discord tool. Instantly validate your username against Discord rules, check format errors, get an availability score, and see alternate suggestions with our discord username checker.',
+    'Free Discord username checker: validate against all 2026 naming rules, check case sensitivity, allowed characters, and get availability scores instantly.',
   keywords: [
     'discord username checker',
     'username checker discord',
@@ -72,6 +92,13 @@ export const metadata: Metadata = {
     'discord display name checker',
     'valid discord username',
     'discord username format',
+    'are discord usernames case sensitive',
+    'discord username allowed characters',
+    'discord handle vs username',
+    'can you change discord username 2026',
+    'is discord username case sensitive',
+    'can discord usernames have capital letters',
+    'discord display name vs username difference 2026',
   ],
   alternates: {
     canonical: `${seoConfig.baseUrl}/tools/discord-username-checker/`,
@@ -81,7 +108,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Discord Username Checker | Username Checker Discord | Free Tool 2026',
+    title: 'Discord Username Checker — Validate Rules & Availability',
     description:
       'Free discord username checker and username checker discord tool. Instantly check if your Discord username is valid, format-compliant, and likely available. Get an availability score and alternate suggestions.',
     url: `${seoConfig.baseUrl}/tools/discord-username-checker/`,
@@ -91,7 +118,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Discord Username Checker | Username Checker Discord | Free Tool 2026',
+    title: 'Discord Username Checker — Validate Rules & Availability',
     description: 'Check if your Discord username is valid and likely available with our free discord username checker. Also known as username checker discord, our tool is instant and no sign-up required.',
     site: seoConfig.twitterHandle,
   },
@@ -198,6 +225,32 @@ export default function DiscordUsernameCheckerPage() {
             <li>Use a hobby + noun combo: <code className="bg-[#F0F2FF] px-1 rounded text-[#5865F2]">pixel.chef</code>, <code className="bg-[#F0F2FF] px-1 rounded text-[#5865F2]">void.coder</code>, check them with our username checker discord!</li>
             <li>Aim for 8–15 characters unique enough to be available, short enough to be memorable, and use our discord username checker to validate!</li>
           </ul>
+        </section>
+
+        {/* Username Rules Content Paragraph */}
+        <section aria-labelledby="rules-2026-heading" className="mb-10 space-y-5 text-[#5b6282] text-base leading-relaxed">
+          <h2 id="rules-2026-heading" className="text-2xl font-bold text-[#1a1d2e]">
+            Discord Username Rules & Allowed Characters in 2026
+          </h2>
+          <p>
+            Discord overhauled its username system in 2023, replacing the old Name#1234
+            discriminator system with unique handles. In 2026, your Discord username
+            must be between 2–32 characters and can only contain lowercase letters,
+            numbers, underscores, and periods. Capital letters are automatically
+            converted to lowercase — so Discord usernames are not case sensitive.
+          </p>
+          <p>
+            Wondering about the difference between your Discord handle vs username vs
+            display name? Your handle (username) is your unique identifier that others
+            use to add you as a friend. Your display name is what appears in servers and
+            can include spaces, emoji, and Unicode characters. Use our checker above to
+            validate any username against all current Discord rules before trying to
+            claim it.
+          </p>
+          <p>
+            For a deeper dive into every rule, edge case, and tip, check out our{' '}
+            <a href="/blog/discord-username-rules-guide/" className="text-[#5865F2] font-bold hover:underline">full Discord username rules guide for 2026</a>.
+          </p>
         </section>
 
         {/* ── FAQ ── */}
