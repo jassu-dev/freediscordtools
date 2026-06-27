@@ -267,5 +267,29 @@ export const tools: Tool[] = [
     keywords: ['discord rules generator', 'discord server rules', 'best discord rules', 'discord rules template', 'discord rules list', 'gaming discord rules', 'how to make discord rules', 'free discord rules generator'],
     category: 'Discord Management & Dev',
   },
+  {
+    slug: 'discord-emote-resizer',
+    name: 'Discord Emote Resizer',
+    description: 'Free Discord emote resizer. Resize images to Discord emote sizes (128x128, 64x64, 32x32) and download in PNG format instantly.',
+    href: '/tools/discord-emote-resizer/',
+    keywords: ['discord emote resizer', 'discord emote size', 'discord emote generator', 'emote resizer', 'discord emoji resizer', 'discord emote maker'],
+    category: 'Discord Lookup & Assets',
+  },
+  {
+    slug: 'discord-message-link-resolver',
+    name: 'Discord Message Link Resolver',
+    description: 'Free Discord message link resolver. Paste any Discord message link to extract server ID, channel ID, message ID, and the timestamp when the message was sent.',
+    href: '/tools/discord-message-link-resolver/',
+    keywords: ['discord message link resolver', 'discord message link parser', 'discord message id to date', 'discord message link', 'discord message timestamp'],
+    category: 'Discord Lookup & Assets',
+  },
+  {
+    slug: 'discord-nitro-perks-calculator',
+    name: 'Discord Nitro Perks Calculator',
+    description: 'Free Discord Nitro perks calculator. Compare Nitro and Nitro Basic, monthly vs annual billing, and see how much money you can save with an annual subscription.',
+    href: '/tools/discord-nitro-perks-calculator/',
+    keywords: ['discord nitro perks', 'discord nitro calculator', 'discord nitro cost', 'discord nitro basic', 'discord nitro vs basic'],
+    category: 'Discord Management & Dev',
+  },
 ];
 
