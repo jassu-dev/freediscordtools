@@ -115,7 +115,7 @@ export default function DiscordMessageLinkResolver() {
                   <div className="flex gap-2 items-center">
                     <span className="text-[#5b6282]">{parsed.guildId}</span>
                     <button
-                      onClick={() => copyToClipboard(parsed.guildId)}
+                      onClick={() => copyToClipboard(parsed.guildId!)}
                       className="text-[#5865F2] hover:underline text-sm"
                     >
                       Copy
