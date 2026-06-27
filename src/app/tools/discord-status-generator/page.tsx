@@ -8,58 +8,63 @@ const faqItems = [
   {
     question: 'How do I set a custom status on Discord?',
     answer:
-      'Click on your avatar in the bottom-left corner of Discord (or tap your profile icon on mobile). Select "Set a custom status". Type or paste your status text, pick an emoji, and optionally set an expiry time. Click Save.',
+      'Click on your avatar in the bottom-left corner of Discord (or tap your profile icon on mobile). Select "Set a custom status". Type or paste your status text (we have tons of discord status ideas to choose from!), pick an emoji, and optionally set an expiry time. Click Save.',
   },
   {
     question: 'What is the character limit for a Discord custom status?',
     answer:
-      'Discord custom status 128 characters official: Discord custom statuses have a maximum length of 128 characters, including any emoji. Our generator respects this limit and warns you if your custom status is too long.',
+      'Discord custom status 128 characters official: Discord custom statuses have a maximum length of 128 characters, including any emoji. Our generator respects this limit and warns you if your custom status is too long, so you can use all your favorite discord status ideas without worry!',
   },
   {
     question: 'What are the best discord status ideas?',
     answer:
-      'We have hundreds of good status for discord ideas! From gaming to aesthetic, funny to motivational, you\'ll find the perfect cool status ideas for your profile. Browse our categories to find discord statuses that match your vibe.',
+      'We have hundreds of good status for discord ideas! From gaming to aesthetic, funny to motivational, you\'ll find the perfect cool status ideas for your profile. Browse our categories to find discord statuses that match your vibe. Whether you need gaming discord status ideas, aesthetic discord status ideas, or funny discord status ideas, we have you covered!',
   },
   {
     question: 'Can I use any emoji in my Discord status?',
     answer:
-      'Yes, you can use any standard Unicode emoji in your status. Discord Nitro subscribers can also use custom server emojis. Standard users are limited to default Unicode emojis.',
+      'Yes, you can use any standard Unicode emoji in your status. Pair them with our discord status ideas to make your status even better! Discord Nitro subscribers can also use custom server emojis. Standard users are limited to default Unicode emojis.',
   },
   {
     question: 'Does my Discord custom status expire?',
     answer:
-      'Only if you set it to. When setting your status, Discord offers optional expiry options: "Today", "This Week", "Don\'t clear". If you choose "Don\'t clear", your status remains until you manually change or remove it.',
+      'Only if you set it to. When setting your status, Discord offers optional expiry options: "Today", "This Week", "Don\'t clear". If you choose "Don\'t clear", your status remains until you manually change or remove it, so you can keep using your favorite discord status ideas!',
   },
   {
     question: 'Can people see my Discord status if I\'m invisible?',
     answer:
-      'When your presence is set to Invisible, other users cannot see your custom status. Your status is only visible to others when you are Online, Idle, or Do Not Disturb.',
+      'When your presence is set to Invisible, other users cannot see your custom status. Your status is only visible to others when you are Online, Idle, or Do Not Disturb, so save your best discord status ideas for when you\'re visible!',
   },
   {
     question: 'What is the difference between a custom status and a Rich Presence status?',
     answer:
-      'A custom status is text you write yourself in User Settings. Rich Presence status is automatic it\'s populated by Discord-integrated applications (like games or Spotify) to show what you\'re playing or listening to. Both can be visible simultaneously.',
+      'A custom status is text you write yourself in User Settings (you can use our discord status ideas for this!). Rich Presence status is automatic it\'s populated by Discord-integrated applications (like games or Spotify) to show what you\'re playing or listening to. Both can be visible simultaneously.',
   },
   {
     question: 'Are there Discord status rules or restrictions?',
     answer:
-      'Yes. Your custom status must comply with Discord\'s Community Guidelines and Terms of Service. Status text cannot contain slurs, threats, harassment, or illegal content. Violating these rules can result in account suspension.',
+      'Yes. Your custom status must comply with Discord\'s Community Guidelines and Terms of Service. Status text cannot contain slurs, threats, harassment, or illegal content. Violating these rules can result in account suspension, so choose your discord status ideas wisely!',
   },
   {
     question: 'What are the best Discord status ideas for gamers?',
     answer:
-      'Popular gamer statuses include: "grinding for that rare drop 🕹️", "git gud or go home ⚔️", "carrying the whole team again 🥇", or "not dead, just respawning 🎮". Browse our Gaming category for 10+ ready-to-copy ideas.',
+      'Popular gamer statuses include: "grinding for that rare drop 🕹️", "git gud or go home ⚔️", "carrying the whole team again 🥇", or "not dead, just respawning 🎮". Browse our Gaming category for 10+ ready-to-copy gaming discord status ideas!',
+  },
+  {
+    question: 'Where can I find more discord status ideas?',
+    answer:
+      'Right here! Our Discord Status Generator has hundreds of discord status ideas across all categories: gaming, aesthetic, coding, studying, funny, motivational, and more. You can also use our generator to create your own custom discord status ideas!',
   },
 ];
 export const metadata: Metadata = {
-  title: 'Discord Status Generator – 50+ Best Discord Status Ideas 2026',
+  title: 'Discord Status Ideas | Best Discord Status Ideas 2026 | Free Generator',
   description:
-    'Free Discord custom status generator. Browse 50+ cool discord status ideas, good status for discord, and discord statuses. Perfect for finding status ideas for discord and best discord status ideas.',
+    'Free Discord status ideas generator. Browse 50+ cool discord status ideas, good status for discord, and discord statuses. Perfect for finding status ideas for discord and best discord status ideas. Get tons of discord status ideas now!',
   keywords: [
+    'discord status ideas',
     'discord status generator',
     'discord custom status ideas',
     'cool discord status',
-    'discord status ideas',
     'discord status copy paste',
     'funny discord status',
     'aesthetic discord status',
@@ -84,9 +89,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Discord Status Generator – 50+ Cool Custom Status Ideas',
+    title: 'Discord Status Ideas | Best Discord Status Ideas 2026 | Free Generator',
     description:
-      'Browse 50+ cool, funny, and aesthetic Discord status ideas or build a custom one with live preview. Copy and paste instantly.',
+      'Browse 50+ cool, funny, and aesthetic Discord status ideas or build a custom one with live preview. Get tons of discord status ideas now!',
     url: `${seoConfig.baseUrl}/tools/discord-status-generator/`,
     type: 'website',
     locale: 'en_US',
@@ -94,8 +99,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Discord Status Generator – 50+ Cool Custom Status Ideas',
-    description: '50+ cool Discord status ideas by category gaming, aesthetic, coding, studying, funny. Copy in one click.',
+    title: 'Discord Status Ideas | Best Discord Status Ideas 2026 | Free Generator',
+    description: '50+ cool Discord status ideas by category gaming, aesthetic, coding, studying, funny. Get the best discord status ideas now!',
     site: seoConfig.twitterHandle,
   },
 };
@@ -125,13 +130,13 @@ export default function DiscordStatusGeneratorPage() {
 
         <header className="mb-8">
           <h1 className="text-3xl font-bold text-[#1a1d2e] mb-2">
-            Discord Status Generator: Best Discord Status Ideas 2026
+            Discord Status Ideas | Best Discord Status Ideas 2026 | Free Generator
           </h1>
           <p className="text-lg text-[#5b6282] leading-relaxed">
-            Find the perfect <strong className="text-[#1a1d2e]">Discord custom status</strong>. Browse 50+ cool discord status ideas, status ideas for discord, and discord statuses across Gaming, Aesthetic, Coding, Studying, Funny, and Motivational categories or build your own with a live Discord preview. Whether you need a good status for discord or cool status ideas, we've got you covered!
+            Find the perfect <strong className="text-[#1a1d2e]">Discord custom status</strong>. Browse 50+ cool discord status ideas, status ideas for discord, and discord statuses across Gaming, Aesthetic, Coding, Studying, Funny, and Motivational categories or build your own with a live Discord preview. Whether you need a good status for discord, cool status ideas, or the best discord status ideas, we've got you covered! Get tons of discord status ideas right here!
           </p>
           <p className="bg-[#F0F2FF] border-l-4 border-[#5865F2] p-4 italic text-sm text-[#5b6282] mt-4">
-            Want your status text in a unique style? Use our <a href="/tools/discord-font-generator/" className="text-[#5865F2] font-bold hover:underline">Discord Font Generator</a> to stylize any text with Unicode fonts.
+            Want your status text in a unique style? Use our <a href="/tools/discord-font-generator/" className="text-[#5865F2] font-bold hover:underline">Discord Font Generator</a> to stylize any text with Unicode fonts, then pair it with our discord status ideas!
           </p>
         </header>
 
@@ -143,10 +148,10 @@ export default function DiscordStatusGeneratorPage() {
         {/* ── How to set a status ── */}
         <section aria-labelledby="howto-heading" className="mb-10 space-y-4 text-[#5b6282] text-base leading-relaxed">
           <h2 id="howto-heading" className="text-2xl font-bold text-[#1a1d2e]">
-            How to Set a Custom Status on Discord
+            How to Set a Custom Status on Discord (Using Our Discord Status Ideas!)
           </h2>
           <p>
-            Setting a custom Discord status takes about 10 seconds. Here is the process on both desktop and mobile:
+            Setting a custom Discord status takes about 10 seconds. First, pick one of our amazing discord status ideas, then follow these steps on both desktop and mobile:
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -155,7 +160,7 @@ export default function DiscordStatusGeneratorPage() {
               <ol className="space-y-2 text-sm list-decimal list-inside">
                 <li>Click your avatar in the bottom-left</li>
                 <li>Select <strong>Set a custom status</strong></li>
-                <li>Type or paste your status text</li>
+                <li>Type or paste your discord status ideas text</li>
                 <li>Pick an emoji from the picker</li>
                 <li>Set expiry (optional) → click <strong>Save</strong></li>
               </ol>
@@ -166,14 +171,14 @@ export default function DiscordStatusGeneratorPage() {
                 <li>Tap your profile icon (bottom-right)</li>
                 <li>Tap your avatar at the top</li>
                 <li>Select <strong>Set Status</strong></li>
-                <li>Enter your text and emoji</li>
+                <li>Enter your discord status ideas text and emoji</li>
                 <li>Tap <strong>Save</strong></li>
               </ol>
             </div>
           </div>
 
           <p>
-            Your status is visible to all users who can see your profile friends, server members (when online), and anyone who visits your profile card. It updates immediately after saving.
+            Your status is visible to all users who can see your profile friends, server members (when online), and anyone who visits your profile card. It updates immediately after saving, so you can switch between your favorite discord status ideas anytime!
           </p>
         </section>
 
@@ -184,28 +189,28 @@ export default function DiscordStatusGeneratorPage() {
           </h2>
 
           <p>
-            Choosing the right Discord status is about matching your current vibe to something that reflects your personality. Here is a breakdown of the most popular categories and what works best for each:
+            Choosing the right Discord status is about matching your current vibe to something that reflects your personality, which is why we have so many discord status ideas organized by category! Here is a breakdown of the most popular categories and what discord status ideas work best for each:
           </p>
 
           {[
             {
               title: '🎮 Gaming Status Ideas',
-              desc: 'Gaming statuses are the most popular on Discord, where a large portion of the user base is actively playing. The best gamer statuses are either self-deprecating ("skill issue honestly"), brag-worthy ("top 1 or nothing"), or situational ("grinding for that rare drop"). These perform especially well in gaming servers where members relate immediately.',
+              desc: 'Gaming discord status ideas are the most popular on Discord, where a large portion of the user base is actively playing. The best gamer discord status ideas are either self-deprecating ("skill issue honestly"), brag-worthy ("top 1 or nothing"), or situational ("grinding for that rare drop"). These gaming discord status ideas perform especially well in gaming servers where members relate immediately.',
               examples: ['"not dead, just respawning 🎮"', '"carrying the whole team again 🥇"', '"big brain plays incoming 🧠"'],
             },
             {
               title: '✨ Aesthetic Status Ideas',
-              desc: 'Aesthetic statuses set a mood rather than describe an activity. They work best paired with a minimalist or vaporwave profile. Keep them poetic, slightly melancholic, or dreamy. Pair with our Discord Font Generator for maximum aesthetic impact.',
+              desc: 'Aesthetic discord status ideas set a mood rather than describe an activity. These aesthetic discord status ideas work best paired with a minimalist or vaporwave profile. Keep them poetic, slightly melancholic, or dreamy. Pair with our Discord Font Generator for maximum aesthetic impact on your discord status ideas!',
               examples: ['"midnight tea and sad music 🌙"', '"main character energy 🌧️"', '"soft hours only ✨"'],
             },
             {
               title: '💻 Coding & Developer Status Ideas',
-              desc: 'Developer-focused statuses resonate strongly in programming servers and tech communities. They range from relatable pain points to deadpan humor about the realities of software development.',
+              desc: 'Developer-focused discord status ideas resonate strongly in programming servers and tech communities. These coding discord status ideas range from relatable pain points to deadpan humor about the realities of software development.',
               examples: ['"debugging since 2 AM 👨‍💻"', '"it\'s a feature, not a bug 🐛"', '"testing in production (again) 🧪"'],
             },
             {
               title: '😄 Funny Status Ideas',
-              desc: 'Humor is always a crowd-pleaser. Funny statuses get reactions and start conversations. They work across all server types and demographics from gaming communities to study groups.',
+              desc: 'Humor is always a crowd-pleaser, which is why our funny discord status ideas are so popular! Funny discord status ideas get reactions and start conversations. These funny discord status ideas work across all server types and demographics from gaming communities to study groups.',
               examples: ['"aggressively doing nothing 🦥"', '"melting gently into the couch 🫠"', '"pretending to have my life together 🎭"'],
             },
           ].map((cat) => (
@@ -224,15 +229,15 @@ export default function DiscordStatusGeneratorPage() {
         {/* ── Tips ── */}
         <section aria-labelledby="tips-heading" className="mb-10 space-y-3 text-[#5b6282] text-base leading-relaxed">
           <h2 id="tips-heading" className="text-2xl font-bold text-[#1a1d2e]">
-            Tips for Writing the Perfect Discord Status
+            Tips for Using Our Discord Status Ideas
           </h2>
           <ul className="space-y-3">
             {[
-              ['Lead with an emoji', 'An emoji at the start catches the eye before the text is read. It sets the tone immediately and makes your status more visually distinctive in profile previews.'],
-              ['Keep it under 60 characters', 'While Discord allows 128 characters, statuses longer than ~60 characters get truncated in most UI contexts. Front-load the most important part.'],
-              ['Be specific over generic', '"grinding ranked in Valorant" lands better than "playing games". Specific statuses start conversations and give others something to respond to.'],
-              ['Update it regularly', 'A stale status from 3 months ago signals an inactive account. Changing it weekly or when your situation changes keeps your profile feeling alive.'],
-              ['Match your server vibe', 'In a professional dev server, "shipping at 3 AM 📦" fits perfectly. In a chill music server, "music louder than thoughts 🎵" lands better. Context-aware statuses get more reactions.'],
+              ['Lead with an emoji', 'An emoji at the start catches the eye before the text is read. It sets the tone immediately and makes your discord status ideas more visually distinctive in profile previews.'],
+              ['Keep it under 60 characters', 'While Discord allows 128 characters, statuses longer than ~60 characters get truncated in most UI contexts. Front-load the most important part of your discord status ideas!'],
+              ['Be specific over generic', '"grinding ranked in Valorant" lands better than "playing games". Specific discord status ideas start conversations and give others something to respond to.'],
+              ['Update it regularly', 'A stale status from 3 months ago signals an inactive account. Changing it weekly or when your situation changes keeps your profile feeling alive—use our new discord status ideas often!'],
+              ['Match your server vibe', 'In a professional dev server, "shipping at 3 AM 📦" fits perfectly. In a chill music server, "music louder than thoughts 🎵" lands better. Context-aware discord status ideas get more reactions.'],
             ].map(([title, desc]) => (
               <li key={title as string} className="flex gap-3">
                 <span className="text-[#5865F2] font-bold shrink-0 mt-0.5">→</span>
