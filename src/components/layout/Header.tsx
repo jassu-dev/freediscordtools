@@ -40,7 +40,7 @@ export default function Header() {
         {/* Logo */}
         <Link
           href="/"
-          className="text-lg font-extrabold text-[#5865F2] hover:text-[#4752C4] transition-colors whitespace-nowrap flex-shrink-0 tracking-tight min-h-[44px] flex items-center px-1"
+          className="text-lg font-extrabold text-[#5865F2] hover:text-[#4752C4] transition-colors whitespace-nowrap flex-shrink-0 tracking-tight min-h-[48px] flex items-center px-1"
           aria-label="FreeDiscordTools home"
         >
           Free<span className="text-[#0f111a]">Discord</span>Tools
@@ -59,7 +59,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="px-4 py-2.5 rounded-lg text-sm font-semibold text-[#2d3149] hover:text-[#5865F2] hover:bg-[#F0F2FF] transition-all min-h-[44px] flex items-center"
+              className="px-4 py-2.5 rounded-lg text-sm font-semibold text-[#2d3149] hover:text-[#5865F2] hover:bg-[#F0F2FF] transition-all min-h-[48px] flex items-center"
             >
               {link.label}
             </Link>
@@ -69,7 +69,7 @@ export default function Header() {
         {/* Mobile hamburger */}
         <button
           onClick={() => setMobileOpen((v) => !v)}
-          className="md:hidden ml-auto flex-shrink-0 p-3 rounded-lg text-[#2d3149] hover:bg-[#F0F2FF] hover:text-[#5865F2] transition-all min-h-[44px] min-w-[44px] flex items-center justify-center"
+          className="md:hidden ml-auto flex-shrink-0 p-3 rounded-lg text-[#2d3149] hover:bg-[#F0F2FF] hover:text-[#5865F2] transition-all min-h-[48px] min-w-[48px] flex items-center justify-center"
           aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={mobileOpen}
           aria-controls="mobile-menu"
@@ -106,7 +106,7 @@ export default function Header() {
                     ref={index === 0 ? firstLinkRef : undefined}
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className="flex items-center px-4 py-3.5 text-sm font-semibold text-[#2d3149] hover:text-[#5865F2] hover:bg-[#F8F9FF] transition-colors min-h-[44px]"
+                    className="flex items-center px-4 py-3.5 text-sm font-semibold text-[#2d3149] hover:text-[#5865F2] hover:bg-[#F8F9FF] transition-colors min-h-[48px]"
                   >
                     {link.label}
                   </Link>

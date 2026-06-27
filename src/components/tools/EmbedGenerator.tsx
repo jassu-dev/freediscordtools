@@ -542,7 +542,7 @@ export default function EmbedGenerator() {
                       {/* Author */}
                       {authorName && (
                         <div className="flex items-center gap-2">
-                          {authorIcon && <img src={authorIcon} className="w-5 h-5 rounded-full object-cover" />}
+                          {authorIcon && <img src={authorIcon} alt="Author Icon" className="w-5 h-5 rounded-full object-cover" />}
                           {authorUrl ? (
                             <a href={authorUrl} target="_blank" rel="noopener noreferrer" className="text-xs font-semibold text-white hover:underline">
                               {authorName}
@@ -598,7 +598,7 @@ export default function EmbedGenerator() {
                       {/* Footer & Timestamp */}
                       {(footerText || showTimestamp) && (
                         <div className="flex items-center gap-2 pt-2 text-[10px] text-gray-400">
-                          {footerIcon && <img src={footerIcon} className="w-4 h-4 rounded-full object-cover" />}
+                          {footerIcon && <img src={footerIcon} alt="Footer Icon" className="w-4 h-4 rounded-full object-cover" />}
                           <div className="flex items-center gap-1.5 flex-wrap">
                             {footerText && <span>{footerText}</span>}
                             {footerText && showTimestamp && <span>•</span>}

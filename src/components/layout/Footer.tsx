@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand/About */}
           <div className="space-y-4">
-            <Link href="/" className="text-xl font-black text-[#0f111a] tracking-tighter inline-flex min-h-[44px] items-center">
+            <Link href="/" className="text-xl font-black text-[#0f111a] tracking-tighter inline-flex min-h-[48px] items-center">
               FREE<span className="text-[#5865F2]">DISCORD</span>TOOLS
             </Link>
             <p className="text-sm text-[#2d3149] leading-relaxed">
@@ -23,10 +23,10 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-[#0f111a] mb-4 uppercase text-xs tracking-widest">Platform</h3>
             <ul className="space-y-2 list-none p-0">
-              <li><Link href="/tools/" className="text-sm text-[#2d3149] hover:text-[#5865F2] min-h-[44px] inline-flex items-center">All Tools</Link></li>
-              <li><Link href="/blog/" className="text-sm text-[#2d3149] hover:text-[#5865F2] min-h-[44px] inline-flex items-center">Blog & Guides</Link></li>
-              <li><Link href="/about/" className="text-sm text-[#2d3149] hover:text-[#5865F2] min-h-[44px] inline-flex items-center">About Us</Link></li>
-              <li><Link href="/contact/" className="text-sm text-[#2d3149] hover:text-[#5865F2] min-h-[44px] inline-flex items-center">Contact</Link></li>
+              <li><Link href="/tools/" className="text-sm text-[#2d3149] hover:text-[#5865F2] min-h-[48px] inline-flex items-center">All Tools</Link></li>
+              <li><Link href="/blog/" className="text-sm text-[#2d3149] hover:text-[#5865F2] min-h-[48px] inline-flex items-center">Blog & Guides</Link></li>
+              <li><Link href="/about/" className="text-sm text-[#2d3149] hover:text-[#5865F2] min-h-[48px] inline-flex items-center">About Us</Link></li>
+              <li><Link href="/contact/" className="text-sm text-[#2d3149] hover:text-[#5865F2] min-h-[48px] inline-flex items-center">Contact</Link></li>
             </ul>
           </div>
 
@@ -36,7 +36,7 @@ export default function Footer() {
             <ul className="space-y-2 list-none p-0">
               {popularTools.map(tool => (
                 <li key={tool.slug}>
-                  <Link href={tool.href} className="text-sm text-[#2d3149] hover:text-[#5865F2] min-h-[44px] inline-flex items-center">
+                  <Link href={tool.href} className="text-sm text-[#2d3149] hover:text-[#5865F2] min-h-[48px] inline-flex items-center">
                     {tool.name}
                   </Link>
                 </li>
@@ -51,8 +51,8 @@ export default function Footer() {
           </p>
           <nav aria-label="Legal navigation">
             <ul className="flex gap-6 list-none m-0 p-0">
-              <li><Link href="/privacy-policy/" className="text-xs text-[#2d3149] hover:text-[#5865F2] min-h-[44px] inline-flex items-center">Privacy</Link></li>
-              <li><Link href="/terms/" className="text-xs text-[#2d3149] hover:text-[#5865F2] min-h-[44px] inline-flex items-center">Terms</Link></li>
+              <li><Link href="/privacy-policy/" className="text-xs text-[#2d3149] hover:text-[#5865F2] min-h-[48px] inline-flex items-center">Privacy</Link></li>
+              <li><Link href="/terms/" className="text-xs text-[#2d3149] hover:text-[#5865F2] min-h-[48px] inline-flex items-center">Terms</Link></li>
             </ul>
           </nav>
         </div>
