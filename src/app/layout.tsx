@@ -120,9 +120,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <script src="https://analytics.ahrefs.com/analytics.js" data-key="r7H9HRT3d9uQqlnHmWsvKw" async></script>
-      </head>
       <body className={`${inter.className} ${inter.variable} min-h-screen flex flex-col bg-[#F8F9FF] text-[#1a1d2e]`}>
         <Script
           async
