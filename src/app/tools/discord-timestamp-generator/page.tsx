@@ -4,6 +4,8 @@ import FaqSchema from '@/components/seo/FaqSchema';import TimestampGenerator fro
 import PageSchema from '@/components/seo/PageSchema';
 import { seoConfig } from '@/config/seo';
 import { buildFaqJsonLd } from '@/lib/jsonld';
+import AuthorTrustBox from '@/components/layout/AuthorTrustBox';
+
 
 const faqItems = [
   {
@@ -266,6 +268,7 @@ export default function DiscordTimestampGeneratorPage() {
           </div>
         </section>
 
+              <AuthorTrustBox />
       </div>
     </>
   );

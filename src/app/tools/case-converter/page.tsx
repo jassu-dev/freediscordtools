@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { seoConfig } from '@/config/seo';
 import PageSchema from '@/components/seo/PageSchema';
 import CaseConverterTool from '@/components/tools/CaseConverterTool';
+import AuthorTrustBox from '@/components/layout/AuthorTrustBox';
+
 
 const PAGE_TITLE = 'Online Case Converter & Word Counter – Free Text Transformer';
 const PAGE_DESCRIPTION = 'Free online case converter. Transform text to uppercase, lowercase, title case, and sentence case instantly. Includes real-time word counter and character counter.';
@@ -124,6 +126,7 @@ export default function CaseConverterPage() {
             ))}
           </div>
         </section>
+              <AuthorTrustBox />
       </div>
     </>
   );

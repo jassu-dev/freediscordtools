@@ -3,6 +3,8 @@ import PageSchema from '@/components/seo/PageSchema';
 import VisibleFAQ from '@/components/seo/VisibleFAQ';
 import Base64EncoderDecoder from '@/components/tools/Base64EncoderDecoder';
 import { seoConfig } from '@/config/seo';
+import AuthorTrustBox from '@/components/layout/AuthorTrustBox';
+
 
 const faqItems = [
   {
@@ -75,6 +77,7 @@ export default function Base64EncoderDecoderPage() {
         </article>
 
         <VisibleFAQ items={faqItems} />
+              <AuthorTrustBox />
       </div>
     </>
   );

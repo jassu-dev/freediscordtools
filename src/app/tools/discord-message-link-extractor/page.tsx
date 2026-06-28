@@ -6,6 +6,8 @@ import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import { buildFaqJsonLd } from '@/lib/jsonld';
 import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
 import { seoConfig } from '@/config/seo';
+import AuthorTrustBox from '@/components/layout/AuthorTrustBox';
+
 
 const faqItems = [
   {
@@ -232,6 +234,7 @@ channel.messages.fetch('MESSAGE_ID')
             ))}
           </div>
         </section>
+              <AuthorTrustBox />
       </div>
     </>
   );

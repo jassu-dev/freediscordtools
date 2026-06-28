@@ -3,6 +3,8 @@ import PageSchema from '@/components/seo/PageSchema';
 import VisibleFAQ from '@/components/seo/VisibleFAQ';
 import CharacterCounter from '@/components/tools/CharacterCounter';
 import { seoConfig } from '@/config/seo';
+import AuthorTrustBox from '@/components/layout/AuthorTrustBox';
+
 
 const faqItems = [
   {
@@ -186,6 +188,7 @@ export default function CharacterCounterPage() {
         </article>
 
         <VisibleFAQ items={faqItems} />
+              <AuthorTrustBox />
       </div>
     </>
   );

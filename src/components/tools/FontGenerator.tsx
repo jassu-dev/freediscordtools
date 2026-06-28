@@ -10,6 +10,7 @@ import {
   type FontStyle,
   type FontCategory,
 } from '@/lib/fonts';
+import { useInfiniteScroll } from '@/hooks/useInfiniteScroll';
 
 // ─── Storage helpers ──────────────────────────────────────────────────────────
 const LS_FAVORITES_KEY = 'dfg_favorites';
@@ -337,6 +338,13 @@ export default function FontGenerator() {
 
   const topFonts = useMemo(() => getTopFonts(10), []);
 
+  const { visibleCount, observerRef, setVisibleCount } = useInfiniteScroll(18, 18, visibleFonts.length);
+
+  // Reset visible count when search or category changes
+  useEffect(() => {
+    setVisibleCount(18);
+  }, [search, activeCategory, setVisibleCount]);
+
   const handleCopy = useCallback(async (text: string, id: string) => {
     const ok = await copy(text, id);
     if (ok) {
@@ -519,7 +527,7 @@ export default function FontGenerator() {
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {visibleFonts.map((font) => (
+            {visibleFonts.slice(0, visibleCount).map((font) => (
               <FontCard
                 key={font.id}
                 font={font}
@@ -533,6 +541,9 @@ export default function FontGenerator() {
                 onSelect={handleSelect}
               />
             ))}
+            {visibleCount < visibleFonts.length && (
+              <div ref={observerRef} className="col-span-1 sm:col-span-2 lg:col-span-3 h-10" />
+            )}
           </div>
         )}
       </section>

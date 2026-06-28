@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import FaqSchema from '@/components/seo/FaqSchema';import { seoConfig } from '@/config/seo';
 import PageSchema from '@/components/seo/PageSchema';
 import DiscordNitroPerksCalculator from '@/components/tools/DiscordNitroPerksCalculator';
+import AuthorTrustBox from '@/components/layout/AuthorTrustBox';
+
 
 const faqItems = [
   {
@@ -84,6 +86,7 @@ export default function DiscordNitroPerksCalculatorPage() {
             ))}
           </div>
         </section>
+              <AuthorTrustBox />
       </div>
     </>
   );

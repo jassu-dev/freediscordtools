@@ -285,6 +285,22 @@ export default function StatusGeneratorTool() {
     return list;
   }, [category, search]);
 
+  const [visibleCount, setVisibleCount] = useState(16);
+
+  // Reset visible count when filters change
+  useMemo(() => {
+    setVisibleCount(16);
+  }, [category, search]);
+
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const { scrollTop, scrollHeight, clientHeight } = e.currentTarget;
+    if (scrollHeight - scrollTop <= clientHeight + 100) {
+      if (visibleCount < filtered.length) {
+        setVisibleCount((prev) => Math.min(prev + 16, filtered.length));
+      }
+    }
+  };
+
   const copy = (text: string, id: string) => {
     navigator.clipboard.writeText(text).then(() => {
       setCopied(id);
@@ -347,8 +363,11 @@ export default function StatusGeneratorTool() {
             <p className="text-xs text-[#5b6282] mb-4">{filtered.length} statuses</p>
 
             {/* Status grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 max-h-[520px] overflow-y-auto pr-1">
-              {filtered.map((s, i) => {
+            <div 
+              className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 max-h-[520px] overflow-y-auto pr-1"
+              onScroll={handleScroll}
+            >
+              {filtered.slice(0, visibleCount).map((s, i) => {
                 const full = `${s.emoji} ${s.text}`;
                 const id = `browse-${i}-${s.text}`;
                 return (

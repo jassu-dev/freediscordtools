@@ -6,6 +6,8 @@ import WebSiteSchema from '@/components/seo/WebSiteSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
 import PermissionCalculatorTool from '@/components/tools/PermissionCalculatorTool';
+import AuthorTrustBox from '@/components/layout/AuthorTrustBox';
+
 
 const faqItems = [
   {
@@ -195,6 +197,7 @@ export default function DiscordPermissionCalculatorPage() {
             ))}
           </div>
         </section>
+              <AuthorTrustBox />
       </div>
     </>
   );

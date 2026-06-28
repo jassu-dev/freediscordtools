@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { seoConfig } from '@/config/seo';
 import PageSchema from '@/components/seo/PageSchema';
 import StudentLoanCalculatorTool from '@/components/tools/student-loan/StudentLoanCalculatorTool';
+import AuthorTrustBox from '@/components/layout/AuthorTrustBox';
+
 
 const faqItems = [
   {
@@ -182,6 +184,7 @@ export default function StudentLoanCalculatorPage() {
             ))}
           </div>
         </section>
+              <AuthorTrustBox />
       </div>
     </>
   );

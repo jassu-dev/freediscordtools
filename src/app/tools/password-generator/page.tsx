@@ -3,6 +3,8 @@ import PageSchema from '@/components/seo/PageSchema';
 import VisibleFAQ from '@/components/seo/VisibleFAQ';
 import PasswordGenerator from '@/components/tools/PasswordGenerator';
 import { seoConfig } from '@/config/seo';
+import AuthorTrustBox from '@/components/layout/AuthorTrustBox';
+
 
 const faqItems = [
   {
@@ -76,6 +78,7 @@ export default function PasswordGeneratorPage() {
         </article>
 
         <VisibleFAQ items={faqItems} />
+              <AuthorTrustBox />
       </div>
     </>
   );

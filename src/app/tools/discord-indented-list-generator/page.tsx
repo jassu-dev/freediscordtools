@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import PageSchema from '@/components/seo/PageSchema';
 import DiscordIndentedListGenerator from '@/components/tools/DiscordIndentedListGenerator';
 import { seoConfig } from '@/config/seo';
+import AuthorTrustBox from '@/components/layout/AuthorTrustBox';
+
 
 const faqItems = [
   {
@@ -134,6 +136,7 @@ export default function DiscordIndentedListGeneratorPage() {
             ))}
           </div>
         </section>
+              <AuthorTrustBox />
       </div>
     </>
   );

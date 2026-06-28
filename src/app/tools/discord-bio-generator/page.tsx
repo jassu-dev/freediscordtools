@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import FaqSchema from '@/components/seo/FaqSchema';import { seoConfig } from '@/config/seo';
 import PageSchema from '@/components/seo/PageSchema';
 import DiscordBioGeneratorTool from '@/components/tools/bio-generator/DiscordBioGeneratorTool';
+import AuthorTrustBox from '@/components/layout/AuthorTrustBox';
+
 
 const faqItems = [
   {
@@ -270,6 +272,7 @@ export default function DiscordBioGeneratorPage() {
           </div>
         </section>
 
+              <AuthorTrustBox />
       </div>
     </>
   );

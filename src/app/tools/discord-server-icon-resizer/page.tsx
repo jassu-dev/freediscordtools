@@ -3,6 +3,8 @@ import PageSchema from '@/components/seo/PageSchema';
 import VisibleFAQ from '@/components/seo/VisibleFAQ';
 import DiscordServerIconResizer from '@/components/tools/DiscordServerIconResizer';
 import { seoConfig } from '@/config/seo';
+import AuthorTrustBox from '@/components/layout/AuthorTrustBox';
+
 
 const faqItems = [
   {
@@ -136,6 +138,7 @@ export default function DiscordServerIconResizerPage() {
         </article>
 
         <VisibleFAQ items={faqItems} />
+              <AuthorTrustBox />
       </div>
     </>
   );

@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
 
-import FaqSchema from '@/components/seo/FaqSchema';import { seoConfig } from '@/config/seo';
+import FaqSchema from '@/components/seo/FaqSchema';
+import { seoConfig } from '@/config/seo';
 import PageSchema from '@/components/seo/PageSchema';
 import StatusGeneratorTool from '@/components/tools/status-generator/StatusGeneratorTool';
+import AuthorTrustBox from '@/components/layout/AuthorTrustBox';
 
 const faqItems = [
   {
@@ -155,10 +157,10 @@ export default function DiscordStatusGeneratorPage() {
             70+ Discord Status Ideas 2026 — Copy & Paste Instantly
           </h1>
           <p className="text-lg text-[#5b6282] leading-relaxed">
-            Find the perfect <strong className="text-[#1a1d2e]">Discord custom status</strong>. Browse 50+ cool discord status ideas, status ideas for discord, and discord statuses across Gaming, Aesthetic, Coding, Studying, Funny, and Motivational categories or build your own with a live Discord preview. Whether you need a good status for discord, cool status ideas, or the best discord status ideas, we've got you covered! Get tons of discord status ideas right here!
+            Tired of the default 'Playing a game' activity? We've compiled a curated list of creative, funny, and aesthetic quotes to help your profile stand out to your friends and server members. Browse our categories below or build your own custom presence message with a live preview.
           </p>
           <p className="bg-[#F0F2FF] border-l-4 border-[#5865F2] p-4 italic text-sm text-[#5b6282] mt-4">
-            Want your status text in a unique style? Use our <a href="/tools/discord-font-generator/" className="text-[#5865F2] font-bold hover:underline">Discord Font Generator</a> to stylize any text with Unicode fonts, then pair it with our discord status ideas!
+            Want your status text in a unique style? Use our <a href="/tools/discord-font-generator/" className="text-[#5865F2] font-bold hover:underline">Font Generator</a> to stylize any text with Unicode fonts, then paste it directly into your profile!
           </p>
         </header>
 
@@ -336,6 +338,7 @@ export default function DiscordStatusGeneratorPage() {
           </div>
         </section>
 
+        <AuthorTrustBox />
       </div>
     </>
   );

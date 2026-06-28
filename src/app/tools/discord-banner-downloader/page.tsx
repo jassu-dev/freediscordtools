@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import FaqSchema from '@/components/seo/FaqSchema';import { seoConfig } from '@/config/seo';
 import PageSchema from '@/components/seo/PageSchema';
 import BannerDownloaderTool from '@/components/tools/BannerDownloaderTool';
+import AuthorTrustBox from '@/components/layout/AuthorTrustBox';
+
 
 const faqItems = [
   {
@@ -203,6 +205,7 @@ export default function DiscordBannerDownloaderPage() {
             ))}
           </div>
         </section>
+              <AuthorTrustBox />
       </div>
     </>
   );

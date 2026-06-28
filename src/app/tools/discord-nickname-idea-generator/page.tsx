@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import PageSchema from '@/components/seo/PageSchema';
 import DiscordNicknameIdeaGenerator from '@/components/tools/DiscordNicknameIdeaGenerator';
 import { seoConfig } from '@/config/seo';
+import AuthorTrustBox from '@/components/layout/AuthorTrustBox';
+
 
 const faqItems = [
   {
@@ -119,6 +121,7 @@ export default function DiscordNicknameIdeaGeneratorPage() {
             ))}
           </div>
         </section>
+              <AuthorTrustBox />
       </div>
     </>
   );

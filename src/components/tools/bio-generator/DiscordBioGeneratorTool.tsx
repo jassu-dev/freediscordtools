@@ -108,6 +108,22 @@ export default function DiscordBioGeneratorTool() {
     return list;
   }, [category, search]);
 
+  const [visibleCount, setVisibleCount] = useState(10);
+
+  // Reset visible count when filters change
+  useMemo(() => {
+    setVisibleCount(10);
+  }, [category, search]);
+
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const { scrollTop, scrollHeight, clientHeight } = e.currentTarget;
+    if (scrollHeight - scrollTop <= clientHeight + 100) {
+      if (visibleCount < filtered.length) {
+        setVisibleCount((prev) => Math.min(prev + 10, filtered.length));
+      }
+    }
+  };
+
   const copy = (text: string, id: string) => {
     navigator.clipboard.writeText(text).then(() => {
       setCopied(id);
@@ -164,8 +180,11 @@ export default function DiscordBioGeneratorTool() {
             <p className="text-xs text-[#5b6282] mb-4">{filtered.length} templates</p>
 
             {/* Bio grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[560px] overflow-y-auto pr-1">
-              {filtered.map((bio) => (
+            <div 
+              className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[560px] overflow-y-auto pr-1"
+              onScroll={handleScroll}
+            >
+              {filtered.slice(0, visibleCount).map((bio) => (
                 <div
                   key={bio.id}
                   className="rounded-xl border border-[#E3E6F0] overflow-hidden hover:border-[#5865F2] transition-all group"

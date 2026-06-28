@@ -6,6 +6,8 @@ import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import { buildFaqJsonLd } from '@/lib/jsonld';
 import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
 import UsernameCheckerTool from '@/components/tools/username-checker/UsernameCheckerTool';
+import AuthorTrustBox from '@/components/layout/AuthorTrustBox';
+
 
 const faqItems = [
   {
@@ -289,6 +291,7 @@ export default function DiscordUsernameCheckerPage() {
           </div>
         </section>
 
+              <AuthorTrustBox />
       </div>
     </>
   );

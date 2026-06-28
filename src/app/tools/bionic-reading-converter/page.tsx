@@ -3,6 +3,8 @@ import PageSchema from '@/components/seo/PageSchema';
 import VisibleFAQ from '@/components/seo/VisibleFAQ';
 import BionicReadingConverter from '@/components/tools/BionicReadingConverter';
 import { seoConfig } from '@/config/seo';
+import AuthorTrustBox from '@/components/layout/AuthorTrustBox';
+
 
 const faqItems = [
   {
@@ -141,6 +143,7 @@ export default function BionicReadingConverterPage() {
         </article>
 
         <VisibleFAQ items={faqItems} />
+              <AuthorTrustBox />
       </div>
     </>
   );

@@ -6,6 +6,8 @@ import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import { buildFaqJsonLd } from '@/lib/jsonld';
 import SoftwareAppSchema from '@/components/seo/SoftwareAppSchema';
 import { seoConfig } from '@/config/seo';
+import AuthorTrustBox from '@/components/layout/AuthorTrustBox';
+
 
 // ─── Metadata ────────────────────────────────────────────────────────────────
 const faqItems = [
@@ -218,6 +220,7 @@ export default function DiscordColorTextGeneratorPage() {
           </div>
         </section>
 
+              <AuthorTrustBox />
       </div>
     </>
   );

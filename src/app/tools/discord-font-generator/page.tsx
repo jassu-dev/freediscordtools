@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import FaqSchema from '@/components/seo/FaqSchema';import FontGenerator from '@/components/tools/FontGenerator';
 import PageSchema from '@/components/seo/PageSchema';
 import { seoConfig } from '@/config/seo';
+import AuthorTrustBox from '@/components/layout/AuthorTrustBox';
+
 
 const faqItems = [
   {
@@ -446,6 +448,7 @@ export default function DiscordFontGeneratorPage() {
           </section>
 
         </div>
+              <AuthorTrustBox />
       </div>
     </>
   );
