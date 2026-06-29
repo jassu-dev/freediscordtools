@@ -85,8 +85,8 @@ export const tools: Tool[] = [
   },
   {
     slug: 'discord-webhook-sender',
-    name: 'Discord Webhook Message Sender',
-    description: 'Free Discord webhook sender to send, test, and debug webhook messages online. Custom username, avatar, and embeds \u2014 no coding or bot setup required.',
+    name: 'Discord Webhook Sender & Webhook Message Sender',
+    description: 'Free online Discord webhook sender and Discord webhook message sender to send, test, and debug webhook messages instantly. Customize usernames, avatars, and embeds with no coding.',
     href: '/tools/discord-webhook-sender/',
     keywords: ['discord webhook message sender', 'discord webhook sender', 'webhook message sender', 'webhook sender discord', 'discord webhook tester', 'send message to discord webhook', 'webhook tester discord', 'discord webhook generator', 'what is a discord webhook', 'how to make a discord webhook', 'webhook discord message sender'],
     category: 'Discord Management & Dev',
