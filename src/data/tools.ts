@@ -291,5 +291,37 @@ export const tools: Tool[] = [
     keywords: ['discord nitro perks', 'discord nitro calculator', 'discord nitro cost', 'discord nitro basic', 'discord nitro vs basic'],
     category: 'Discord Management & Dev',
   },
+  {
+    slug: 'discord-spoiler-generator',
+    name: 'Discord Spoiler Generator',
+    description: 'Free Discord spoiler generator. Create spoiler tags for text, images, and links instantly. The best Discord spoiler maker online with one-click copy.',
+    href: '/tools/discord-spoiler-generator/',
+    keywords: ['discord spoiler generator', 'discord spoiler maker', 'how to make a spoiler on discord', 'discord spoiler tags', 'discord hidden text'],
+    category: 'Discord Formatting',
+  },
+  {
+    slug: 'discord-text-rotator',
+    name: 'Discord Text Rotator',
+    description: 'Free Discord text rotator. Flip text upside-down, reverse text, and create weird text styles for Discord. One-click copy for all text effects.',
+    href: '/tools/discord-text-rotator/',
+    keywords: ['discord text rotator', 'upside down text discord', 'reverse text discord', 'discord weird text', 'discord text flipper'],
+    category: 'Discord Formatting',
+  },
+  {
+    slug: 'discord-invite-link-generator',
+    name: 'Discord Invite Link Generator',
+    description: 'Free Discord invite link generator. Create custom Discord invite links with expiration times, max uses, and temporary membership options.',
+    href: '/tools/discord-invite-link-generator/',
+    keywords: ['discord invite link generator', 'discord invite maker', 'custom discord invite', 'discord invite code', 'how to make a discord invite link'],
+    category: 'Discord Management & Dev',
+  },
+  {
+    slug: 'discord-poll-creator',
+    name: 'Discord Poll Creator',
+    description: 'Free Discord poll creator. Make simple polls, multiple-choice polls, and yes/no polls for Discord. Copy-paste ready poll templates.',
+    href: '/tools/discord-poll-creator/',
+    keywords: ['discord poll creator', 'discord poll maker', 'how to make a poll on discord', 'discord poll template', 'discord survey maker'],
+    category: 'Discord Formatting',
+  },
 ];
 
