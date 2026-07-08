@@ -2,6 +2,14 @@ import type { Tool } from '@/types';
 
 export const tools: Tool[] = [
   {
+    slug: 'discord-name-generator',
+    name: 'Discord Name Generator',
+    description: 'Free Discord name generator for usernames, display names, server names, clan names, and channel names. Create aesthetic, funny, gaming, cute, dark, and professional Discord name ideas instantly.',
+    href: '/tools/discord-name-generator/',
+    keywords: ['discord name generator', 'discord names', 'discord name ideas', 'discord username ideas', 'discord username generator', 'discord server name ideas', 'discord server name generator', 'discord display name ideas', 'aesthetic discord names', 'funny discord names', 'cool discord names', 'gaming discord names', 'discord clan name generator', 'discord channel name ideas'],
+    category: 'Discord Formatting',
+  },
+  {
     slug: 'discord-indented-list-generator',
     name: 'Discord Indented List Generator',
     description: 'Free Discord indented list generator and markdown list tool. Create nested bullet lists, numbered lists, and checklists for Discord with one-click copy.',
@@ -324,4 +332,3 @@ export const tools: Tool[] = [
     category: 'Discord Formatting',
   },
 ];
-

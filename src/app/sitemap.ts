@@ -8,6 +8,7 @@ export const revalidate = false;
 
 // High-value tool slugs that deserve priority 1.0
 const PRIORITY_TOOLS = new Set([
+  'discord-name-generator',
   'discord-timestamp-generator',
   'discord-font-generator',
   'discord-color-text-generator',
