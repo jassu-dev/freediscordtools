@@ -27,6 +27,8 @@ const PRIORITY_TOOLS = new Set([
   'discord-role-color-gradient-generator',
   'discord-server-icon-resizer',
   'discord-rules-generator',
+  'discord-server-age-calculator',
+  'discord-role-color-picker',
 ]);
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -41,6 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/about/`,         lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${baseUrl}/contact/`,       lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${baseUrl}/privacy-policy/`,lastModified: now, changeFrequency: 'yearly',  priority: 0.3 },
+    { url: `${baseUrl}/cookie-policy/`, lastModified: now, changeFrequency: 'yearly',  priority: 0.3 },
     { url: `${baseUrl}/terms/`,         lastModified: now, changeFrequency: 'yearly',  priority: 0.3 },
   ];
 

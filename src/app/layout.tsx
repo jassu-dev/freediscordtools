@@ -6,6 +6,7 @@ import SkipLink from '@/components/layout/SkipLink';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import GoogleAnalytics from '@/components/seo/GoogleAnalytics';
+import CookieConsent from '@/components/layout/CookieConsent';
 import { seoConfig } from '@/config/seo';
 import { adsConfig } from '@/config/ads';
 
@@ -48,6 +49,13 @@ export const metadata: Metadata = {
     'discord bio generator',
     'discord status generator',
     'discord status ideas',
+    'discord status ideas copy and paste',
+    'discord status ideas aesthetic',
+    'discord status 2026',
+    'best discord status',
+    'good discord statuses',
+    'social battery discord status',
+    'discord status',
     'discord webhook sender',
     'discord webhook message sender',
     'discord permission calculator',
@@ -134,6 +142,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );

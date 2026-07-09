@@ -59,6 +59,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
+              prefetch={true}
               className="px-4 py-2.5 rounded-lg text-sm font-semibold text-[#2d3149] hover:text-[#5865F2] hover:bg-[#F0F2FF] transition-all min-h-[48px] flex items-center"
             >
               {link.label}
@@ -105,6 +106,7 @@ export default function Header() {
                   <Link
                     ref={index === 0 ? firstLinkRef : undefined}
                     href={link.href}
+                    prefetch={true}
                     onClick={() => setMobileOpen(false)}
                     className="flex items-center px-4 py-3.5 text-sm font-semibold text-[#2d3149] hover:text-[#5865F2] hover:bg-[#F8F9FF] transition-colors min-h-[48px]"
                   >

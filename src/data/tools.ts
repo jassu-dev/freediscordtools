@@ -9,6 +9,7 @@ export const tools: Tool[] = [
     keywords: ['discord name generator', 'discord names', 'discord name ideas', 'discord username ideas', 'discord username generator', 'discord server name ideas', 'discord server name generator', 'discord display name ideas', 'aesthetic discord names', 'funny discord names', 'cool discord names', 'gaming discord names', 'discord clan name generator', 'discord channel name ideas'],
     category: 'Discord Formatting',
   },
+  
   {
     slug: 'discord-indented-list-generator',
     name: 'Discord Indented List Generator',
@@ -329,6 +330,22 @@ export const tools: Tool[] = [
     description: 'Free Discord poll creator. Make simple polls, multiple-choice polls, and yes/no polls for Discord. Copy-paste ready poll templates.',
     href: '/tools/discord-poll-creator/',
     keywords: ['discord poll creator', 'discord poll maker', 'how to make a poll on discord', 'discord poll template', 'discord survey maker'],
+    category: 'Discord Formatting',
+  },
+  {
+    slug: 'discord-server-age-calculator',
+    name: 'Discord Server Age Calculator',
+    description: 'Free Discord server age calculator. Find out exactly how old any Discord server or account is by pasting the Server ID. Get creation date, age in years/months/days, and a milestone badge.',
+    href: '/tools/discord-server-age-calculator/',
+    keywords: ['discord server age calculator', 'how old is my discord server', 'discord server creation date', 'discord server age checker', 'discord account age checker', 'discord snowflake age'],
+    category: 'Discord Management & Dev',
+  },
+  {
+    slug: 'discord-role-color-picker',
+    name: 'Discord Role Color Picker',
+    description: 'Free Discord role color picker with 40+ preset colors and a custom hex input. Find the perfect Discord color code for any role. Copies hex code and decimal value instantly.',
+    href: '/tools/discord-role-color-picker/',
+    keywords: ['discord role color picker', 'discord color picker', 'discord role colors', 'discord color codes', 'discord hex colors', 'discord colour picker', 'discord color palette'],
     category: 'Discord Formatting',
   },
 ];

@@ -52,6 +52,7 @@ export default function Footer() {
           <nav aria-label="Legal navigation">
             <ul className="flex gap-6 list-none m-0 p-0">
               <li><Link href="/privacy-policy/" className="text-xs text-[#2d3149] hover:text-[#5865F2] min-h-[48px] inline-flex items-center">Privacy</Link></li>
+              <li><Link href="/cookie-policy/" className="text-xs text-[#2d3149] hover:text-[#5865F2] min-h-[48px] inline-flex items-center">Cookies</Link></li>
               <li><Link href="/terms/" className="text-xs text-[#2d3149] hover:text-[#5865F2] min-h-[48px] inline-flex items-center">Terms</Link></li>
               <li><Link href="/disclaimer/" className="text-xs text-[#2d3149] hover:text-[#5865F2] min-h-[48px] inline-flex items-center">Disclaimer</Link></li>
             </ul>

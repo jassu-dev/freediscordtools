@@ -18,11 +18,12 @@ interface ToolCardProps {
 export default function ToolCard({ tool }: ToolCardProps) {
   const meta = categoryMeta[tool.category] ?? fallbackMeta;
   // Show only the first word of the category as badge text to keep it compact
-  const badgeText = tool.category.split(' ')[0];
+  const badgeText = (tool.category || '').split(' ')[0] || 'Tool';
 
   return (
     <Link
       href={tool.href}
+      prefetch={true}
       className="group relative flex flex-col p-6 rounded-2xl bg-white border border-[#E3E6F0] hover:border-[#5865F2]/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#5865F2]/40"
       data-testid="tool-card"
     >

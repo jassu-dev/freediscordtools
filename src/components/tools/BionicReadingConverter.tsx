@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, useMemo, useRef } from 'react';
+import { useState, useCallback, useMemo, useRef, useEffect } from 'react';
 import { Copy, RotateCcw, Download, Sparkles, FileText, Check } from 'lucide-react';
 
 const DEMO_TEXT = `Bionic Reading is a new method facilitating the reading process by guiding the eyes through text with artificial fixation points. The eye is guided through the text by bolding the first letters of each word.
@@ -8,19 +8,24 @@ const DEMO_TEXT = `Bionic Reading is a new method facilitating the reading proce
 This allows the reader to focus on only the bolded letters and let the brain complete the rest of the words. It is especially helpful for people with ADHD, dyslexia, or anyone looking to read and study much faster. Try adjusting the sliders to see what feels most natural for your brain.`;
 
 // Debounce utility function
-const debounce = <T extends (...args: unknown[]) => unknown>(
+const debounce = <T extends (...args: any[]) => void>(
   func: T,
   wait: number
 ) => {
   let timeout: NodeJS.Timeout | null = null;
-  return (...args: Parameters<T>) => {
+  const debounced = (...args: Parameters<T>) => {
     if (timeout) clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
+  debounced.cancel = () => {
+    if (timeout) clearTimeout(timeout);
+  };
+  return debounced;
 };
 
 export default function BionicReadingConverter() {
   const [text, setText] = useState('');
+  const [debouncedText, setDebouncedText] = useState('');
   const [fixation, setFixation] = useState(50);
   const [skipShort, setSkipShort] = useState(false);
   const [fontSize, setFontSize] = useState(18);
@@ -40,8 +45,8 @@ export default function BionicReadingConverter() {
   }, []);
 
   const bionicHtml = useMemo(() => {
-    if (!text) return '';
-    const tokens = text.match(/([a-zA-Z0-9]+)|([^a-zA-Z0-9]+)/g) || [];
+    if (!debouncedText) return '';
+    const tokens = debouncedText.match(/([a-zA-Z0-9]+)|([^a-zA-Z0-9]+)/g) || [];
     return tokens
       .map((token) => {
         if (/^[a-zA-Z0-9]+$/.test(token)) {
@@ -57,11 +62,11 @@ export default function BionicReadingConverter() {
         return escapeHtml(token);
       })
       .join('');
-  }, [text, fixation, skipShort, escapeHtml]);
+  }, [debouncedText, fixation, skipShort, escapeHtml]);
 
   const bionicMarkdown = useMemo(() => {
-    if (!text) return '';
-    const tokens = text.match(/([a-zA-Z0-9]+)|([^a-zA-Z0-9]+)/g) || [];
+    if (!debouncedText) return '';
+    const tokens = debouncedText.match(/([a-zA-Z0-9]+)|([^a-zA-Z0-9]+)/g) || [];
     return tokens
       .map((token) => {
         if (/^[a-zA-Z0-9]+$/.test(token)) {
@@ -75,7 +80,7 @@ export default function BionicReadingConverter() {
         return token;
       })
       .join('');
-  }, [text, fixation, skipShort]);
+  }, [debouncedText, fixation, skipShort]);
 
   const handleCopy = useCallback(async (type: 'html' | 'md' | 'text', content: string) => {
     try {
@@ -114,13 +119,21 @@ export default function BionicReadingConverter() {
 
   // Debounced text setter
   const debouncedSetText = useMemo(
-    () => debounce((value: string) => setText(value), 150),
+    () => debounce((value: string) => setDebouncedText(value), 150),
     []
   );
 
+  useEffect(() => {
+    return () => {
+      debouncedSetText.cancel();
+    };
+  }, [debouncedSetText]);
+
   const handleTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    textRef.current = e.target.value;
-    debouncedSetText(e.target.value);
+    const val = e.target.value;
+    textRef.current = val;
+    setText(val);
+    debouncedSetText(val);
   };
 
   return (
@@ -140,6 +153,7 @@ export default function BionicReadingConverter() {
                   onClick={() => {
                     textRef.current = DEMO_TEXT;
                     setText(DEMO_TEXT);
+                    setDebouncedText(DEMO_TEXT);
                   }}
                   className="px-3 py-1.5 rounded-lg bg-[#F0F2FF] hover:bg-[#E3E6FF] text-[#5865F2] font-semibold text-xs transition-colors flex items-center gap-1 cursor-pointer min-h-[44px] min-w-[44px]"
                 >
@@ -149,6 +163,7 @@ export default function BionicReadingConverter() {
                   onClick={() => {
                     textRef.current = '';
                     setText('');
+                    setDebouncedText('');
                   }}
                   className="px-3 py-1.5 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-600 font-semibold text-xs transition-colors flex items-center gap-1 cursor-pointer min-h-[44px] min-w-[44px]"
                 >

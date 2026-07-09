@@ -4,6 +4,7 @@ import BionicReadingConverter from '@/components/tools/BionicReadingConverter';
 
 describe('BionicReadingConverter component', () => {
   beforeEach(() => {
+    vi.useFakeTimers();
     Object.defineProperty(navigator, 'clipboard', {
       value: { writeText: vi.fn().mockResolvedValue(undefined) },
       writable: true,
@@ -12,6 +13,10 @@ describe('BionicReadingConverter component', () => {
   });
 
   afterEach(() => {
+    act(() => {
+      vi.runOnlyPendingTimers();
+    });
+    vi.useRealTimers();
     vi.restoreAllMocks();
   });
 
@@ -36,6 +41,9 @@ describe('BionicReadingConverter component', () => {
     await act(async () => {
       fireEvent.change(textarea, { target: { value: 'Some test reading text' } });
     });
+    act(() => {
+      vi.advanceTimersByTime(150);
+    });
     expect(textarea.value).toBe('Some test reading text');
 
     const clearBtn = screen.getByRole('button', { name: /Clear/i });
@@ -51,6 +59,9 @@ describe('BionicReadingConverter component', () => {
     await act(async () => {
       fireEvent.change(textarea, { target: { value: 'Bionic' } });
     });
+    act(() => {
+      vi.advanceTimersByTime(150);
+    });
     // Check if the output element exists and contains a strong tag
     // Word length is 6, fixation default is 50%, so ceil(6*0.5) = 3 letters bolded ('Bio')
     const boldElement = container.querySelector('strong');
@@ -63,6 +74,9 @@ describe('BionicReadingConverter component', () => {
     const textarea = screen.getByLabelText('Enter Your Text') as HTMLTextAreaElement;
     await act(async () => {
       fireEvent.change(textarea, { target: { value: 'Bionic is fun' } });
+    });
+    act(() => {
+      vi.advanceTimersByTime(150);
     });
     
     // Default: 'is' (len 2) and 'fun' (len 3) should have strong tags
@@ -88,6 +102,9 @@ describe('BionicReadingConverter component', () => {
     const textarea = screen.getByLabelText('Enter Your Text') as HTMLTextAreaElement;
     await act(async () => {
       fireEvent.change(textarea, { target: { value: 'Test word' } });
+    });
+    act(() => {
+      vi.advanceTimersByTime(150);
     });
     
     const copyBtn = screen.getByRole('button', { name: /Copy Markdown/i });

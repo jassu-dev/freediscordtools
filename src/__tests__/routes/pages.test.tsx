@@ -87,12 +87,16 @@ describe('P4: Every page has exactly one h1', () => {
 });
 
 // P5: WebSite JSON-LD — verified via metadata/schema components rendering script tags
+// P5: WebSite JSON-LD — verified via metadata/schema components rendering script tags
 describe('P5: Pages include WebSiteSchema component', () => {
   it('Home page renders WebSiteSchema', () => {
     const container = renderPage(HomePage);
     const scripts = Array.from(container.querySelectorAll('script[type="application/ld+json"]'));
     const websiteSchema = scripts.find((s) => {
-      try { return JSON.parse(s.textContent || '{}')['@type'] === 'WebSite'; } catch { return false; }
+      try {
+        const json = JSON.parse(s.textContent || '{}');
+        return json['@type'] === 'WebSite' || (json['@graph'] && json['@graph'].some((item: any) => item['@type'] === 'WebSite'));
+      } catch { return false; }
     });
     expect(websiteSchema).toBeTruthy();
   });
@@ -101,7 +105,10 @@ describe('P5: Pages include WebSiteSchema component', () => {
     const container = renderPage(TimestampPage);
     const scripts = Array.from(container.querySelectorAll('script[type="application/ld+json"]'));
     const websiteSchema = scripts.find((s) => {
-      try { return JSON.parse(s.textContent || '{}')['@type'] === 'WebSite'; } catch { return false; }
+      try {
+        const json = JSON.parse(s.textContent || '{}');
+        return json['@type'] === 'WebSite' || (json['@graph'] && json['@graph'].some((item: any) => item['@type'] === 'WebSite'));
+      } catch { return false; }
     });
     expect(websiteSchema).toBeTruthy();
   });
@@ -131,7 +138,7 @@ describe('P7: sitemap.xml contains all required URLs', () => {
     const { default: sitemap } = await import('@/app/sitemap');
     const urls = sitemap();
     const requiredUrls = [
-      'https://freediscordtools.in',
+      'https://freediscordtools.in/',
       'https://freediscordtools.in/tools/',
       'https://freediscordtools.in/tools/discord-timestamp-generator/',
       'https://freediscordtools.in/about/',
@@ -152,11 +159,15 @@ describe('P14: FAQPage JSON-LD matches FAQ section content', () => {
     const container = renderPage(TimestampPage);
     const scripts = Array.from(container.querySelectorAll('script[type="application/ld+json"]'));
     const faqSchema = scripts.find((s) => {
-      try { return JSON.parse(s.textContent || '{}')['@type'] === 'FAQPage'; } catch { return false; }
+      try {
+        const json = JSON.parse(s.textContent || '{}');
+        return json['@type'] === 'FAQPage' || (json['@graph'] && json['@graph'].some((item: any) => item['@type'] === 'FAQPage'));
+      } catch { return false; }
     });
     expect(faqSchema).toBeTruthy();
     const parsed = JSON.parse(faqSchema!.textContent!);
-    expect(parsed.mainEntity.length).toBeGreaterThanOrEqual(5);
+    const mainEntity = parsed['@type'] === 'FAQPage' ? parsed.mainEntity : (parsed['@graph']?.find((item: any) => item['@type'] === 'FAQPage')?.mainEntity || []);
+    expect(mainEntity.length).toBeGreaterThanOrEqual(5);
   });
 });
 

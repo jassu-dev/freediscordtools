@@ -94,7 +94,24 @@ export function computeUnixTimestamp(
     const offsetMs = displayedDate.getTime() - naiveDate.getTime();
 
     // The actual UTC time = naiveDate - offsetMs
-    const utcMs = naiveDate.getTime() - offsetMs;
+    let utcMs = naiveDate.getTime() - offsetMs;
+
+    // Iterative adjustment to correct for DST changes within the transition window
+    for (let i = 0; i < 2; i++) {
+      const checkDate = new Date(utcMs);
+      const checkParts = formatter.formatToParts(checkDate);
+      const checkMap: Record<string, string> = {};
+      for (const p of checkParts) {
+        checkMap[p.type] = p.value;
+      }
+      const checkStr = `${checkMap['year']}-${checkMap['month']}-${checkMap['day']}T${checkMap['hour'] === '24' ? '00' : checkMap['hour']}:${checkMap['minute']}:${checkMap['second']}Z`;
+      const checkDisplayedDate = new Date(checkStr);
+      if (isNaN(checkDisplayedDate.getTime())) break;
+      const diff = checkDisplayedDate.getTime() - naiveDate.getTime();
+      if (diff === 0) break;
+      utcMs -= diff;
+    }
+
     const result = Math.floor(utcMs / 1000);
 
     if (isNaN(result)) return null;

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect, useCallback } from 'react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { tools } from '@/data/tools';
 import { blogPosts } from '@/data/blog';
@@ -45,6 +46,7 @@ function runSearch(query: string): SearchResult[] {
 }
 
 export default function SearchBar() {
+  const router = useRouter();
   const [query, setQuery] = useState('');
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
@@ -84,7 +86,7 @@ export default function SearchBar() {
       setActiveIndex((i) => Math.max(i - 1, -1));
     }
     if (e.key === 'Enter' && activeIndex >= 0 && results[activeIndex]) {
-      window.location.href = results[activeIndex].href;
+      router.push(results[activeIndex].href);
     }
   }
 
