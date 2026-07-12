@@ -348,4 +348,28 @@ export const tools: Tool[] = [
     keywords: ['discord role color picker', 'discord color picker', 'discord role colors', 'discord color codes', 'discord hex colors', 'discord colour picker', 'discord color palette'],
     category: 'Discord Formatting',
   },
+  {
+    slug: 'discord-automod-rule-builder',
+    name: 'Discord Automod Rule Builder',
+    description: 'Free Discord automod rule builder to create, customize, and manage auto-moderation rules for your server. Build keyword filters, spam blockers, and link protectors instantly.',
+    href: '/tools/discord-automod-rule-builder/',
+    keywords: ['discord automod rule builder', 'discord automod', 'automod rules', 'discord auto moderation', 'discord keyword filter', 'discord spam blocker', 'discord link filter'],
+    category: 'Discord Management & Dev',
+  },
+  {
+    slug: 'discord-ban-message-generator',
+    name: 'Discord Ban Message Generator',
+    description: 'Free Discord ban message generator with 10+ professional, customizable ban templates for permanent and temporary bans. Create polite, formal ban messages instantly.',
+    href: '/tools/discord-ban-message-generator/',
+    keywords: ['discord ban message generator', 'discord ban message', 'discord ban template', 'discord permanent ban', 'discord temp ban', 'discord server moderation', 'discord ban notice'],
+    category: 'Discord Management & Dev',
+  },
+  {
+    slug: 'discord-warning-generator',
+    name: 'Discord Warning Generator',
+    description: 'Free Discord warning generator with friendly, formal, and professional warning templates for first, second, and final warnings. Customize usernames and reasons easily.',
+    href: '/tools/discord-warning-generator/',
+    keywords: ['discord warning generator', 'discord warning message', 'discord warning template', 'discord first warning', 'discord second warning', 'discord server moderation', 'discord warning notice'],
+    category: 'Discord Management & Dev',
+  },
 ];
