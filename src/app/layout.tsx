@@ -136,6 +136,12 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+        <Script
+          src="https://quge5.com/88/tag.min.js"
+          data-zone="291219"
+          data-cfasync="false"
+          strategy="afterInteractive"
+        />
         <GoogleAnalytics />
         <SkipLink />
         <Header />
