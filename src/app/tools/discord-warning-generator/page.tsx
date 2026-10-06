@@ -13,7 +13,7 @@ const faqItems = [
   },
   {
     question: 'What should a good Discord warning message include?',
-    answer: 'A good Discord warning message should include: 1) The member's username, 2) A clear reason for the warning, 3) Which rule(s) were violated, 4) A reminder to follow server rules, 5) A polite but firm tone. Use our Discord warning generator to create perfect warnings every time.',
+    answer: "A good Discord warning message should include: 1) The member's username, 2) A clear reason for the warning, 3) Which rule(s) were violated, 4) A reminder to follow server rules, 5) A polite but firm tone. Use our Discord warning generator to create perfect warnings every time.",
   },
   {
     question: 'Is this Discord warning generator free?',
@@ -21,7 +21,7 @@ const faqItems = [
   },
   {
     question: 'How do I warn someone on Discord politely?',
-    answer: 'To warn someone politely on Discord, use our Discord warning generator to create a clear, friendly message that explains the issue without being hostile. Be specific about the rule violation, and remind them of your server's rules — our generator makes this easy!',
+    answer: "To warn someone politely on Discord, use our Discord warning generator to create a clear, friendly message that explains the issue without being hostile. Be specific about the rule violation, and remind them of your server's rules — our generator makes this easy!",
   },
 ];
 

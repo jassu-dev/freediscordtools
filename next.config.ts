@@ -14,9 +14,6 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  turbopack: {
-    treeShaking: true,
-  },
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', 'qrcode.react'],
