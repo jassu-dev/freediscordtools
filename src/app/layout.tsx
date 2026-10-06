@@ -118,6 +118,7 @@ export const metadata: Metadata = {
   other: {
     'theme-color': '#5865F2',
     'script:ld+json': websiteSchema,
+    monetag: 'e4f318b45e8488a0e88521a54c17e2b8',
   },
 };
 
